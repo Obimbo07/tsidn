@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './admin.css';
 const Front = () => {
 
@@ -38,11 +40,17 @@ const Front = () => {
     })
 
     }
-    console.log(formData);
+    // console.log(formData);
 
     const handleSubmit = async(e) => {
         e.preventDefault();
 
+        for (const key in formData) {
+            if (formData[key] === '' || formData[key] === null) {
+                toast.error(`${key} is empty`);
+                return; 
+            }
+        }
         try {
             const newFormData = new FormData();
 
@@ -57,17 +65,19 @@ const Front = () => {
 
             const response = await axios.post(post_api, newFormData);
 
-            console.log(response.data);
-
-            setFormData({
-                selectedCategory: '',
-                selectedTag: '',
-                title: '',
-                content: '',
-                image: null,
-                date: '',
-            });
-
+            // console.log(response.data.success);
+            const success = response.data.success;
+            if(success) {
+                setFormData({
+                    selectedCategory: '',
+                    selectedTag: '',
+                    title: '',
+                    content: '',
+                    image: null,
+                    date: '',
+                });
+                return;
+            }
         } catch(error) {
             console.log(error.message);
         }
@@ -101,6 +111,7 @@ const Front = () => {
                 
             </div>
             <div className="content-area">
+                <ToastContainer />
                 <div className="post-form">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="category">Category:</label>
