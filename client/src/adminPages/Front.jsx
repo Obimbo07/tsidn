@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import './admin.css';
 const Front = () => {
@@ -7,11 +8,6 @@ const Front = () => {
         training: ['tag4', 'tag5', 'tag6'],
         pressRelease: ['tag7', 'tag8', 'tag9']
     }
-
-    
-    const [selectedCategory, setSelectedCategory] = useState('');
-    const [selectedTag, setSelectedTag] = useState('');
-
     const [formData, setFormData] = useState({
         selectedCategory: '',
         selectedTag: '',
@@ -22,16 +18,58 @@ const Front = () => {
     });
 
     const handleCategoryChange = (e) => {
-         setSelectedCategory(e.target.value);
-        console.log(selectedCategory);
+        setFormData({
+            ...formData,
+            selectedCategory: e.target.value,
+        })
     }
 
     const handleTagChange = (e) => {
-        setSelectedTag(e.target.value);
-        console.log(selectedTag);
+        setFormData({
+            ...formData,
+            selectedTag: e.target.value,
+        })
     }
 
+    const handleChange = (e) => {
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+    })
+
+    }
     console.log(formData);
+
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+
+        try {
+            const newFormData = new FormData();
+
+            newFormData.append('selectedCategory', formData.selectedCategory);
+            newFormData.append('selectedTag', formData.selectedTag);
+            newFormData.append('title', formData.title);
+            newFormData.append('content', formData.content);
+            newFormData.append('image', formData.image);
+            newFormData.append('date', formData.date);
+
+            const response = await axios.post('/api/postData', newFormData);
+
+            console.log(response.data);
+
+            setFormData({
+                selectedCategory: '',
+                selectedTag: '',
+                title: '',
+                content: '',
+                image: null,
+                date: '',
+            });
+
+        } catch(error) {
+            console.log(error.message);
+        }
+    }
 
     return (
         <div className="front-page">
@@ -62,12 +100,12 @@ const Front = () => {
             </div>
             <div className="content-area">
                 <div className="post-form">
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <label htmlFor="category">Category:</label>
                         <select
-                         name="category" 
+                         name="selectedCategory" 
                          id="category"
-                         value={selectedCategory}
+                         value={formData.selectedCategory}
                          onChange={handleCategoryChange}
                          >
                             <option value="">select a category</option>
@@ -79,31 +117,47 @@ const Front = () => {
                         </select>
                         <label htmlFor="tags">Tags:</label>
                         <select 
-                        name="tags" 
+                        name="selectedTag" 
                         id="tags"
-                        value={selectedTag}
+                        value={formData.selectedTag}
                         onChange={handleTagChange}
                         >
                             <option value=""></option>
-                            {selectedCategory && 
-                                menus[selectedCategory].map((tag) => (
+                            {formData.selectedCategory && 
+                                menus[formData.selectedCategory].map((tag) => (
                                     <option key={tag} value={tag}>{tag}</option>
                                 ))}
                         </select>
                         <label htmlFor="title">Title:</label>
-                        <input type="text" name='title' id='title' />
+                        <input type="text" 
+                        name='title' 
+                        id='title'
+                        value={formData.title}
+                        onChange={handleChange}
+                         />
                         <label htmlFor="content">Content:</label>
                         <textarea name="content"
                          id="content" 
                          cols="30" 
                          rows="10"
                          placeholder='content area'
+                         value={formData.content}
+                         onChange={handleChange}
                          >
                         </textarea>
                         <label htmlFor="image">Image:</label>
-                        <input type="file" name="image" id="image" />
+                        <input type="file" 
+                        name="image" 
+                        id="image" 
+                        onChange={(e) => setFormData({...formData, image: e.target.files[0]})}
+                        />
                         <label htmlFor="date">Date:</label>
-                        <input type="date" name="date" id="date" />
+                        <input type="date"
+                         name="date"
+                          id="date"
+                          value={formData.date}
+                          onChange={handleChange}
+                           />
                         <div className="button">
                             <button type='submit'>Post</button>
                         </div>
