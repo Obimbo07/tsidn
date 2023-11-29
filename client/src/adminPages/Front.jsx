@@ -10,9 +10,29 @@ const Front = () => {
         training: ['tag4', 'tag5', 'tag6'],
         pressRelease: ['tag7', 'tag8', 'tag9']
     }
+
+    const categories = [
+        'Transport Safety',
+        'Trainings',
+        'Press Releases',
+        'Podcasts',
+        'Meetings & Events',
+        'News',
+      ];
+
+      const tags = [
+        'Transport',
+        'Road Safety',
+        'Knowledge Sharing',
+        'Capacity building',
+        'Eco-transport development',
+        'Human Resource Development',
+        'Agg in transport Sector',
+        'Research and Development',
+      ];
     const [formData, setFormData] = useState({
         selectedCategory: '',
-        selectedTag: '',
+        selectedTags: [],
         title: '',
         content: '',
         image: null,
@@ -26,11 +46,19 @@ const Front = () => {
         })
     }
 
-    const handleTagChange = (e) => {
+    const handleTagChange = (tag) => {
+        const updatedTags = [...formData.selectedTags];
+
+        if (updatedTags.includes(tag)) {
+          updatedTags.splice(updatedTags.indexOf(tag), 1);
+        } else {
+          updatedTags.push(tag);
+        }
+    
         setFormData({
-            ...formData,
-            selectedTag: e.target.value,
-        })
+          ...formData,
+          selectedTags: updatedTags,
+        });
     }
 
     const handleChange = (e) => {
@@ -44,18 +72,17 @@ const Front = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-
         for (const key in formData) {
-            if (formData[key] === '' || formData[key] === null) {
-                toast.error(`${key} is empty`);
-                return; 
+            if (key !== 'selectedTags' && (formData[key] === '' || formData[key] === null)) {
+              toast.error(`${key} is empty`);
+              return;
             }
-        }
+          }
         try {
             const newFormData = new FormData();
 
             newFormData.append('selectedCategory', formData.selectedCategory);
-            newFormData.append('selectedTag', formData.selectedTag);
+            newFormData.append('selectedTag', formData.selectedTags.join(','));
             newFormData.append('title', formData.title);
             newFormData.append('content', formData.content);
             newFormData.append('image', formData.image);
@@ -70,7 +97,7 @@ const Front = () => {
             if(success) {
                 setFormData({
                     selectedCategory: '',
-                    selectedTag: '',
+                    selectedTags: [],
                     title: '',
                     content: '',
                     image: null,
@@ -122,25 +149,25 @@ const Front = () => {
                          onChange={handleCategoryChange}
                          >
                             <option value="">select a category</option>
-                            {Object.keys(menus).map((category) => (
+                            {categories.map((category) => (
                                 <option key={category} value={category}>
                                     {category}
                                 </option>
                             ))}
                         </select>
                         <label htmlFor="tags">Tags:</label>
-                        <select 
-                        name="selectedTag" 
-                        id="tags"
-                        value={formData.selectedTag}
-                        onChange={handleTagChange}
-                        >
-                            <option value=""></option>
-                            {formData.selectedCategory && 
-                                menus[formData.selectedCategory].map((tag) => (
-                                    <option key={tag} value={tag}>{tag}</option>
-                                ))}
-                        </select>
+                        {tags.map((tag) => (
+                            <div key={tag} className="tag-checkbox">
+                            <input
+                                type="checkbox"
+                                id={tag}
+                                value={tag}
+                                checked={formData.selectedTags.includes(tag)}
+                                onChange={() => handleTagChange(tag)}
+                            />
+                            <label htmlFor={tag}>{tag}</label>
+                            </div>
+                        ))}
                         <label htmlFor="title">Title:</label>
                         <input type="text" 
                         name='title' 
