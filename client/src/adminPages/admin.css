@@ -1,9 +1,18 @@
 
+:root {
+    --light: #E0F4FF;
+    --primary: #87C4FF;
+    --secondary: #39A7FF;
+    --cream: #FFEED9;
+    --blue: #0caceb;
+    --white: white;
+    --black: black;
+}
 .front-page {
     display: flex;
     background-color: #FFEED9;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
   
   .header {
@@ -32,17 +41,17 @@
   }
   .links button {
     padding: 8px 15px;
-    color: white;
+    color: var(--white);
     font-size: 17px;
     font-weight: 800;
-    background-color: #0caceb;
+    background-color: var(--blue);
     border: none;
     border-radius: 5px;
   }
   
  .sidebar {
     margin-top: 80px;
-    background-color: #E0F4FF;
+    background-color: var(--light);
     padding: 10px;
     width: 200px;
     height: 100%;
@@ -78,3 +87,45 @@
     margin-left: 250px;
     padding: 10px;
   }
+  .content-area .post-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .content-area form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-area form input, select, textarea {
+    border: 1px solid var(--primary);
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  .content-area form label {
+    font-weight:600;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+
+  .content-area form .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .content-area form button {
+    padding: 8px 25px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    border: none;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 600;
+}
+.content-area form button:hover{
+    background-color: var(--primary);
+    color: var(--black);
+}
