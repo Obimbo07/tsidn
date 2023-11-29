@@ -9,15 +9,18 @@ app.use(express.json());
 
 const port = process.env.PORT;
 
-const createConnection = require('./database/db');
+const router = require('./routes/routes')
 
+app.use('/api', router);
+
+const createConnection = require('./database/db');
 
 const startServer = () => {
 
     createConnection();
     app.listen(port, () => {
         console.log(`server listening to port ${port}`)
-    })
+    });
 }
 
 startServer();

@@ -53,7 +53,9 @@ const Front = () => {
             newFormData.append('image', formData.image);
             newFormData.append('date', formData.date);
 
-            const response = await axios.post('/api/postData', newFormData);
+            const post_api = `${process.env.REACT_APP_DATABASE_API}/api/postContent`;
+
+            const response = await axios.post(post_api, newFormData);
 
             console.log(response.data);
 
