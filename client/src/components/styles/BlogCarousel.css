@@ -1,0 +1,46 @@
+/* BlogCarousel.css */
+
+.blog-carousel {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    color: #555;
+  }
+  
+  .slick-dots {
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 4px;
+  }
+  
+  .slick-dots li button {
+    font-size: 12px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: #333;
+    color: #fff;
+  }
+  
