@@ -8,6 +8,7 @@ const queries = {
     selectPodCast: "SELECT * FROM content_table WHERE post_category = 'Podcasts'",
     selectMeeting: "SELECT * FROM content_table WHERE post_category = 'Meetings & Events'",
     selectNews: "SELECT * FROM content_table WHERE post_category = 'News'",
+    deleteContent: "DELETE FROM content_table WHERE id = ?",
 
 }
 

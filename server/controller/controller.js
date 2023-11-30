@@ -166,6 +166,25 @@ const controllers = {
         } catch (error) {
            console.log(error); 
         }
+    },
+    deleteContent: async(id) => {
+        try  {
+            const connection = await createConnection();
+            const query = queries.deleteContent;
+
+            const Delete = await new Promise((resolve, reject) => {
+                connection.query(query, (err, result) => {
+                    if(err) {
+                        reject(err);
+                    }else {
+                        resolve(result);
+                    }
+                });
+            });
+            return Delete;
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 

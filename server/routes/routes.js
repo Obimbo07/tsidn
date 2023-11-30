@@ -93,4 +93,15 @@ router.get('/selectNews', async(req, res) => {
     }
 });
 
+router.delete('/deleteContent', async(req,res) => {
+    try {
+        const {id} = req.params;
+        await controller.deleteContent(id);
+        
+        res.json({success: true})
+    } catch(error) {
+        res.json({success: false, error: error.message});
+    }
+})
+
 module.exports = router;
