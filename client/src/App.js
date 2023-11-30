@@ -5,12 +5,17 @@ import About from './components/pages/About';
 import './App.css';
 
 function App() {
+
+
+
   return (
     <>
     <Navbar />
     <Routes>
     <Route path="/" element={<Homepage />} />
-    <Route path="/about" element={<About />} />
+    <Route path="/about" element={<About />} >
+ 
+     </Route>
     </Routes>
     </>
   );

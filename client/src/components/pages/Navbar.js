@@ -5,9 +5,9 @@ import '../styles/navbar.css';
 const Navbar = () => {
   const links = [
     { id: 1, text: 'Home', url: '/' },
-    { id: 2, text: 'Our Work', url: '/about' },
+    { id: 2, text: 'About', url: '/about', dropdown: ['Mission', 'Trainings', 'Seminars'] },
     { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Trainings', 'Seminars'] },
-    { id: 4, text: 'Media', url: '/media' },
+    { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'News']},
   ];
 
   return (
