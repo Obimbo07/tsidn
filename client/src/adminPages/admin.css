@@ -70,17 +70,20 @@
     font-size: 30px;
     font-weight: 700;
   }
-  
+  .sidebar .details ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 600;
+  }
   .sidebar .details ul li {
     list-style: none;
     margin-bottom: 30px;
-    font-size: 20px;
-    font-weight: 600;
     padding-bottom: 10px;
     border-bottom: 1px solid black
    
   }
-  .sidebar .details ul li:hover {
+  .sidebar .details ul li a:hover {
     color: #39A7FF;
   }
   .content-area {
