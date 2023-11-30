@@ -30,4 +30,67 @@ router.post('/postContent', upload.single('image') ,async(req, res) => {
     }   
 });
 
+router.get('/selectContent', async(req, res) => {
+    try{
+        const data = await controller.selectContent();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectTraining', async(req, res) => {
+    try {
+        const data = await controller.selectTrainings();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectTransportSafety', async(req, res) => {
+    try {
+        const data = await controller.selectTransportSafety();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectPressRelease', async(req, res) => {
+    try {
+        const data = await controller.selectPressRelease();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectPodCasts', async(req, res) => {
+    try {
+        const data = await controller.selectPodcasts();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectMeeting', async(req, res) => {
+    try {
+        const data = await controller.selectMeetings();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
+router.get('/selectNews', async(req, res) => {
+    try {
+        const data = await controller.selectNews();
+        res.json({success: true, data: data});
+    } catch (error) {
+        res.json({success: false, error: error.message});
+    }
+});
+
 module.exports = router;
