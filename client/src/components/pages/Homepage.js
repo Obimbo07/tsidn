@@ -5,7 +5,6 @@ import '../styles/Homepage.css';
 const blogPosts = [
     { id: 1, title: 'Post 1', content: 'Content for post 1' },
     { id: 2, title: 'Post 2', content: 'Content for post 2' },
-    // Add more blog posts as needed
   ];
 const Homepage = () => {
   return (
