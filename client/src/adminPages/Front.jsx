@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './admin.css';
+
 const Front = () => {
     const [openPostForm, setOpenForm] =  useState(false);
 
@@ -23,32 +25,32 @@ const Front = () => {
         {
             id: 1,
             title: 'Transport Safety',
-            link: '/transportSafety'
+            link: 'transportSafety'
         },
         {
             id: 2,
             title: 'Trainings',
-            link:  '/training',
+            link:  'training',
         },
         {
             id: 3,
             title: 'Press Releases',
-            link: '/pressRelease'
+            link: 'pressRelease'
         },
         {
             id: 4,
             title: 'Podcasts',
-            link: '/podcasts',
+            link: 'podcasts',
         },
         {
             id: 5,
             title: 'Meetings & Events',
-            link: '/meetings',
+            link: 'meetings',
         },
         {
             id: 6,
             title: 'News',
-            link: '/news',
+            link: 'news',
         }
       ]
 
@@ -165,7 +167,7 @@ const Front = () => {
                     <div className="details">
                         <ul>
                             {categories.map((category) => (
-                                <li key={category.id}> <a href={category.link}>{category.title}</a></li>
+                                <li key={category.id}> <Link to={category.link}>{category.title}</Link> </li>
                             ))}
                         </ul>
                     </div>
@@ -248,7 +250,7 @@ const Front = () => {
                     
                     
                 )}
-                
+                <Outlet />
             </div>
         </div>
     )
