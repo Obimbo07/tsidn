@@ -15,7 +15,7 @@
     height: 100%;
   }
   
-  .header {
+  .front-page .header {
     background-color: white;
     color: black;
     align-items: center;
@@ -23,24 +23,24 @@
     position: fixed;
     box-shadow: 0px 3px 5px #888888;
   }
-  .header nav {
+  .front-page .header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .logo {
+  .front-page .logo {
     margin-left: 20px;
   }
-  .logo h2 {
+  .front-page .logo h2 {
     font-size: 25px;
     font-weight: 700;
   }
-  .links {
+  .front-page .links {
     margin-right: 20px;
   }
-  .links button,
-  .post button {
+  .front-page .links button,
+  .front-page .post button {
     padding: 8px 15px;
     color: var(--white);
     font-size: 17px;
@@ -50,7 +50,7 @@
     border-radius: 5px;
   }
   
- .sidebar {
+  .front-page .sidebar {
     margin-top: 80px;
     background-color: var(--light);
     padding: 10px;
@@ -59,39 +59,39 @@
     position: fixed;
   }
 
-  .sidebar-content {
+  .front-page .sidebar-content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .sidebar .menu h2 {
+  .front-page .sidebar .menu h2 {
     color: #39A7FF;
     font-size: 30px;
     font-weight: 700;
   }
-  .sidebar .details ul li a{
+  .front-page .sidebar .details ul li a{
     text-decoration: none;
     color: var(--black);
     font-size: 22px;
     font-weight: 600;
   }
-  .sidebar .details ul li {
+  .front-page .sidebar .details ul li {
     list-style: none;
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 1px solid black
    
   }
-  .sidebar .details ul li a:hover {
+  .front-page .sidebar .details ul li a:hover {
     color: #39A7FF;
   }
-  .content-area {
+  .front-page .content-area {
     margin-top: 70px;
     margin-left: 250px;
     padding: 10px;
   }
-  .modal {
+  .front-page .modal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +104,7 @@
     overflow: auto;
 }
 
-.modal-content {
+.front-page .modal-content {
     background-color: #fff; 
     padding: 20px;
     border-radius: 5px;
@@ -113,46 +113,46 @@
     margin-bottom: 70px;
 }
 
-  .form{
+.front-page .form{
     margin: 0 auto;
     overflow: auto;
   }
-  .content-area .post-form {
+  .front-page .content-area .post-form {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     overflow: auto;
   }
-  .content-area form {
+  .front-page .content-area form {
     display: flex;
     flex-direction: column;
     overflow: auto;
     width: 400px;
   }
 
-  .content-area form input, select, textarea {
+  .front-page .content-area form input, select, textarea {
     border: 1px solid var(--primary);
     outline: none;
     border-radius: 3px;
     padding: 5px;
   }
-  .content-area form textarea {
+  .front-page .content-area form textarea {
     resize: vertical;
   }
-  .content-area form label {
+  .front-page .content-area form label {
     font-weight:600;
     margin-top: 10px;
     margin-bottom: 3px;
   }
 
-  .content-area form .button {
+  .front-page .content-area form .button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
 
-  .content-area form button {
+  .front-page .content-area form button {
     padding: 8px 25px;
     border-radius: 5px;
     background-color: var(--secondary);
@@ -161,7 +161,8 @@
     color: var(--white);
     font-weight: 600;
 }
-.content-area form button:hover{
+.front-page .content-area form button:hover{
     background-color: var(--primary);
     color: var(--black);
 }
+
