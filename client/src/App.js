@@ -2,8 +2,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Front from './adminPages/Front';
+import TransportSafety from './adminPages/TransportSafety';
 import Homepage from './components/pages/Homepage';
-import Navbar from './components/pages/Navbar';
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path='/dashboard' element={<Front />} />,
+          <Route path='/dashboard' element={<Front />} />
+          <Route path='/transportSafety' element={<TransportSafety />} />
         </Routes>
       </>
   );
