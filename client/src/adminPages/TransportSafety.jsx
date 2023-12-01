@@ -155,11 +155,14 @@ const TransportSafety = () => {
             newFormData.append('post_tag', formData.post_tag.join(','));
             newFormData.append('post_title', formData.post_title);
             newFormData.append('post_content', formData.post_content);
-            newFormData.append('post_image', formData.post_image);
             newFormData.append('date', formData.date);
-            // if (formData.post_image instanceof File) {
-            //     newFormData.append('post_image', formData.post_image);
-            // }
+            if (formData.post_image instanceof File) {
+                newFormData.append('post_image', formData.post_image);
+              } else {
+                const blob = new Blob([new Uint8Array(formData.post_image.data)], { type: formData.post_image.type });
+                const file = new File([blob], 'image.jpg', { type: formData.post_image.type });
+                newFormData.append('post_image', file);
+              }
 
             const post_edit_api = `${process.env.REACT_APP_DATABASE_API}/api/updateContent/${editId}`;
 

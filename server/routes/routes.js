@@ -104,7 +104,7 @@ router.delete('/deleteContent/:id', async(req,res) => {
     }
 });
 
-router.put('/updateContent/:id',upload.single('post_image.data'), async(req, res) => {
+router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => {
     try {
         const newFormData = req.body;
         const id = req.params.id;
@@ -114,7 +114,7 @@ router.put('/updateContent/:id',upload.single('post_image.data'), async(req, res
        
         const file = imageFile.buffer;
         const imageName = imageFile.fieldname;
-    
+        
         // console.log(newFormData);
         // console.log(id);
         // console.log(file, imageName);
@@ -123,7 +123,6 @@ router.put('/updateContent/:id',upload.single('post_image.data'), async(req, res
         const title = newFormData.post_title;
         const content = newFormData.post_content;
         const date = newFormData.date;
-        console.log(category, tag, title, content, file,imageName, date, id );
         const data = await controller.updateContent(category, tag, title, content, file,imageName, date, id )
 
         res.json({success: true, data:data})
