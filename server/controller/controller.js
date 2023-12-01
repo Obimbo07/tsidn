@@ -4,12 +4,12 @@ const queries = require('../queries/queries');
 
 
 const controllers = {
-    insertContent: async(selectCategory, selectedTag, title, content, image, imageText, date) => {
+    insertContent: async(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate) => {
         try {
             const connection = await createConnection();
             const query =  queries.insertQuery;
             const insertContent = await new Promise((resolve, reject) => {
-                connection.query(query,[selectCategory, selectedTag, title, content, image,imageText, date],(err, result) => {
+                connection.query(query,[selectCategory, selectedTag, title, content, image,imageText, date, startDate, endDate],(err, result) => {
                     if(err) {
                         reject(err);
                     }else {

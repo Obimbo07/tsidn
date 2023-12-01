@@ -4,23 +4,27 @@ import { Link, Outlet } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './admin.css';
-import TransportSafety from './TransportSafety';
 
 const Front = () => {
     const [openPostForm, setOpenForm] =  useState(false);
+    const [openFixedDate, setFixedDate] = useState(true);
+    const [openScheduledDate, setScheduledDate] = useState(false);
+
+    const handleFixedDate = (e) => {
+        e.preventDefault();
+        setFixedDate(!openFixedDate);
+        setScheduledDate(false);
+    }
+
+    const handleScheduledDate = (e) => {
+        e.preventDefault();
+        setScheduledDate(!openScheduledDate);
+        setFixedDate(false);
+    }
 
     const handleOPenForm = () => {
         setOpenForm(!openPostForm);
     }
-
-    // const categories = [
-    //     'Transport Safety',
-    //     'Trainings',
-    //     'Press Releases',
-    //     'Podcasts',
-    //     'Meetings & Events',
-    //     'News',
-    //   ];
 
     const categories = [
         {
@@ -72,6 +76,8 @@ const Front = () => {
         content: '',
         image: null,
         date: '',
+        startDate: '',
+        endDate: '',
     });
 
     const handleCategoryChange = (e) => {
@@ -105,10 +111,10 @@ const Front = () => {
     }
     // console.log(formData);
 
-    const handleSubmit = async(e) => {
-        e.preventDefault();
+    const handleSubmit = async(event) => {
+        event.preventDefault();
         for (const key in formData) {
-            if (key !== 'selectedTags' && (formData[key] === '' || formData[key] === null)) {
+            if (key !== 'selectedTags' && key !== 'date' && key !== 'startDate' && key !== 'endDate' && (formData[key] === '' || formData[key] === null)) {
               toast.error(`${key} is empty`);
               return;
             }
@@ -122,6 +128,8 @@ const Front = () => {
             newFormData.append('content', formData.content);
             newFormData.append('image', formData.image);
             newFormData.append('date', formData.date);
+            newFormData.append('startDate', formData.startDate);
+            newFormData.append('endDate', formData.endDate);
 
             const post_api = `${process.env.REACT_APP_DATABASE_API}/api/postContent`;
 
@@ -137,6 +145,8 @@ const Front = () => {
                     content: '',
                     image: null,
                     date: '',
+                    startDate: '',
+                    endDate: '',
                 });
                 return;
             }
@@ -182,7 +192,7 @@ const Front = () => {
                         <div className="modal-content">
                             <div className="form">
                             <div className="post-form">
-                                <form onSubmit={handleSubmit}>
+                                <form onSubmit={(event) =>handleSubmit(event)}>
                                     <label htmlFor="category">Category:</label>
                                     <select
                                     name="selectedCategory" 
@@ -233,15 +243,45 @@ const Front = () => {
                                     id="image" 
                                     onChange={(e) => setFormData({...formData, image: e.target.files[0]})}
                                     />
+                                    <div className="date-types">
+                                        <button onClick={(e) => handleFixedDate(e)}>Fixed Date</button>
+                                        <button onClick={(e) => handleScheduledDate(e)}>Scheduled Date</button>
+                                    </div>
                                     <label htmlFor="date">Date:</label>
-                                    <input type="date"
-                                    name="date"
-                                    id="date"
-                                    value={formData.date}
-                                    onChange={handleChange}
-                                    />
+                                    {openFixedDate && (
+                                        <>
+                                            <input type="date"
+                                            name="date"
+                                            id="date"
+                                            value={formData.date}
+                                            onChange={handleChange}
+                                            />
+                                        </>
+                                    )}
+                                    {
+                                        openScheduledDate && (
+                                            <>
+                                            <label htmlFor="startDate">Start Date</label>
+                                            <input type="date" 
+                                            name="startDate"
+                                             id="startDate" 
+                                             value={formData.startDate}
+                                             onChange={handleChange}
+                                             />
+                                            <label htmlFor="endDate">End Date</label>
+                                            <input type="date"
+                                             name="endDate" 
+                                             id="endDate"
+                                             value={formData.endDate}
+                                             onChange={handleChange}
+                                              />
+                                            </>
+                                        )
+                                    }
+                                    
                                     <div className="button">
                                         <button type='submit'>Post</button>
+                                        
                                     </div>
                                 </form>
                             </div>

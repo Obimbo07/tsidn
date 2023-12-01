@@ -140,13 +140,6 @@ const TransportSafety = () => {
     
     const handleSubmitEdit = async(e) => {
         e.preventDefault();
-        // for (const key in formData) {
-        //     if (key !== 'post_tag' && (formData[key] === '' || formData[key] === null)) {
-        //       toast.error(`${key} is empty`);
-        //       return;
-        //     }
-        //   }
-        //   console.log('formData',formData);
           try{
             console.log('formData',formData);
             const newFormData = new FormData();
@@ -205,7 +198,9 @@ const TransportSafety = () => {
                         <th>Title</th>
                         <th>Content</th>
                         <th>Image</th>
-                        <th>Post Date</th>
+                        <th>Fixed Date</th>
+                        <th>Start Date</th>
+                        <th>Fixed Date</th>
                         <th>View More</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -229,7 +224,9 @@ const TransportSafety = () => {
                                             Download
                                         </a>
                                     </td>
-                                    <td>{data.date}</td>
+                                    <td>{data.date ? data.date : 'Unavailable'}</td>
+                                    <td>{data.start_date ? data.start_date  : 'Unavailable'}</td>
+                                    <td>{data.end_date ? data.start_date : 'Unavailable'}</td>
                                     <td><button onClick={() => handleViewMore(data.id)}>View More</button></td>
                                     <td><button onClick={() => handleOpenEdit(data.id)}>Edit</button></td>
                                     <td><button onClick={() => handleDelete(data.id)}>Delete</button></td>

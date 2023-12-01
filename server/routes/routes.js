@@ -12,6 +12,7 @@ const controller = require('../controller/controller');
 router.post('/postContent', upload.single('image') ,async(req, res) => {
     try {
         const newFormData = req.body;
+        // console.log(newFormData);
         const imageData = req.file;
         const image = imageData.buffer;
         const imageText = imageData.originalname;
@@ -19,10 +20,12 @@ router.post('/postContent', upload.single('image') ,async(req, res) => {
         const selectedTag = newFormData.selectedTag;
         const title = newFormData.title;
         const content = newFormData.content;
-        const date = newFormData.date;
-        // console.log(selectCategory, selectedTag, title, content, date);
+        const date = newFormData.date || null;
+        const startDate = newFormData.startDate || null;
+        const endDate = newFormData.endDate || null;
+        // console.log(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate);
         // console.log(imageText);
-        await controller.insertContent(selectCategory, selectedTag, title, content, image,imageText, date);
+        await controller.insertContent(selectCategory, selectedTag, title, content, image,imageText, date, startDate, endDate);
         res.json({success:true});
         
     } catch (error) {
@@ -123,6 +126,7 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
         const title = newFormData.post_title;
         const content = newFormData.post_content;
         const date = newFormData.date;
+       
         const data = await controller.updateContent(category, tag, title, content, file,imageName, date, id )
 
         res.json({success: true, data:data})
