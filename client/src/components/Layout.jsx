@@ -2,7 +2,8 @@ import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
 import './layout.css';
 
-const Layout = () => {
+
+const Layout = ({}) => {
   return (
     <div className="layout_container">
       <div className="layout__left-column">

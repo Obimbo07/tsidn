@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogCarousel from './blogCarousel';
 import '../styles/Homepage.css';
+import Navbar from './Navbar';
 
 const blogPosts = [
     { id: 1, title: 'Post 1', content: 'Content for post 1' },
@@ -8,7 +9,9 @@ const blogPosts = [
   ];
 const Homepage = () => {
   return (
-    <div  className="top-section">
+    <>
+    <Navbar />
+      <div  className="top-section">
      <div className="topContent">
      <div className="carousel">
      <BlogCarousel blogPosts={blogPosts} />
@@ -53,6 +56,8 @@ const Homepage = () => {
     </div>
      </div>
     </div>
+    </>
+    
   )
 }
 

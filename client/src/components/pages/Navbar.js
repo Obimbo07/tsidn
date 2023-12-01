@@ -4,14 +4,20 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'Home', url: '/' },
-    { id: 2, text: 'About', url: '/about', dropdown: ['Mission', 'Trainings', 'Seminars'] },
-    { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Trainings', 'Seminars'] },
-    { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'News']},
+    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director', 'Mission', 'Core Values', 'TSDN Aims', 'What we do', 'How to get Involved'] },
+    { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
+    { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
   ];
 
   return (
     <nav>
+      <div className="logo">
+        <span>
+          <Link to="/" className="logo-name">
+          <img src="../../../LOGO.jpg" alt="logo" />
+          </Link>
+        </span>
+      </div>
       <ul className="list-nav">
         {links.map((link) => (
           <li key={link.id}>

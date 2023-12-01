@@ -7,11 +7,14 @@ import Layout from './components/Layout';
 import Mission from './components/pages/Mission';
 import Transport from './components/pages/Transport';
 import Themes from './components/pages/Themes';
+import Trainings from './components/pages/Trainings';
+import Footer from './components/Footer';
+import ExecutiveDirector from './components/pages/ExecutiveDirector';
 
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route
           path="/"
@@ -25,9 +28,17 @@ function App() {
             index
             element={<About />}
           />
+          <Route 
+            path="/about/executive-director"
+            element={<ExecutiveDirector />}
+          />
           <Route
             path="/about/mission"
             element={<Mission />}
+          />
+          <Route
+          path="/about/trainings"
+          element={<Trainings />}
           />
         </Route>
         <Route
@@ -44,6 +55,7 @@ function App() {
           />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }
