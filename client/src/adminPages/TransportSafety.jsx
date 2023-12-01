@@ -305,26 +305,27 @@ const TransportSafety = () => {
                 )}
 
             {viewMore && viewContent && (
-                <div className="modal">
-                    <div className="modal-content">
+                <div className="modal-view">
+                    <div className="modal-content-view">
                         <div className="view">
                             <div className="button-close">
-                                <button>Close</button>
+                                <button onClick={(e) => setViewContent(false)}>Close</button>
                             </div>
                             <div className="title">
-                                <h2>Category: {viewContent.post_category}</h2>
+                                <p> <span>Category:</span>{viewContent.post_category}</p>
                             </div>
                             <div className="tags">
-                                <p>Tags: {viewContent.post_tag}</p>
+                                <p><span>Tags:</span>{viewContent.post_tag}</p>
                             </div>
                             <div className="content">
-                                <p>Content: {viewContent.post_content}</p>
+                                <p><span>Content:</span>{viewContent.post_content}</p>
                             </div>
                             <div className="post-image">
+                                <span>Image</span>
                                 <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
                             </div>
                             <div className="post-date">
-                                <p>Date: {viewContent.date}</p>
+                                <p><span>Date:</span>{viewContent.date}</p>
                             </div>
                         </div>
                         

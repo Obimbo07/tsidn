@@ -66,4 +66,80 @@
   .table tbody tr {
     animation: fadeIn 0.5s ease-out;
   }
+
+  .modal-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 90;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    overflow: auto;
+}
+
+.modal-content-view {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    height: 450px;
+    margin-bottom: 70px;
+    width: 500px;
+}
+.modal-content-view  .view {
+    text-align: center;
+  }
+  
+  .modal-content-view  .button-close {
+    text-align: right;
+  }
+  
+  .modal-content-view  button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  .modal-content-view  .title h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .modal-content-view  span {
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  .modal-content-view .title p,
+  .modal-content-view  .tags p,
+ 
+  .modal-content-view  .post-date p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+  }
+  .modal-content-view  .content p{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .modal-content-view  .post-image img {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+
   
