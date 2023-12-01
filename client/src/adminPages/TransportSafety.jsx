@@ -146,7 +146,7 @@ const TransportSafety = () => {
               return;
             }
           }
-          console.log('formData',formData);
+        //   console.log('formData',formData);
           try{
             const newFormData = new FormData();
 
@@ -164,6 +164,19 @@ const TransportSafety = () => {
           } catch(error) {
             console.log(error);
           }
+    }
+
+    const[viewMore, setViewMore] = useState(false);
+    const[viewContent, setViewContent] = useState();
+
+    const handleViewMore = (id) => {
+        console.log(id);
+        const currentView = transportList.find(data => data.id === id);
+        if(currentView) {
+            console.log(currentView);
+            setViewContent(currentView);
+        }
+        setViewMore(true);
     }
     return (
         <div className="transport-page">
@@ -204,7 +217,7 @@ const TransportSafety = () => {
                                         </a>
                                     </td>
                                     <td>{data.date}</td>
-                                    <td><button>View More</button></td>
+                                    <td><button onClick={() => handleViewMore(data.id)}>View More</button></td>
                                     <td><button onClick={() => handleOpenEdit(data.id)}>Edit</button></td>
                                     <td><button onClick={() => handleDelete(data.id)}>Delete</button></td>
                                 </tr>
@@ -290,6 +303,34 @@ const TransportSafety = () => {
                     
                     
                 )}
+
+            {viewMore && viewContent && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <div className="view">
+                            <div className="button-close">
+                                <button>Close</button>
+                            </div>
+                            <div className="title">
+                                <h2>Category: {viewContent.post_category}</h2>
+                            </div>
+                            <div className="tags">
+                                <p>Tags: {viewContent.post_tag}</p>
+                            </div>
+                            <div className="content">
+                                <p>Content: {viewContent.post_content}</p>
+                            </div>
+                            <div className="post-image">
+                                <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
+                            </div>
+                            <div className="post-date">
+                                <p>Date: {viewContent.date}</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

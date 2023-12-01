@@ -114,6 +114,6 @@ router.put('/updateTransport/:id',upload.single('post_image'), (req, res) => {
     console.log(newFormData);
     console.log(id);
     console.log(file, imageName);
-})
+});
 
 module.exports = router;
