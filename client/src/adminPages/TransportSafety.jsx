@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Pages.css';
 
 const TransportSafety = () => {
@@ -42,8 +44,10 @@ const TransportSafety = () => {
     }
 
     const[formData, setFormData] = useState('');
+    const[editId, setEditId] = useState('');
     const handleOpenEdit = (id) => {
-        console.log('handleOpenEdit',id);
+        setEditId(id);
+        // console.log('handleOpenEdit',id);
         setOpenFormEdit(!openFormEdit);
         const currentObject = transportList.find(data => data.id === id);
 
@@ -55,7 +59,7 @@ const TransportSafety = () => {
         }
     }
 
-    console.log('formData',formData);
+    
     const categories = [
         {
             id: 1,
@@ -134,11 +138,36 @@ const TransportSafety = () => {
         setOpenFormEdit(false);
       }
     
-    const handleSubmitEdit = () => {
+    const handleSubmitEdit = async(e) => {
+        e.preventDefault();
+        for (const key in formData) {
+            if (key !== 'post_tag' && (formData[key] === '' || formData[key] === null)) {
+              toast.error(`${key} is empty`);
+              return;
+            }
+          }
+          console.log('formData',formData);
+          try{
+            const newFormData = new FormData();
 
+            newFormData.append('post_category', formData.post_category);
+            newFormData.append('post_tag', formData.post_tag);
+            newFormData.append('post_title', formData.post_title);
+            newFormData.append('post_content', formData.post_content);
+            newFormData.append('post_image', formData.post_image);
+            newFormData.append('date', formData.date);
+
+            const post_edit_api = `${process.env.REACT_APP_DATABASE_API}/api/updateTransport/${editId}`;
+
+            const response =  await axios.put(post_edit_api, newFormData);
+            console.log(response);
+          } catch(error) {
+            console.log(error);
+          }
     }
     return (
         <div className="transport-page">
+            <ToastContainer/>
             <div className="title">
                 <h1>Transport Content</h1>
             </div>

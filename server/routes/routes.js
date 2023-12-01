@@ -104,4 +104,16 @@ router.delete('/deleteContent/:id', async(req,res) => {
     }
 });
 
+router.put('/updateTransport/:id',upload.single('post_image'), (req, res) => {
+    const newFormData = req.body;
+    const id = req.params.id;
+    const imageFile = req.file;
+    const file = imageFile.buffer;
+    const imageName = imageFile.fieldname;
+
+    console.log(newFormData);
+    console.log(id);
+    console.log(file, imageName);
+})
+
 module.exports = router;
