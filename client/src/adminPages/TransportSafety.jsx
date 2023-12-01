@@ -178,6 +178,12 @@ const TransportSafety = () => {
         }
         setViewMore(true);
     }
+    const truncateText = (text, maxLength) => {
+        if (text.length > maxLength) {
+          return text.substring(0, maxLength) + '...';
+        }
+        return text;
+      };
     return (
         <div className="transport-page">
             <ToastContainer/>
@@ -209,7 +215,7 @@ const TransportSafety = () => {
                                     <td>{data.post_category}</td>
                                     <td>{data.post_tag}</td>
                                     <td>{data.post_title}</td>
-                                    <td>{data.post_content}</td>
+                                    <td>{truncateText(data.post_content, 50)}</td>
                                     <td>
                                     <a href={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}
                                         download={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}>
