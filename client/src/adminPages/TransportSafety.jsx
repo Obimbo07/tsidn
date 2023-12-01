@@ -249,7 +249,9 @@ const TransportSafety = () => {
                     <div className="modal">
                         <div className="modal-content">
                             <div className="form">
-                                <button onClick={handleCloseEdit}>Close</button>
+                                <div className="button-close">
+                                    <button onClick={handleCloseEdit}>Close</button>
+                                </div> 
                             <div className="post-form">
                                 <form onSubmit={handleSubmitEdit}>
                                     <label htmlFor="category">Category:</label>
