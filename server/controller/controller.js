@@ -185,6 +185,25 @@ const controllers = {
         } catch (error) {
             console.log(error);
         }
+    },
+    updateContent: async(category, tag, title, content, file,imageName, date, id ) => {
+        try{
+            const connection = await createConnection();
+            const query = queries.updateContent;
+
+            const Update = await new Promise((resolve, reject) => {
+                connection.query(query,[category, tag, title, content, file,imageName, date, id ], (err, result) => {
+                    if(err) {
+                        reject(err);
+                    }else {
+                        resolve(result);
+                    }
+                });
+            });
+            return Update;
+        }catch(error) {
+            console.log(error);
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Pages.css';
 
@@ -140,24 +140,28 @@ const TransportSafety = () => {
     
     const handleSubmitEdit = async(e) => {
         e.preventDefault();
-        for (const key in formData) {
-            if (key !== 'post_tag' && (formData[key] === '' || formData[key] === null)) {
-              toast.error(`${key} is empty`);
-              return;
-            }
-          }
+        // for (const key in formData) {
+        //     if (key !== 'post_tag' && (formData[key] === '' || formData[key] === null)) {
+        //       toast.error(`${key} is empty`);
+        //       return;
+        //     }
+        //   }
         //   console.log('formData',formData);
           try{
+            console.log('formData',formData);
             const newFormData = new FormData();
 
             newFormData.append('post_category', formData.post_category);
-            newFormData.append('post_tag', formData.post_tag);
+            newFormData.append('post_tag', formData.post_tag.join(','));
             newFormData.append('post_title', formData.post_title);
             newFormData.append('post_content', formData.post_content);
             newFormData.append('post_image', formData.post_image);
             newFormData.append('date', formData.date);
+            // if (formData.post_image instanceof File) {
+            //     newFormData.append('post_image', formData.post_image);
+            // }
 
-            const post_edit_api = `${process.env.REACT_APP_DATABASE_API}/api/updateTransport/${editId}`;
+            const post_edit_api = `${process.env.REACT_APP_DATABASE_API}/api/updateContent/${editId}`;
 
             const response =  await axios.put(post_edit_api, newFormData);
             console.log(response);
