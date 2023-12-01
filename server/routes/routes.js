@@ -118,7 +118,7 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
         const file = imageFile.buffer;
         const imageName = imageFile.fieldname;
         
-        // console.log(newFormData);
+        console.log(newFormData);
         // console.log(id);
         // console.log(file, imageName);
         const category = newFormData.post_category;
@@ -126,8 +126,10 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
         const title = newFormData.post_title;
         const content = newFormData.post_content;
         const date = newFormData.date;
+        const startDate = newFormData.start_date;
+        const endDate = newFormData.end_date;
        
-        const data = await controller.updateContent(category, tag, title, content, file,imageName, date, id )
+        const data = await controller.updateContent(category, tag, title, content, file,imageName, date, startDate,endDate, id )
 
         res.json({success: true, data:data})
     }catch(error) {

@@ -149,6 +149,9 @@ const TransportSafety = () => {
             newFormData.append('post_title', formData.post_title);
             newFormData.append('post_content', formData.post_content);
             newFormData.append('date', formData.date);
+            newFormData.append('start_date', formData.start_date);
+            newFormData.append('end_date', formData.end_date);
+
             if (formData.post_image instanceof File) {
                 newFormData.append('post_image', formData.post_image);
               } else {
@@ -296,12 +299,31 @@ const TransportSafety = () => {
                                     onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
                                     />
                                     <label htmlFor="date">Date:</label>
-                                    <input type="date"
-                                    name="date"
-                                    id="date"
-                                    value={formData.date}
-                                    onChange={handleChange}
-                                    />
+                                    { typeof formData.date !== 'object' ? (
+                                    <>
+                                        <input type="date"
+                                        name="date"
+                                        id="date"
+                                        value={formData.date}
+                                        onChange={(e) => setFormData({...formData, date: e.target.value})}
+                                        />
+                                    </>): (<>
+                                        <label htmlFor="">Start Date: </label>
+                                        <input type="date"
+                                        name="date"
+                                        id="date"
+                                        value={formData.start_date}
+                                        onChange={(e) => setFormData({...formData, start_date: e.target.value})}
+                                        />
+                                        <label htmlFor="">End Date:</label>
+                                        <input type="date"
+                                        name="date"
+                                        id="date"
+                                        value={formData.end_date}
+                                        onChange={(e) => setFormData({...formData, end_date: e.target.value})}
+                                        />
+                                    </>)}
+                                    
                                     <div className="button">
                                         <button type='submit'>Post</button>
                                     </div>
@@ -334,9 +356,23 @@ const TransportSafety = () => {
                                 <span>Image</span>
                                 <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
                             </div>
-                            <div className="post-date">
-                                <p><span>Date:</span>{viewContent.date}</p>
-                            </div>
+                            { typeof viewContent.date !== 'object' ? (
+                                <>
+                                <div className="post-date">
+                                    <p><span>Date:</span>{viewContent.date}</p>
+                                </div>
+                                </>
+                            ): (
+                                <>
+                                <div className="post-date">
+                                    <p><span>Start Date:</span>{viewContent.start_date}</p>
+                                </div>
+                                <div className="post-date">
+                                    <p><span>End Date:</span>{viewContent.end_date}</p>
+                                </div>
+                                </>
+                            )}
+                            
                         </div>
                         
                     </div>

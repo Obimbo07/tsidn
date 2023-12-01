@@ -186,13 +186,13 @@ const controllers = {
             console.log(error);
         }
     },
-    updateContent: async(category, tag, title, content, file,imageName, date, id ) => {
+    updateContent: async(category, tag, title, content, file,imageName, date, startDate,endDate, id ) => {
         try{
             const connection = await createConnection();
             const query = queries.updateContent;
 
             const Update = await new Promise((resolve, reject) => {
-                connection.query(query,[category, tag, title, content, file,imageName, date, id ], (err, result) => {
+                connection.query(query,[category, tag, title, content, file,imageName, date, startDate,endDate, id ], (err, result) => {
                     if(err) {
                         reject(err);
                     }else {
