@@ -55,20 +55,25 @@
     background-color: var(--light);
     padding: 10px;
     width: 200px;
-    height: 100%;
+    height: calc(100vh - 80px); 
     position: fixed;
+    overflow: auto;
   }
 
   .front-page .sidebar-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
   }
 
   .front-page .sidebar .menu h2 {
     color: #39A7FF;
     font-size: 30px;
     font-weight: 700;
+  }
+  .front-page .sidebar .details{
+    overflow: auto;
   }
   .front-page .sidebar .details ul li a{
     text-decoration: none;
@@ -150,6 +155,16 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+  }
+  .front-page .content-area form .date-types {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .front-page .content-area form .date-types button {
+    padding: 5px 8px;
+    border-radius: 3px;
   }
 
   .front-page .content-area form button {

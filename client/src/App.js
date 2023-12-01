@@ -9,6 +9,7 @@ import PressRelease from './adminPages/PressRelease';
 import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Homepage from './components/pages/Homepage';
+import DashHome from './adminPages/DashHome';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path='/dashboard' element={<Front />} >
+            <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
             <Route path="training" element={<Training />} />
             <Route path="pressRelease" element={<PressRelease/>} />

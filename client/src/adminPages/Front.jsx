@@ -199,6 +199,7 @@ const Front = () => {
                     </div>
                     <div className="details">
                         <ul>
+                            <li> <Link to="">Home</Link></li>
                             {categories.map((category) => (
                                 <li key={category.id}> <Link to={category.link}>{category.title}</Link> </li>
                             ))}

@@ -213,13 +213,13 @@ const News = () => {
                         <th>Delete</th>
                     </thead>
                     <tbody>
-                        {transportList.length === 0 ? (
+                        {transportList && transportList.length === 0 ? (
                             <tr>
                                  <td>No Data</td>
                             </tr>  
                         ): (
                             <>
-                            {transportList.map((data) => (
+                            {transportList && transportList.map((data) => (
                                 <tr key={data.id}>
                                     <td>{data.post_category}</td>
                                     <td>{data.post_tag}</td>
