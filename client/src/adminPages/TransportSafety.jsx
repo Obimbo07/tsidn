@@ -141,7 +141,7 @@ const TransportSafety = () => {
     const handleSubmitEdit = async(e) => {
         e.preventDefault();
           try{
-            console.log('formData',formData);
+            // console.log('formData',formData);
             const newFormData = new FormData();
 
             newFormData.append('post_category', formData.post_category);
@@ -163,7 +163,11 @@ const TransportSafety = () => {
             const post_edit_api = `${process.env.REACT_APP_DATABASE_API}/api/updateContent/${editId}`;
 
             const response =  await axios.put(post_edit_api, newFormData);
-            console.log(response);
+            const success = response.data.success;
+            if(success) {
+                selectTrans();
+                setOpenFormEdit(false);
+            }
           } catch(error) {
             console.log(error);
           }
