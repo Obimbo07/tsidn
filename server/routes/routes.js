@@ -20,9 +20,9 @@ router.post('/postContent', upload.single('image') ,async(req, res) => {
         const selectedTag = newFormData.selectedTag;
         const title = newFormData.title;
         const content = newFormData.content;
-        const date = newFormData.date || null;
-        const startDate = newFormData.startDate || null;
-        const endDate = newFormData.endDate || null;
+        const date = newFormData.date ;
+        const startDate = newFormData.startDate ;
+        const endDate = newFormData.endDate ;
         // console.log(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate);
         // console.log(imageText);
         await controller.insertContent(selectCategory, selectedTag, title, content, image,imageText, date, startDate, endDate);

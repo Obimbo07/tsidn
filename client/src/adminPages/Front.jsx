@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,6 +9,27 @@ const Front = () => {
     const [openPostForm, setOpenForm] =  useState(false);
     const [openFixedDate, setFixedDate] = useState(true);
     const [openScheduledDate, setScheduledDate] = useState(false);
+    const [contentList, setContentList] = useState([]);
+
+    const select_content_api = `${process.env.REACT_APP_DATABASE_API}/api/selectContent`;
+
+    const selectContent =  useCallback(async() => {
+        try {
+            await axios.get(select_content_api);
+            // console.log('response',response);
+            // if(response.data.success) {
+            //     setContentList(response.data.data);
+            // }
+            return;
+        } catch (error) {
+            console.log(error);
+        }
+    }, [select_content_api])
+
+    
+    useEffect(() => {
+        selectContent();
+    }, [selectContent]);
 
     const handleFixedDate = (e) => {
         e.preventDefault();
@@ -137,6 +158,7 @@ const Front = () => {
 
             const success = response.data.success;
             if(success) {
+                selectContent();
                 setOpenForm(false);
                 setFormData({
                     selectedCategory: '',

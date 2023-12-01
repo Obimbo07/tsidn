@@ -1,3 +1,13 @@
+:root {
+  --light: #E0F4FF;
+  --primary: #87C4FF;
+  --secondary: #39A7FF;
+  --cream: #FFEED9;
+  --blue: #0caceb;
+  --white: white;
+  --black: black;
+  --red: red;
+}
 
 .transport-page {
     display: flex;
@@ -36,19 +46,28 @@
   .table tbody tr:hover {
     background-color: #f5f5f59b;
   }
-  
+  .table td a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px 10px;
+    background-color: var(--blue);
+    border-radius: 5px;
+  }
+  .table td a:hover {
+    background-color: var(--secondary);
+  }
   .table button {
     padding: 8px 12px;
     cursor: pointer;
     border: none;
-    background-color: #3498db;
+    background-color: var(--blue);
     color: #fff;
     border-radius: 4px;
     transition: background-color 0.3s ease;
   }
   
   .table button:hover {
-    background-color: #007bb5;
+    background-color: var(--secondary);
   }
   
   /* Add some animation for better user experience */
@@ -106,6 +125,12 @@
     border-radius: 5px;
     font-size: 18px;
     font-weight: 900;
+  }
+  .delete-btn button {
+    background-color: var(--red);
+  }
+  .delete-btn button:hover {
+    background-color: rgba(255, 0, 0, 0.586);
   }
   
   .modal-content-view  .title h2 {

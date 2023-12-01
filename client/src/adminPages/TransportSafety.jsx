@@ -195,7 +195,7 @@ const TransportSafety = () => {
         <div className="transport-page">
             <ToastContainer/>
             <div className="title">
-                <h1>Transport Content</h1>
+                <h1>Transport</h1>
             </div>
             <div className="table">
                 <table>
@@ -207,7 +207,7 @@ const TransportSafety = () => {
                         <th>Image</th>
                         <th>Fixed Date</th>
                         <th>Start Date</th>
-                        <th>Fixed Date</th>
+                        <th>End Date</th>
                         <th>View More</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -231,12 +231,12 @@ const TransportSafety = () => {
                                             Download
                                         </a>
                                     </td>
-                                    <td>{data.date ? data.date : 'Unavailable'}</td>
-                                    <td>{data.start_date ? data.start_date  : 'Unavailable'}</td>
-                                    <td>{data.end_date ? data.start_date : 'Unavailable'}</td>
+                                    <td style={data.date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.date ? data.date : 'Unavailable'}</td>
+                                    <td style={data.start_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.start_date ? data.start_date  : 'Unavailable'}</td>
+                                    <td style={data.end_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.end_date ? data.start_date : 'Unavailable'}</td>
                                     <td><button onClick={() => handleViewMore(data.id)}>View More</button></td>
                                     <td><button onClick={() => handleOpenEdit(data.id)}>Edit</button></td>
-                                    <td><button onClick={() => handleDelete(data.id)}>Delete</button></td>
+                                    <td className='delete-btn'><button onClick={() => handleDelete(data.id)}>Delete</button></td>
                                 </tr>
                             ))}
                             </>
@@ -303,7 +303,7 @@ const TransportSafety = () => {
                                     onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
                                     />
                                     <label htmlFor="date">Date:</label>
-                                    { typeof formData.date !== 'object' ? (
+                                    { formData.date  ? (
                                     <>
                                         <input type="date"
                                         name="date"
@@ -360,7 +360,8 @@ const TransportSafety = () => {
                                 <span>Image</span>
                                 <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
                             </div>
-                            { typeof viewContent.date !== 'object' ? (
+                            
+                            { viewContent.date ? (
                                 <>
                                 <div className="post-date">
                                     <p><span>Date:</span>{viewContent.date}</p>
