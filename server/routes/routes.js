@@ -93,7 +93,7 @@ router.get('/selectNews', async(req, res) => {
     }
 });
 
-router.delete('/deleteContent', async(req,res) => {
+router.delete('/deleteContent/:id', async(req,res) => {
     try {
         const {id} = req.params;
         await controller.deleteContent(id);
@@ -102,6 +102,6 @@ router.delete('/deleteContent', async(req,res) => {
     } catch(error) {
         res.json({success: false, error: error.message});
     }
-})
+});
 
 module.exports = router;

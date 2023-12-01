@@ -4,6 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './admin.css';
+import TransportSafety from './TransportSafety';
 
 const Front = () => {
     const [openPostForm, setOpenForm] =  useState(false);
@@ -126,9 +127,9 @@ const Front = () => {
 
             const response = await axios.post(post_api, newFormData);
 
-            // console.log(response.data.success);
             const success = response.data.success;
             if(success) {
+                setOpenForm(false);
                 setFormData({
                     selectedCategory: '',
                     selectedTags: [],

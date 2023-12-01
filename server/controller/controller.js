@@ -173,7 +173,7 @@ const controllers = {
             const query = queries.deleteContent;
 
             const Delete = await new Promise((resolve, reject) => {
-                connection.query(query, (err, result) => {
+                connection.query(query,[id], (err, result) => {
                     if(err) {
                         reject(err);
                     }else {
