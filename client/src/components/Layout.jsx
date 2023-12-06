@@ -1,11 +1,12 @@
 import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
+import Navbar from './pages/Navbar';
 import './layout.css';
 
 
-const Layout = ({}) => {
+const Layout = () => {
   return (
-    <div className="layout_container">
+    <><Navbar /><div className="layout_container">
       <div className="layout__left-column">
         <h2>Left Column (4 columns)</h2>
         <SideBar />
@@ -13,7 +14,7 @@ const Layout = ({}) => {
       <div className="layout__right-column">
         <Outlet />
       </div>
-    </div>
+    </div></>
   );
 };
 

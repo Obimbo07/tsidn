@@ -1,6 +1,7 @@
 .footerSection {
     background-color: rgb(6, 6, 40);
     padding: 5%;
+    border-radius: 10px;
 }
 
 .inner-sctn {
