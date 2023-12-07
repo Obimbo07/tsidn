@@ -1,0 +1,49 @@
+/* Add these styles to your CSS file or component */
+
+.executive-director-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .executive-director-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular, adjust as needed */
+    margin-bottom: 20px;
+  }
+  
+  .executive-director-text {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    line-height: 1.6;
+  }
+  
+  .executive-director-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .executive-director-text p {
+    margin-bottom: 15px;
+  }
+  
+  .executive-director-text p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .executive-director-text p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .executive-director-text p a:hover {
+    text-decoration: underline;
+  }
+  

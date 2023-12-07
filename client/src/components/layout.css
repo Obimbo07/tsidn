@@ -1,0 +1,16 @@
+.layout_container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.layout__left-column {
+  flex: 4;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.layout__right-column {
+  flex: 8;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
