@@ -4,9 +4,11 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director', 'Mission', 'Core Values', 'TSDN Aims', 'What we do', 'How to get Involved'] },
+    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director', 'Mission', 'Our Core Values',] },
+    { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
+    { id: 4, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights',]},
   ];
   const toplinks = [
     { id: 1, text: 'Contact us', url: '/contact',},

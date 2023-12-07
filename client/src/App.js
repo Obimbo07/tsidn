@@ -9,12 +9,21 @@ import Themes from './components/pages/Themes';
 import Footer from './components/Footer';
 import ExecutiveDirector from './components/pages/ExecutiveDirector';
 import Media from './components/pages/media/Media';
-import Podcasts from './component/pages/media/Podcats';
-import PressRelease from './component/pages/media/PressRelease';
-import Videos from './component/pages/media/Videos';
+import Podcasts from './components/pages/media/Podcasts';
+import PressRelease from './components/pages/media/PressRelease';
+import Videos from './components/pages/media/Videos';
 import Events from './components/pages/events/Events';
 import Highlights from './components/pages/events/Highlights';
-
+import OurCoreValues from './components/pages/OurCoreValues';
+import AggInTransport from './components/pages/themes/AggInTransport';
+import CapacityBuilding from './components/pages/themes/CapacityBuilding';
+import EcoTransport from './components/pages/themes/EcoTransport';
+import HumanResource from './components/pages/themes/HumanResource';
+import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelopment';
+import RoadSafety from './components/pages/themes/RoadSafety';
+import TsdnAims from './components/pages/tsdnAims/TsdnAims';
+import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
+import KnowledgeSharing from './components/pages/themes/KnowledgeSharing';
 function App() {
   return (
     <>
@@ -25,7 +34,7 @@ function App() {
           element={<Homepage />}
         />
         <Route
-          path="/about"
+          path="/about/"
           element={<Layout />}
         >
           <Route
@@ -51,10 +60,10 @@ function App() {
           >
             <Route
               index
-              element={<TSDNAIMS />}
+              element={<TsdnAims />}
             />
             <Route
-              path="/what-we-do"
+              path="/tsdn-aims/what-we-do"
               element={<WhatWeDo />}
             />
           </Route>
@@ -75,6 +84,10 @@ function App() {
             element={<RoadSafety />}
           />
           <Route
+            path="/themes/knowledge-sharing"
+            element={<KnowledgeSharing />}
+          />
+          <Route
             path="/themes/capacity-building"
             element={<CapacityBuilding />}
           />
@@ -87,7 +100,7 @@ function App() {
             element={<HumanResource />}
           />
           <Route
-            path="/themes/agg-transport-sector"
+            path="/themes/agg-in-transport-sector"
             element={<AggInTransport />}
           />
           <Route
@@ -104,15 +117,15 @@ function App() {
              element={<Media />}
              />
           <Route 
-            path="/press-release"
+            path="/media/press-release"
             element={<PressRelease />}
             />
             <Route 
-            path="/podcasts"
+            path="/media/podcasts"
             element={<Podcasts />}
             />
             <Route 
-            path="/videos"
+            path="/media/videos"
             element={<Videos />}
             />
          </Route>
@@ -125,11 +138,11 @@ function App() {
               element={<Events />}
             />
             <Route
-              path="/meetings-and-events"
+              path="/meetings-and-events/meetings-and-events"
               element={<Events />}
             />
             <Route
-              path="/ambush-highlights"
+              path="/meetings-and-events/ambush-highlights"
               element={<Highlights />}
             />
           </Route>

@@ -7,26 +7,31 @@ const SideBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const links = [
+    { id: 1, text: 'About', url: '/about', dropdown: ['Executive Director', 'Mission', 'Our Core Values'] },
+    { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do'] },
+    { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
+    { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos'] },
+    { id: 4, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights'] },
+  ];
+
   useEffect(() => {
     // Function to get the corresponding sidebar links based on the current route
     const getSidebarLinks = () => {
       const currentPath = location.pathname;
 
-      // Define your sidebar links based on the current route
-      if (currentPath.startsWith('/about')) {
-        setSidebarLinks([
-          { id: 1, text: 'About', url: '/about' },
-          { id: 2, text: 'Executive Director', url: '/about/executive-director' },
-          { id: 3, text: 'Mission', url: '/about/mission' },
-          { id: 4, text: 'Core Values', url: '/about/core-values' },
-          { id: 5, text: 'T', url: '/about/' },
+      const matchingLink = links.find(link => currentPath.startsWith(link.url));
 
-        ]); 
-      } else if (currentPath.startsWith('/themes')) {
+      if (matchingLink) {
         setSidebarLinks([
-          { id: 1, text: 'Themes', url: '/themes' },
-          { id: 2, text: 'Transport', url: '/themes/transport' },
-          // Add more links as needed
+          { id: 1, text: matchingLink.text, url: matchingLink.url },
+          ...(matchingLink.dropdown
+            ? matchingLink.dropdown.map((item, index) => ({
+                id: index + 2,
+                text: item,
+                url: `${matchingLink.url}/${item.toLowerCase().replace(/ /g, '-')}`,
+              }))
+            : []),
         ]);
       } else {
         // Default sidebar links
@@ -54,7 +59,6 @@ const SideBar = () => {
         <a
           key={link.id}
           className="sidebar_links"
-          href="#"
           onClick={() => navigate(link.url)}
         >
           {link.text}

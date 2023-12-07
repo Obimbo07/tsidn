@@ -79,8 +79,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="bottom-footer">
+       <span className="copyright"> ©TranSafety Development Network. </span>
+       </div>
     </div>
   );
 };
-
 export default Footer;
