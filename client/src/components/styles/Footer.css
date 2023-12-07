@@ -1,0 +1,27 @@
+.footerSection {
+    background-color: rgb(6, 6, 40);
+    padding: 5%;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.inner-sctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    color: #fff;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    width: fit-content;
+}
+
+.contentContainer4 {
+    width: 20%;
+
+}
