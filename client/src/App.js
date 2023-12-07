@@ -24,6 +24,15 @@ import RoadSafety from './components/pages/themes/RoadSafety';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
 import KnowledgeSharing from './components/pages/themes/KnowledgeSharing';
+import DashHome from './adminPages/DashHome';
+import Front from './adminPages/Front';
+import Meetings from './adminPages/Meetings';
+import News from './adminPages/News';
+import Pay from './adminPages/Pay';
+import Podcasts from './adminPages/Podcasts';
+import PressRelease from './adminPages/PressRelease';
+import Training from './adminPages/Training';
+import TransportSafety from './adminPages/TransportSafety';
 function App() {
   return (
     <>
@@ -146,10 +155,20 @@ function App() {
               element={<Highlights />}
             />
           </Route>
+          <Route path='/dashboard' element={<Front />} >
+            <Route path="" element={<DashHome />} />
+            <Route path="transportSafety" element={<TransportSafety />} />
+            <Route path="training" element={<Training />} />
+            <Route path="pressRelease" element={<PressRelease/>} />
+            <Route path="podcasts" element={<Podcasts />} />
+            <Route path="meetings" element={<Meetings />} />
+            <Route path="news" element={<News />} />
+            <Route path="pay" element={<Pay />} />
+          </Route>
       </Routes>
       <Footer />
     </>
   );
 }
 
-export default App;
+export default App;
