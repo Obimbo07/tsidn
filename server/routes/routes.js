@@ -138,6 +138,14 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
    
 });
 
+router.post('/payPremium', (req, res) => {
+    const  formData = req.body;
+    const reason = formData.payReason;
+    const amount = formData.amount;
+
+    console.log(reason, amount)
+})
+
 
 
 module.exports = router;

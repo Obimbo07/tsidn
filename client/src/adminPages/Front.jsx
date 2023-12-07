@@ -9,7 +9,7 @@ const Front = () => {
     const [openPostForm, setOpenForm] =  useState(false);
     const [openFixedDate, setFixedDate] = useState(true);
     const [openScheduledDate, setScheduledDate] = useState(false);
-    const [contentList, setContentList] = useState([]);
+    // const [contentList, setContentList] = useState([]);
 
     const select_content_api = `${process.env.REACT_APP_DATABASE_API}/api/selectContent`;
 
@@ -77,6 +77,11 @@ const Front = () => {
             id: 6,
             title: 'News',
             link: 'news',
+        },
+        {
+            id: 7,
+            title: 'Pay',
+            link: 'pay',
         }
       ]
 
