@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Pages.css';
 
-const Podcasts = () => {
+const PodcastsAdmin = () => {
    
     const[transportList, setTransportList] = useState([]);
     const[openFormEdit, setOpenFormEdit] = useState([]);
@@ -387,4 +387,4 @@ const Podcasts = () => {
     )
 }
 
-export default Podcasts;
+export default PodcastsAdmin;
