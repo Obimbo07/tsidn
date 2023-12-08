@@ -1,38 +1,37 @@
-import { Routes, Route } from 'react-router-dom';
-import Homepage from './components/pages/Homepage';
-import About from './components/pages/About';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Layout from './components/Layout';
-import Mission from './components/pages/Mission';
-import Transport from './components/pages/Transport';
-import Themes from './components/pages/Themes';
-import Footer from './components/Footer';
-import ExecutiveDirector from './components/pages/ExecutiveDirector';
-import Media from './components/pages/media/Media';
-import Podcasts from './components/pages/media/Podcasts';
-import PressRelease from './components/pages/media/PressRelease';
-import Videos from './components/pages/media/Videos';
-import Events from './components/pages/events/Events';
-import Highlights from './components/pages/events/Highlights';
-import OurCoreValues from './components/pages/OurCoreValues';
-import AggInTransport from './components/pages/themes/AggInTransport';
-import CapacityBuilding from './components/pages/themes/CapacityBuilding';
-import EcoTransport from './components/pages/themes/EcoTransport';
-import HumanResource from './components/pages/themes/HumanResource';
-import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelopment';
-import RoadSafety from './components/pages/themes/RoadSafety';
-import TsdnAims from './components/pages/tsdnAims/TsdnAims';
-import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
-import KnowledgeSharing from './components/pages/themes/KnowledgeSharing';
 import DashHome from './adminPages/DashHome';
 import Front from './adminPages/Front';
 import Meetings from './adminPages/Meetings';
 import News from './adminPages/News';
 import Pay from './adminPages/Pay';
-import Podcasts from './adminPages/Podcasts';
-import PressRelease from './adminPages/PressRelease';
+import PodcastsAdmin from './adminPages/PodcastsAdmin';
 import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
+import Footer from './components/Footer';
+import Layout from './components/Layout';
+import About from './components/pages/About';
+import ExecutiveDirector from './components/pages/ExecutiveDirector';
+import Homepage from './components/pages/Homepage';
+import Mission from './components/pages/Mission';
+import OurCoreValues from './components/pages/OurCoreValues';
+import Themes from './components/pages/Themes';
+import Transport from './components/pages/Transport';
+import Events from './components/pages/events/Events';
+import Highlights from './components/pages/events/Highlights';
+import Media from './components/pages/media/Media';
+import Podcasts from './components/pages/media/Podcasts';
+import PressRelease from './components/pages/media/PressRelease';
+import Videos from './components/pages/media/Videos';
+import AggInTransport from './components/pages/themes/AggInTransport';
+import CapacityBuilding from './components/pages/themes/CapacityBuilding';
+import EcoTransport from './components/pages/themes/EcoTransport';
+import HumanResource from './components/pages/themes/HumanResource';
+import KnowledgeSharing from './components/pages/themes/KnowledgeSharing';
+import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelopment';
+import RoadSafety from './components/pages/themes/RoadSafety';
+import TsdnAims from './components/pages/tsdnAims/TsdnAims';
+import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
 function App() {
   return (
     <>
@@ -160,7 +159,7 @@ function App() {
             <Route path="transportSafety" element={<TransportSafety />} />
             <Route path="training" element={<Training />} />
             <Route path="pressRelease" element={<PressRelease/>} />
-            <Route path="podcasts" element={<Podcasts />} />
+            <Route path="podcasts" element={<PodcastsAdmin />} />
             <Route path="meetings" element={<Meetings />} />
             <Route path="news" element={<News />} />
             <Route path="pay" element={<Pay />} />
