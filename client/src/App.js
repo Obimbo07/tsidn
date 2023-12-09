@@ -8,7 +8,6 @@ import Pay from './adminPages/Pay';
 import PodcastsAdmin from './adminPages/PodcastsAdmin';
 import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
-import Footer from './components/Footer';
 import Layout from './components/Layout';
 import About from './components/pages/About';
 import ExecutiveDirector from './components/pages/ExecutiveDirector';
@@ -165,7 +164,7 @@ function App() {
             <Route path="pay" element={<Pay />} />
           </Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

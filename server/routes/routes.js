@@ -138,6 +138,51 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
    
 });
 
+router.post('/registerUser', async(req, res) => {
+    try {
+        const formBody = req.body;
+
+        const userName = formBody.userName;
+        const email = formBody.email;
+        const password = formBody.password;
+        const users = await controller.userList();
+        const userExist = users.find(user => user.user_email === email);
+        const userExists = Array(userExist).length;
+
+        if(userExists > 0) {
+            console.log('Email already Exists');
+            res.json({success: false, message: 'Email already Exists'});
+        }
+
+        await controller.registerUser(userName, email, password);
+
+        res.json({success: true, message: "Successifully registered"});
+    } catch (error) {
+        res.json({success: false})
+    }
+});
+
+router.post('/loginUser', async(req, res) => {
+    try {
+        const formData = req.body;
+        const email = formData.email;
+        const password = formData.password;
+        const users = await controller.userList();
+        const userExist = users.find(user => user.user_email === email);
+        
+        if(userExist) {
+            if(password === userExist.password) {
+                res.json({success: true, message: 'Logged in Successifully'});
+            }
+        } else {
+            console.log('Email does not exist');
+            res.json({success: false, message: 'Email does not exist'});
+        }
+    } catch(error) {
+        res.json({success: false, message: error.message});
+    }
+});
+
 router.post('/payPremium', (req, res) => {
     const  formData = req.body;
     const reason = formData.payReason;

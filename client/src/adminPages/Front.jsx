@@ -184,7 +184,7 @@ const Front = () => {
 
     return (
         <div className="front-page">
-            <div className="header">
+            <div className="admin-header">
                 <nav>
                     <div className="logo">
                         <h2>Admin page</h2>
