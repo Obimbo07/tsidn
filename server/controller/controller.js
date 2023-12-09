@@ -1,12 +1,14 @@
-const createConnection = require('../database/db');
+const database = require('../database/db');
 const queries = require('../queries/queries');
+const { connect } = require('../routes/routes');
 
 
 
 const controllers = {
     insertContent: async(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate) => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
+            
             const query =  queries.insertQuery;
             const insertContent = await new Promise((resolve, reject) => {
                 connection.query(query,[selectCategory, selectedTag, title, content, image,imageText, date, startDate, endDate],(err, result) => {
@@ -24,7 +26,7 @@ const controllers = {
     },
     selectContent: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectDataQuery;
 
             const selectData = await new Promise((resolve, reject) => {
@@ -43,7 +45,7 @@ const controllers = {
     },
     selectTrainings: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectTrainings;
 
             const selectTraining = await new Promise((resolve, reject) => {
@@ -64,7 +66,7 @@ const controllers = {
     },
     selectTransportSafety: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectTransportSafety;
 
             const select = await new Promise((resolve, reject) => {
@@ -85,7 +87,7 @@ const controllers = {
     },
     selectPressRelease: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectPressRelease;
 
             const select = await new Promise((resolve, reject) => {
@@ -106,7 +108,7 @@ const controllers = {
     },
     selectPodcasts: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectPodCast;
 
             const select = await new Promise((resolve, reject) => {
@@ -127,7 +129,7 @@ const controllers = {
     },
     selectMeetings: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectMeeting;
 
             const select = await new Promise((resolve, reject) => {
@@ -148,7 +150,7 @@ const controllers = {
     },
     selectNews: async() => {
         try {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.selectNews;
 
             const select = await new Promise((resolve, reject) => {
@@ -169,7 +171,7 @@ const controllers = {
     },
     deleteContent: async(id) => {
         try  {
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.deleteContent;
 
             const Delete = await new Promise((resolve, reject) => {
@@ -188,7 +190,7 @@ const controllers = {
     },
     updateContent: async(category, tag, title, content, file,imageName, date, startDate,endDate, id ) => {
         try{
-            const connection = await createConnection();
+            const connection = await database.createConnection();
             const query = queries.updateContent;
 
             const Update = await new Promise((resolve, reject) => {
@@ -202,6 +204,44 @@ const controllers = {
             });
             return Update;
         }catch(error) {
+            console.log(error);
+        }
+    },
+    userList: async () => {
+        try{
+            const connection = await database.createConnection();
+            const query = queries.usersList;
+
+            const users = await new Promise((resolve, reject) => {
+                connection.query(query, (err, result) => {
+                    if(err) {
+                        reject(err);
+                    }else{
+                        resolve(result);
+                    }
+                });
+            });
+            return users;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    registerUser: async (userName, email, password) => {
+        try {
+            const connection = await database.createConnection();
+            const query = queries.registerUser;
+
+            const register = await new Promise((resolve, reject) => {
+                connection.query(query, [userName, email, password], (err, result) => {
+                    if(err) {
+                        reject(err);
+                    }else{
+                        resolve(result);
+                    }
+                });
+            });
+            return register;
+        } catch (error) {
             console.log(error);
         }
     }

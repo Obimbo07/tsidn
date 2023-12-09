@@ -17,10 +17,11 @@ const createConnection = require('./database/db');
 
 const startServer = () => {
 
-    createConnection();
+    createConnection.createConnection();
     app.listen(port, () => {
         console.log(`server listening to port ${port}`)
     });
+  
 }
 
 startServer();
