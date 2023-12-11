@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
-import DirectorInnovation from './pages/DirectorInnovation';
 
 const SideBar = () => {
-  const [sidebarLinks, setSidebarLinks] = useState([]);
+  const [sidebarLinks, setSidebarLinks] = useState();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -51,10 +50,11 @@ const SideBar = () => {
   });
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" key={sidebarLinks.id}>
       {sidebarLinks.map((link) => (
         <a
           key={link.id}
+          href="/"
           className="sidebar_links"
           onClick={() => navigate(link.url)}
         >
