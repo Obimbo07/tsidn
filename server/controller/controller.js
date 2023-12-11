@@ -1,8 +1,5 @@
 const database = require('../database/db');
 const queries = require('../queries/queries');
-const { connect } = require('../routes/routes');
-
-
 
 const controllers = {
     insertContent: async(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate) => {
