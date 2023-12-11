@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
+import DirectorInnovation from './pages/DirectorInnovation';
 
 const SideBar = () => {
   const [sidebarLinks, setSidebarLinks] = useState([]);
@@ -8,7 +9,7 @@ const SideBar = () => {
   const navigate = useNavigate();
 
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: ['Executive Director', 'Mission', 'Our Core Values'] },
+    { id: 1, text: 'About', url: '/about', dropdown: ['Executive Director','Chief Innovation Officer', 'Mission', 'Our Core Values'] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do'] },
     { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos'] },
@@ -16,7 +17,6 @@ const SideBar = () => {
   ];
 
   useEffect(() => {
-    // Function to get the corresponding sidebar links based on the current route
     const getSidebarLinks = () => {
       const currentPath = location.pathname;
 
@@ -34,24 +34,21 @@ const SideBar = () => {
             : []),
         ]);
       } else {
-        // Default sidebar links
         setSidebarLinks([
           { id: 1, text: 'Home', url: '/' },
           { id: 2, text: 'Dashboard', url: '/dashboard' },
           { id: 3, text: 'Settings', url: '/settings' },
-          // Add more links as needed
         ]);
       }
     };
 
-    // Call the function initially and on route changes
     getSidebarLinks();
-
     // You can also update the sidebar links dynamically on route changes
     return () => {
       // Cleanup (if needed)
     };
-  }, [location.pathname]);
+    
+  });
 
   return (
     <div className="sidebar">

@@ -1,10 +1,11 @@
 import React from 'react';
+import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director', 'Mission', 'Our Core Values',] },
+    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Chief Innovation Officer', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
@@ -35,9 +36,12 @@ const Navbar = () => {
         </Link>
       </span>
       <div className="adBaneer">
-        <span className="ad">
-        <img src="../../../ad.png" alt='add banner' />
+        <span>
+        <img className="ad" src="../../../ad.png" alt='add banner' />
         </span>
+      </div>
+      <div className="Search">
+        <Search />
       </div>
     </div>
     <nav>

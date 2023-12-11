@@ -10,19 +10,21 @@ const Meetings = () => {
     const[openFormEdit, setOpenFormEdit] = useState([]);
 
     const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`;
+    
 
-    const selectTrans =  useCallback(async() => {
+    
+    const selectTrans = useCallback(async () => {
         try {
-            const response =await axios.get(select_trans_api);
-            console.log('response',response);
-            if(response.data.success) {
+            const response = await axios.get(select_trans_api);
+            console.log('response', response);
+            if (response.data.success) {
                 setTransportList(response.data.data);
             }
-            return;
         } catch (error) {
-            console.log(error);
+            console.error('Error fetching data:', error.message);
         }
-    }, [select_trans_api])
+    }, [select_trans_api]);
+    
     console.log('transportList',transportList);
     
     useEffect(() => {

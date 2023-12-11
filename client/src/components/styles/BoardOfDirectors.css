@@ -1,0 +1,28 @@
+.board-of-directors-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.text-section {
+  max-width: 100%;
+}
+
+.innovation-officer {
+  width: 20%;
+  height: 10em;
+  border-radius: 75%;
+}
+.text-section div p {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.text-section div p em {
+  padding: 20px;
+  font-family: monospace;
+
+}
