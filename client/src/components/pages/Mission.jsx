@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from  'react-redux';
-import { fetchPosts } from '../../redux/posts/postSlice';
+import { fetchPosts } from '../../redux/Posts/postSlice';
 
 const Mission = () => {
   const posts = useSelector((state) => state.data);
