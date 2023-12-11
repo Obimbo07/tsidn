@@ -80,11 +80,31 @@ nav {
   display: flex;
   justify-content: flex-end;
   color: #fff;
-
-
 }
 .topNav-links {
   width: fit-content;
+}
+
+.ad {
+  width: 72%;
+  margin: 0 77px 0 89px;
+  animation: slide 9s ease-in-out alternate;
+}
+
+.error-text {
+  color: red;
+}
+
+
+@keyframes slide {
+  0% { transform: translateY(0); opacity: 1; }
+  30% { opacity: 0; }
+  40% { transform: translateY(-100%); opacity: 1;}
+}
+
+.search {
+  display: flex;
+  border-radius: 20px;
 }
 
 .topNav-links ul {

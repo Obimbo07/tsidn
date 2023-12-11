@@ -6,11 +6,12 @@ import Meetings from './adminPages/Meetings';
 import News from './adminPages/News';
 import Pay from './adminPages/Pay';
 import PodcastsAdmin from './adminPages/PodcastsAdmin';
-import Training from './adminPages/Training';
+// import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
 import About from './components/pages/About';
 import ExecutiveDirector from './components/pages/ExecutiveDirector';
+import DirectorInnovation from './components/pages/DirectorInnovation';
 import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
 import OurCoreValues from './components/pages/OurCoreValues';
@@ -51,6 +52,10 @@ function App() {
           <Route 
             path="/about/executive-director"
             element={<ExecutiveDirector />}
+          />
+          <Route 
+            path="/about/chief-innovation-officer"
+            element={<DirectorInnovation />}
           />
           <Route
             path="/about/mission"
@@ -156,7 +161,7 @@ function App() {
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
-            <Route path="training" element={<Training />} />
+            {/* <Route path="training" element={<Training />} /> */}
             <Route path="pressRelease" element={<PressRelease/>} />
             <Route path="podcasts" element={<PodcastsAdmin />} />
             <Route path="meetings" element={<Meetings />} />
