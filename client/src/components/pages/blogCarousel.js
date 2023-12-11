@@ -4,11 +4,20 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/BlogCarousel.css';
 
+
+const Events = [
+  { id: 1, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data. ' },
+  { id: 2, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 3, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 4, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+]
+
+
 const BlogCarousel = ({ blogPosts }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 200,
+    speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: null,
@@ -16,6 +25,7 @@ const BlogCarousel = ({ blogPosts }) => {
   };
 
   return (
+    <div className="slider-section">
     <div className="blog-carousel">
       <Slider {...settings}>
         {blogPosts.map((post) => (
@@ -35,6 +45,27 @@ const BlogCarousel = ({ blogPosts }) => {
           </div>
         ))}
       </Slider>
+    </div>
+    <div className="event-section">
+    <span className="stn-header">MAJOR EVENTS</span>
+      <div className="events-section">
+        <div className="events-container">
+           <div classname="events-section">
+              {Events.map((event) => (
+                <div className="event-card" key={event.id}>
+                  <div className="card-logo">
+                    <img src='../../LOGO.jpg'  className="cardLogo" alt="tsdn-logo" />
+                </div>
+                <div className="card-content">
+                 <span>{event.title}</span>
+                 <span>{event.content}</span>
+                </div>
+                </div>
+              ))}
+           </div>
+        </div>
+     </div>
+      </div>
     </div>
   );
 };

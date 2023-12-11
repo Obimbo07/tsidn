@@ -1,10 +1,14 @@
 .blog-carousel {
-  margin: auto;
+  width: 50%;
   position: relative;
   padding: 20px;
   border-radius: 20px;
   background-color: #fff;
   height: 27em;
+}
+
+.slider-section {
+  display: flex;
 }
 
 .carousel-image {
