@@ -1,18 +1,18 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
 
 const SideBar = () => {
-  const [sidebarLinks, setSidebarLinks] = useState();
+  const [sidebarLinks, setSidebarLinks] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();
 
   const links = [
     { id: 1, text: 'About', url: '/about', dropdown: ['Executive Director','Chief Innovation Officer', 'Mission', 'Our Core Values'] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do'] },
-    { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
-    { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos'] },
-    { id: 4, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights'] },
+    { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
+    { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos'] },
+    { id: 5, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights'] },
   ];
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const SideBar = () => {
           { id: 1, text: matchingLink.text, url: matchingLink.url },
           ...(matchingLink.dropdown
             ? matchingLink.dropdown.map((item, index) => ({
-                id: index + 2,
+                id: index + 1,
                 text: item,
                 url: `${matchingLink.url}/${item.toLowerCase().replace(/ /g, '-')}`,
               }))
@@ -47,14 +47,14 @@ const SideBar = () => {
       // Cleanup (if needed)
     };
     
-  });
+  }, [location.pathname]);
 
   return (
-    <div className="sidebar" key={sidebarLinks.id}>
+    <div className="sidebar">
       {sidebarLinks.map((link) => (
         <a
           key={link.id}
-          href="/"
+          href="#"
           className="sidebar_links"
           onClick={() => navigate(link.url)}
         >

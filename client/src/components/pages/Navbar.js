@@ -7,9 +7,9 @@ const Navbar = () => {
   const links = [
     { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Chief Innovation Officer', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
-    { id: 2, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
-    { id: 3, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
-    { id: 4, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights',]},
+    { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
+    { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
+    { id: 5, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights',]},
   ];
   const toplinks = [
     { id: 1, text: 'Contact us', url: '/contact',},
@@ -18,11 +18,11 @@ const Navbar = () => {
   return (
     
     <>
-    <section class="top-nav">
-      <div class="topNav-links">
+    <section className="top-nav">
+      <div className="topNav-links">
         <ul>
           {toplinks.map((toplink) => (
-            <li className="topNav-link">
+            <li className="topNav-link" key={toplink.id}>
               <Link to={toplink.url} >{toplink.text}</Link>
             </li>
           ))}
