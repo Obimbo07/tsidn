@@ -1,20 +1,19 @@
-import React from 'react';
-import BlogCarousel from './blogCarousel';
-import CardComponent from './Cards';
-import '../styles/Homepage.css';
-import Navbar from './Navbar';
-import Footer from '../Footer'; 
-import { useSelector, useDispatch } from 'react-redux';
-import useEffect from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../../redux/Posts/postSlice';
+import Footer from '../Footer';
+import '../styles/Homepage.css';
+import CardComponent from './Cards';
+import Navbar from './Navbar';
+import BlogCarousel from './blogCarousel';
 
 
 
 
 const Homepage = () => {
   const blogPosts = useSelector((state) => state.data);
-const dispatch = useDispatch();
-console.log(blogPosts);
+  const dispatch = useDispatch();
+  console.log(blogPosts);
 
 useEffect(() => {
   dispatch(fetchPosts())
@@ -33,7 +32,7 @@ useEffect(() => {
      <div className="bottom-content">
      <div className="press-releases">
   <h3>Press releases</h3>
-  <div className="timeline">
+  {/* <div className="timeline">
     {blogPosts.map((release) => (
       <div className="timeline-item" key={release.id}>
         <div className="date">{release.Date}</div>
@@ -43,7 +42,7 @@ useEffect(() => {
         </div>
       </div>
     ))}
-  </div>
+  </div> */}
 </div>
 
      <div className="missions-section">
