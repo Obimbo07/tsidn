@@ -32,6 +32,11 @@ import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelop
 import RoadSafety from './components/pages/themes/RoadSafety';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
+import DirectorChristine from './components/pages/DirectorChristine';
+import DirectorAbedi from './components/pages/DirectorAbedi';
+import DirectorIan from './components/pages/DirectorIan';
+import FullPostContent from './components/pages/FullPostContent';
+
 function App() {
   return (
     <>
@@ -52,6 +57,18 @@ function App() {
           <Route 
             path="/about/executive-director"
             element={<ExecutiveDirector />}
+          />
+          <Route 
+            path="/about/director-christine"
+            element={<DirectorChristine />}
+          />
+          <Route 
+            path="/about/director-ian"
+            element={<DirectorIan />}
+          />
+          <Route 
+            path="/about/director-abedi"
+            element={<DirectorAbedi />}
           />
           <Route 
             path="/about/chief-innovation-officer"
@@ -156,6 +173,15 @@ function App() {
             <Route
               path="/meetings-and-events/ambush-highlights"
               element={<Highlights />}
+            />
+          </Route>
+          <Route 
+            path="/blog/:id"
+            element={<Layout />}
+          >
+            <Route
+              index
+              element={<FullPostContent/>}
             />
           </Route>
           <Route path='/dashboard' element={<Front />} >

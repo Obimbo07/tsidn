@@ -10,7 +10,7 @@
 }
 
 .layout__right-column {
-  flex: 8;
+  flex: 12;
   background-color: #e0e0e0;
   padding: 20px;
 }

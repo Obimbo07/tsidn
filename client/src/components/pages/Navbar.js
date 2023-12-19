@@ -5,7 +5,7 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Chief Innovation Officer', 'Mission', 'Our Core Values',] },
+    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Director Christine', 'Director Ian', 'DirectorAbedi', 'Chief Innovation Officer', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
@@ -31,8 +31,8 @@ const Navbar = () => {
     </section>
     <div className="logo-div">
       <span>
-        <Link to="#" className="logo-name">
-          <img className="logo" src="../../../LOGO.jpg" alt="TSDN logo" />
+        <Link to="/" className="logo-name">
+          <img className="logo" src="../../../logotest.jpeg" alt="TSDN logo" />
         </Link>
       </span>
       <div className="adBaneer">

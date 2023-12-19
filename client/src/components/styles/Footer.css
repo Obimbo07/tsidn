@@ -1,6 +1,6 @@
 .footerSection {
     background-color: rgb(6, 6, 40);
-    padding: 5%;
+    padding: 3%;
     border-radius: 10px;
     color: #fff;
 }
@@ -14,14 +14,26 @@
 }
 
 .icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 10px;
-    width: fit-content;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+gap: 16px;
+width: -moz-fit-content;
+flex-wrap: wrap;
 }
 
 .contentContainer4 {
-    width: 20%;
+    width: 33%;
+    height: 8em;
+}
 
+.contentContainer4 div a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+}
+
+.get-newsletter {
+    padding: 10px;
 }
