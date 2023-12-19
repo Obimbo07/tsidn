@@ -4,37 +4,21 @@ import CardComponent from './Cards';
 import '../styles/Homepage.css';
 import Navbar from './Navbar';
 import Footer from '../Footer'; 
+import { useSelector, useDispatch } from 'react-redux';
+import useEffect from 'react';
+import { fetchPosts } from '../../redux/Posts/postSlice';
 
-const blogPosts = [
-    { id: 1, title: 'Post 2', content: 'Content for post 2', image: "https://kenyaonlinenews.com/wp-content/uploads/2022/10/Linda-Ndungu-Bolt-Country-ManagerSamuel-Musumba-Safety-Program-Director-NTSA-and-Boda-Boda-Riders-during-the-safety-gears-handlover-ceremenony-.-scaled.jpg" },
-    { id: 2, title: 'Post 2', content: 'Content for post 3', image: "https://kenyaonlinenews.com/wp-content/uploads/2022/10/Linda-Ndungu-Bolt-Country-ManagerSamuel-Musumba-Safety-Program-Director-NTSA-and-Boda-Boda-Riders-during-the-safety-gears-handlover-ceremenony-.-scaled.jpg" },
-    { id: 3, title: 'Post 2', content: 'Content for post 5', image: "https://kenyaonlinenews.com/wp-content/uploads/2022/10/Linda-Ndungu-Bolt-Country-ManagerSamuel-Musumba-Safety-Program-Director-NTSA-and-Boda-Boda-Riders-during-the-safety-gears-handlover-ceremenony-.-scaled.jpg" },
-    { id: 4, title: 'Post 2', content: 'Content for post 6', image: "https://kenyaonlinenews.com/wp-content/uploads/2022/10/Linda-Ndungu-Bolt-Country-ManagerSamuel-Musumba-Safety-Program-Director-NTSA-and-Boda-Boda-Riders-during-the-safety-gears-handlover-ceremenony-.-scaled.jpg" },
 
-  ];
 
-const pressReleases = [
-  { id: 1,
-     title: 'news 2', 
-     content: 'Sample Dataset for the press realeases.',
-    Date: '25th Nov 2023',
 
-  },
-  {
-    id: 2,
-    title: 'news 3',
-    content: 'Sample Dataset for the press realeases.',
-    Date: '23rd Dec 2023',
-  },
-  {
-    id: 3,
-    title: 'news 4',
-    content: 'Sample Dataset for the press realeases.',
-    Date: '23rd Dec 2023',
-  }
-
-];
 const Homepage = () => {
+  const blogPosts = useSelector((state) => state.data);
+const dispatch = useDispatch();
+console.log(blogPosts);
+
+useEffect(() => {
+  dispatch(fetchPosts())
+}, [dispatch])
   return (
     <>
     <Navbar />
@@ -50,7 +34,7 @@ const Homepage = () => {
      <div className="press-releases">
   <h3>Press releases</h3>
   <div className="timeline">
-    {pressReleases.map((release) => (
+    {blogPosts.map((release) => (
       <div className="timeline-item" key={release.id}>
         <div className="date">{release.Date}</div>
         <div className="press-content">
@@ -61,6 +45,7 @@ const Homepage = () => {
     ))}
   </div>
 </div>
+
      <div className="missions-section">
         <div className="missions">
          <p>Company missions</p>
@@ -68,7 +53,7 @@ const Homepage = () => {
           <iframe
         width="200"
         height="200"
-        src="https://www.youtube.com/embed/LFrQ0kfRY_I?si=Ki97nqDyF3FQZv7F"
+        src="https://www.youtube.com/embed/T--aotYDL0g?si=GPC24-McY4EBB1uJ"
         title="YouTube Video 1"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

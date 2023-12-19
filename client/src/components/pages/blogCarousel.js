@@ -17,7 +17,7 @@ const BlogCarousel = ({ blogPosts }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 100,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: null,
@@ -31,20 +31,21 @@ const BlogCarousel = ({ blogPosts }) => {
         {blogPosts.map((post) => (
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
-              <a href="#" className="continue-reading-link">
-              <h2>{post.title}</h2>
-              <p>{post.content}</p>              
+              <a href={`blog/${post.id}`} className="continue-reading-link">
+              <h2>{post.post_title}</h2>
+              <span>{post.post_tag}</span>
+              <p>{post.post_content}</p>              
               </a>
             </div>
             <img
-              src={post.image}
-              alt={post.title}
-              loading="lazy" // Add lazy loading attribute
+              src={post.image_name}
+              alt={post.post_title}
+              loading="lazy"
               className="carousel-image"
             />
           </div>
         ))}
-      </Slider>
+        </Slider>
     </div>
     <div className="event-section">
     <span className="stn-header">MAJOR EVENTS</span>

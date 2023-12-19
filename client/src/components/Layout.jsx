@@ -2,19 +2,27 @@ import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
 import Navbar from './pages/Navbar';
 import './layout.css';
+import Footer from './Footer';
+import { useLocation } from 'react-router-dom';
+
 
 
 const Layout = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  console.log(path);
   return (
-    <><Navbar /><div className="layout_container">
+
+    <>
+    <Navbar /><div className="layout_container">
       <div className="layout__left-column">
-        <h2>Left Column (4 columns)</h2>
+        <a  href="{path}">{path}</a>
         <SideBar />
       </div>
       <div className="layout__right-column">
         <Outlet />
       </div>
-    </div></>
+    </div><Footer /></>
   );
 };
 

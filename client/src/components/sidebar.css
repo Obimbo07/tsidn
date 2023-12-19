@@ -1,4 +1,13 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sidebar-links {
+  background-color: rgb(10, 32, 61);
+  background-size: contain;
+  width: fit-content;
+  padding: 2%;
 }

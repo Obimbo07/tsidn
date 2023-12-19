@@ -12,8 +12,11 @@
   }
   
   .events-section {
-    height: 27em;
     overflow: auto;
+  }
+
+  .event-section {
+    background-color: #fff;
   }
   
   .events-container {
@@ -100,7 +103,7 @@
 
   .event-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding: 13px;
     align-items: center;
     border-bottom: solid 2px;

@@ -30,17 +30,17 @@ const createConnection = async () => {
     }
 }
 
-const closeConnection = (connection) => {
-    return new Promise((resolve, reject) => {
-        connection.end((err) => {
-            if(err) {
-                reject(err);
-            }else {
-                console.log('Connection Closed');
-                resolve();
-            }
-        })
-    })
-}
+// const closeConnection = (connection) => {
+//     return new Promise((resolve, reject) => {
+//         connection.end((err) => {
+//             if(err) {
+//                 reject(err);
+//             }else {
+//                 console.log('Connection Closed');
+//                 resolve();
+//             }
+//         })
+//     })
+// }
 
-module.exports = {createConnection, closeConnection};
+module.exports = {createConnection};
