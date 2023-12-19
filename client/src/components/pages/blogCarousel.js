@@ -32,14 +32,13 @@ const BlogCarousel = ({ blogPosts }) => {
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
               <a href={`blog/${post.id}`} className="continue-reading-link">
-              <h2>{post.post_title}</h2>
-              <span>{post.post_tag}</span>
-              <p>{post.post_content}</p>              
+              <h2>{post.title}</h2>
+              <p>{post.content}</p>              
               </a>
             </div>
             <img
-              src={post.image_name}
-              alt={post.post_title}
+              src={post.image}
+              alt={post.title}
               loading="lazy"
               className="carousel-image"
             />
@@ -51,7 +50,7 @@ const BlogCarousel = ({ blogPosts }) => {
     <span className="stn-header">MAJOR EVENTS</span>
       <div className="events-section">
         <div className="events-container">
-           <div classname="events-section">
+           <div className="events-section">
               {Events.map((event) => (
                 <div className="event-card" key={event.id}>
                   <div className="card-logo">

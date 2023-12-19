@@ -2,25 +2,21 @@ import React from 'react';
 import '../styles/CardComponent.css';
 
 const CardComponent = () => {
-  // Sample data for each card
   const cardsData = [
     {
       id: 1,
       title: 'Transport',
-      imageUrl: 'https://placekitten.com/300/200', 
-      iconUrl: 'https://placekitten.com/50/50', 
+      iconUrl: '../camera_1972954.png', 
     },
     {
       id: 2,
       title: 'Road Safety',
-      imageUrl: 'https://placekitten.com/301/200',
-      iconUrl: 'https://placekitten.com/51/50',
+      iconUrl: '../agreement_10476721.png',
     },
     {
       id: 3,
       title: 'Trainings',
-      imageUrl: 'https://placekitten.com/302/200',
-      iconUrl: 'https://placekitten.com/52/50',
+      iconUrl: '../traffic_cone.png',
     },
     {
       id: 4,
@@ -46,7 +42,6 @@ const CardComponent = () => {
     <div className="card-container">
       {cardsData.map((card) => (
         <div className="card" key={card.id}>
-          <img className="card-image" src={card.imageUrl} alt={`Card ${card.id}`} />
           <div className="icon-section">
             <img className="icon" src={card.iconUrl} alt={`Icon ${card.id}`} />
           </div>

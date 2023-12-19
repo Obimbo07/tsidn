@@ -23,7 +23,7 @@ const SideBar = () => {
 
       if (matchingLink) {
         setSidebarLinks([
-          { id: 1, text: matchingLink.text, url: matchingLink.url },
+          { id: 0, text: matchingLink.text, url: matchingLink.url },
           ...(matchingLink.dropdown
             ? matchingLink.dropdown.map((item, index) => ({
                 id: index + 1,

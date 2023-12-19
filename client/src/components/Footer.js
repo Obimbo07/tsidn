@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="contentContainer2">
           <h4>ORGANIZATION LINKS</h4>
-          <ul>
+          <ul className="about-links">
             <li>
               <Link to="/transport">Transport</Link>
             </li>
@@ -51,7 +51,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="contentContainer4">
-          <span>Social icons</span>
+          <h4>SOCIAL MEDIA</h4>
           <div className="icons">
           <a href="https://"> Twitter
           <FontAwesomeIcon icon={faXTwitter} />
@@ -81,17 +81,20 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTelegram} />
           </a>
           </div>
-          <div className="newsletter" onSubmit={(e) => Newsletter(e)}>
-          <form className="get-newsletter">
-          <input type="email" placeholder="Enter your email address" />
-          <button type="submit">Submit</button>
-          </form>
-        </div>
         </div>
       </div>
+      <div className="newsletter-section">
+                <h4>Enter email to get newsletter</h4>
+                <form onSubmit={Newsletter}>
+                    <input type="email" placeholder="Enter your email" />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
       <div className="bottom-footer">
-       <span className="copyright"> © 2023 TranSafety Development Network. </span>
-       </div>
+                <span className="horizontal-line"></span>
+                <span className="copyright"> © 2023 TranSafety Development Network. </span>
+                <span className="horizontal-line"></span>
+            </div>
     </div>
   );
 };

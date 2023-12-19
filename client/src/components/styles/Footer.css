@@ -8,18 +8,22 @@
 .inner-sctn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 10%;
     color: #fff;
 }
 
 .icons {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-gap: 16px;
-width: -moz-fit-content;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.icons a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
 }
 
 .contentContainer4 {
@@ -27,13 +31,67 @@ flex-wrap: wrap;
     height: 8em;
 }
 
-.contentContainer4 div a {
+.bottom-footer {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     align-items: center;
-    color: #fff;
+    margin-top: 46px; /* Adjust the margin as needed */
+}
+
+.horizontal-line {
+    flex: 1;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.copyright {
+    margin: 0;
 }
 
 .get-newsletter {
     padding: 10px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.about-links li a {
+    color: #fff;
+    padding: 20px;
+}
+
+.about-links li {
+    list-style: none;
+}
+.newsletter-section {
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.newsletter-section h4 {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-section input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
