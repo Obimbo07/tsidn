@@ -6,8 +6,20 @@
 }
 
 .sidebar-links {
-  background-color: rgb(10, 32, 61);
   background-size: contain;
+  width: -moz-fit-content;
   width: fit-content;
-  padding: 2%;
+  padding: 5%;
+  text-decoration: none;
+  color: black;
+  transition: border-bottom 0.3s ease;
+  background-color: white;
+  width: 96%;
+}
+
+.sidebar-links:hover,
+.sidebar-links.active {
+  border-bottom: 2px solid white;
+  background-color: rgb(10, 32, 61);
+  color: #fff;
 }

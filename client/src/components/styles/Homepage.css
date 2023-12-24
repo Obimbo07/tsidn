@@ -99,7 +99,7 @@
     width: 95%;
     font-size: 20px;
     font-family: 'circular';
-}
+  }
 
   .event-card {
     display: flex;
@@ -134,14 +134,14 @@
     font-size: 14px;
     text-decoration: none;
     color: #fff;
-    background-color: #007bff; /* Change to your preferred color */
-    border: 1px solid #007bff; /* Change to your preferred color */
+    background-color: #007bff; 
+    border: 1px solid #007bff; 
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
   .carousel-text .cta-button:hover {
-    background-color: #0056b3; /* Change to your preferred color on hover */
+    background-color: #0056b3;
   }
   
   .involvement {

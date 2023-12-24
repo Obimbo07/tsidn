@@ -13,7 +13,6 @@ const queries = {
     registerUser: "INSERT INTO users_table (user_name, user_email, password) VALUES (?,?,?)",
     loginUser: "SELECT * FROM users_table WHERE user_email = ?",
     usersList: 'SELECT * FROM users_table',
-
 }
 
 module.exports = queries;

@@ -40,7 +40,7 @@ router.get('/selectContent', async(req, res) => {
     } catch (error) {
         res.json({success: false, error: error.message});
     }
-});
+});``
 
 router.get('/selectTraining', async(req, res) => {
     try {

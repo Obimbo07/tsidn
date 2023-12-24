@@ -35,8 +35,6 @@ const SideBar = () => {
       } else {
         setSidebarLinks([
           { id: 1, text: 'Home', url: '/' },
-          { id: 2, text: 'Dashboard', url: '/dashboard' },
-          { id: 3, text: 'Settings', url: '/settings' },
         ]);
       }
     };
@@ -55,7 +53,7 @@ const SideBar = () => {
         <a
           key={link.id}
           href="#"
-          className="sidebar-links"
+          className={`sidebar-links ${location.pathname.startsWith(link.url) ? 'active' : ''}`}
           onClick={() => navigate(link.url)}
         >
           {link.text}

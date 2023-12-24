@@ -1,9 +1,8 @@
 nav {
     background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
     display: flex;
     margin-top: 10px;
+    border: 1px solid;
   }
   
   .list-nav {
@@ -12,14 +11,16 @@ nav {
     padding: 0;
     width: 100%;
     display: flex;
+    gap: 10px;
     list-style: none;
     flex-direction: row;
-    justify-content: space-around;
     align-items: flex-start;
+    border: 1px solid;
   }
   
   .list-nav li {
-    margin-right: 20px;
+    margin-right: 3%;
+    border: 1px solid;
   }
   
   .list-nav li:last-child {
@@ -65,6 +66,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 8em;
+    background-color: #fff;
   }
 
   .logo {
@@ -75,12 +77,15 @@ nav {
   .topnav {
     width: 100%;
   }
+
 .top-nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   color: #fff;
+  background-color: #fff;
 }
+
 .topNav-links {
   width: fit-content;
 }

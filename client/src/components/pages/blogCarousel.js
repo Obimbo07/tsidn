@@ -28,7 +28,7 @@ const BlogCarousel = ({ blogPosts }) => {
     <div className="slider-section">
     <div className="blog-carousel">
       <Slider {...settings}>
-        {blogPosts.map((post) => (
+      {blogPosts.map((post) => (
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
               <a href={`blog/${post.id}`} className="continue-reading-link">

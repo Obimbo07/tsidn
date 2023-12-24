@@ -36,9 +36,19 @@ import DirectorChristine from './components/pages/DirectorChristine';
 import DirectorAbedi from './components/pages/DirectorAbedi';
 import DirectorIan from './components/pages/DirectorIan';
 import FullPostContent from './components/pages/FullPostContent';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchPosts } from './redux/Posts/postSlice';
+
 
 function App() {
-  return (
+  const posts = useSelector((state) => state.posts.data);
+  const dispatch = useDispatch();
+  console.log(posts);
+
+  useEffect(() => {
+    dispatch(fetchPosts())
+  }, [dispatch]);  return (
     <>
       {/* <Navbar /> */}
       <Routes>
@@ -52,7 +62,7 @@ function App() {
         >
           <Route
             index
-            element={<About />}
+            element={<Mission />}
           />
           <Route 
             path="/about/executive-director"
@@ -177,11 +187,11 @@ function App() {
           </Route>
           <Route 
             path="/blog/:id"
-            element={<Layout />}
+            element={<Layout blogPosts={posts} />}
           >
             <Route
               index
-              element={<FullPostContent/>}
+              element={<FullPostContent blogPosts={posts} />}
             />
           </Route>
           <Route path='/dashboard' element={<Front />} >
