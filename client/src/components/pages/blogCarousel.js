@@ -3,13 +3,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/BlogCarousel.css';
+import { Navigate } from 'react-router-dom';
 
 
 const Events = [
-  { id: 1, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data. ' },
-  { id: 2, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 3, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 4, title: 'MajorEvents', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 1, title: 'Major Events', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  { id: 2, title: 'Test Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 3, title: 'Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 4, title: 'Company  Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
 
 
@@ -17,7 +18,7 @@ const BlogCarousel = ({ blogPosts }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: null,
@@ -52,10 +53,10 @@ const BlogCarousel = ({ blogPosts }) => {
         <div className="events-container">
            <div className="events-section">
               {Events.map((event) => (
-                <div className="event-card" key={event.id}>
+                <div className="event-card"  key={event.id}>
                   <div className="card-logo">
                     <img src='../../LOGO.jpg'  className="cardLogo" alt="tsdn-logo" />
-                </div>
+                  </div>
                 <div className="card-content">
                  <span>{event.title}</span>
                  <span>{event.content}</span>

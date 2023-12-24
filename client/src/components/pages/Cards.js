@@ -37,7 +37,7 @@ const CardComponent = () => {
       iconUrl: 'https://placekitten.com/55/50',
     },
   ];
-
+  
   return (
     <div className="card-container">
       {cardsData.map((card) => (
