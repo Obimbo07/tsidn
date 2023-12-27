@@ -16,15 +16,8 @@ const FullPostContent = ({ blogPosts }) => {
   if (!currentPost) {
     return <div>Blog post not found</div>;
   }
+
   
-  {/* <div className="full-post-content">
-     {blogPosts.map((blog) => (
-      <div keys={blog.id}>
-      <h2>{blog.title}</h2>
-      <img src={blog.image} alt={blog.title} className="post-image" />
-      <p>{blog.content}</p></div>
-     ))};
-    </div> */}
 
 
   return (
@@ -33,8 +26,16 @@ const FullPostContent = ({ blogPosts }) => {
       <h2>{currentPost.title}</h2>
       <img src={currentPost.image} alt={currentPost.title} className="post-image" />
       <p>{currentPost.content}</p></div>
-     
+      {/* <div className="full-post-content">
+     {blogPosts.map((blog) => (
+      <div keys={blog.id}>
+      <h2>{blog.title}</h2>
+      <img src={blog.image} alt={blog.title} className="post-image" />
+      <p>{blog.content}</p></div>
+     ))};
+    </div> */}
     </div>
+   
   );
 };
 

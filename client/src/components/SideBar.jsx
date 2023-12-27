@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
 
@@ -7,13 +7,13 @@ const SideBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const links = [
+  const links = useMemo(() => [
     { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Director Christine', 'Director Ian', 'Director Abedi', 'Chief Innovation Officer', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
     { id: 5, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights',]},
-  ];
+  ],[] ) ;
 
   useEffect(() => {
     const getSidebarLinks = () => {
