@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [websiteContent, setWebsiteContent] = useState('');
+  // const [websiteContent, setWebsiteContent] = useState('');
+  let websiteContent;
 
 //   useEffect(() => {
 //     // Fetch website content on component mount

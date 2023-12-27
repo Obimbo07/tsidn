@@ -9,7 +9,7 @@ import PodcastsAdmin from './adminPages/PodcastsAdmin';
 // import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
-import About from './components/pages/About';
+// import About from './components/pages/About';
 import ExecutiveDirector from './components/pages/ExecutiveDirector';
 import DirectorInnovation from './components/pages/DirectorInnovation';
 import Homepage from './components/pages/Homepage';

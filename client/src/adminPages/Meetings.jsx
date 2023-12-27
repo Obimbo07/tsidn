@@ -117,13 +117,12 @@ const Meetings = () => {
         });
     }
 
-    const handleChange = (e) => {
-    setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-    })
-
-    }
+    // const handleChange = (e) => {
+    // setFormData({
+    //     ...formData,
+    //     [e.target.name]: e.target.value,
+    // })
+    // }
 
       const tags = [
         'Transport',

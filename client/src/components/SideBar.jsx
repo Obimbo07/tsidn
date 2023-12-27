@@ -45,19 +45,19 @@ const SideBar = () => {
       // Cleanup (if needed)
     };
     
-  }, [location.pathname]);
+  }, [location.pathname, links]);
 
   return (
     <div className="sidebar">
       {sidebarLinks.map((link) => (
-        <a
-          key={link.id}
-          href="#"
-          className={`sidebar-links ${location.pathname.startsWith(link.url) ? 'active' : ''}`}
-          onClick={() => navigate(link.url)}
+        <button
+        key={link.id}
+        href="#"
+        className={`sidebar-links ${location.pathname.startsWith(link.url) ? 'active' : ''}`}
+        onClick={() => navigate(link.url)}
         >
           {link.text}
-        </a>
+        </button>
       ))}
     </div>
   );
