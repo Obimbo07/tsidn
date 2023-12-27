@@ -40,8 +40,21 @@
   color: #FFF;
   text-decoration: none;
   padding: 49px 89px;
-  background-color: #333;
+  background-color: #533c3ceb;
   border-radius: 4px;
   margin-top: 10px;
-  width: fit-content;
+  width: 116%;
+}
+
+.stn-header {
+   padding: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    text-decoration-style: solid;
+    text-decoration-color: #1600f0;
+    text-decoration-thickness: 6px;
+    text-underline-position: 20px;
 }

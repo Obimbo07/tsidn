@@ -18,7 +18,7 @@
 .text-section div p {
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  /* gap: 21px; */
 }
 
 .text-section div p em {
