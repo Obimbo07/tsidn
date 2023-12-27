@@ -38,7 +38,7 @@ import DirectorIan from './components/pages/DirectorIan';
 import FullPostContent from './components/pages/FullPostContent';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchPosts } from './redux/Posts/postSlice';
+import { fetchPosts } from './redux/posts/postSlice';
 
 
 function App() {
