@@ -1,10 +1,6 @@
 const database = require('../database/db');
 const queries = require('../queries/queries');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e729b0219de337c2f4c53212a35b8f8d2ea6470f
 const controllers = {
     insertContent: async(selectCategory, selectedTag, title, content, image, imageText, date, startDate, endDate) => {
         try {
