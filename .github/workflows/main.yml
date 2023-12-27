@@ -42,7 +42,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME_FRONTEND }}
         password: ${{ secrets.FTP_PASSWORD_FRONTEND }}
         local-dir: client/build/
-        target: /home/tsidnorg/tsidn.org/Obimbo07/
+        target: /home/tsidnorg/public_html/
 
     - name: List contents of server directory
       run: ls -R server/
@@ -54,4 +54,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME_BACKEND }}
         password: ${{ secrets.FTP_PASSWORD_BACKEND }}
         local-dir: server/
-        target: /home/tsidnorg/tsidnapi.tsidn.org/Obimbo07/
+        target: /home/tsidnorg/tsidnapi.tsidn.org/
