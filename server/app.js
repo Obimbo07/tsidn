@@ -5,11 +5,11 @@ const dotenv = require('dotenv')
 dotenv.config({path: './database/.env'});
 
 
-// const corsOptions = {
-//     origin: 'http://localhost:3000',
-//     methods: ['POST', 'GET','PUT','DELETE']
-// }
-app.use(cors());
+const corsOptions = {
+    origin: 'https://tsidn.org',
+    methods: ['POST', 'GET','PUT','DELETE']
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const port = process.env.PORT;
