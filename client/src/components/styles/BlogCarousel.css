@@ -24,37 +24,42 @@
   z-index: 1;
 }
 
-.intro-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.intro-section p {
-  font-size: 16px;
-  margin: 0;
-}
-
 .continue-reading-link {
   display: block;
   font-size: 51px;
   color: #FFF;
   text-decoration: none;
   padding: 49px 89px;
-  background-color: #533c3ceb;
+  background-color: #211d46;
   border-radius: 4px;
   margin-top: 10px;
   width: 116%;
 }
 
 .stn-header {
-   padding: 10px;
-    text-decoration: underline;
-    font-size: 23px;
-    font-family: serif;
-    display: flex;
-    justify-content: center;
-    text-decoration-style: solid;
-    text-decoration-color: #1600f0;
-    text-decoration-thickness: 6px;
-    text-underline-position: 20px;
+  padding: 10px;
+  text-decoration: underline;
+  font-size: 23px;
+  font-family: serif;
+  display: flex;
+  justify-content: center;
+  text-decoration-style: solid;
+  text-decoration-color: #1600f0;
+  text-decoration-thickness: 6px;
+  text-underline-position: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .blog-carousel {
+    width: auto;
+  }
+
+  .intro-section {
+    top: 50%; 
+  }
+
+  .continue-reading-link {
+    font-size: 28px;
+    padding: 20px; 
+  }
 }
