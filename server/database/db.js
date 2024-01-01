@@ -7,7 +7,7 @@ const config = {
     database : process.env.DATABASE,
     password: process.env.PASSWORD,
     user: process.env.USER,
-    port: process.env.DB_PORT
+    // port: process.env.DB_PORT
 }
 
 const createConnection = async () => {
