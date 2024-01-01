@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search';
+// import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
@@ -27,21 +27,20 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </section>
-    <div className="logo-div">
-      <span>
-        <Link to="/" className="logo-name">
-          <img className="logo" src="../../../logotest.jpeg" alt="TSDN logo" />
-        </Link>
-      </span>
-      <div className="adBaneer">
         <span>
         <img className="ad" src="../../../ad.png" alt='add banner' />
         </span>
       </div>
+    </section>
+    <div className="logo-div">
+      <span className="logo-content">
+        <Link to="/" className="logo-name">
+          <img className="logo" src="../../../TSDN LOGO.svg" alt="TSDN logo" />
+        </Link>
+        <h1>TSDN</h1>
+      </span>
       <div className="Search">
-        <Search />
+        {/* <Search /> */}
       </div>
     </div>
     <nav>

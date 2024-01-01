@@ -67,8 +67,9 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 8em;
+    height: 4em;
     background-color: #fff;
+    margin-top: 10px;
   }
 
   .logo {
@@ -81,20 +82,22 @@ nav {
   }
 
 .top-nav {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
   background-color: #fff;
 }
 
 .topNav-links {
-  width: fit-content;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+}
+
+.topNav-links spa
+n {
+  width: 23%;
 }
 
 .ad {
   width: 72%;
-  margin: 0 77px 0 89px;
   animation: slide 9s ease-in-out alternate;
 }
 
@@ -122,4 +125,13 @@ nav {
   gap: 20px;
   list-style: none;
   color: #fff;
+}
+
+.logo-content {
+  display: flex;
+  background-color: #b1b1b154;
+  align-items: center;
+  width: 26%;
+  height: 5em;
+  justify-content: space-around;
 }

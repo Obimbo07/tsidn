@@ -9,10 +9,7 @@ const dummyData = [
   ];
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
-  // Simulating an API call with a delay
   await new Promise((resolve) => setTimeout(resolve, 100));
-
-  // Return dummy data
   return dummyData;
 });
 
