@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react';
+
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,9 +30,9 @@ const Search = () => {
   };
 
   const renderSearchResults = () => {
-    if (!searchResults.length) {
-      return <p className="error-text">No results found.</p>;
-    }
+    // if (!searchResults.length) {
+    //   return <p className="error-text">No results found.</p>;
+    // }
 
     return searchResults.map((result) => (
       <p key={result}>
@@ -47,7 +50,10 @@ const Search = () => {
           value={searchTerm}
           onChange={handleInputChange}
         />
-        <button type="submit">Search</button>
+        <button type="submit">
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        
+        Search</button>
       </form>
       {searchResults.length > 0 && <h3>Results</h3>}
       {renderSearchResults()}

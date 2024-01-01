@@ -7,10 +7,8 @@
   .card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    overflow: hidden;
-    margin: 10px;
-    width: 200px;
-    height: 7em;
+    width: 20%;
+    height: 13em;
   }
   
   .card-image {
@@ -35,3 +33,16 @@
     background-color: #eee;
   }
   
+@media only screen and (max-width: 500px) {
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 14px;
+  }
+
+  .card{
+    width: 30%;
+  }
+}

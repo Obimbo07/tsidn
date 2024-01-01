@@ -7,7 +7,7 @@ const Modal = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowModal(true);
-    }, 100);
+    }, 1000);
 
     return () => {
       clearTimeout(timeoutId);

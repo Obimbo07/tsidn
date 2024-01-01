@@ -33,7 +33,7 @@ const BlogCarousel = ({ blogPosts }) => {
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
               <a href={`blog/${post.id}`} className="continue-reading-link">
-              <h2>{post.title}</h2>
+              <h5>{post.title}</h5>
               <p>{post.content}</p>              
               </a>
             </div>
