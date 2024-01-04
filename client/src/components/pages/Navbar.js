@@ -1,5 +1,5 @@
 import React from 'react';
-// import Search from './Search';
+import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
@@ -35,12 +35,12 @@ const Navbar = () => {
     <div className="logo-div">
       <span className="logo-content">
         <Link to="/" className="logo-name">
-          <img className="logo" src="../../../TSDN LOGO.svg" alt="TSDN logo" />
+          <img className="logo" src="../../../LogoFinal.svg" alt="TSDN logo" />
         </Link>
         <h1>TSDN</h1>
       </span>
       <div className="Search">
-        {/* <Search /> */}
+        <Search />
       </div>
     </div>
     <nav>

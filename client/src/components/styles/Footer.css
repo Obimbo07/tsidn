@@ -26,23 +26,27 @@
     color: #fff;
 }
 
-.contentContainer4 {
-    width: 33%;
-    height: 8em;
+a {
+    font-family: serif;
+    font-weight: normal;
+}
+
+.icon-text {
+    padding: 5% 0 5% 0;
 }
 
 .bottom-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 46px; /* Adjust the margin as needed */
+    margin-top: 46px;
 }
 
 .horizontal-line {
     flex: 1;
     height: 1px;
     background-color: #fff;
-    margin: 0 10px; /* Adjust the margin as needed */
+    margin: 0 10px;
 }
 
 .copyright {
@@ -57,16 +61,17 @@ h4 {
     margin: 0;
 }
 
+
 .about-links li a {
     color: #fff;
-    padding: 20px;
 }
 
 .about-links li {
     list-style: none;
+    width: fit-content;
 }
 .newsletter-section {
-    margin-top: 20px; 
+    margin: 20px; 
     text-align: center;
 }
 
@@ -94,4 +99,15 @@ h4 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .inner-sctn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    ul {
+       padding-inline-start: 0;
+    }
 }

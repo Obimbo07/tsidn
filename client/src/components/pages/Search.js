@@ -1,3 +1,4 @@
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react';
@@ -51,7 +52,7 @@ const Search = () => {
           onChange={handleInputChange}
         />
         <button type="submit">
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
         
         Search</button>
       </form>

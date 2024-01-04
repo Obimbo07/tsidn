@@ -37,8 +37,7 @@ import DirectorIan from './components/pages/DirectorIan';
 import FullPostContent from './components/pages/FullPostContent';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchPosts } from './redux/posts/postSlice';
-
+import { fetchPosts } from '../src/redux/Posts/postSlice';
 
 function App() {
   const posts = useSelector((state) => state.posts.data);
@@ -49,7 +48,6 @@ function App() {
     dispatch(fetchPosts())
   }, [dispatch]);  return (
     <>
-      {/* <Navbar /> */}
       <Routes>
         <Route
           path="/"

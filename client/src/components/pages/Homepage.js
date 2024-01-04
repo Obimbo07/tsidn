@@ -6,7 +6,7 @@ import '../styles/Homepage.css';
 import Navbar from './Navbar';
 import Footer from '../Footer';
 import Modal from '../Modal';
-import { fetchPosts } from '../../redux/posts/postSlice';
+import { fetchPosts } from '../../redux/Posts/postSlice';
 
 const pressReleases = [
   { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases.', Date: '25th Nov 2023' },
