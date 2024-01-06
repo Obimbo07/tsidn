@@ -50,3 +50,37 @@
 .outer-link {
   width: 27%;
 }
+
+@media (max-width: 768px) {
+  .layout__left-column {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .layout__left-column.open {
+    display: block;
+  }
+
+  .more-options-btn,
+  .close-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #3367d6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .more-options-btn:hover,
+  .close-btn:hover {
+    background-color: #254785;
+  }
+}

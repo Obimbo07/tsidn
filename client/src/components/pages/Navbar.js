@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
@@ -15,6 +15,8 @@ const Navbar = () => {
     { id: 1, text: 'Contact us', url: '/contact',},
     { id: 2, text: 'Register', url: '/register', },
   ]
+
+  const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false);
   return (
     
     <>
@@ -43,8 +45,15 @@ const Navbar = () => {
         <Search />
       </div>
     </div>
+    
     <nav>
-        <ul className="list-nav">
+    <button
+        className="hamburger-btn"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        ☰
+      </button>
+        <ul className={`list-nav ${mobileMenuOpen ? 'open' : ''}`}>
           {links.map((link) => (
             <li key={link.id}>
               {link.dropdown ? (

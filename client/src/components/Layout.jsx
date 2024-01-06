@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
 import Navbar from './pages/Navbar';
@@ -11,10 +11,14 @@ const Layout = () => {
   const path = location.pathname;
 
   const pathSections = path.toUpperCase().split('/').filter(Boolean);
-
   const frontPart = pathSections.length > 0 ? pathSections[0] : '';
-
   const restOfPath = pathSections.slice(1).join('/');
+
+  const [isLeftColumnOpen, setIsLeftColumnOpen] = useState(false);
+
+  const toggleLeftColumn = () => {
+    setIsLeftColumnOpen(!isLeftColumnOpen);
+  };
 
   return (
     <>
@@ -22,7 +26,7 @@ const Layout = () => {
       <div className="bread-crumbs">
         <div className="navigation-guide">
           <span className="outer-link">
-            <a  href={`/${frontPart}`}>{frontPart}</a>
+            <a href={`/${frontPart}`}>{frontPart}</a>
           </span>
           <div className="inLink-container">
             {restOfPath && (
@@ -33,8 +37,14 @@ const Layout = () => {
           </div>
         </div>
       </div>
+      <button className="more-options-btn" onClick={toggleLeftColumn}>
+            More Options
+      </button>
       <div className="layout_container">
-        <div className="layout__left-column">
+        <div className={`layout__left-column ${isLeftColumnOpen ? 'open' : ''}`}>
+          <button className="close-btn" onClick={toggleLeftColumn}>
+            X
+          </button>
           <SideBar />
         </div>
         <div className="layout__right-column">
