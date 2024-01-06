@@ -1,0 +1,113 @@
+.footerSection {
+    background-color: rgb(6, 6, 40);
+    padding: 3%;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.inner-sctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10%;
+    color: #fff;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.icons a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+}
+
+a {
+    font-family: serif;
+    font-weight: normal;
+}
+
+.icon-text {
+    padding: 5% 0 5% 0;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 46px;
+}
+
+.horizontal-line {
+    flex: 1;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.get-newsletter {
+    padding: 10px;
+}
+
+h4 {
+    margin: 0;
+}
+
+
+.about-links li a {
+    color: #fff;
+}
+
+.about-links li {
+    list-style: none;
+    width: fit-content;
+}
+.newsletter-section {
+    margin: 20px; 
+    text-align: center;
+}
+
+.newsletter-section h4 {
+    margin-bottom: 10px;
+}
+
+.newsletter-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-section input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.newsletter-section button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .inner-sctn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    ul {
+       padding-inline-start: 0;
+    }
+}
