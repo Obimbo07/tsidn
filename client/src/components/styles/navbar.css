@@ -133,3 +133,40 @@ n {
   display: flex;
   align-items: center;
 }
+
+.hamburger-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .list-nav {
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .list-nav.open {
+    display: flex;
+  }
+
+  .list-nav li {
+    border-left: none;
+    border-bottom: 1px solid;
+    padding: 10px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
