@@ -182,7 +182,8 @@ const Front = () => {
     }
 
     return (
-        <div className="front-page bg-[#ffffff]">
+        <>
+            <div className="front-page bg-[#ffffff]">
             <div className="bg-secColor">
                 <div className="flex justify-between items-center px-[15px] py-[25px] text-[20px]">
                     <div className="">
@@ -209,15 +210,21 @@ const Front = () => {
             <div className="content-area">
                 <ToastContainer />
                 {openPostForm && (
-                    <div className="flex items-center justify-center fixed bg-[#0000004d] w-[100%] h-[100%]  mt-[0px]">
-                            <div className="post-form bg-white px-[30px]   h-[600px] mb-[70px] overflow-auto">
-                                <form onSubmit={(event) =>handleSubmit(event)} className='flex flex-col '>
-                                    <label htmlFor="category">Category:</label>
+                    <div className="flex items-center justify-center fixed bg-[#0000004d] w-[100%] h-[100%]  mt-[0px] ">
+                            <div className="post-form bg-white px-[30px]   h-[600px] mb-[140px] overflow-auto py-[40px]">
+                                <form onSubmit={(event) =>handleSubmit(event)} className='flex flex-col  '>
+                                    <div className="flex justify-end">
+                                        <button className='bg-[red] px-[10px] py-[3px] rounded-[3px]' onClick={() => setOpenForm(false)}>
+                                            Close
+                                        </button>
+                                    </div>
+                                    <label htmlFor="category" className='font-[500] mb-[5px] text-[18px]'>Category:</label>
                                     <select
                                     name="selectedCategory" 
                                     id="category"
                                     value={formData.selectedCategory}
                                     onChange={handleCategoryChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     >
                                         <option value="">select a category</option>
                                         {categories.map((category) => (
@@ -226,27 +233,29 @@ const Front = () => {
                                             </option>
                                         ))}
                                     </select>
-                                    <label htmlFor="tags">Tags:</label>
+                                    <label htmlFor="tags" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Tags:</label>
                                     {tags.map((tag) => (
-                                        <div key={tag} className="tag-checkbox">
+                                        <div key={tag} className="tag-checkbox flex flex-row gap-[10px] items-center">
                                         <input
                                             type="checkbox"
                                             id={tag}
                                             value={tag}
                                             checked={formData.selectedTags.includes(tag)}
                                             onChange={() => handleTagChange(tag)}
+                                            className='border-[1px] border-lightBlue outline-none  rounded-[3px] text-[30px] '
                                         />
-                                        <label htmlFor={tag}>{tag}</label>
+                                        <label htmlFor={tag} className='font-[400] text-[18px] '>{tag}</label>
                                         </div>
                                     ))}
-                                    <label htmlFor="title">Title:</label>
+                                    <label htmlFor="title" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Title:</label>
                                     <input type="text" 
                                     name='title' 
                                     id='title'
                                     value={formData.title}
                                     onChange={handleChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     />
-                                    <label htmlFor="content">Content:</label>
+                                    <label htmlFor="content" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Content:</label>
                                     <textarea name="content"
                                     id="content" 
                                     cols="30" 
@@ -254,19 +263,29 @@ const Front = () => {
                                     placeholder='content area'
                                     value={formData.content}
                                     onChange={handleChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     >
                                     </textarea>
-                                    <label htmlFor="image">Image:</label>
+                                    <label htmlFor="image" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Image:</label>
                                     <input type="file" 
                                     name="image" 
                                     id="image" 
                                     onChange={(e) => setFormData({...formData, image: e.target.files[0]})}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     />
-                                    <div className="date-types">
-                                        <button onClick={(e) => handleFixedDate(e)}>Fixed Date</button>
-                                        <button onClick={(e) => handleScheduledDate(e)}>Scheduled Date</button>
+                                    <div className="date-types flex justify-center gap-[20px] mt-[20px]">
+                                        <button onClick={(e) => handleFixedDate(e)}
+                                        className='bg-lightBlue px-[10px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'
+                                        >
+                                            Fixed Date
+                                        </button>
+                                        <button onClick={(e) => handleScheduledDate(e)}
+                                        className='bg-lightBlue px-[10px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'
+                                        >
+                                            Scheduled Date
+                                        </button>
                                     </div>
-                                    <label htmlFor="date">Date:</label>
+                                    <label htmlFor="date" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Date:</label>
                                     {openFixedDate && (
                                         <>
                                             <input type="date"
@@ -274,32 +293,35 @@ const Front = () => {
                                             id="date"
                                             value={formData.date}
                                             onChange={handleChange}
+                                            className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                             />
                                         </>
                                     )}
                                     {
                                         openScheduledDate && (
                                             <>
-                                            <label htmlFor="startDate">Start Date</label>
+                                            <label htmlFor="startDate" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Start Date</label>
                                             <input type="date" 
                                             name="startDate"
                                              id="startDate" 
                                              value={formData.startDate}
                                              onChange={handleChange}
+                                             className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                              />
-                                            <label htmlFor="endDate">End Date</label>
+                                            <label htmlFor="endDate" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>End Date</label>
                                             <input type="date"
                                              name="endDate" 
                                              id="endDate"
                                              value={formData.endDate}
                                              onChange={handleChange}
+                                             className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                               />
                                             </>
                                         )
                                     }
                                     
-                                    <div className="button">
-                                        <button type='submit'>Post</button>
+                                    <div className="button flex justify-center mt-[20px]">
+                                        <button type='submit' className='bg-lightBlue px-[20px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'>Post</button>
                                         
                                     </div>
                                 </form>
@@ -309,6 +331,9 @@ const Front = () => {
                 <Outlet />
             </div>
         </div>
+
+        </>
+        
     )
 }
 
