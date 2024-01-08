@@ -1,14 +1,19 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Front = () => {
+    const navigate = useNavigate();
     const [openPostForm, setOpenForm] =  useState(false);
     const [openFixedDate, setFixedDate] = useState(true);
     const [openScheduledDate, setScheduledDate] = useState(false);
     // const [contentList, setContentList] = useState([]);
+
+    const HomeNavigate = () => {
+        navigate('');
+    }
 
     const select_content_api = `${process.env.REACT_APP_DATABASE_API}/api/selectContent`;
 
@@ -186,7 +191,7 @@ const Front = () => {
             <div className="front-page bg-[#ffffff]">
             <div className="bg-secColor">
                 <div className="flex justify-between items-center px-[15px] py-[25px] text-[20px]">
-                    <div className="">
+                    <div className="" onClick={HomeNavigate}>
                         <img src="../../logotest.jpeg" alt="" className='w-[100px] h-[80px]'/>
                     </div>
                     <div className="details">

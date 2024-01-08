@@ -214,7 +214,6 @@ const TransportSafety = () => {
                         <th>Fixed Date</th>
                         <th>Start Date</th>
                         <th>End Date</th>
-                        <th>View More</th>
                     </thead>
                     <tbody>
                         {transportList.length === 0 ? (
@@ -247,7 +246,7 @@ const TransportSafety = () => {
                                         <tr colSpan="11" className='border-b-[1px] border-b-[#ddd] flex justify-center w-[100%] '>
                                             {viewMore && viewContent && (
                                             <div className="flex flex-row items-center ">
-                                                <div className="flex flex-col justify-center w-[800px] bg-[#F6F7D3] px-[30px] py-[20px]">
+                                                <div className="flex flex-col justify-center w-[800px] bg-lightYellow px-[30px] py-[20px]">
                                                     <div className="flex justify-end" onClick={(e) => setViewContent(false)}>
                                                         <FontAwesomeIcon icon={faXmark}
                                                             className='text-[35px] text-[orangered]'
@@ -270,11 +269,13 @@ const TransportSafety = () => {
                                                         </div>
                                                         <div className="flex flex-col items-center gap-[10px]">
                                                             <h2 className='font-[500]'>Image</h2>
-                                                            <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
+                                                            <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} 
+                                                            alt={viewContent.image_name} 
+                                                            className='w-[300px] h-[200px] border-[1px] border-darkBlack'
+                                                            />
                                                         </div>
                                                     </div>
-                                                    
-                                                    
+                                            
                                                     { viewContent.date ? (
                                                         <>
                                                         <div className="mt-[20px]">
@@ -301,99 +302,106 @@ const TransportSafety = () => {
                                     </tr>
                                     )}
                                     {editId == data.id && (
-                                        <tr colSpan="11" className='border-b-[1px] border-b-[#ddd]'>
+                                        <tr colSpan="11" className='border-b-[1px] border-b-[#ddd] '>
                                             {openFormEdit && formData &&(
-                                                <div className="">
-                                                    <div className="">
-                                                        <div className="form">
-                                                            <div className="button-close">
-                                                                <button onClick={handleCloseEdit}>Close</button>
-                                                            </div> 
-                                                        <div className="post-form">
-                                                            <form onSubmit={handleSubmitEdit}>
-                                                                <label htmlFor="category">Category:</label>
-                                                                <select
-                                                                name="selectedCategory" 
-                                                                id="category"
-                                                                value={formData.post_category}
-                                                                onChange={handleCategoryChange}
-                                                                >
-                                                                    <option value="">select a category</option>
-                                                                    {categories.map((category) => (
-                                                                        <option key={category.id} value={category.title}>
-                                                                            {category.title}
-                                                                        </option>
-                                                                    ))}
-                                                                </select>
-                                                                <label htmlFor="tags">Tags:</label>
-                                                                {tags.map((tag) => (
-                                                                    <div key={tag} className="tag-checkbox">
-                                                                    <input
-                                                                        type="checkbox"
-                                                                        id={tag}
-                                                                        value={tag}
-                                                                        checked={formData.post_tag.includes(tag)}
-                                                                        onChange={() => handleTagChange(tag)}
-                                                                    />
-                                                                    <label htmlFor={tag}>{tag}</label>
-                                                                    </div>
+                                                <div className="bg-lightYellow px-[40px] py-[20px]">
+                                                        <div className="flex justify-end "  >
+                                                            <div className="" onClick={handleCloseEdit}>
+                                                                <FontAwesomeIcon icon={faXmark}
+                                                                    className='text-[35px] text-[orangered]'
+                                                                />
+                                                            </div>
+
+                                                        </div> 
+                                                        <form onSubmit={handleSubmitEdit} className='flex flex-col'>
+                                                            <label htmlFor="category" className='font-[500] text-[18px] mb-[8px]'>Category:</label>
+                                                            <select
+                                                            name="selectedCategory" 
+                                                            id="category"
+                                                            value={formData.post_category}
+                                                            onChange={handleCategoryChange}
+                                                            className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                            >
+                                                                <option value="">select a category</option>
+                                                                {categories.map((category) => (
+                                                                    <option key={category.id} value={category.title}>
+                                                                        {category.title}
+                                                                    </option>
                                                                 ))}
-                                                                <label htmlFor="title">Title:</label>
-                                                                <input type="text" 
-                                                                name='title' 
-                                                                id='title'
-                                                                value={formData.post_title}
-                                                                onChange={(e) => setFormData({...formData, post_title: e.target.value})}
+                                                            </select>
+                                                            <label htmlFor="tags" className='font-[500] text-[18px] mb-[8px]' >Tags:</label>
+                                                            {tags.map((tag) => (
+                                                                <div key={tag} className="flex flex-row items-center gap-[5px]">
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id={tag}
+                                                                    value={tag}
+                                                                    checked={formData.post_tag.includes(tag)}
+                                                                    onChange={() => handleTagChange(tag)}
+                                                                    className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
                                                                 />
-                                                                <label htmlFor="content">Content:</label>
-                                                                <textarea name="content"
-                                                                id="content" 
-                                                                cols="30" 
-                                                                rows="10"
-                                                                placeholder='content area'
-                                                                value={formData.post_content}
-                                                                onChange={(e) => setFormData({...formData, post_content: e.target.value})}
-                                                                >
-                                                                </textarea>
-                                                                <label htmlFor="image">Image:</label>
-                                                                <input type="file" 
-                                                                name="image" 
-                                                                id="image" 
-                                                                onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
-                                                                />
-                                                                <label htmlFor="date">Date:</label>
-                                                                { formData.date  ? (
-                                                                <>
-                                                                    <input type="date"
-                                                                    name="date"
-                                                                    id="date"
-                                                                    value={formData.date}
-                                                                    onChange={(e) => setFormData({...formData, date: e.target.value})}
-                                                                    />
-                                                                </>): (<>
-                                                                    <label htmlFor="">Start Date: </label>
-                                                                    <input type="date"
-                                                                    name="date"
-                                                                    id="date"
-                                                                    value={formData.start_date}
-                                                                    onChange={(e) => setFormData({...formData, start_date: e.target.value})}
-                                                                    />
-                                                                    <label htmlFor="">End Date:</label>
-                                                                    <input type="date"
-                                                                    name="date"
-                                                                    id="date"
-                                                                    value={formData.end_date}
-                                                                    onChange={(e) => setFormData({...formData, end_date: e.target.value})}
-                                                                    />
-                                                                </>)}
-                                                                
-                                                                <div className="button">
-                                                                    <button type='submit'>Post</button>
+                                                                <label htmlFor={tag} className='font-[400] text-[16px] '>{tag}</label>
                                                                 </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    </div>
+                                                            ))}
+                                                            <label htmlFor="title" className='font-[500] text-[18px] mb-[8px]'>Title:</label>
+                                                            <input type="text" 
+                                                            name='title' 
+                                                            id='title'
+                                                            value={formData.post_title}
+                                                            onChange={(e) => setFormData({...formData, post_title: e.target.value})}
+                                                            className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                            />
+                                                            <label htmlFor="content" className='font-[500] text-[18px] mb-[8px]'>Content:</label>
+                                                            <textarea name="content"
+                                                            id="content" 
+                                                            cols="30" 
+                                                            rows="10"
+                                                            placeholder='content area'
+                                                            value={formData.post_content}
+                                                            onChange={(e) => setFormData({...formData, post_content: e.target.value})}
+                                                            className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none resize-y'
+                                                            >
+                                                            </textarea>
+                                                            <label htmlFor="image" className='font-[500] text-[18px] mb-[8px]'>Image:</label>
+                                                            <input type="file" 
+                                                            name="image" 
+                                                            id="image" 
+                                                            onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
+                                                            className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                            />
+                                                            <label htmlFor="date" className='font-[500] text-[18px] mb-[8px]'>Date:</label>
+                                                            { formData.date  ? (
+                                                            <>
+                                                                <input type="date"
+                                                                name="date"
+                                                                id="date"
+                                                                value={formData.date}
+                                                                onChange={(e) => setFormData({...formData, date: e.target.value})}
+                                                                className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                                />
+                                                            </>): (<>
+                                                                <label htmlFor="" className='font-[500] text-[18px] mb-[8px]'>Start Date: </label>
+                                                                <input type="date"
+                                                                name="date"
+                                                                id="date"
+                                                                value={formData.start_date}
+                                                                onChange={(e) => setFormData({...formData, start_date: e.target.value})}
+                                                                className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                                />
+                                                                <label htmlFor="" className='font-[500] text-[18px] mb-[8px]'>End Date:</label>
+                                                                <input type="date"
+                                                                name="date"
+                                                                id="date"
+                                                                value={formData.end_date}
+                                                                onChange={(e) => setFormData({...formData, end_date: e.target.value})}
+                                                                className='border-[1px] border-lightBlue rounded-[3px] py-[3px] px-[2px] text-[17px] outline-none'
+                                                                />
+                                                            </>)}
+                                                            
+                                                            <div className="flex justify-center items-center mt-[10px]">
+                                                                <button type='submit' className='bg-[#495664] px-[20px] py-[5px] rounded-[4px] text-white text-[18px]'>Post</button>
+                                                            </div>
+                                                        </form>
                                                 </div>  
                                             )}
                                         </tr>

@@ -10,7 +10,8 @@ module.exports = {
       'secColor': '#EFFFFB',
       'green': '#50D890',
       'white': '#ffffff',
-      'oraColor': 'orangered'
+      'oraColor': 'orangered',
+      'lightYellow': '#F6F7D3'
     },
     extend: {},
   },
