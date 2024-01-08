@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { fetchPosts } from '../src/redux/Posts/postSlice';
 import './App.css';
 import DashHome from './adminPages/DashHome';
 import Front from './adminPages/Front';
@@ -6,11 +9,16 @@ import Meetings from './adminPages/Meetings';
 import News from './adminPages/News';
 import Pay from './adminPages/Pay';
 import PodcastsAdmin from './adminPages/PodcastsAdmin';
+import Press from './adminPages/Press';
 import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
-import ExecutiveDirector from './components/pages/ExecutiveDirector';
+import DirectorAbedi from './components/pages/DirectorAbedi';
+import DirectorChristine from './components/pages/DirectorChristine';
+import DirectorIan from './components/pages/DirectorIan';
 import DirectorInnovation from './components/pages/DirectorInnovation';
+import ExecutiveDirector from './components/pages/ExecutiveDirector';
+import FullPostContent from './components/pages/FullPostContent';
 import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
 import OurCoreValues from './components/pages/OurCoreValues';
@@ -31,13 +39,6 @@ import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelop
 import RoadSafety from './components/pages/themes/RoadSafety';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
-import DirectorChristine from './components/pages/DirectorChristine';
-import DirectorAbedi from './components/pages/DirectorAbedi';
-import DirectorIan from './components/pages/DirectorIan';
-import FullPostContent from './components/pages/FullPostContent';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchPosts } from '../src/redux/Posts/postSlice';
 
 function App() {
   const posts = useSelector((state) => state.posts.data);
@@ -195,7 +196,7 @@ function App() {
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
             <Route path="training" element={<Training />} />
-            <Route path="pressRelease" element={<PressRelease/>} />
+            <Route path="press" element={<Press />} />
             <Route path="podcasts" element={<PodcastsAdmin />} />
             <Route path="meetings" element={<Meetings />} />
             <Route path="news" element={<News />} />

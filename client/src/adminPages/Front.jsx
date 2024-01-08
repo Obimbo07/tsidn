@@ -65,7 +65,7 @@ const Front = () => {
         {
             id: 3,
             title: 'Press Releases',
-            link: 'pressRelease'
+            link: 'press'
         },
         {
             id: 4,
@@ -189,7 +189,7 @@ const Front = () => {
     return (
         <>
             <div className="front-page bg-[#ffffff]">
-            <div className="bg-secColor">
+            <div className="bg-secColor  w-[100%]" >
                 <div className="flex justify-between items-center px-[15px] py-[25px] text-[20px]">
                     <div className="" onClick={HomeNavigate}>
                         <img src="../../logotest.jpeg" alt="" className='w-[100px] h-[80px]'/>
@@ -204,15 +204,15 @@ const Front = () => {
                     </div>
                     <div className="flex justify-center items-center gap-[80px]">
                         <div className="post">
-                            <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[8px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-lightBlue'}`}>{openPostForm ? 'Close': 'Post'}</button>
+                            <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[3px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-[##3A4750]'}`}>{openPostForm ? 'Close': 'Post'}</button>
                         </div>
                         <div className="links">
-                            <button className='bg-lightBlue px-[15px] py-[5px] rounded-[8px] text-white font-[700]'>logout</button>
+                            <button className='bg-[#3A4750] px-[15px] py-[5px] rounded-[3px] text-white font-[700]'>logout</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="content-area">
+            <div className="">
                 <ToastContainer />
                 {openPostForm && (
                     <div className="flex items-center justify-center fixed bg-[#0000004d] w-[100%] h-[100%]  mt-[0px] ">

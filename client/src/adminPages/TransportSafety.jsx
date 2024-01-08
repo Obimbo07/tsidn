@@ -206,14 +206,13 @@ const TransportSafety = () => {
                         <p className='text-darkBlack text-[20px] font-[400]'>Transport</p>
                     </caption>
                     <thead className='bg-[#f2f2f2] text-[black] py-[30px] '>
-                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' >Category</th>
-                        <th>Tags</th>
-                        <th>Title</th>
-                        <th>Content</th>
-                        <th>Image</th>
-                        <th>Fixed Date</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Tags</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Title</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Content</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Image</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Fixed Date</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Start Date</th>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>End Date</th>
                     </thead>
                     <tbody>
                         {transportList.length === 0 ? (
@@ -225,7 +224,6 @@ const TransportSafety = () => {
                             {transportList.map((data) => (
                                 <React.Fragment key={data.id}>
                                     <tr className=' hover:bg-[#f5f5f59b]' key={data.id}>
-                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_category}</td>
                                         <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_tag}</td>
                                         <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_title}</td>
                                         <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{truncateText(data.post_content, 50)}</td>

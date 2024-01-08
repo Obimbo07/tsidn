@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Training = () => {
+const Press = () => {
    
     const[transportList, setTransportList] = useState([]);
     const[openFormEdit, setOpenFormEdit] = useState([]);
@@ -14,7 +14,8 @@ const Training = () => {
     const[viewContent, setViewContent] = useState();
     const [selectId, setSelectId] = useState(null);
 
-    const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectTraining`;
+    const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectPressRelease`;
+    console.log('select_trans_api',select_trans_api);
 
     const selectTrans =  useCallback(async() => {
         try {
@@ -179,7 +180,6 @@ const Training = () => {
           }
     }
 
-    
 
     const handleViewMore = (id) => {
         setOpenFormEdit(false);
@@ -203,7 +203,7 @@ const Training = () => {
             <div className="flex justify-center px-[40px]">
                 <table className='border-collapse border-spacing-0 w-[100%] mt-[40px]'>
                     <caption className='caption-top'>
-                        <p className='text-darkBlack text-[20px] font-[400]'>Training</p>
+                        <p className='text-darkBlack text-[20px] font-[400]'>Press Release</p>
                     </caption>
                     <thead className='bg-[#f2f2f2] text-[black] py-[30px] '>
                         <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>Tags</th>
@@ -417,4 +417,4 @@ const Training = () => {
     )
 }
 
-export default Training;
+export default Press;
