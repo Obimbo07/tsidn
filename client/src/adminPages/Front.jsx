@@ -137,8 +137,8 @@ const Front = () => {
         ...formData,
         [e.target.name]: e.target.value,
     })
-
     }
+
     // console.log(formData);
 
     const handleSubmit = async(event) => {
@@ -195,14 +195,14 @@ const Front = () => {
                         <img src="../../logotest.jpeg" alt="" className='w-[100px] h-[80px]'/>
                     </div>
                     <div className="details">
-                        <ul className='flex justify-center gap-[30px] items-center '>
+                        <ul className='flex justify-center gap-[30px] items-cent px-[20px] '>
                             <li> <Link to="" className='text-[20px] font-[500]'>Home</Link></li>
                             {categories.map((category) => (
                                 <li key={category.id} > <Link to={category.link} className='text-[20px] font-[500]'>{category.title}</Link> </li>
                             ))}
                         </ul>
                     </div>
-                    <div className="flex justify-center items-center gap-[80px]">
+                    <div className="flex justify-center items-center gap-[30px]">
                         <div className="">
                             <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[3px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-[#3A4750]'}`}>{openPostForm ? 'Close': 'Post'}</button>
                         </div>
