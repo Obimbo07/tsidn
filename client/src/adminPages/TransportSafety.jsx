@@ -1,8 +1,10 @@
+import { faPenToSquare , faEye} from '@fortawesome/free-regular-svg-icons';
+import { faTrash , faDownload} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 const TransportSafety = () => {
    
@@ -192,15 +194,15 @@ const TransportSafety = () => {
         return text;
       };
     return (
-        <div className="transport-page">
+        <div className="transport-page flex flex-col">
             <ToastContainer/>
-            <div className="title">
-                <h1>Transport</h1>
-            </div>
-            <div className="table">
-                <table>
-                    <thead>
-                        <th>Category</th>
+            <div className="flex justify-center px-[40px]">
+                <table className='border-collapse border-spacing-0 w-[100%] mt-[40px]'>
+                    <caption className='caption-top'>
+                        <p className='text-darkBlack text-[20px] font-[400]'>Transport</p>
+                    </caption>
+                    <thead className='bg-[#f2f2f2] text-[black] py-[30px] '>
+                        <th className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' >Category</th>
                         <th>Tags</th>
                         <th>Title</th>
                         <th>Content</th>
@@ -209,8 +211,6 @@ const TransportSafety = () => {
                         <th>Start Date</th>
                         <th>End Date</th>
                         <th>View More</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
                     </thead>
                     <tbody>
                         {transportList.length === 0 ? (
@@ -220,23 +220,23 @@ const TransportSafety = () => {
                         ): (
                             <>
                             {transportList.map((data) => (
-                                <tr key={data.id}>
-                                    <td>{data.post_category}</td>
-                                    <td>{data.post_tag}</td>
-                                    <td>{data.post_title}</td>
-                                    <td>{truncateText(data.post_content, 50)}</td>
-                                    <td>
+                                <tr className=' hover:bg-[#f5f5f59b]' key={data.id}>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_category}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_tag}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_title}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{truncateText(data.post_content, 50)}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>
                                     <a href={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}
                                         download={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}>
-                                            Download
+                                            <FontAwesomeIcon icon={faDownload} />
                                         </a>
-                                    </td>
-                                    <td style={data.date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.date ? data.date : 'Unavailable'}</td>
-                                    <td style={data.start_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.start_date ? data.start_date  : 'Unavailable'}</td>
-                                    <td style={data.end_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.end_date ? data.start_date : 'Unavailable'}</td>
-                                    <td><button onClick={() => handleViewMore(data.id)}>View More</button></td>
-                                    <td><button onClick={() => handleOpenEdit(data.id)}>Edit</button></td>
-                                    <td className='delete-btn'><button onClick={() => handleDelete(data.id)}>Delete</button></td>
+                                    </td >
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.date ? data.date : 'Unavailable'}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.start_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.start_date ? data.start_date  : 'Unavailable'}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.end_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.end_date ? data.start_date : 'Unavailable'}</td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleViewMore(data.id)}><FontAwesomeIcon icon={faEye} /></td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleOpenEdit(data.id)}><FontAwesomeIcon icon={faPenToSquare} /></td>
+                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleDelete(data.id)}><FontAwesomeIcon icon={faTrash} /></td>
                                 </tr>
                             ))}
                             </>
@@ -246,7 +246,7 @@ const TransportSafety = () => {
             </div>
 
             {openFormEdit && formData &&(
-                    <div className="modal">
+                    <div className="admin-modal">
                         <div className="modal-content">
                             <div className="form">
                                 <div className="button-close">

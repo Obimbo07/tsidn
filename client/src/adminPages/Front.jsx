@@ -214,7 +214,7 @@ const Front = () => {
                             <div className="post-form bg-white px-[30px]   h-[600px] mb-[140px] overflow-auto py-[40px]">
                                 <form onSubmit={(event) =>handleSubmit(event)} className='flex flex-col  '>
                                     <div className="flex justify-end">
-                                        <button className='bg-[red] px-[10px] py-[3px] rounded-[3px]' onClick={() => setOpenForm(false)}>
+                                        <button className='bg-[red] px-[10px] py-[3px] rounded-[3px] text-white font-[500]' onClick={() => setOpenForm(false)}>
                                             Close
                                         </button>
                                     </div>
@@ -253,7 +253,7 @@ const Front = () => {
                                     id='title'
                                     value={formData.title}
                                     onChange={handleChange}
-                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] px-[5px] rounded-[3px] text-[18px]'
                                     />
                                     <label htmlFor="content" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Content:</label>
                                     <textarea name="content"
