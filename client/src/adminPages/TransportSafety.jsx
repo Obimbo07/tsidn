@@ -1,5 +1,5 @@
-import { faPenToSquare , faEye} from '@fortawesome/free-regular-svg-icons';
-import { faTrash , faDownload} from '@fortawesome/free-solid-svg-icons';
+import { faEye, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faDownload, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -10,6 +10,9 @@ const TransportSafety = () => {
    
     const[transportList, setTransportList] = useState([]);
     const[openFormEdit, setOpenFormEdit] = useState([]);
+    const[viewMore, setViewMore] = useState(false);
+    const[viewContent, setViewContent] = useState();
+    const [selectId, setSelectId] = useState(null);
 
     const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectTransportSafety`;
 
@@ -48,6 +51,7 @@ const TransportSafety = () => {
     const[formData, setFormData] = useState('');
     const[editId, setEditId] = useState('');
     const handleOpenEdit = (id) => {
+        setViewMore(false);
         setEditId(id);
         // console.log('handleOpenEdit',id);
         setOpenFormEdit(!openFormEdit);
@@ -175,14 +179,13 @@ const TransportSafety = () => {
           }
     }
 
-    const[viewMore, setViewMore] = useState(false);
-    const[viewContent, setViewContent] = useState();
+    
 
     const handleViewMore = (id) => {
-        console.log(id);
+        setOpenFormEdit(false);
+        setSelectId(id);
         const currentView = transportList.find(data => data.id === id);
         if(currentView) {
-            console.log(currentView);
             setViewContent(currentView);
         }
         setViewMore(true);
@@ -193,6 +196,7 @@ const TransportSafety = () => {
         }
         return text;
       };
+
     return (
         <div className="transport-page flex flex-col">
             <ToastContainer/>
@@ -220,24 +224,171 @@ const TransportSafety = () => {
                         ): (
                             <>
                             {transportList.map((data) => (
-                                <tr className=' hover:bg-[#f5f5f59b]' key={data.id}>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_category}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_tag}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_title}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{truncateText(data.post_content, 50)}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>
-                                    <a href={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}
-                                        download={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}>
-                                            <FontAwesomeIcon icon={faDownload} />
-                                        </a>
-                                    </td >
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.date ? data.date : 'Unavailable'}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.start_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.start_date ? data.start_date  : 'Unavailable'}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.end_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.end_date ? data.start_date : 'Unavailable'}</td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleViewMore(data.id)}><FontAwesomeIcon icon={faEye} /></td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleOpenEdit(data.id)}><FontAwesomeIcon icon={faPenToSquare} /></td>
-                                    <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleDelete(data.id)}><FontAwesomeIcon icon={faTrash} /></td>
-                                </tr>
+                                <React.Fragment key={data.id}>
+                                    <tr className=' hover:bg-[#f5f5f59b]' key={data.id}>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_category}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_tag}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{data.post_title}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>{truncateText(data.post_content, 50)}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]'>
+                                        <a href={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}
+                                            download={URL.createObjectURL(new Blob([new Uint8Array(data.post_image.data)],{type: 'image/jpeg', }))}>
+                                                <FontAwesomeIcon icon={faDownload} />
+                                            </a>
+                                        </td >
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.date ? data.date : 'Unavailable'}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.start_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.start_date ? data.start_date  : 'Unavailable'}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' style={data.end_date? {color: 'black'}: {color: 'grey' , fontStyle: 'italic'}}>{data.end_date ? data.start_date : 'Unavailable'}</td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleViewMore(data.id)}><FontAwesomeIcon icon={faEye} /></td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleOpenEdit(data.id)}><FontAwesomeIcon icon={faPenToSquare} /></td>
+                                        <td className='p-[20px] text-left border-b-[1px] border-b-[#ddd]' onClick={() => handleDelete(data.id)}><FontAwesomeIcon icon={faTrash} /></td>
+                                    </tr>
+                                    {selectId === data.id && (
+                                        <tr>
+                                        {viewMore && viewContent && (
+                                            <div className="">
+                                                <div className="">
+                                                    <div className="view">
+                                                        <div className="button-close">
+                                                            <button onClick={(e) => setViewContent(false)}>Close</button>
+                                                        </div>
+                                                        <div className="title">
+                                                            <p> <span>Category:</span>{viewContent.post_category}</p>
+                                                        </div>
+                                                        <div className="tags">
+                                                            <p><span>Tags:</span>{viewContent.post_tag}</p>
+                                                        </div>
+                                                        <div className="content">
+                                                            <p><span>Content:</span>{viewContent.post_content}</p>
+                                                        </div>
+                                                        <div className="post-image">
+                                                            <span>Image</span>
+                                                            <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
+                                                        </div>
+                                                        
+                                                        { viewContent.date ? (
+                                                            <>
+                                                            <div className="post-date">
+                                                                <p><span>Date:</span>{viewContent.date}</p>
+                                                            </div>
+                                                            </>
+                                                        ): (
+                                                            <>
+                                                            <div className="post-date">
+                                                                <p><span>Start Date:</span>{viewContent.start_date}</p>
+                                                            </div>
+                                                            <div className="post-date">
+                                                                <p><span>End Date:</span>{viewContent.end_date}</p>
+                                                            </div>
+                                                            </>
+                                                        )}
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        )}
+                                    </tr>
+                                    )}
+                                    {editId == data.id && (
+                                        <tr>
+                                            {openFormEdit && formData &&(
+                                                <div className="">
+                                                    <div className="">
+                                                        <div className="form">
+                                                            <div className="button-close">
+                                                                <button onClick={handleCloseEdit}>Close</button>
+                                                            </div> 
+                                                        <div className="post-form">
+                                                            <form onSubmit={handleSubmitEdit}>
+                                                                <label htmlFor="category">Category:</label>
+                                                                <select
+                                                                name="selectedCategory" 
+                                                                id="category"
+                                                                value={formData.post_category}
+                                                                onChange={handleCategoryChange}
+                                                                >
+                                                                    <option value="">select a category</option>
+                                                                    {categories.map((category) => (
+                                                                        <option key={category.id} value={category.title}>
+                                                                            {category.title}
+                                                                        </option>
+                                                                    ))}
+                                                                </select>
+                                                                <label htmlFor="tags">Tags:</label>
+                                                                {tags.map((tag) => (
+                                                                    <div key={tag} className="tag-checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        id={tag}
+                                                                        value={tag}
+                                                                        checked={formData.post_tag.includes(tag)}
+                                                                        onChange={() => handleTagChange(tag)}
+                                                                    />
+                                                                    <label htmlFor={tag}>{tag}</label>
+                                                                    </div>
+                                                                ))}
+                                                                <label htmlFor="title">Title:</label>
+                                                                <input type="text" 
+                                                                name='title' 
+                                                                id='title'
+                                                                value={formData.post_title}
+                                                                onChange={(e) => setFormData({...formData, post_title: e.target.value})}
+                                                                />
+                                                                <label htmlFor="content">Content:</label>
+                                                                <textarea name="content"
+                                                                id="content" 
+                                                                cols="30" 
+                                                                rows="10"
+                                                                placeholder='content area'
+                                                                value={formData.post_content}
+                                                                onChange={(e) => setFormData({...formData, post_content: e.target.value})}
+                                                                >
+                                                                </textarea>
+                                                                <label htmlFor="image">Image:</label>
+                                                                <input type="file" 
+                                                                name="image" 
+                                                                id="image" 
+                                                                onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
+                                                                />
+                                                                <label htmlFor="date">Date:</label>
+                                                                { formData.date  ? (
+                                                                <>
+                                                                    <input type="date"
+                                                                    name="date"
+                                                                    id="date"
+                                                                    value={formData.date}
+                                                                    onChange={(e) => setFormData({...formData, date: e.target.value})}
+                                                                    />
+                                                                </>): (<>
+                                                                    <label htmlFor="">Start Date: </label>
+                                                                    <input type="date"
+                                                                    name="date"
+                                                                    id="date"
+                                                                    value={formData.start_date}
+                                                                    onChange={(e) => setFormData({...formData, start_date: e.target.value})}
+                                                                    />
+                                                                    <label htmlFor="">End Date:</label>
+                                                                    <input type="date"
+                                                                    name="date"
+                                                                    id="date"
+                                                                    value={formData.end_date}
+                                                                    onChange={(e) => setFormData({...formData, end_date: e.target.value})}
+                                                                    />
+                                                                </>)}
+                                                                
+                                                                <div className="button">
+                                                                    <button type='submit'>Post</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>  
+                                            )}
+                                        </tr>
+                                    )}
+                                </React.Fragment>
                             ))}
                             </>
                         )} 
@@ -245,146 +396,7 @@ const TransportSafety = () => {
                 </table>
             </div>
 
-            {openFormEdit && formData &&(
-                    <div className="admin-modal">
-                        <div className="modal-content">
-                            <div className="form">
-                                <div className="button-close">
-                                    <button onClick={handleCloseEdit}>Close</button>
-                                </div> 
-                            <div className="post-form">
-                                <form onSubmit={handleSubmitEdit}>
-                                    <label htmlFor="category">Category:</label>
-                                    <select
-                                    name="selectedCategory" 
-                                    id="category"
-                                    value={formData.post_category}
-                                    onChange={handleCategoryChange}
-                                    >
-                                        <option value="">select a category</option>
-                                        {categories.map((category) => (
-                                            <option key={category.id} value={category.title}>
-                                                {category.title}
-                                            </option>
-                                        ))}
-                                    </select>
-                                    <label htmlFor="tags">Tags:</label>
-                                    {tags.map((tag) => (
-                                        <div key={tag} className="tag-checkbox">
-                                        <input
-                                            type="checkbox"
-                                            id={tag}
-                                            value={tag}
-                                            checked={formData.post_tag.includes(tag)}
-                                            onChange={() => handleTagChange(tag)}
-                                        />
-                                        <label htmlFor={tag}>{tag}</label>
-                                        </div>
-                                    ))}
-                                    <label htmlFor="title">Title:</label>
-                                    <input type="text" 
-                                    name='title' 
-                                    id='title'
-                                    value={formData.post_title}
-                                    onChange={(e) => setFormData({...formData, post_title: e.target.value})}
-                                    />
-                                    <label htmlFor="content">Content:</label>
-                                    <textarea name="content"
-                                    id="content" 
-                                    cols="30" 
-                                    rows="10"
-                                    placeholder='content area'
-                                    value={formData.post_content}
-                                    onChange={(e) => setFormData({...formData, post_content: e.target.value})}
-                                    >
-                                    </textarea>
-                                    <label htmlFor="image">Image:</label>
-                                    <input type="file" 
-                                    name="image" 
-                                    id="image" 
-                                    onChange={(e) => setFormData({...formData, post_image: e.target.files[0]})}
-                                    />
-                                    <label htmlFor="date">Date:</label>
-                                    { formData.date  ? (
-                                    <>
-                                        <input type="date"
-                                        name="date"
-                                        id="date"
-                                        value={formData.date}
-                                        onChange={(e) => setFormData({...formData, date: e.target.value})}
-                                        />
-                                    </>): (<>
-                                        <label htmlFor="">Start Date: </label>
-                                        <input type="date"
-                                        name="date"
-                                        id="date"
-                                        value={formData.start_date}
-                                        onChange={(e) => setFormData({...formData, start_date: e.target.value})}
-                                        />
-                                        <label htmlFor="">End Date:</label>
-                                        <input type="date"
-                                        name="date"
-                                        id="date"
-                                        value={formData.end_date}
-                                        onChange={(e) => setFormData({...formData, end_date: e.target.value})}
-                                        />
-                                    </>)}
-                                    
-                                    <div className="button">
-                                        <button type='submit'>Post</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    
-                )}
-
-            {viewMore && viewContent && (
-                <div className="modal-view">
-                    <div className="modal-content-view">
-                        <div className="view">
-                            <div className="button-close">
-                                <button onClick={(e) => setViewContent(false)}>Close</button>
-                            </div>
-                            <div className="title">
-                                <p> <span>Category:</span>{viewContent.post_category}</p>
-                            </div>
-                            <div className="tags">
-                                <p><span>Tags:</span>{viewContent.post_tag}</p>
-                            </div>
-                            <div className="content">
-                                <p><span>Content:</span>{viewContent.post_content}</p>
-                            </div>
-                            <div className="post-image">
-                                <span>Image</span>
-                                <img src={URL.createObjectURL(new Blob([new Uint8Array(viewContent.post_image.data)],{type: 'image/jpeg', }))} alt={viewContent.image_name} />
-                            </div>
-                            
-                            { viewContent.date ? (
-                                <>
-                                <div className="post-date">
-                                    <p><span>Date:</span>{viewContent.date}</p>
-                                </div>
-                                </>
-                            ): (
-                                <>
-                                <div className="post-date">
-                                    <p><span>Start Date:</span>{viewContent.start_date}</p>
-                                </div>
-                                <div className="post-date">
-                                    <p><span>End Date:</span>{viewContent.end_date}</p>
-                                </div>
-                                </>
-                            )}
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            )}
+            
         </div>
     )
 }
