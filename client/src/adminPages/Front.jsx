@@ -203,8 +203,8 @@ const Front = () => {
                         </ul>
                     </div>
                     <div className="flex justify-center items-center gap-[80px]">
-                        <div className="post">
-                            <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[3px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-[##3A4750]'}`}>{openPostForm ? 'Close': 'Post'}</button>
+                        <div className="">
+                            <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[3px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-[#3A4750]'}`}>{openPostForm ? 'Close': 'Post'}</button>
                         </div>
                         <div className="links">
                             <button className='bg-[#3A4750] px-[15px] py-[5px] rounded-[3px] text-white font-[700]'>logout</button>
