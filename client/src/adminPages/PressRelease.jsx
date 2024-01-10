@@ -4,12 +4,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Pages.css';
 
-const PodcastsAdmin = () => {
+const PressRelease = () => {
    
     const[transportList, setTransportList] = useState([]);
     const[openFormEdit, setOpenFormEdit] = useState([]);
 
-    const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectPodCasts`;
+    const select_trans_api = `${process.env.REACT_APP_DATABASE_API}/api/selectPressRelease`;
 
     const selectTrans =  useCallback(async() => {
         try {
@@ -115,13 +115,13 @@ const PodcastsAdmin = () => {
         });
     }
 
-    // const handleChange = (e) => {
-    // setFormData({
-    //     ...formData,
-    //     [e.target.name]: e.target.value,
-    // })
+    const handleChange = (e) => {
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+    })
 
-    // }
+    }
 
       const tags = [
         'Transport',
@@ -195,7 +195,7 @@ const PodcastsAdmin = () => {
         <div className="transport-page">
             <ToastContainer/>
             <div className="title">
-                <h1>Podcasts</h1>
+                <h1>Press Release</h1>
             </div>
             <div className="table">
                 <table>
@@ -387,4 +387,4 @@ const PodcastsAdmin = () => {
     )
 }
 
-export default PodcastsAdmin;
+export default PressRelease;

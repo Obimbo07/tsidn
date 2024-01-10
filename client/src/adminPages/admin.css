@@ -1,0 +1,191 @@
+
+:root {
+    --light: #E0F4FF;
+    --primary: #87C4FF;
+    --secondary: #39A7FF;
+    --cream: #FFEED9;
+    --blue: #0caceb;
+    --white: white;
+    --black: black;
+}
+/* * {
+  margin:  0;
+  background-color: #FFEED9;
+}  */
+
+.front-page {
+    display: flex;
+    /* background-color: #FFEED9; */
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+  
+  .front-page .admin-header {
+    background-color: white;
+    color: black;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 3px 5px #888888;
+   
+  }
+  .front-page .admin-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+  }
+  
+  .front-page .logo {
+    margin-left: 20px;
+  }
+  .front-page .logo h2 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .front-page .links {
+    margin-right: 20px;
+  }
+  .front-page .links button,
+  .front-page .post button {
+    padding: 8px 15px;
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 800;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .front-page .sidebar {
+    margin-top: 80px;
+    background-color: var(--light);
+    padding: 10px;
+    width: 200px;
+    height: calc(100vh - 80px); 
+    position: fixed;
+    overflow: auto;
+  }
+
+  .front-page .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .front-page .sidebar .menu h2 {
+    color: #39A7FF;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .front-page .sidebar .details{
+    overflow: auto;
+  }
+  .front-page .sidebar .details ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .front-page .sidebar .details ul li {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black
+   
+  }
+  .front-page .sidebar .details ul li a:hover {
+    color: #39A7FF;
+  }
+  .front-page .content-area {
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 10px;
+  }
+  .front-page .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 90;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    overflow: auto;
+}
+
+.front-page .modal-content {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    height: 600px;
+    margin-bottom: 70px;
+}
+
+.front-page .form{
+    margin: 0 auto;
+    overflow: auto;
+  }
+  .front-page .content-area .post-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  .front-page .content-area form {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 400px;
+  }
+
+  .front-page .content-area form input, select, textarea {
+    border: 1px solid var(--primary);
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  .front-page .content-area form textarea {
+    resize: vertical;
+  }
+  .front-page .content-area form label {
+    font-weight:600;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+
+  .front-page .content-area form .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .front-page .content-area form .date-types {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .front-page .content-area form .date-types button {
+    padding: 5px 8px;
+    border-radius: 3px;
+  }
+
+  .front-page .content-area form button {
+    padding: 8px 25px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    border: none;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 600;
+}
+.front-page .content-area form button:hover{
+    background-color: var(--primary);
+    color: var(--black);
+}
+
