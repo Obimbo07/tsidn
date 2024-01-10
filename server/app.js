@@ -4,12 +4,23 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 dotenv.config({path: './database/.env'});
 
-
+//production cors
 const corsOptions = {
     origin: 'https://tsidn.org',
     methods: ['POST', 'GET','PUT','DELETE']
 }
-app.use(cors(corsOptions));
+
+//local development cors
+
+const corsOptionsLocal = {
+    origin: 'http://localhost:3000',
+    methods: ['POST', 'GET','PUT','DELETE']
+}
+
+app.use(cors(corsOptionsLocal));
+
+
+
 app.use(express.json());
 
 const port = process.env.PORT;

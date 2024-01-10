@@ -1,15 +1,19 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './admin.css';
 
 const Front = () => {
+    const navigate = useNavigate();
     const [openPostForm, setOpenForm] =  useState(false);
     const [openFixedDate, setFixedDate] = useState(true);
     const [openScheduledDate, setScheduledDate] = useState(false);
     // const [contentList, setContentList] = useState([]);
+
+    const HomeNavigate = () => {
+        navigate('');
+    }
 
     const select_content_api = `${process.env.REACT_APP_DATABASE_API}/api/selectContent`;
 
@@ -61,7 +65,7 @@ const Front = () => {
         {
             id: 3,
             title: 'Press Releases',
-            link: 'pressRelease'
+            link: 'press'
         },
         {
             id: 4,
@@ -133,8 +137,8 @@ const Front = () => {
         ...formData,
         [e.target.name]: e.target.value,
     })
-
     }
+
     // console.log(formData);
 
     const handleSubmit = async(event) => {
@@ -183,50 +187,49 @@ const Front = () => {
     }
 
     return (
-        <div className="front-page">
-            <div className="admin-header">
-                <nav>
-                    <div className="logo">
-                        <h2>Admin page</h2>
-                    </div>
-                    <div className="post">
-                        <button onClick={handleOPenForm}>{openPostForm ? 'Close': 'Post'}</button>
-                    </div>
-                    <div className="links">
-                        <button>logout</button>
-                    </div>
-                </nav>
-            </div>
-            <div className="sidebar">
-                <div className="sidebar-content">
-                    <div className="menu">
-                        <h2>Menu</h2>
+        <>
+            <div className="front-page bg-[#ffffff]">
+            <div className="bg-secColor  w-[100%]" >
+                <div className="flex justify-between items-center px-[15px] py-[25px] text-[20px]">
+                    <div className="" onClick={HomeNavigate}>
+                        <img src="../../logotest.jpeg" alt="" className='w-[100px] h-[80px]'/>
                     </div>
                     <div className="details">
-                        <ul>
-                            <li> <Link to="">Home</Link></li>
+                        <ul className='flex justify-center gap-[30px] items-cent px-[20px] '>
+                            <li> <Link to="" className='text-[20px] font-[500]'>Home</Link></li>
                             {categories.map((category) => (
-                                <li key={category.id}> <Link to={category.link}>{category.title}</Link> </li>
+                                <li key={category.id} > <Link to={category.link} className='text-[20px] font-[500]'>{category.title}</Link> </li>
                             ))}
                         </ul>
                     </div>
+                    <div className="flex justify-center items-center gap-[30px]">
+                        <div className="">
+                            <button onClick={handleOPenForm} className={` px-[15px] py-[5px] rounded-[3px] font-[700] text-white ${openPostForm ? 'bg-[red] ': 'bg-[#3A4750]'}`}>{openPostForm ? 'Close': 'Post'}</button>
+                        </div>
+                        <div className="links">
+                            <button className='bg-[#3A4750] px-[15px] py-[5px] rounded-[3px] text-white font-[700]'>logout</button>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-            <div className="content-area">
+            <div className="">
                 <ToastContainer />
                 {openPostForm && (
-                    <div className="modal">
-                        <div className="modal-content">
-                            <div className="form">
-                            <div className="post-form">
-                                <form onSubmit={(event) =>handleSubmit(event)}>
-                                    <label htmlFor="category">Category:</label>
+                    <div className="flex items-center justify-center fixed bg-[#0000004d] w-[100%] h-[100%]  mt-[0px] ">
+                            <div className="post-form bg-white px-[30px]   h-[600px] mb-[140px] overflow-auto py-[40px]">
+                                <form onSubmit={(event) =>handleSubmit(event)} className='flex flex-col  '>
+                                    <div className="flex justify-end">
+                                        <button className='bg-[red] px-[10px] py-[3px] rounded-[3px] text-white font-[500]' onClick={() => setOpenForm(false)}>
+                                            Close
+                                        </button>
+                                    </div>
+                                    <label htmlFor="category" className='font-[500] mb-[5px] text-[18px]'>Category:</label>
                                     <select
                                     name="selectedCategory" 
                                     id="category"
                                     value={formData.selectedCategory}
                                     onChange={handleCategoryChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     >
                                         <option value="">select a category</option>
                                         {categories.map((category) => (
@@ -235,27 +238,29 @@ const Front = () => {
                                             </option>
                                         ))}
                                     </select>
-                                    <label htmlFor="tags">Tags:</label>
+                                    <label htmlFor="tags" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Tags:</label>
                                     {tags.map((tag) => (
-                                        <div key={tag} className="tag-checkbox">
+                                        <div key={tag} className="tag-checkbox flex flex-row gap-[10px] items-center">
                                         <input
                                             type="checkbox"
                                             id={tag}
                                             value={tag}
                                             checked={formData.selectedTags.includes(tag)}
                                             onChange={() => handleTagChange(tag)}
+                                            className='border-[1px] border-lightBlue outline-none  rounded-[3px] text-[30px] '
                                         />
-                                        <label htmlFor={tag}>{tag}</label>
+                                        <label htmlFor={tag} className='font-[400] text-[18px] '>{tag}</label>
                                         </div>
                                     ))}
-                                    <label htmlFor="title">Title:</label>
+                                    <label htmlFor="title" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Title:</label>
                                     <input type="text" 
                                     name='title' 
                                     id='title'
                                     value={formData.title}
                                     onChange={handleChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] px-[5px] rounded-[3px] text-[18px]'
                                     />
-                                    <label htmlFor="content">Content:</label>
+                                    <label htmlFor="content" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Content:</label>
                                     <textarea name="content"
                                     id="content" 
                                     cols="30" 
@@ -263,19 +268,29 @@ const Front = () => {
                                     placeholder='content area'
                                     value={formData.content}
                                     onChange={handleChange}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     >
                                     </textarea>
-                                    <label htmlFor="image">Image:</label>
+                                    <label htmlFor="image" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Image:</label>
                                     <input type="file" 
                                     name="image" 
                                     id="image" 
                                     onChange={(e) => setFormData({...formData, image: e.target.files[0]})}
+                                    className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                     />
-                                    <div className="date-types">
-                                        <button onClick={(e) => handleFixedDate(e)}>Fixed Date</button>
-                                        <button onClick={(e) => handleScheduledDate(e)}>Scheduled Date</button>
+                                    <div className="date-types flex justify-center gap-[20px] mt-[20px]">
+                                        <button onClick={(e) => handleFixedDate(e)}
+                                        className='bg-lightBlue px-[10px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'
+                                        >
+                                            Fixed Date
+                                        </button>
+                                        <button onClick={(e) => handleScheduledDate(e)}
+                                        className='bg-lightBlue px-[10px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'
+                                        >
+                                            Scheduled Date
+                                        </button>
                                     </div>
-                                    <label htmlFor="date">Date:</label>
+                                    <label htmlFor="date" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Date:</label>
                                     {openFixedDate && (
                                         <>
                                             <input type="date"
@@ -283,45 +298,47 @@ const Front = () => {
                                             id="date"
                                             value={formData.date}
                                             onChange={handleChange}
+                                            className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                             />
                                         </>
                                     )}
                                     {
                                         openScheduledDate && (
                                             <>
-                                            <label htmlFor="startDate">Start Date</label>
+                                            <label htmlFor="startDate" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>Start Date</label>
                                             <input type="date" 
                                             name="startDate"
                                              id="startDate" 
                                              value={formData.startDate}
                                              onChange={handleChange}
+                                             className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                              />
-                                            <label htmlFor="endDate">End Date</label>
+                                            <label htmlFor="endDate" className='font-[500] mb-[5px] text-[18px] mt-[10px]'>End Date</label>
                                             <input type="date"
                                              name="endDate" 
                                              id="endDate"
                                              value={formData.endDate}
                                              onChange={handleChange}
+                                             className='border-[1px] border-lightBlue outline-none py-[8px] rounded-[3px] text-[18px]'
                                               />
                                             </>
                                         )
                                     }
                                     
-                                    <div className="button">
-                                        <button type='submit'>Post</button>
+                                    <div className="button flex justify-center mt-[20px]">
+                                        <button type='submit' className='bg-lightBlue px-[20px] py-[5px] rounded-[8px] text-white font-[500] text-[20px]'>Post</button>
                                         
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    
+                    </div> 
                 )}
                 <Outlet />
             </div>
         </div>
+
+        </>
+        
     )
 }
 
