@@ -1,16 +1,6 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts } from '../../redux/Posts/postSlice';
+import React from 'react';
 
 const Mission = () => {
-  const posts = useSelector((state) => state.data);
-  const dispatch = useDispatch();
-  console.log(posts);
-
-  useEffect(() => {
-    dispatch(fetchPosts())
-  }, [dispatch])
-
   return (
     <div className="mission-container">
 

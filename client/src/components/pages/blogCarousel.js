@@ -33,12 +33,11 @@ const BlogCarousel = ({ blogPosts }) => {
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
               <a href={`blog/${post.id}`} className="continue-reading-link">
-              <h5>{post.title}</h5>
-              <p>{post.content}</p>              
+              <h6>{post.post_title}</h6>
               </a>
             </div>
             <img
-              src={post.image}
+              src={`data:image/png;base64,${post.post_image.data.toString('base64')}`}
               alt={post.title}
               loading="lazy"
               className="carousel-image"
@@ -55,7 +54,7 @@ const BlogCarousel = ({ blogPosts }) => {
               {Events.map((event) => (
                 <div className="event-card"  key={event.id}>
                   <div className="card-logo">
-                    <img src='../../LOGO.jpg'  className="cardLogo" alt="tsdn-logo" />
+                    <img src='../../LogoFinal.svg'  className="cardLogo" alt="tsdn-logo" />
                   </div>
                 <div className="card-content">
                  <span>{event.title}</span>

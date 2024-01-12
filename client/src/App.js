@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { fetchPosts } from '../src/redux/Posts/postSlice';
+import { fetchPosts } from '../src/redux/posts/postSlice';
 import './App.css';
 import DashHome from './adminPages/DashHome';
 import Front from './adminPages/Front';

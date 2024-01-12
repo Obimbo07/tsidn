@@ -33,6 +33,13 @@
   .press-releases {
     height: fit-content;
   }
+
+  .press-releases h3 {
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 5px;
+    padding: 10px;
+  }
   
   .timeline-item {
     position: relative;
@@ -71,6 +78,9 @@
     padding: 10px;
   }
   
+  .missions {
+    width: -webkit-fill-available;
+  }
   .video-container {
     display: flex;
     flex-direction: row;

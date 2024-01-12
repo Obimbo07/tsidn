@@ -58,6 +58,10 @@
     top: 50%; 
   }
 
+  .cardLogo {
+    width: 146%;
+  }
+
   .continue-reading-link {
     font-size: 28px;
     padding: 20px; 
