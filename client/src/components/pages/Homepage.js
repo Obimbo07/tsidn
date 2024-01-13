@@ -54,7 +54,7 @@ const Homepage = () => {
               <p>Company missions</p>
               <div className="Company-video">
                 <iframe
-                  width="200"
+                  width= "-webkit-fill-available"
                   height="200"
                   src="https://www.youtube.com/embed/T--aotYDL0g?si=GPC24-McY4EBB1uJ"
                   title="YouTube Video 1"

@@ -54,6 +54,7 @@ const Navbar = () => {
         ☰
       </button>
         <ul className={`list-nav ${mobileMenuOpen ? 'open' : ''}`}>
+          <button onClick={() => setMobileMenuOpen(false)}> X</button>                                                                                                        
           {links.map((link) => (
             <li key={link.id}>
               {link.dropdown ? (

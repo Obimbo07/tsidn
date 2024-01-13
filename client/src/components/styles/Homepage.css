@@ -81,6 +81,10 @@
   .missions {
     width: -webkit-fill-available;
   }
+
+  .missions-section {
+    width: -webkit-fill-available
+  }
   .video-container {
     display: flex;
     flex-direction: row;
@@ -118,6 +122,9 @@
     width: 120%;
   }
   
+  .Company-video iframe {
+    width: -webkit-fill-available;
+  } 
   .bottom-content {
     display: flex;
     flex-wrap: wrap;

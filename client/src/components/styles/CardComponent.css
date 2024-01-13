@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
   }
   
   .card {
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 20%;
-    height: 13em;
+    height: 6em;
   }
   
   .card-image {

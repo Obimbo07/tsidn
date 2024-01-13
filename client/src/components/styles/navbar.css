@@ -154,16 +154,34 @@ n {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     display: none;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  @keyframes navslider {
+   from {
+    transform: translateX(-100%);
+   } to {
+    transform: translateY(0);
+   }
   }
 
   .list-nav.open {
     display: flex;
+    height: 100vh;
+    animation: navslider 0.3s ease-in-out;
   }
 
   .list-nav li {
     border-left: none;
     border-bottom: 1px solid;
     padding: 10px;
+  }
+
+  .list-nav button {
+    font-size: 20px;
+    font-weight: bold;
+    align-self: self-end;
+    padding: 24px;
   }
 
   .dropdown:hover .dropdown-content {
