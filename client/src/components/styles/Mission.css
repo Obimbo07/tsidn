@@ -9,10 +9,8 @@
   }
   
   .mission-container h2 {
-    color: #333;
-    font-family: monospace;
-    font-size: 33px;
-    font-weight: 800;
+    font-family: fantasy;
+    font-size: 20px;
   }
   
   .mission-container p {

@@ -2,8 +2,6 @@
 
 .executive-director-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     text-align: center;
     margin: 20px;
@@ -17,10 +15,10 @@
   }
   
   .executive-director-text {
-    max-width: 800px; /* Adjust the max-width as needed */
     margin: 0 auto;
-    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-family: Arial; /* Use your preferred font */
     line-height: 1.6;
+    text-align: left;
   }
   
   .executive-director-text h2 {
@@ -30,6 +28,12 @@
   
   .executive-director-text p {
     margin-bottom: 15px;
+  }
+
+  .intro-ed {
+    font-family: fantasy;
+    font-size: 20px;
+    align-items: center;
   }
   
   .executive-director-text p:last-child {
