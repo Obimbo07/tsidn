@@ -8,8 +8,9 @@
   .card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 20%;
-    height: 6em;
+    width: 30%;
+    height: 11em;
+    background-color: #fff;
   }
   
   .card-image {
@@ -19,9 +20,13 @@
   }
   
   .icon-section {
-    padding: 10px;
-    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 13px;
+
   }
+
   
   .icon {
     width: 30px;
@@ -31,7 +36,6 @@
   .title-section {
     padding: 10px;
     text-align: center;
-    background-color: #eee;
   }
   
 @media only screen and (max-width: 500px) {
@@ -45,5 +49,10 @@
 
   .card{
     width: 30%;
+  }
+
+  .icon-section img {
+    width: 72px;
+    height: auto;
   }
 }

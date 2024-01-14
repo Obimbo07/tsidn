@@ -36,7 +36,7 @@ const Homepage = () => {
       <div className="bottom-section">
         <div className="bottom-content">
           <div className="press-releases">
-            <h3>Press releases</h3>
+            <h3>PRESS RELEASES</h3>
             <div className="timeline">
               {pressReleases.map((release) => (
                 <div className="timeline-item" key={release.id}>
@@ -49,7 +49,7 @@ const Homepage = () => {
               ))}
             </div>
           </div>
-          <div className="missions-section">
+          {/* <div className="missions-section">
             <div className="missions">
               <p>Company missions</p>
               <div className="Company-video">
@@ -64,22 +64,14 @@ const Homepage = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <CardComponent />
         <div className="lower-section">
           <div className="featured-videos">
             <h3>FEATURED VIDEOS</h3>
             <div className="video-container">
-              <iframe
-                width="460"
-                height="315"
-                src="https://www.youtube.com/embed/LFrQ0kfRY_I?si=Ki97nqDyF3FQZv7F"
-                title="YouTube Video 1"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+
               <iframe
                 width="460"
                 height="315"

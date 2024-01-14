@@ -36,9 +36,9 @@
 
   .press-releases h3 {
     text-decoration: underline;
-    text-decoration-color: blue;
     text-decoration-thickness: 5px;
-    padding: 10px;
+    border-bottom: 2px solid;
+    margin-bottom: 12px;
   }
   
   .timeline-item {
@@ -47,6 +47,7 @@
     border-left: 2px solid #ccc;
     margin-bottom: 20px;
     background-color: #00000087;
+    height: 11em;
   }
   
   .date {
@@ -54,6 +55,8 @@
     top: 0;
     left: -18px;
     background-color: #fff;
+    color: blue;
+    font-family: serif;
     padding: 5px;
     font-weight: bold;
   }

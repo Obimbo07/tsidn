@@ -37,7 +37,7 @@ const BlogCarousel = ({ blogPosts }) => {
               </a>
             </div>
             <img
-              src={`data:image/png;base64,${post.post_image.data.toString('base64')}`}
+              src={URL.createObjectURL(new Blob([new Uint8Array(post.post_image.data)],{type: 'image/jpeg', }))}
               alt={post.title}
               loading="lazy"
               className="carousel-image"
