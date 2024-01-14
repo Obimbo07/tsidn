@@ -29,11 +29,16 @@
   font-size: 51px;
   color: #FFF;
   text-decoration: none;
-  padding: 49px 89px;
+  padding: 49px 67px;
   background-color: #211d46;
-  border-radius: 4px;
-  margin-top: 10px;
-  width: 116%;
+  border-radius: 7px;
+  margin-top: 87px;
+  width: 182%;
+}
+
+.continue-reading-link h6 {
+  font-size: 13px;
+  width: fit-content;
 }
 
 .stn-header {

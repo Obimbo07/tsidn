@@ -9,9 +9,9 @@ import Modal from '../Modal';
 import { fetchPosts } from '../../redux/posts/postSlice';
 
 const pressReleases = [
-  { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases.', Date: '25th Nov 2023' },
-  { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases.', Date: '23rd Dec 2023' },
-  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases.', Date: '23rd Dec 2023' },
+  { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '25th Nov 2023' },
+  { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '23rd Dec 2023' },
+  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases with released or scheduled date', Date: '23rd Dec 2023' },
 ];
 
 const Homepage = () => {
@@ -42,8 +42,9 @@ const Homepage = () => {
                 <div className="timeline-item" key={release.id}>
                   <div className="date">{release.Date}</div>
                   <div className="press-content">
-                    <h4>{release.title}</h4>
+                    <a href="#">
                     <p>{release.content}</p>
+                    </a>
                   </div>
                 </div>
               ))}

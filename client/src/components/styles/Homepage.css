@@ -46,16 +46,15 @@
     padding: 20px;
     border-left: 2px solid #ccc;
     margin-bottom: 20px;
-    background-color: #00000087;
+    background-color: #0000004a;
     height: 11em;
   }
   
   .date {
     position: absolute;
-    top: 0;
-    left: -18px;
+    top: 1px;
+    left: -1px;
     background-color: #fff;
-    color: blue;
     font-family: serif;
     padding: 5px;
     font-weight: bold;
@@ -119,15 +118,29 @@
   
   .card-content {
     display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 78%;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 120%;
+  }
+
+  .card-content span {
+    font-variant-caps: normal;
   }
   
   .Company-video iframe {
     width: -webkit-fill-available;
   } 
+
+  .event-title {
+    color: #0056b3;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .event-title:hover {
+    color: #453b3b;
+  }
   .bottom-content {
     display: flex;
     flex-wrap: wrap;

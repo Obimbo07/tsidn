@@ -7,10 +7,10 @@ import '../styles/BlogCarousel.css';
 
 
 const Events = [
-  { id: 1, title: 'Major Events', content: 'Company writeup that is displayed on each card and listed from the api data.'},
-  { id: 2, title: 'Test Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 3, title: 'Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 4, title: 'Company  Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 1, title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  { id: 2, title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 3, title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 4, title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
 
 
@@ -57,8 +57,10 @@ const BlogCarousel = ({ blogPosts }) => {
                     <img src='../../LogoFinal.svg'  className="cardLogo" alt="tsdn-logo" />
                   </div>
                 <div className="card-content">
+                 <a href="https://me.com" className="event-title">
                  <span>{event.title}</span>
-                 <span>{event.content}</span>
+                 </a>
+                 <span>{event.date}</span>
                 </div>
                 </div>
               ))}

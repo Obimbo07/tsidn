@@ -1,14 +1,9 @@
 import React from 'react';
+import '../styles/Mission.css';
 
 const Mission = () => {
   return (
     <div className="mission-container">
-
-      {/* <div>
-        {posts.map(post => {
-          <h4 key={post.id}>{post.post_title}</h4>
-        })}
-      </div> */}
       <h2>Our Mission</h2>
       <p>
         At Transposafety International Development Network (TSID-NET), our mission is to empower road transport safety and development in Kenya. We are dedicated to fostering collaboration among key stakeholders at national, regional, and international levels to enhance the safety and development of the transport sector. Our primary goal is to ensure the well-being of communities, facilitate the efficient movement of goods and services, and contribute to the overall growth of Kenya’s economy.
