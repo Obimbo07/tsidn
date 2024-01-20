@@ -1,0 +1,9 @@
+.body {
+    background-color: azure;
+    height: 100vh;
+}
+
+.directors-body {
+    width: 100%;
+    display: flex;
+}

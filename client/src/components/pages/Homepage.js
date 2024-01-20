@@ -50,6 +50,9 @@ const Homepage = () => {
               ))}
             </div>
           </div>
+          <div className="podcasts">
+            
+          </div>
           {/* <div className="missions-section">
             <div className="missions">
               <p>Company missions</p>

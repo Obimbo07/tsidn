@@ -1,0 +1,42 @@
+/* OurCoreValues.css */
+
+.core-values-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .core-values-heading {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .core-values-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .core-values-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .core-values-list li {
+    margin-bottom: 10px;
+  }
+  
+  .core-values-list li strong {
+    color: #333;
+  }
+  
+  .core-values-subheading {
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  

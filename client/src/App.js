@@ -14,7 +14,7 @@ import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
 import DirectorAbedi from './components/pages/DirectorAbedi';
-import DirectorChristine from './components/pages/DirectorChristine';
+import Directors from './components/pages/Directors';
 import DirectorIan from './components/pages/DirectorIan';
 import DirectorInnovation from './components/pages/DirectorInnovation';
 import ExecutiveDirector from './components/pages/ExecutiveDirector';
@@ -39,7 +39,7 @@ import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelop
 import RoadSafety from './components/pages/themes/RoadSafety';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
-
+import DirectorAustin from './components/pages/DirectorAustin';
 function App() {
   const posts = useSelector((state) => state.posts.data);
   const dispatch = useDispatch();
@@ -68,7 +68,7 @@ function App() {
           />
           <Route 
             path="/about/director-christine"
-            element={<DirectorChristine />}
+            element={<Directors />}
           />
           <Route 
             path="/about/director-ian"
@@ -192,6 +192,7 @@ function App() {
               element={<FullPostContent blogPosts={posts} />}
             />
           </Route>
+          <Route path='/director-austin' element={<DirectorAustin />} />
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
