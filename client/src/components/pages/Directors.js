@@ -5,30 +5,58 @@ import "../styles/directors.css"
 const directors = [
 {
   id: 1,
-  title: 'CEO',
+  title: 'Executive Director',
   name: 'Samuel Musumba',
-  imgPath: '/obimbo.jpeg',
+  imgPath: '/musumba.png',
   url: '/director-austin' 
 },
 {
   id: 2,
-  title: 'CTO',
-  name: 'John2',
-  imgPath: '/obimbo.jpeg',
+  title: 'Senior Director Corporate Development and Marketing Communications and a Co-founder',
+  name: 'Shirley Cherotich',
+  imgPath: '/shirley.png',
   url: '/director-austin'
 },
 {
   id: 3,
-  title: 'Director Innovation',
-  name: 'John3',
-  imgPath: '/obimbo.jpeg',
+  title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
+  name: 'Christine Ajulu',
+  imgPath: '/christine.png',
   url: '/director-austin'
 },
 {
   id: 4,
-  title: 'Finance',
-  name: 'John4',
-  imgPath: '/obimbo.jpeg',
+  title: 'Director Software Engineering, Innovation and Research Division ',
+  name: 'Austin Obimbo',
+  imgPath: '/austin.png',
+  url: '/director-john'
+},
+{
+  id: 4,
+  title: 'Senior Director Services TSDN',
+  name: 'Ian Kipchumba',
+  imgPath: '/ian.jpeg',
+  url: '/director-john'
+},
+{
+  id: 4,
+  title: 'Operations Officer TSDN ',
+  name: 'Ms. Reginah Kinyanjui',
+  imgPath: '/austin.png',
+  url: '/director-john'
+},
+{ 
+  id: 4,
+  title: 'Director and counsel TSDN',
+  name: 'Aaron Ngweno',
+  imgPath: '/austin.png',
+  url: '/director-john'
+},
+{ 
+  id: 4,
+  title: 'Director and counsel TSDN',
+  name: 'Abedi Amakobe',
+  imgPath: '/abedi.jpeg',
   url: '/director-john'
 },
 ]
@@ -37,14 +65,14 @@ const Directors = () => {
   return (
     <div className="directors-body">
       {directors.map((director) => (
-         <div key={director.name} >
+         <div className="directors" key={director.name} >
          <div className="directors-section">
          <Link to={director.url}>
          <div>
          <img src={director.imgPath} alt='directors' />
          </div>
-         <h2>{director.title}</h2>
-         <h1>{director.name}</h1> 
+         <h1 className="director-title">{director.name}</h1>
+         <h6 className="director-title">{director.title}</h6>
          </Link>
          </div>
           </div>
