@@ -13,11 +13,11 @@ import Press from './adminPages/Press';
 import Training from './adminPages/Training';
 import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
-import DirectorAbedi from './components/pages/DirectorAbedi';
+import DirectorAbedi from './components/pages/directors/DirectorAbedi';
 import Directors from './components/pages/Directors';
 import DirectorIan from './components/pages/DirectorIan';
 import DirectorInnovation from './components/pages/DirectorInnovation';
-import ExecutiveDirector from './components/pages/ExecutiveDirector';
+import ExecutiveDirector from './components/pages/directors/ExecutiveDirector';
 import FullPostContent from './components/pages/FullPostContent';
 import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
@@ -62,10 +62,7 @@ function App() {
             index
             element={<Mission />}
           />
-          <Route 
-            path="/about/executive-director"
-            element={<ExecutiveDirector />}
-          />
+          
           <Route 
             path="/about/director-christine"
             element={<Directors />}
@@ -192,6 +189,10 @@ function App() {
               element={<FullPostContent blogPosts={posts} />}
             />
           </Route>
+          <Route 
+            path="/executive-director"
+            element={<ExecutiveDirector />}
+          />
           <Route path='/director-austin' element={<DirectorAustin />} />
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />

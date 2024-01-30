@@ -8,7 +8,7 @@ const directors = [
   title: 'Executive Director',
   name: 'Samuel Musumba',
   imgPath: '/musumba.png',
-  url: '/director-austin' 
+  url: '/executive-director' 
 },
 {
   id: 2,

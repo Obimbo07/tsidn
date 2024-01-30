@@ -9,7 +9,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px;
-    gap: 10px;
+    gap: 10%;
 
 }
 
@@ -21,3 +21,13 @@
 .directors-section div img {
     border-radius: 100%;
 }
+
+ 
+@media only screen and (max-width: 768px) {
+    
+    .directors-body{
+        gap: 29%;
+    }
+
+
+  }

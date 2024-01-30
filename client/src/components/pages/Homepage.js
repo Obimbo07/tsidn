@@ -51,7 +51,28 @@ const Homepage = () => {
             </div>
           </div>
           <div className="podcasts">
-            
+           <div className="podcasts-section">
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+           </div>
           </div>
           {/* <div className="missions-section">
             <div className="missions">
