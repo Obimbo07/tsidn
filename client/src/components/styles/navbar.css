@@ -118,7 +118,15 @@ nav {
 
 .search {
   display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
   border-radius: 20px;
+  border: 2px solid;
+  padding: 5px
+}
+
+.search-input {
+
 }
 
 .topNav-links ul {

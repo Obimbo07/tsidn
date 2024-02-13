@@ -1,6 +1,5 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-brands-svg-icons'
+import { faSearchengin } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react';
 
 
@@ -46,15 +45,15 @@ const Search = () => {
     <div>
       <form className="search" onSubmit={handleSearchSubmit}>
         <input
-          id="search"
+          id="search-input"
+          placeholder="Search here..."
           type="text"
           value={searchTerm}
           onChange={handleInputChange}
         />
         <button type="submit">
-        {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
-        
-        Search</button>
+        <FontAwesomeIcon icon={faSearchengin} />
+        </button>
       </form>
       {searchResults.length > 0 && <h3>Results</h3>}
       {renderSearchResults()}
