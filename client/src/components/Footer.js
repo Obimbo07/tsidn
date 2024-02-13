@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <div className="footerSection">
       <div className="newsletter-section">
-                <h4>Sign up for our Newsletter</h4>
+                <h3>Sign up for our Newsletter</h3>
                 <form onSubmit={Newsletter}>
                     <input type="email" placeholder="Enter your email" />
                     <button type="submit">Subscribe</button>

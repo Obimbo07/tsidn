@@ -59,11 +59,14 @@ a {
 
 h4 {
     margin: 0;
+    font-weight: 700;
+    font-family: serif;
 }
 
 
 .about-links li a {
     color: #fff;
+    font-weight: 100;
 }
 
 .about-links li {
