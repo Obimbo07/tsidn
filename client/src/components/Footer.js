@@ -33,10 +33,10 @@ const Footer = () => {
        </div>
       <div className="inner-sctn">
         <div className="contentContainer1">
-          <h4>ABOUT TSDN</h4>
+          <h4>About Tsdn</h4>
           <ul className="about-links">
             <li>
-              <Link to="/about/executive-director">Executive Director</Link>
+              <Link to="/executive-director">Executive Director</Link>
             </li>
             <li>
               <Link to="/about/mission">Mission</Link>
@@ -47,7 +47,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="contentContainer2">
-          <h4>ORGANIZATION LINKS</h4>
+          <h4>Organization Links</h4>
           <ul className="about-links">
             <li>
               <Link to="/transport">TranSafety</Link>
@@ -58,7 +58,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="contentContainer4">
-          <h4 className='icon-text'>FOLLOW US</h4>
+          <h4 className='icon-text'>Follow Us</h4>
           <div className="icons">
           <a href="https://">Twitter
           <FontAwesomeIcon icon={faXTwitter} />
