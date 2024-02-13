@@ -8,7 +8,7 @@ const SideBar = () => {
   const navigate = useNavigate();
 
   const links = useMemo(() => [
-    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Director Christine', 'Director Ian', 'Director Abedi', 'Chief Innovation Officer', 'Mission', 'Our Core Values',] },
+    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executives', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},

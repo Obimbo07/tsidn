@@ -15,49 +15,56 @@ const directors = [
   title: 'Senior Director Corporate Development and Marketing Communications and a Co-founder',
   name: 'Shirley Cherotich',
   imgPath: '/shirley.png',
-  url: '/director-austin'
+  url: '/shirley-cherotich'
 },
 {
   id: 3,
   title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
   name: 'Christine Ajulu',
   imgPath: '/christine.png',
-  url: '/director-austin'
+  url: '/christine-ajulu'
 },
 {
   id: 4,
   title: 'Director Software Engineering, Innovation and Research Division ',
   name: 'Austin Obimbo',
   imgPath: '/austin.png',
-  url: '/director-john'
+  url: '/austin-obimbo'
 },
 {
   id: 4,
   title: 'Senior Director Services TSDN',
   name: 'Ian Kipchumba',
   imgPath: '/ian.jpeg',
-  url: '/director-john'
+  url: '/ian-kipchumba'
 },
 {
   id: 4,
   title: 'Operations Officer TSDN ',
   name: 'Ms. Reginah Kinyanjui',
   imgPath: '/austin.png',
-  url: '/director-john'
+  url: '/reginah-kinyajui'
 },
 { 
   id: 4,
   title: 'Director and counsel TSDN',
   name: 'Aaron Ngweno',
   imgPath: '/austin.png',
-  url: '/director-john'
+  url: '/aaron-ngweno'
 },
 { 
   id: 4,
   title: 'Director and counsel TSDN',
   name: 'Abedi Amakobe',
   imgPath: '/abedi.jpeg',
-  url: '/director-john'
+  url: '/abedi-amakobe'
+},
+{ 
+  id: 5,
+  title: 'Director',
+  name: 'Dr Romanus',
+  imgPath: '/abedi.jpeg',
+  url: '/dr-romanus'
 },
 ]
 
@@ -68,7 +75,7 @@ const Directors = () => {
          <div className="directors" key={director.name} >
          <div className="directors-section">
          <Link to={director.url}>
-         <div>
+         <div class="directors-image">
          <img src={director.imgPath} alt='directors' />
          </div>
          <h1 className="director-title">{director.name}</h1>
