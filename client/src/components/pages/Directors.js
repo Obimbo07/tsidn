@@ -73,15 +73,15 @@ const Directors = () => {
     <div className="directors-body">
       {directors.map((director) => (
          <div className="directors" key={director.name} >
-         <div className="directors-section">
-         <Link to={director.url}>
+         <Link className="directors-link" to={director.url}>
          <div class="directors-image">
          <img src={director.imgPath} alt='directors' />
          </div>
+         <div class="directors-content">
          <h1 className="director-title">{director.name}</h1>
          <h6 className="director-title">{director.title}</h6>
-         </Link>
          </div>
+         </Link>
           </div>
       ))}
     </div>
