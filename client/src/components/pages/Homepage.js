@@ -51,6 +51,7 @@ const Homepage = () => {
             </div>
           </div>
           <div className="podcasts">
+          <h3>Podcasts</h3>
            <div className="podcasts-section">
             <span>
               <h1>Podcasts list</h1>

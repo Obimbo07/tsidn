@@ -64,7 +64,7 @@ function App() {
           />
           
           <Route 
-            path="/about/director-christine"
+            path="/about/executives"
             element={<Directors />}
           />
           <Route 

@@ -5,7 +5,7 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: ['Director Christine', 'Mission', 'Our Core Values',] },
+    { id: 1, text: 'About', url: '/about', dropdown: ['Executives', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
     { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
     { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
@@ -54,7 +54,7 @@ const Navbar = () => {
         ☰
       </button>
         <ul className={`list-nav ${mobileMenuOpen ? 'open' : ''}`}>
-          <button className="close-btn" onClick={() => setMobileMenuOpen(false)}> X</button>                                                                                                        
+            <span className={`listclose ${mobileMenuOpen ? '' : 'open'}`} onClick={() => setMobileMenuOpen(false)}> X</span>                                                                                                        
           {links.map((link) => (
             <li key={link.id}>
               {link.dropdown ? (
