@@ -21,20 +21,15 @@ import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
 import OurCoreValues from './components/pages/OurCoreValues';
 import Themes from './components/pages/Themes';
-import Transport from './components/pages/Transport';
 import Events from './components/pages/events/Events';
 import Highlights from './components/pages/events/Highlights';
 import Media from './components/pages/media/Media';
 import Podcasts from './components/pages/media/Podcasts';
 import PressRelease from './components/pages/media/PressRelease';
 import Videos from './components/pages/media/Videos';
-import AggInTransport from './components/pages/themes/AggInTransport';
-import CapacityBuilding from './components/pages/themes/CapacityBuilding';
 import EcoTransport from './components/pages/themes/EcoTransport';
-import HumanResource from './components/pages/themes/HumanResource';
 import KnowledgeSharing from './components/pages/themes/KnowledgeSharing';
-import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelopment';
-import RoadSafety from './components/pages/themes/RoadSafety';
+import ResearchAndDevelopmentInTransport from './components/pages/themes/ResearchAndDevelopmentInTransport';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
 import DirectorAustin from './components/pages/directors/DirectorAustin';
@@ -42,6 +37,10 @@ import DirectorIan from './components/pages/directors/DirectorIan';
 import DirectorAaron from './components/pages/directors/DirectorAaron';
 import DirectorChristine from './components/pages/directors/DirectorChristine';
 import DirectorShirley from './components/pages/directors/DirectorShirley';
+import CapacityBuildingAndHumanResourceDevelopmentInTransport from './components/pages/themes/CapacityBuildingAndHumanResourceDevelopmentInTransport';
+import TransportSafetyAndDevelopment from './components/pages/themes/TransportSafetyAndDevelopment';
+import AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment from './components/pages/themes/AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment';
+import CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes from './components/pages/themes/CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes';
 
 function App() {
   const posts = useSelector((state) => state.posts.data);
@@ -101,44 +100,40 @@ function App() {
             />
           </Route>
         <Route
-          path="/themes"
+          path="/themes/"
           element={<Layout />}
         >
           <Route
             index
-            element={<Themes />}
+            element={<TransportSafetyAndDevelopment  />}
           />
           <Route
-            path="/themes/transport"
-            element={<Transport />}
+            path="/themes/transport-safety-and-development"
+            element={<TransportSafetyAndDevelopment />}
           />
           <Route
-            path="/themes/road-safety"
-            element={<RoadSafety />}
+            path="/themes/expert-knowledge-sharing-in-transport-safety-development"
+            element={<KnowledgeSharing/>}
           />
           <Route
-            path="/themes/knowledge-sharing"
-            element={<KnowledgeSharing />}
-          />
-          <Route
-            path="/themes/capacity-building"
-            element={<CapacityBuilding />}
+            path="/themes/capacity-building-and-human-resource-development-in-transport"
+            element={<CapacityBuildingAndHumanResourceDevelopmentInTransport />}
           />
           <Route
             path="/themes/eco-transport-development"
             element={<EcoTransport />}
           />
           <Route
-            path="/themes/human-resource-development"
-            element={<HumanResource />}
+            path="/themes/research-and-development-in-transport"
+            element={<ResearchAndDevelopmentInTransport />}
           />
           <Route
-            path="/themes/agg-in-transport-sector"
-            element={<AggInTransport />}
+            path="/themes/advocacy-for-good-governance-in-transport-safety-and-development"
+            element={<AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment />}
           />
           <Route
-            path="/themes/research-and-development"
-            element={<ResearchAndDevelopment />}
+            path="/themes/catalyzing-financing-for-road-transport-safety-improvement-programmes"
+            element={<CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes />}
           />
         </Route>
         <Route
