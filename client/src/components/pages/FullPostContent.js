@@ -15,15 +15,16 @@ const FullPostContent = ({ blogPosts }) => {
     return <div className='err-content'>Blog Content Doesn't Exist</div>;
   }
 
-  
-
-
   return (
     <div className="full-post-content">
       <div className="blog-content" >
-      <h2>{currentPost.title}</h2>
-      <img src={currentPost.image} alt={currentPost.title} className="post-image" />
-      <p>{currentPost.content}</p></div>
+      <h2>{currentPost.post_title}</h2>
+      <img
+          src={`data:image/png;base64,${currentPost.post_image}`}
+          alt={currentPost.post_title}
+          className="post-image"
+        />
+      <p>{currentPost.post_content}</p></div>
     </div>
    
   );

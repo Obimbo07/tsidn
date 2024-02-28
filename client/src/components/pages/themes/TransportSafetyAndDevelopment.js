@@ -1,27 +1,27 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const RoadSafety = () => {
+const Transport = () => {
   return (
-    <Container className="road-safety-container">
-      <h2 className="mb-4">Road Safety: A Fundamental Priority</h2>
+    <Container className="transport-container">
+      <h2 className="mb-4">Transport Safety and Development</h2>
       <Row>
         <Col md={6}>
-          <Image alt="Road Safety" fluid className="mb-4" />
+          <Image src="/transport-image.jpg" alt="Transport" fluid className="mb-4" />
         </Col>
         <Col md={6}>
           <p>
-            Road safety is not just a catchphrase at TSID-NET; it's a fundamental priority that underscores our commitment to the welfare of our employees, partners, and the wider community. We firmly believe that safe and sustainable road transport begins with a strong emphasis on safety.
+            Transport Safety and Development is at the core of our mission at TSID-NET. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
           </p>
           <p>
-            Our company actively advocates for good governance in road safety and development, and we recognize that our own practices must set an example. We maintain a proactive approach to road safety, implementing robust safety protocols and providing ongoing training to our team members. We're also dedicated to promoting awareness and education on road safety issues, collaborating with local communities and governments to make a tangible difference in reducing accidents and injuries.
+            Through partnerships with government agencies, NGOs, and international organizations, we work to improve road infrastructure, implement safety regulations, and promote responsible practices among drivers and transport operators.
           </p>
           <p>
-            For us, road safety is not just a legal obligation but a moral duty that guides our every action.
+            Our efforts aim to create a transportation environment that prioritizes the safety of passengers, pedestrians, and goods while contributing to the overall development of communities and the economy.
           </p>
         </Col>
+        
       </Row>
-
       <h2 className="mt-4">Making a Difference on the Roads</h2>
       <Row>
         <Col md={6}>
@@ -43,4 +43,4 @@ const RoadSafety = () => {
   );
 };
 
-export default RoadSafety;
+export default Transport;

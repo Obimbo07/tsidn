@@ -28,6 +28,7 @@ const Layout = () => {
           <span className="outer-link">
             <a href={`/${frontPart}`}>{frontPart}</a>
           </span>
+          {'>'}
           <div className="inLink-container">
             {restOfPath && (
               <>

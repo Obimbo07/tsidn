@@ -7,10 +7,10 @@ import '../styles/BlogCarousel.css';
 
 
 const Events = [
-  { id: 1, title: 'Major Events', content: 'Company writeup that is displayed on each card and listed from the api data.'},
-  { id: 2, title: 'Test Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 3, title: 'Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  { id: 4, title: 'Company  Events', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 1, title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  { id: 2, title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 3, title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  { id: 4, title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
 
 
@@ -33,12 +33,11 @@ const BlogCarousel = ({ blogPosts }) => {
           <div className="slider-inner" key={post.id}>
             <div className="intro-section">
               <a href={`blog/${post.id}`} className="continue-reading-link">
-              <h5>{post.title}</h5>
-              <p>{post.content}</p>              
+              <h6>{post.post_title}</h6>
               </a>
             </div>
             <img
-              src={post.image}
+              src={URL.createObjectURL(new Blob([new Uint8Array(post.post_image.data)],{type: 'image/jpeg', }))}
               alt={post.title}
               loading="lazy"
               className="carousel-image"
@@ -55,11 +54,13 @@ const BlogCarousel = ({ blogPosts }) => {
               {Events.map((event) => (
                 <div className="event-card"  key={event.id}>
                   <div className="card-logo">
-                    <img src='../../LOGO.jpg'  className="cardLogo" alt="tsdn-logo" />
+                    <img src='../../LogoFinal.svg'  className="cardLogo" alt="tsdn-logo" />
                   </div>
                 <div className="card-content">
+                 <a href="https://me.com" className="event-title">
                  <span>{event.title}</span>
-                 <span>{event.content}</span>
+                 </a>
+                 <span>{event.date}</span>
                 </div>
                 </div>
               ))}

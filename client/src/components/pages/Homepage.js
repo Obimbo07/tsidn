@@ -6,12 +6,12 @@ import '../styles/Homepage.css';
 import Navbar from './Navbar';
 import Footer from '../Footer';
 import Modal from '../Modal';
-import { fetchPosts } from '../../redux/Posts/postSlice';
+import { fetchPosts } from '../../redux/posts/postSlice';
 
 const pressReleases = [
-  { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases.', Date: '25th Nov 2023' },
-  { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases.', Date: '23rd Dec 2023' },
-  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases.', Date: '23rd Dec 2023' },
+  { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '25th Nov 2023' },
+  { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '23rd Dec 2023' },
+  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases with released or scheduled date', Date: '23rd Dec 2023' },
 ];
 
 const Homepage = () => {
@@ -36,25 +36,51 @@ const Homepage = () => {
       <div className="bottom-section">
         <div className="bottom-content">
           <div className="press-releases">
-            <h3>Press releases</h3>
+            <h3>PRESS RELEASES</h3>
             <div className="timeline">
               {pressReleases.map((release) => (
                 <div className="timeline-item" key={release.id}>
                   <div className="date">{release.Date}</div>
                   <div className="press-content">
-                    <h4>{release.title}</h4>
+                    <a href="#">
                     <p>{release.content}</p>
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="missions-section">
+          <div className="podcasts">
+          <h3>Podcasts</h3>
+           <div className="podcasts-section">
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+            <span>
+              <h1>Podcasts list</h1>
+              <p>SCHEDULED PODCATS TITLE</p>
+              <p>2024: 05: 20</p>
+            </span>
+           </div>
+          </div>
+          {/* <div className="missions-section">
             <div className="missions">
               <p>Company missions</p>
               <div className="Company-video">
                 <iframe
-                  width="200"
+                  width= "-webkit-fill-available"
                   height="200"
                   src="https://www.youtube.com/embed/T--aotYDL0g?si=GPC24-McY4EBB1uJ"
                   title="YouTube Video 1"
@@ -64,23 +90,14 @@ const Homepage = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <CardComponent />
         <div className="lower-section">
           <div className="featured-videos">
             <h3>FEATURED VIDEOS</h3>
             <div className="video-container">
-              <iframe
-                width="460"
-                height="315"
-                src="https://www.youtube.com/embed/LFrQ0kfRY_I?si=Ki97nqDyF3FQZv7F"
-                title="YouTube Video 1"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-=
+
               <iframe
                 width="460"
                 height="315"

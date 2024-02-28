@@ -5,9 +5,9 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   const links = [
-    { id: 1, text: 'About', url: '/about', dropdown: [ 'Executive Director','Director Christine', 'Director Ian', 'DirectorAbedi', 'Chief Innovation Officer', 'Mission', 'Our Core Values',] },
+    { id: 1, text: 'About', url: '/about', dropdown: ['Executives', 'Mission', 'Our Core Values',] },
     { id: 2, text: 'TSDN Aims', url: '/tsdn-aims', dropdown: ['What We Do']},
-    { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport', 'Road Safety', 'Knowledge Sharing', 'Capacity Building', 'Eco-transport development', 'Human Resource development', 'AGG in transport Sector', 'Research and Development'] },
+    { id: 3, text: 'Themes', url: '/themes', dropdown: ['Transport safety and development',  'Expert knowledge sharing in transport safety development', 'Capacity building and human resource Development in transport', 'Eco-transport development', 'Catalyzing financing for road transport safety improvement programmes', 'Advocacy for good governance in transport safety and development', 'Research and Development in transport'] },
     { id: 4, text: 'Media', url: '/media', dropdown: ['Press Release', 'Podcasts', 'Videos']},
     { id: 5, text: 'Events', url: '/meetings-and-events', dropdown: ['Meetings And Events', 'Ambush Highlights',]},
   ];
@@ -54,6 +54,7 @@ const Navbar = () => {
         ☰
       </button>
         <ul className={`list-nav ${mobileMenuOpen ? 'open' : ''}`}>
+            <span className={`listclose ${mobileMenuOpen ? '' : 'open'}`} onClick={() => setMobileMenuOpen(false)}> X</span>                                                                                                        
           {links.map((link) => (
             <li key={link.id}>
               {link.dropdown ? (
