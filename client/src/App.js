@@ -15,8 +15,6 @@ import TransportSafety from './adminPages/TransportSafety';
 import Layout from './components/Layout';
 import DirectorAbedi from './components/pages/directors/DirectorAbedi';
 import Directors from './components/pages/Directors';
-import DirectorIan from './components/pages/DirectorIan';
-import DirectorInnovation from './components/pages/DirectorInnovation';
 import ExecutiveDirector from './components/pages/directors/ExecutiveDirector';
 import FullPostContent from './components/pages/FullPostContent';
 import Homepage from './components/pages/Homepage';
@@ -39,7 +37,12 @@ import ResearchAndDevelopment from './components/pages/themes/ResearchAndDevelop
 import RoadSafety from './components/pages/themes/RoadSafety';
 import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
-import DirectorAustin from './components/pages/DirectorAustin';
+import DirectorAustin from './components/pages/directors/DirectorAustin';
+import DirectorIan from './components/pages/directors/DirectorIan';
+import DirectorAaron from './components/pages/directors/DirectorAaron';
+import DirectorChristine from './components/pages/directors/DirectorChristine';
+import DirectorShirley from './components/pages/directors/DirectorShirley';
+
 function App() {
   const posts = useSelector((state) => state.posts.data);
   const dispatch = useDispatch();
@@ -74,10 +77,6 @@ function App() {
           <Route 
             path="/about/director-abedi"
             element={<DirectorAbedi />}
-          />
-          <Route 
-            path="/about/chief-innovation-officer"
-            element={<DirectorInnovation />}
           />
           <Route
             path="/about/mission"
@@ -193,7 +192,10 @@ function App() {
             path="/executive-director"
             element={<ExecutiveDirector />}
           />
-          <Route path='/director-austin' element={<DirectorAustin />} />
+          <Route path='christine-ajulu' element={<DirectorChristine /> } />
+          <Route path='/shirley-cherotich' element={<DirectorShirley />} />
+          <Route path='/aaron-director' element={<DirectorAaron />} />
+          <Route path='/austin-obimbo' element={<DirectorAustin />} />
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
