@@ -6,7 +6,7 @@ const OurCoreValues = () => {
     <div className="core-values-container">
       <h2 className="core-values-heading">Our Core Values</h2>
       <p className="core-values-text">
-        TRANSPOSAFETY INTERNATIONAL DEVELOPMENT NETWORK (TSID-NET) is committed to promoting safe and sustainable road transport in Kenya. Our core values form the foundation of our organization and guide our actions and decisions. These values reflect our dedication to enhancing safety and development in the transport sector.
+        TRANSPOSAFETY INTERNATIONAL DEVELOPMENT NETWORK (TSD-NET) is committed to promoting safe and sustainable road transport in Kenya. Our core values form the foundation of our organization and guide our actions and decisions. These values reflect our dedication to enhancing safety and development in the transport sector.
       </p>
       <ul className="core-values-list">
         <li><strong>Partnership:</strong> Building and nurturing partnerships among key stakeholders in road transport, both government and NGOs, at the national, regional, and international levels.</li>

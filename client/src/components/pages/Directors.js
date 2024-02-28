@@ -70,22 +70,28 @@ const directors = [
 
 const Directors = () => {
   return (
-    <div className="directors-body">
+    <div className="container">
+    <div className="row">
       {directors.map((director) => (
-         <div className="directors" key={director.name} >
-         <Link className="directors-link" to={director.url}>
-         <div class="directors-image">
-         <img src={director.imgPath} alt='directors' />
-         </div>
-         <div class="directors-content">
-         <h1 className="director-title">{director.name}</h1>
-         <h6 className="director-title">{director.title}</h6>
-         </div>
-         </Link>
-          </div>
+        <div className="col-md-4 mb-4 mt-4" key={director.id}>
+          <Link className="text-decoration-none text-dark h-auto" to={director.url}>
+            <div className="card w-100">
+              <div className="card-header w-100 d-flex flex-row gap-10">
+              <div className='w-20'>
+                <img className="card-img-top w-10" src={director.imgPath} alt={director.name} />
+              </div>
+              <h5 className="card-title">{director.name}</h5>
+              </div>
+              <div className="card-body">
+                <p className="card-text b-black">{director.title}</p>
+              </div>
+            </div>
+          </Link>
+        </div>
       ))}
     </div>
-  )
+  </div>
+);
 }
 
 export default Directors;

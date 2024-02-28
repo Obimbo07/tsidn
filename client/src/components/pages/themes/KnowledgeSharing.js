@@ -1,15 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const KnowledgeSharing = () => {
+const ExpertKnowledge = () => {
   return (
-    <div>Fostering a Culture of Knowledge Sharing
+    <Container className="expert-knowledge-container">
+      <h2 className="mb-4">Expert Knowledge Sharing in Transport Safety Development</h2>
+      <Row>
+        <Col md={6}>
+          <Image src="/expert-knowledge-image.jpg" alt="Expert Knowledge" fluid className="mb-4" />
+        </Col>
+        <Col md={6}>
+          <p>
+            At TSID-NET, we believe in the power of sharing expertise and best practices to advance transport safety development. Through workshops, seminars, and online resources, we facilitate the exchange of knowledge among industry professionals, researchers, and policymakers.
+          </p>
+          <p>
+            Our goal is to promote continuous learning and innovation in transport safety, ensuring that stakeholders have access to the latest research findings, technological advancements, and successful interventions from around the world.
+          </p>
+          <p>
+            By fostering a culture of collaboration and knowledge sharing, we empower individuals and organizations to make informed decisions and implement effective strategies to improve road safety and transportation systems.
+          </p>
+        </Col>
+      </Row>
+    </Container>
+  );
+};;
 
-    At TSID-NET, we believe that knowledge is a valuable asset that multiplies in value when shared. We foster a culture of knowledge sharing, where insights and expertise are exchanged freely among our team members, partners, and stakeholders. We recognize that in the dynamic field of transportation, staying ahead means constantly learning and adapting. Our organization actively promotes expert knowledge sharing in transport safety development, which involves disseminating best practices, innovative approaches, and the latest research findings. We conduct regular training programs, workshops, and seminars to ensure that our team members are well-informed and equipped with the latest knowledge and skills to excel in their roles. Furthermore, we extend this commitment to our external partners and the wider community, contributing to the collective growth and development of the transport sector through the power of shared knowledge.
-    
-    2. Driving Innovation through Knowledge Sharing
-    
-    Knowledge sharing is the driving force behind our innovation at TSID-NET. We believe that when ideas and experiences are freely exchanged, it fuels the creative engine that powers our organization. Our commitment to knowledge sharing is not limited to internal practices; we actively engage with external stakeholders to create a collaborative ecosystem where fresh insights and perspectives are valued. This approach extends to our partnerships with local governments, community organizations, and fellow NGOs, as we work together to enhance road safety and sustainable transport. Additionally, our research and development activities are anchored in the spirit of knowledge sharing. We regularly publish documents and quarterly magazines to disseminate the latest industry trends, insights, and case studies. By promoting a culture of knowledge sharing, we aim to be at the forefront of safe and sustainable road transport and safety policy and practice.</div>
-  )
-}
-
-export default KnowledgeSharing
+export default ExpertKnowledge;

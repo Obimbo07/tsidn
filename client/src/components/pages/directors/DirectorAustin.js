@@ -1,9 +1,14 @@
-import React from 'react';
-import '../styles/BoardOfDirectors.css';
+import React from 'react'
+import Navbar from '../Navbar'
+// import '../styles/directors.css'
+// import '../styles/BoardOfDirectors.css';
 
-const DirectorInnovation = () => {
+
+const DirectorJohn = () => {
   return (
-    <><div className="board-of-directors-container">
+    <>
+    <Navbar />
+    <div className='body'><div className="board-of-directors-container">
           <div className="text-section">
                  <div className="intro">
                   <img src='../../../23rd.jpg ' alt="Company Logo" className="innovation-officer" />
@@ -20,8 +25,9 @@ const DirectorInnovation = () => {
               </div>
           </div>
       </div> 
+    </div>
     </>
-  );
-};
+  )
+}
 
-export default DirectorInnovation;
+export default DirectorJohn;
