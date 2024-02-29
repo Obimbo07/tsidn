@@ -6,16 +6,16 @@ const CardComponent = () => {
   const cardsData = [
     {
       id: 1,
-      title: 'Transport',
+      title: 'Transport safety and development ',
       iconUrl: '../camera_1972954.png',
-      path: 'themes/transport'
+      path: 'themes/transport-safety-and-development'
        
     },
     {
       id: 2,
-      title: 'Road Safety',
+      title: 'Expert knowledge sharing',
       iconUrl: '../agreement_10476721.png',
-      path: 'themes/road-safety'
+      path: 'themes/expert-knowledge-sharing-in-transport-safety-development'
     },
     {
       id: 3,
@@ -33,13 +33,13 @@ const CardComponent = () => {
       id: 5,
       title: 'Research and Development',
       iconUrl: '../conedevelopment.png',
-      path: 'themes/research-and-development'
+      path: 'themes/research-and-development-in-transport'
     },
     {
       id: 6,
       title: 'Capacity Building',
       iconUrl: '../supply-chain-management_11562996.png',
-      path: 'themes/capacity-building'
+      path: 'themes/capacity-building-and-human-resource-development-in-transport'
     },
   ];
   
@@ -52,7 +52,7 @@ const CardComponent = () => {
             <img className="icon" src={card.iconUrl} alt={`Icon ${card.id}`} />
           </div>
           <div className="title-section">
-            <h3>{card.title}</h3>
+            <h6>{card.title}</h6>
           </div>
           </Link>
         </div>

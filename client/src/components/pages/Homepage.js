@@ -3,16 +3,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import BlogCarousel from './blogCarousel';
 import CardComponent from './Cards';
 import '../styles/Homepage.css';
-import Navbar from './Navbar';
 import Footer from '../Footer';
 import Modal from '../Modal';
 import { fetchPosts } from '../../redux/posts/postSlice';
+import { Link } from 'react-router-dom';
+import Component from './Component';
 
 const pressReleases = [
   { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '25th Nov 2023' },
   { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '23rd Dec 2023' },
   { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases with released or scheduled date', Date: '23rd Dec 2023' },
 ];
+
+const podcasts = [
+  { id: 1, title: 'Fundamentals of road safety', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 2, title: 'Policy and regulatory framework in transport sector', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 3, title: 'Managing road safety risks', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 4, title: 'Speed management', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 5, title: 'Fatigue management', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 6, title: 'Journey planning', date: '23rd Dec 2023 - 20th Dec 2023' },
+  { id: 7, title: 'Drunk/drug driving', date: '23rd Dec 2023 - 20th Dec 2023' }
+]
 
 const Homepage = () => {
   const posts = useSelector((state) => state.posts.data);
@@ -25,7 +36,7 @@ const Homepage = () => {
   return (
     <>
       <Modal />
-      <Navbar />
+      <Component />
       <div className="top-section">
         <div className="topContent">
           <div className="carousel">
@@ -50,29 +61,19 @@ const Homepage = () => {
               ))}
             </div>
           </div>
-          <div className="podcasts">
+          <div className="podcasts dark-bg">
           <h3>Podcasts</h3>
            <div className="podcasts-section">
-            <span>
-              <h1>Podcasts list</h1>
-              <p>SCHEDULED PODCATS TITLE</p>
-              <p>2024: 05: 20</p>
-            </span>
-            <span>
-              <h1>Podcasts list</h1>
-              <p>SCHEDULED PODCATS TITLE</p>
-              <p>2024: 05: 20</p>
-            </span>
-            <span>
-              <h1>Podcasts list</h1>
-              <p>SCHEDULED PODCATS TITLE</p>
-              <p>2024: 05: 20</p>
-            </span>
-            <span>
-              <h1>Podcasts list</h1>
-              <p>SCHEDULED PODCATS TITLE</p>
-              <p>2024: 05: 20</p>
-            </span>
+            {podcasts.map((podcast) => (
+              <div className="podcast-section m-2" key={podcast.id}>
+               <Link>
+                 <div className='p-2'>
+                  <h5 className="text-white">{podcast.title}</h5>
+                  <p className="text-white">{podcast.date}</p>
+                 </div>
+                </Link>
+              </div>
+            ))}
            </div>
           </div>
           {/* <div className="missions-section">

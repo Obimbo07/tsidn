@@ -21,6 +21,7 @@
 
   .podcasts h3 {
     text-decoration: underline;
+    text-decoration-color: #0056b3;
     text-decoration-thickness: 10px;
     border-bottom: 3px solid;
     margin-bottom: 11px;
@@ -237,6 +238,10 @@
 .bottom-content {
   display: flex;
   gap: 1px;
+}
+
+.podcast-section {
+ background-color:  rgba(6, 6, 40, 0.591);
 }
 
 

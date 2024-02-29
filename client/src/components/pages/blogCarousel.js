@@ -58,7 +58,7 @@ const BlogCarousel = ({ blogPosts }) => {
                   </div>
                 <div className="card-content">
                  <a href="https://me.com" className="event-title">
-                 <span>{event.title}</span>
+                 <h6>{event.title}</h6>
                  </a>
                  <span>{event.date}</span>
                 </div>

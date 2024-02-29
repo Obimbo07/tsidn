@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar'
+import Navbar from '../Component'
 // import '../styles/directors.css'
 // import '../styles/BoardOfDirectors.css';
 

@@ -45,7 +45,13 @@
     padding: -4px
 }
 
+.close-btn{
+  display: none;
+}
 
+.more-options-btn {
+  display: none;
+}
 @media (max-width: 768px) {
   .layout__left-column {
     display: none;
