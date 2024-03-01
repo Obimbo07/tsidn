@@ -7,7 +7,7 @@ import Footer from '../Footer';
 import Modal from '../Modal';
 import { fetchPosts } from '../../redux/posts/postSlice';
 import { Link } from 'react-router-dom';
-import Component from './Component';
+import Component from './Navbar';
 
 const pressReleases = [
   { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '25th Nov 2023' },

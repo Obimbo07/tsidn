@@ -33,28 +33,28 @@ const directors = [
 },
 {
   id: 4,
-  title: 'Senior Director Services TSDN',
+  title: 'Senior Director Services',
   name: 'Ian Kipchumba',
   imgPath: '/ian.jpeg',
   url: '/ian-kipchumba'
 },
 {
   id: 4,
-  title: 'Operations Officer TSDN ',
+  title: 'Operations Officer',
   name: 'Ms. Reginah Kinyanjui',
   imgPath: '/austin.png',
   url: '/reginah-kinyajui'
 },
 { 
   id: 4,
-  title: 'Director and counsel TSDN',
+  title: 'Director and counsel',
   name: 'Aaron Ngweno',
   imgPath: '/austin.png',
   url: '/aaron-ngweno'
 },
 { 
   id: 4,
-  title: 'Director and counsel TSDN',
+  title: 'Director and counsel',
   name: 'Abedi Amakobe',
   imgPath: '/abedi.jpeg',
   url: '/abedi-amakobe'
@@ -71,7 +71,9 @@ const directors = [
 const Directors = () => {
   return (
     <div className="container">
+
     <div className="row">
+     <h3 className='p-2 leaderhead'>Tsdn Leadership</h3>
       {directors.map((director) => (
         <div className="col-md-4 mb-4 mt-4" key={director.id}>
           <Link className="text-decoration-none text-dark h-auto" to={director.url}>

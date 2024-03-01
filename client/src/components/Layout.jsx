@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar';
-import Navbar from './pages/Component';
+import Navbar from './pages/Navbar';
 import './layout.css';
 import Footer from './Footer';
 import { useLocation } from 'react-router-dom';
-import NavBarComponent from './pages/Component';
+import NavBarComponent from './pages/Navbar';
 
 const Layout = () => {
   const location = useLocation();

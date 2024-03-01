@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../Component';
+import Navbar from '../Navbar';
 import Footer from '../../Footer';
 import '../../styles/ExecutiveDirector.css';
 
