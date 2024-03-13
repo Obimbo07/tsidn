@@ -1,0 +1,58 @@
+.board-of-directors-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-section {
+  max-width: 800px; /* Adjust this value based on your design */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.intro h2 {
+  font-family: fantasy;
+  font-size: 26px;
+}
+
+.content-section {
+  line-height: 2em;
+  line-height: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+
+.innovation-officer {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border-radius: 50%; /* This should be 50% for a perfect circle */
+  margin-bottom: 20px;
+}
+
+.text-section div p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.content-section em {
+  display: block;
+  padding: 20px;
+  font-family: monospace;
+  padding: 28px;
+  width: fit-content;
+}
+
+.content-section span {
+  text-align: start;
+  padding: 15px;
+}

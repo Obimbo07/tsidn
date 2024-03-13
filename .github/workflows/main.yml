@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - feature/bugfix
+      - develop
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -16,33 +16,38 @@ jobs:
       with:
         node-version: 20
 
-    - name: Install dependencies for client
-      run: |
-        cd client
-        npm install
-       
-    # - name: Install dependencies for server
+    # - name: Install dependencies for client
     #   run: |
-    #     cd server
+    #     cd client
     #     npm install
-
-    - name: Build React app
+       
+    - name: Install dependencies for server
       run: |
-        cd client
-        npm run build
+        cd server
+        npm install
 
-    - name: List contents of build directory
-      run: ls -R client/build/
+    - name: Remove package-lock.json from deployed server code
+      run: |
+        cd server/
+        rm package-lock.json
+        
+    # - name: Build React app
+    #   run: |
+    #     cd client
+    #     npm run build
+
+    # - name: List contents of build directory
+    #   run: ls -R client/build/
    
 
-    - name: 📂 Deploy to cPanel frontend
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server:  ftp.tsidn.org
-        username: ${{ secrets.FTP_USERNAME_FRONTEND }}
-        password: ${{ secrets.FTP_PASSWORD_FRONTEND }}
-        local-dir: client/build/
-        target: /home/tsidnorg/tsidn.org/Obimbo07/
+    # - name: 📂 Deploy to cPanel frontend
+    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    #   with:
+    #     server:  ftp.tsidn.org
+    #     username: ${{ secrets.FTP_USERNAME_FRONTEND }}
+    #     password: ${{ secrets.FTP_PASSWORD_FRONTEND }}
+    #     local-dir: client/build/
+    #     target: /home/tsidnorg/public_html/
 
     - name: List contents of server directory
       run: ls -R server/
@@ -54,4 +59,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME_BACKEND }}
         password: ${{ secrets.FTP_PASSWORD_BACKEND }}
         local-dir: server/
-        target: /home/tsidnorg/tsidnapi.tsidn.org/Obimbo07/
+        target: /home/tsidnorg/tsidnapi.tsidn.org/
