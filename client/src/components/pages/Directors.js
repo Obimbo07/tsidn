@@ -21,14 +21,14 @@ const directors = [
   id: 3,
   title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
   name: 'Christine Ajulu',
-  imgPath: '/christine.png',
+  imgPath: '/chiristine.jpg',
   url: '/christine-ajulu'
 },
 {
   id: 4,
   title: 'Director Software Engineering, Innovation and Research Division ',
   name: 'Austin Obimbo',
-  imgPath: '/austin.png',
+  imgPath: '/MrObimbo.jpg',
   url: '/austin-obimbo'
 },
 {
@@ -48,23 +48,9 @@ const directors = [
 { 
   id: 4,
   title: 'Director and counsel',
-  name: 'Aaron Ngweno',
-  imgPath: '/austin.png',
-  url: '/aaron-ngweno'
-},
-{ 
-  id: 4,
-  title: 'Director and counsel',
   name: 'Abedi Amakobe',
-  imgPath: '/abedi.jpeg',
+  imgPath: '/DrAbedi.jpg',
   url: '/abedi-amakobe'
-},
-{ 
-  id: 5,
-  title: 'Director',
-  name: 'Dr Romanus',
-  imgPath: '/abedi.jpeg',
-  url: '/dr-romanus'
 },
 ]
 
