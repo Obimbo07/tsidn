@@ -1,0 +1,27 @@
+/* DirectorAustin.css */
+.director-austin-container {
+    padding: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+  }
+  
+  .innovation-officer {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .content-section {
+    font-size: 16px;
+  }
+  
+  .content-section p {
+    margin-bottom: 15px;
+  }
+  
+  .content-section em {
+    font-style: italic;
+  }
+  
