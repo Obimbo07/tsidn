@@ -62,10 +62,10 @@ const Directors = () => {
      <h3 className='p-2 leaderhead'>Tsdn Leadership</h3>
       {directors.map((director) => (
         <div className="col-md-4 mb-4 mt-4" key={director.id}>
-          <Link className="text-decoration-none text-dark h-auto" to={director.url}>
+          <Link className="text-decoration-none text-dark" to={director.url}>
             <div className="card w-100">
               <div className="card-header w-100 d-flex flex-row gap-10">
-              <div className='w-20'>
+              <div className='w-70'>
                 <img className="card-img-top w-10" src={director.imgPath} alt={director.name} />
               </div>
               <h5 className="card-title">{director.name}</h5>
