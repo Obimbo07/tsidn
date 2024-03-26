@@ -1,27 +1,78 @@
-/* DirectorAustin.css */
-.director-austin-container {
-    padding: 20px;
-  }
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.intro Img {
+  width: 14rem;
+  filter: drop-shadow(2px 7px 6px black);
+}
+
+.intro h2 {
+  font-family: 'serif';
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.innovation-officer {
+  margin-bottom: 20px;
+}
+
+.content-section {
+  font-size: 16px;
+}
+
+.content-section p {
+  margin-bottom: 15px;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content-section p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-section em {
+  font-style: italic;
+}
+.austs-quote {
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 100; 
+}
   
-  .intro {
-    text-align: center;
-  }
+  @media (min-width: 768px) {
+    .director-container {
+      padding: 40px;
+    }
   
-  .innovation-officer {
-    border-radius: 50%;
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
+    .text-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
   
-  .content-section {
-    font-size: 16px;
-  }
+    .intro {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+
+      width: 100px;
+    }
   
-  .content-section p {
-    margin-bottom: 15px;
-  }
+    .innovation-officer {
+      margin-right: 20px;
+    }
   
-  .content-section em {
-    font-style: italic;
+    .content-section {
+      font-size: 18px; 
+    }
   }
   
