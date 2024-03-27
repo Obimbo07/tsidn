@@ -67,7 +67,7 @@ const Directors = () => {
       <h3 className='p-2 leaderhead col-md-9 text-align-center'>Tsdn Leadership</h3>
       <div className="row">
         {directors.map((director) => (
-          <div className="col-md-6 mb-4 mt-4" key={director.id}>
+          <div  key={director.id}>
             <Link className="text-decoration-none text-dark " to={director.url}>
               <div className="card w-100 directors-card">
                 <div className="row no-guttersp-2">
