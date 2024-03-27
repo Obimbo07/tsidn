@@ -4,7 +4,7 @@
 
 body {
   margin: 0px 206px ! important;
-  background-color: #fff;
+  background-color: #fff ! important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -27,7 +27,7 @@ a {
 
 @media only screen and (max-width: 500px){
   body {
-    margin: 0;
+    margin: 0 ! important;
   }
   .slider-section {
     display: flex;
