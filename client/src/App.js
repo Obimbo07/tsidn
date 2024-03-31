@@ -20,7 +20,6 @@ import FullPostContent from './components/pages/FullPostContent';
 import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
 import OurCoreValues from './components/pages/OurCoreValues';
-import Themes from './components/pages/Themes';
 import Events from './components/pages/events/Events';
 import Highlights from './components/pages/events/Highlights';
 import Media from './components/pages/media/Media';
