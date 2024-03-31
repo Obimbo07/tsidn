@@ -299,7 +299,7 @@ const TransportSafety = () => {
                                         )}
                                     </tr>
                                     )}
-                                    {editId == data.id && (
+                                    {editId === data.id && (
                                         <tr colSpan="11" className='border-b-[1px] border-b-[#ddd] '>
                                             {openFormEdit && formData &&(
                                                 <div className="bg-lightYellow px-[40px] py-[20px]">
