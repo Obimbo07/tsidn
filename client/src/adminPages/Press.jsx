@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { faEye, faEyeSlash, faPenToSquare, } from '@fortawesome/free-regular-svg-icons';
 import { faDownload, faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
