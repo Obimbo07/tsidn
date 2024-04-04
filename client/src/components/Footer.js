@@ -33,7 +33,8 @@ const Footer = () => {
             <div className="inner-sctn">
                 <div className="map-container">
                       <img src="worldmap.png" alt="Map section" />
-                      <p>123 Street, City, Country</p>
+                      <p>Nairobi, Kenya</p>
+                      <p>Mail: admin@tsidn.org</p>
                 </div>
                 <div className="contentContainer1">
                     <h4>About Tsdn</h4>
