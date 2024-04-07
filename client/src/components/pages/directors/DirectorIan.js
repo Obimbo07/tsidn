@@ -6,4 +6,4 @@ const DirectorIan = () => {
   )
 }
 
-export default DirectorIan
+export default DirectorIan;

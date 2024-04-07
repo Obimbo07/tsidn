@@ -91,5 +91,9 @@
       width: 30%;
     }
 
+    .directors-card {
+      width: 100% !important;
+    }
+
 
 }

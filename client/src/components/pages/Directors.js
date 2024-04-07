@@ -32,7 +32,7 @@ const directors = [
     id: 3,
     title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
     name: 'Christine Ajulu',
-    imgPath: '/chiristine.jpg',
+    imgPath: '/christine.jpg',
     url: '/christine-ajulu',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -96,7 +96,6 @@ const Directors = () => {
                      </div>
                       <h5 className="card-title">{director.name}</h5>
                       <p className="card-text" style={{ fontWeight: '400' }}>{director.title}</p>
-                      <p className="card-text" style={{ fontWeight: '250' }}>{director.intro}<Link to={director.url} className="card-link">...</Link></p>
                     </div>
                   </div>
                 </div>
