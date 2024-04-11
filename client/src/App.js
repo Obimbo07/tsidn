@@ -190,6 +190,8 @@ function App() {
           <Route path='/shirley-cherotich' element={<DirectorShirley />} />
           <Route path='/aaron-director' element={<DirectorAaron />} />
           <Route path='/austin-obimbo' element={<DirectorAustin />} />
+          <Route path="/ian-kipchumba" element={<DirectorIan />} />
+          <Route path="/abedi-amakobe" element={<DirectorAbedi />} />
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />
