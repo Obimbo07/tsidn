@@ -10,7 +10,7 @@ const directors = [
     id: 1,
     title: 'Executive Director',
     name: 'Samuel Musumba',
-    imgPath: '/musumba.png',
+    imgPath: '/mr-director.jpg',
     url: '/executive-director',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -90,9 +90,10 @@ const Directors = () => {
                   <div className="body-col">
                     <div className="card-body">
                      <div className="social-links">
-                      <a href={director.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href={director.twitter}><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href={director.email}><FontAwesomeIcon icon={faEnvelope} /></a>
+
+                      <a class="fa-iconlinks"  href={director.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a class="fa-iconlinks" href={director.twitter}><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a class="fa-iconlinks" href={director.email}><FontAwesomeIcon icon={faEnvelope} /></a>
                      </div>
                       <h5 className="card-title">{director.name}</h5>
                       <p className="card-text" style={{ fontWeight: '400' }}>{director.title}</p>

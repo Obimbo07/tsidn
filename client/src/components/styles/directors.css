@@ -29,6 +29,7 @@
   width: 48% !important;
 }
 
+
 .row {
   gap: 26px;
 }
@@ -41,7 +42,7 @@
 .social-links {
   gap: 5px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .directors-image {
@@ -67,6 +68,10 @@
   font-family: fantasy;
   font-size: 20px;
   text-decoration: underline;
+}
+
+.fa-iconlinks {
+  color: unset !important;
 }
 
 @media only screen and (max-width: 768px) {
