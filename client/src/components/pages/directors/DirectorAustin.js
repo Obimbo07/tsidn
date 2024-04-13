@@ -47,10 +47,11 @@ const DirectorAustin = () => {
             </p>
             <p>
               Prior to his joining TSDN, Austine led a community of hybrid software engineers improving our daily lives for a better future. 
-              He worked voluntarily as a Mentor at Microverse, an online program for remote software engineers, where he held several roles including technology officer.
+              He worked voluntarily as a student Mentor at Microverse, an online program for remote software engineers.
             </p>
             <p>
-              Austine is currently undertaking his Bachelor's degree in Technology in Information Technology from the Technical University of Mombasa. He has also earned certification as a professional python developer, Data analysts to help make data-driven decisions.
+              Austine is currently undertaking his Bachelor's degree in Information Technology from the Technical University of Mombasa. 
+              He has also earned certification as a Data analysts helping him make data-driven impacting positive company growth.
             </p>
             <p> <em className="austs-quote">We go down to implement solutions and provide technical result-oriented 
             support to the company, impacting growth and development. 

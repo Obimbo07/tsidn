@@ -27,7 +27,9 @@
 
 .directors-card {
   width: 48% !important;
+  padding: 0;
 }
+
 
 .row {
   gap: 26px;
@@ -41,7 +43,7 @@
 .social-links {
   gap: 5px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .directors-image {
@@ -58,15 +60,14 @@
   flex-direction: column;
 }
 
-.director-img {
-    width: 46%;
-    height: 10%;
-}
-
 .leaderhead {
   font-family: fantasy;
   font-size: 20px;
   text-decoration: underline;
+}
+
+.fa-iconlinks {
+  color: unset !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -89,6 +90,10 @@
 
     .directors-image {
       width: 30%;
+    }
+
+    .directors-card {
+      width: 100% !important;
     }
 
 

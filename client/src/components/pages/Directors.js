@@ -10,7 +10,7 @@ const directors = [
     id: 1,
     title: 'Executive Director',
     name: 'Samuel Musumba',
-    imgPath: '/musumba.png',
+    imgPath: '/mr-director.jpg',
     url: '/executive-director',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -21,7 +21,7 @@ const directors = [
     id: 2,
     title: 'Senior Director Corporate Development and Marketing Communications and a Co-founder',
     name: 'Shirley Cherotich',
-    imgPath: '/shirley.png',
+    imgPath: '/shirley.jpg',
     url: '/shirley-cherotich',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -32,7 +32,7 @@ const directors = [
     id: 3,
     title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
     name: 'Christine Ajulu',
-    imgPath: '/chiristine.jpg',
+    imgPath: '/christine.jpg',
     url: '/christine-ajulu',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -85,18 +85,18 @@ const Directors = () => {
               <Link className="text-decoration-none link-sctn text-dark" to={director.url}>
                 <div className="flex ">
                   <div className="col-xl-4">
-                    <img className="card-img directors-img" src={director.imgPath} alt={director.name} />
+                    <img className="directors-img" src={director.imgPath} alt={director.name} />
                   </div>
                   <div className="body-col">
                     <div className="card-body">
                      <div className="social-links">
-                      <a href={director.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a href={director.twitter}><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a href={director.email}><FontAwesomeIcon icon={faEnvelope} /></a>
+
+                      <a class="fa-iconlinks"  href={director.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>
+                      <a class="fa-iconlinks" href={director.twitter}><FontAwesomeIcon icon={faTwitter} /></a>
+                      <a class="fa-iconlinks" href={director.email}><FontAwesomeIcon icon={faEnvelope} /></a>
                      </div>
                       <h5 className="card-title">{director.name}</h5>
                       <p className="card-text" style={{ fontWeight: '400' }}>{director.title}</p>
-                      <p className="card-text" style={{ fontWeight: '250' }}>{director.intro}<Link to={director.url} className="card-link">...</Link></p>
                     </div>
                   </div>
                 </div>

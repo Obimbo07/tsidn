@@ -25,9 +25,7 @@
 }
 
 .content-section p {
-  margin-bottom: 15px;
   background-color: #fff;
-  margin-top: 10px;
   padding: 10px;
   opacity: 0;
   transform: translateY(20px);
@@ -41,7 +39,10 @@
 
 .content-section em {
   font-style: italic;
+  font-size: 16px;
+  font-weight: 600
 }
+
 .austs-quote {
   padding: 10px;
   font-size: 10px;
