@@ -21,7 +21,7 @@ const directors = [
     id: 2,
     title: 'Senior Director Corporate Development and Marketing Communications and a Co-founder',
     name: 'Shirley Cherotich',
-    imgPath: '/shirley.png',
+    imgPath: '/shirley.jpg',
     url: '/shirley-cherotich',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -85,7 +85,7 @@ const Directors = () => {
               <Link className="text-decoration-none link-sctn text-dark" to={director.url}>
                 <div className="flex ">
                   <div className="col-xl-4">
-                    <img className="card-img directors-img" src={director.imgPath} alt={director.name} />
+                    <img className="directors-img" src={director.imgPath} alt={director.name} />
                   </div>
                   <div className="body-col">
                     <div className="card-body">
