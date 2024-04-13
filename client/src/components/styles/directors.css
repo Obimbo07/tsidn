@@ -27,6 +27,7 @@
 
 .directors-card {
   width: 48% !important;
+  padding: 0;
 }
 
 
@@ -57,11 +58,6 @@
 .directors-link {
   display: flex;
   flex-direction: column;
-}
-
-.director-img {
-    width: 46%;
-    height: 10%;
 }
 
 .leaderhead {

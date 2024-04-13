@@ -38,7 +38,19 @@ const DirectorAbedi = () => {
           </div>
           <Row className="content-section">
         <p>Abedi Amakobe is among the directors consel reporting to  the ED with over 25 years in transport industry.</p>
-      
+        
+        <p>
+        <h3>Profession</h3>
+         >> He is a trained trainer of trainers and a drivers' trainer on Advanced Safe Defensive Training Systems, from Smith Systems International in UK since 2013 
+         to date where he conducts his refresher course every two years.
+         <br />
+        >> He is a member of NTSA  Road Safety commitee.
+         <br />
+        >> Mr Abedi helps in the Curriculum development team in NITA and also members of KEBS where he helps in developing standards.
+         <br />
+         >> He is an authorized trainer of PIEA where he trains oil marketers with its transporters on safe products handling and transportation
+         </p>
+         
           </Row>
         </Row>
       </Container>

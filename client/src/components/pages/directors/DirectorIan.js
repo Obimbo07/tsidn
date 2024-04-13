@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../../Footer';
-import { Container, Row, Image } from 'react-bootstrap';
+import { Container, Row, Col,  Image } from 'react-bootstrap';
 import '../../styles/DirectorAustin.css';
 
 const DirectorIan = () => {
@@ -37,7 +37,7 @@ const DirectorIan = () => {
             <Image src="/ian.jpeg" alt="Austin" className="innovation-officer" fluid /> {/* Use fluid to make image responsive */}
             <h2>Senior Director Services TSDN</h2>
           </div>
-          <Row className="content-section">
+          <Col className="content-section">
           <p>Ian Kipchumba  is TSDN’s senior  Director  of Services, reporting to  the ED.</p>
             <p>
             Ian oversees the full range of TSDNs services, including TSDN News, TSDN Podcasts, the TSDN TV app, and TSDN TV, as well as TSDN Pay, Social media Apps, Search Ads, TSDN ’s iCloud services, and TSDN’s creativity apps.  
@@ -50,7 +50,7 @@ const DirectorIan = () => {
 
 Ian earned a Diploma and professional certificates in Film production from PCEA Rowlege and bachelor’s degree Computer University of Nairobi. 
 </p>
-          </Row>
+          </Col>
         </Row>
       </Container>
       <Footer />

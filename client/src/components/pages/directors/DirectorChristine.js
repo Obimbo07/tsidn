@@ -40,10 +40,10 @@ const DirectorChristine = () => {
             <p>
             Christine Kajulu is a Senior Director Occupational Health, Environment, Policy, and Social Initiatives at TSDN reporting to the Executive Director. Christine oversees TSDN’s efforts to build capacity in occupational health initiatives, Mental health initiatives, education policy programmes in Road Transport Safety, addressing road transport environmental impacts through promoting sustainable transport - e-mobility and related product accessibility.
             </p>
-            <ul >
+            <p>
               <h5>Before tsdn she has the following qualifications: </h5>
               <li>She holds a Master’s Degree in Occupational Health focusing on road safety.</li>
-            </ul>
+            </p>
           </Col>
         </Row>
       </Container>
