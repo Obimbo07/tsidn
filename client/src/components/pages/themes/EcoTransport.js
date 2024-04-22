@@ -12,7 +12,8 @@ const EcoTransport = () => {
         </Col>
         <Col md={6}>
           <p>
-            ECO-Transport development focuses on promoting environmentally friendly and sustainable transportation solutions. At TSID-NET, we advocate for policies and technologies that reduce emissions, conserve energy, and minimize environmental impact across the transport sector.
+            ECO-Transport development focuses on promoting environmentally friendly and sustainable transportation solutions. 
+            At TSDN, we advocate for policies and technologies that reduce emissions, conserve energy, and minimize environmental impact across the transport sector.
           </p>
           <p>
             Through research, education, and partnership initiatives, we support the adoption of alternative fuels, green infrastructure, and eco-friendly vehicle designs. By integrating environmental considerations into transport planning and operations, we aim to mitigate climate change, improve air quality, and protect natural resources for future generations.
