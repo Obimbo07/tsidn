@@ -11,7 +11,7 @@ const Transport = () => {
         </Col>
         <Col md={6}>
           <p>
-            Transport Safety and Development is at the core of our mission at TSID-NET. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
+            Transport Safety and Development is at the core of our mission at TSDN. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
           </p>
           <p>
             Through partnerships with government agencies, NGOs, and international organizations, we work to improve road infrastructure, implement safety regulations, and promote responsible practices among drivers and transport operators.
