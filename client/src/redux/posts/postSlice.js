@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-const api = 'https://tsidnapi.tsidn.org/api/selectContent';
+// const api = 'https://tsidnapi.tsidn.org/api/selectContent';
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   try {
