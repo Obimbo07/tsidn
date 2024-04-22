@@ -12,7 +12,7 @@ const AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment = () => {
         </Col>
         <Col md={6}>
           <p>
-            Good governance is essential for ensuring transparency, accountability, and effectiveness in the transport sector. At TSID-NET, we advocate for policies and practices that promote ethical conduct, regulatory compliance, and public participation in decision-making processes.
+            Good governance is essential for ensuring transparency, accountability, and effectiveness in the transport sector. At TSDN, we advocate for policies and practices that promote ethical conduct, regulatory compliance, and public participation in decision-making processes.
           </p>
           <p>
             Through research, policy analysis, and stakeholder engagement, we work to influence government agencies, legislative bodies, and industry associations to adopt measures that prioritize safety, sustainability, and social responsibility in transportation initiatives.
