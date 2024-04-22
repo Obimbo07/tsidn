@@ -11,7 +11,7 @@ const ExpertKnowledge = () => {
         </Col>
         <Col md={6}>
           <p>
-            At TSID-NET, we believe in the power of sharing expertise and best practices to advance transport safety development. Through workshops, seminars, and online resources, we facilitate the exchange of knowledge among industry professionals, researchers, and policymakers.
+            At TSDN, we believe in the power of sharing expertise and best practices to advance transport safety development. Through workshops, seminars, and online resources, we facilitate the exchange of knowledge among industry professionals, researchers, and policymakers.
           </p>
           <p>
             Our goal is to promote continuous learning and innovation in transport safety, ensuring that stakeholders have access to the latest research findings, technological advancements, and successful interventions from around the world.
