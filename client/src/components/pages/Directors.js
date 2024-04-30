@@ -10,7 +10,7 @@ const directors = [
     id: 1,
     title: 'Executive Director',
     name: 'Samuel Musumba',
-    imgPath: '/mr-director.jpg',
+    imgPath: '/samuelMusumba.jpeg',
     url: '/executive-director',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',

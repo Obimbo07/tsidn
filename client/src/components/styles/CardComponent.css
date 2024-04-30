@@ -9,7 +9,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 30%;
-    height: 11em;
+    height: 11em !important;
     background-color: #fff;
     animation: transform 0.5s ease-in-out;
   }

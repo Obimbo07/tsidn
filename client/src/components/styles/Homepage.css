@@ -17,6 +17,7 @@
 
   .podcasts {
     width: 40%;
+    margin-left: 72px;
   }
 
   .podcasts h3 {
@@ -54,9 +55,10 @@
 
   .press-releases h3 {
     text-decoration: underline;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 10px;
     border-bottom: 2px solid;
     margin-bottom: 12px;
+    text-decoration-color: #0056b3;
   }
   
   .timeline-item {
@@ -64,8 +66,8 @@
     padding: 20px;
     border-left: 2px solid #ccc;
     margin-bottom: 20px;
-    background-color: #0000004a;
-    height: 11em;
+    background-color: #0000001a;
+    height: max-content;
   }
   
   .date {
@@ -241,8 +243,10 @@
 }
 
 .podcast-section {
- background-color:  rgba(58, 58, 58, 0.591);
+ background-color:  #0000001a;
+ text-align: center;
 }
+
 
 
 @media only screen and (max-width: 500px){
