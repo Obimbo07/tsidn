@@ -11,7 +11,7 @@ const ResearchAndDevelopment = () => {
         </Col>
         <Col md={6}>
           <p>
-            Research and development play a critical role in advancing innovation and improving safety in the transport sector. At TSID-NET, we support and conduct research projects that address key challenges and opportunities in road transport, including traffic management, vehicle design, and behavioral analysis.
+            Research and development play a critical role in advancing innovation and improving safety in the transport sector. At TSDN, we support and conduct research projects that address key challenges and opportunities in road transport, including traffic management, vehicle design, and behavioral analysis.
           </p>
           <p>
             Through partnerships with academic institutions, industry experts, and government agencies, we collaborate on studies, pilot projects, and technology demonstrations to generate evidence-based solutions and best practices.

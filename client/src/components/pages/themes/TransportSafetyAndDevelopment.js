@@ -6,13 +6,14 @@ const Transport = () => {
     <Container className="transport-container">
       <h2 className="mb-4">Transport Safety and Development</h2>
       <Row>
-        <Col md={6}>
-          <Image src="/transport-image.jpg" alt="Transport" fluid className="mb-4" />
-        </Col>
+       
         <Col md={6}>
           <p>
-            Transport Safety and Development is at the core of our mission at TSID-NET. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
+            Transport Safety and Development is at the core of our mission at TSDN. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
           </p>
+          <Col md={6}>
+          <Image src="/safety.jpeg" alt="Transport" fluid className="mb-4" />
+        </Col>
           <p>
             Through partnerships with government agencies, NGOs, and international organizations, we work to improve road infrastructure, implement safety regulations, and promote responsible practices among drivers and transport operators.
           </p>
@@ -36,7 +37,7 @@ const Transport = () => {
           </p>
         </Col>
         <Col md={6}>
-          <Image  alt="Making a Difference on the Roads" fluid className="mb-4" />
+          <Image  alt="Making a Difference on the Roads" fluid className="mb-4" src='/transportsafety.jpg' />
         </Col>
       </Row>
     </Container>

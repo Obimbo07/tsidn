@@ -10,7 +10,7 @@ const directors = [
     id: 1,
     title: 'Executive Director',
     name: 'Samuel Musumba',
-    imgPath: '/mr-director.jpg',
+    imgPath: '/samuelMusumba.jpeg',
     url: '/executive-director',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
@@ -47,7 +47,6 @@ const directors = [
     url: '/austin-obimbo',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
-    twitter: 'https://twitter.com/',
     email: 'mailto:samuel@example.com'
   },
   {
@@ -70,40 +69,43 @@ const directors = [
     url: '/abedi-amakobe',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
-    twitter: 'https://twitter.com/',
     email: 'mailto:samuel@example.com'
   },
 ];
 
 const Directors = () => {
   return (
-    <div className="container">
-      <h3 className='p-2 leaderhead col-md-9 text-align-center'>Tsdn Leadership</h3>
-      <div className="row">
-        {directors.map((director) => (
-             <div className="card directors-card" key={director.id}>
-              <Link className="text-decoration-none link-sctn text-dark" to={director.url}>
-                <div className="flex ">
-                  <div className="col-xl-4">
-                    <img className="directors-img" src={director.imgPath} alt={director.name} />
-                  </div>
-                  <div className="body-col">
-                    <div className="card-body">
-                     <div className="social-links">
-
-                      <a class="fa-iconlinks"  href={director.linkedin}><FontAwesomeIcon icon={faLinkedin} /></a>
-                      <a class="fa-iconlinks" href={director.twitter}><FontAwesomeIcon icon={faTwitter} /></a>
-                      <a class="fa-iconlinks" href={director.email}><FontAwesomeIcon icon={faEnvelope} /></a>
-                     </div>
-                      <h5 className="card-title">{director.name}</h5>
-                      <p className="card-text" style={{ fontWeight: '400' }}>{director.title}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+    <div className="directors-container">
+      {directors.map((director) => (
+        <div key={director.id} className="directors">
+          <Link to={director.url} className="directors-link">
+            <img src={director.imgPath} alt={director.name} className="directors-img" />
+            <div className="directors-content">
+              <div>
+                <h3 className="directors-title">{director.title}</h3>
+                <p className="directors-name">{director.name}</p>
               </div>
-        ))}
-      </div>
+              <div className="directors-social">
+                {director.linkedin && (
+                  <a href={director.linkedin}>
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                )}
+                {director.twitter && (
+                  <a href={director.twitter}>
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </a>
+                )}
+                {director.email && (
+                  <a href={director.email}>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </a>
+                )}
+              </div>
+            </div>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

@@ -9,8 +9,6 @@ import {
     faSoundcloud, 
     faYoutube, 
     faWhatsapp, 
-    faMailchimp, 
-    faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 import './styles/Footer.css';
 
@@ -64,32 +62,26 @@ const Footer = () => {
                 <div className="contentContainer4">
                     <h4 className='icon-text'>Follow Us</h4>
                     <div className="icons text-white">
-                        <a className="text-white" href="https://twitter.com">
+                        <a className="text-white" href="https://twitter.com/tsdn">
                             Twitter <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a className="text-white" href="https://facebook.com">
+                        <a className="text-white" href="https://web.facebook.com/profile.php?id=61558983545764">
                             Facebook <FontAwesomeIcon icon={faFacebook} />
                         </a>
-                        <a className="text-white" href="https://instagram.com">
+                        <a className="text-white" href="https://instagram.com/tsdn_network">
                             Instagram <FontAwesomeIcon icon={faInstagram} />
                         </a>
                         <a className="text-white" href="https://flickr.com">
                             Flickr <FontAwesomeIcon icon={faFlickr} />
                         </a>
-                        <a className="text-white" href="https://soundcloud.com">
+                        <a className="text-white" href="https://on.soundcloud.com/V5dSLU2boZpzKjkD8">
                             SoundCloud <FontAwesomeIcon icon={faSoundcloud} />
                         </a>
-                        <a className="text-white" href="https://youtube.com">
+                        <a className="text-white" href="https://www.youtube.com/@tsidn">
                             Youtube <FontAwesomeIcon icon={faYoutube} />
                         </a>
-                        <a className="text-white" href="https://whatsapp.com">
+                        <a className="text-white" href="https://whatsapp.com/channel/0029VaYwqsb6mYPIHhofLG37">
                             WhatsApp <FontAwesomeIcon icon={faWhatsapp} />
-                        </a>
-                        <a className="text-white" href="https://mailchimp.com">
-                            MailChimp <FontAwesomeIcon icon={faMailchimp} />
-                        </a>
-                        <a className="text-white" href="https://telegram.org">
-                            Telegram <FontAwesomeIcon icon={faTelegram} />
                         </a>
                     </div>
                 </div>

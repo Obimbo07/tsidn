@@ -10,7 +10,7 @@ const ExecutiveDirector = () => (
     <Container>
       <Row className="intro-ed">
         <Col>
-          <Image src="/ED.jpg" alt="Executive Director" className="executive-director-image" />
+          <Image src="/samuelMusumba.jpeg" alt="Executive Director" className="executive-director-image" />
         </Col>
         <Col>
           <h1>Executive Director</h1>

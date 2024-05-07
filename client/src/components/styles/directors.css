@@ -1,4 +1,4 @@
-.body {
+/* .body {
   background-color: azure;
   height: 100vh;
 }
@@ -46,8 +46,9 @@
   justify-content: flex-start;
 }
 
-.directors-image {
+.directors-img {
   display: flex;
+  width: 50%;
   gap: 20px;
 }
 
@@ -88,8 +89,12 @@
         display: flex;
     }
 
-    .directors-image {
-      width: 30%;
+    .directors-img {
+      width: 100%;
+    }
+
+    .content-cont cont {
+      width: 20%;
     }
 
     .directors-card {
@@ -97,4 +102,87 @@
     }
 
 
+} */
+
+.directors {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.directors:hover {
+  transform: scale(1.02);
+  background-color: #d0d0d0aa;
+}
+
+.directors-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.directors-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.directors-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.directors-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.directors-name {
+  font-size: 16px;
+  color: #666;
+}
+
+.directors-social {
+  display: flex;
+  gap: 10px;
+}
+
+.directors-social a {
+  color: #ccc;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.directors-social a:hover {
+  color: #333;
+}
+
+.directors-container {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 750px){
+  .directors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .directors {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+  }
 }

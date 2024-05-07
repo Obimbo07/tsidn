@@ -11,7 +11,8 @@ const CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes = () => {
         </Col>
         <Col md={6}>
           <p>
-            Securing adequate funding is crucial for implementing road transport safety improvement programs. At TSID-NET, we work to mobilize financial resources from government budgets, international donors, private investors, and other sources to support initiatives that enhance road infrastructure, vehicle safety, and driver training.
+            Securing adequate funding is crucial for implementing road transport safety improvement programs. 
+            At TSDN, we work to mobilize financial resources from government budgets, international donors, private investors, and other sources to support initiatives that enhance road infrastructure, vehicle safety, and driver training.
           </p>
           <p>
             Through strategic partnerships, advocacy campaigns, and project proposals, we seek to raise awareness of the economic, social, and public health benefits of investing in road safety. By leveraging available funding mechanisms and promoting innovative financing models, we aim to accelerate progress towards our goal of reducing road traffic fatalities and injuries.
