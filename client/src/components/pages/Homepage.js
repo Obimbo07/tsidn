@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import BlogCarousel from './blogCarousel';
 import CardComponent from './Cards';
@@ -28,13 +28,21 @@ const podcasts = [
 const Homepage = () => {
   const posts = useSelector((state) => state.posts.data);
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPosts())
+    .then(() => setIsLoading(false))
+    .catch(() => setIsLoading(false));
   }, [dispatch]);
 
   return (
     <>
+    {isLoading && (
+        <div className="loader">
+          <div className="spinner"></div>
+        </div>
+      )}
       <Modal />
       <Component />
       <div className="top-section">
@@ -50,14 +58,14 @@ const Homepage = () => {
             <h3>PRESS RELEASES</h3>
             <div className="timeline">
               {pressReleases.map((release) => (
+                <Link to={'media/press-release'}>
                 <div className="timeline-item" key={release.id}>
                   <div className="date">{release.Date}</div>
-                  <div className="press-content">
-                    <a href="#">
+                  <div className="press-content">                   
                     <p>{release.content}</p>
-                    </a>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -66,10 +74,10 @@ const Homepage = () => {
            <div className="podcasts-section">
             {podcasts.map((podcast) => (
               <div className="podcast-section m-2" key={podcast.id}>
-               <Link>
+               <Link to={'media/podcasts'}>
                  <div className='p-2'>
-                  <h5 className="text-white">{podcast.title}</h5>
-                  <p className="text-white">{podcast.date}</p>
+                  <h5 className="text-primary">{podcast.title}</h5>
+                  <p className="text-primary">{podcast.date}</p>
                  </div>
                 </Link>
               </div>

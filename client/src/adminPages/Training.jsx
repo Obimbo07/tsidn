@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { faEye, faEyeSlash, faPenToSquare, } from '@fortawesome/free-regular-svg-icons';
 import { faDownload, faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -299,7 +300,7 @@ const Training = () => {
                                         )}
                                     </tr>
                                     )}
-                                    {editId == data.id && (
+                                    {editId === data.id && (
                                         <tr colSpan="11" className='border-b-[1px] border-b-[#ddd] '>
                                             {openFormEdit && formData &&(
                                                 <div className="bg-lightYellow px-[40px] py-[20px]">

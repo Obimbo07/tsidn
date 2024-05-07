@@ -20,7 +20,6 @@ import FullPostContent from './components/pages/FullPostContent';
 import Homepage from './components/pages/Homepage';
 import Mission from './components/pages/Mission';
 import OurCoreValues from './components/pages/OurCoreValues';
-import Themes from './components/pages/Themes';
 import Events from './components/pages/events/Events';
 import Highlights from './components/pages/events/Highlights';
 import Media from './components/pages/media/Media';
@@ -34,7 +33,6 @@ import TsdnAims from './components/pages/tsdnAims/TsdnAims';
 import WhatWeDo from './components/pages/tsdnAims/WhatWeDo';
 import DirectorAustin from './components/pages/directors/DirectorAustin';
 import DirectorIan from './components/pages/directors/DirectorIan';
-import DirectorAaron from './components/pages/directors/DirectorAaron';
 import DirectorChristine from './components/pages/directors/DirectorChristine';
 import DirectorShirley from './components/pages/directors/DirectorShirley';
 import CapacityBuildingAndHumanResourceDevelopmentInTransport from './components/pages/themes/CapacityBuildingAndHumanResourceDevelopmentInTransport';
@@ -189,8 +187,9 @@ function App() {
           />
           <Route path='christine-ajulu' element={<DirectorChristine /> } />
           <Route path='/shirley-cherotich' element={<DirectorShirley />} />
-          <Route path='/aaron-director' element={<DirectorAaron />} />
           <Route path='/austin-obimbo' element={<DirectorAustin />} />
+          <Route path="/ian-kipchumba" element={<DirectorIan />} />
+          <Route path="/abedi-amakobe" element={<DirectorAbedi />} />
           <Route path='/dashboard' element={<Front />} >
             <Route path="" element={<DashHome />} />
             <Route path="transportSafety" element={<TransportSafety />} />

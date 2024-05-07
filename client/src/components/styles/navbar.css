@@ -141,6 +141,10 @@ nav {
   display: none;
 }
 
+.listclose {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hamburger-btn {
     display: block;
@@ -184,6 +188,8 @@ nav {
   .listclose {
     position: inherit;
     align-self: flex-end;
+    display: block;
+    font-size: 30px;
   }
 
   .list-nav button {

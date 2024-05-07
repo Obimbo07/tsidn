@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 body {
-  margin: 0px 206px ! important;
-  background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 50%, #ccc 50%, #ccc 75%, transparent 75%, transparent);
-  background-size: 4px 4px; 
+  background-color: #fff ! important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 50%, #ccc 50%, #ccc 75%, transparent 75%, transparent);
+    background-size: 4px 4px; 
 }
 
 
@@ -26,11 +25,16 @@ a {
 }
 
 @media only screen and (max-width: 500px){
-  body {
-    margin: 0;
-  }
   .slider-section {
     display: flex;
     flex-direction: column;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  body {
+    margin: 0px 206px !important;
+    
   }
 }

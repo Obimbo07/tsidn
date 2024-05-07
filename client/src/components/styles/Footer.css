@@ -9,8 +9,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10%;
     color: #fff;
+}
+
+.inner-sctn div {
+    width: -webkit-fill-available;
 }
 
 .icons {

@@ -8,6 +8,7 @@
 .slider-section {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .carousel-image {
@@ -53,7 +54,7 @@
   padding: 0px 0px -1px 0px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px){
   .blog-carousel {
     width: auto;
   }

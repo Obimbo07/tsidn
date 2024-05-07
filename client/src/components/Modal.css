@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -12,6 +12,7 @@
   .modal-content {
     position: absolute;
     top: 50%;
+    max-width: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
@@ -32,3 +33,9 @@
     display: block;
   }
   
+@media only screen and (min-width: 500px) {
+ .modal-content {
+  max-width: 82% !important;
+  left: 44%;
+ }
+} 
