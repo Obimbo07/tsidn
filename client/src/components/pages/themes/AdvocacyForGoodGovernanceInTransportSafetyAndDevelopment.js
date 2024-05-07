@@ -8,7 +8,7 @@ const AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment = () => {
       <h2 className="mb-4">Advocacy for Good Governance in Transport Safety and Development</h2>
       <Row>
         <Col md={6}>
-          <Image src="/advocacy-image.jpg" alt="Advocacy" fluid className="mb-4" />
+          <Image src="/transportsafety.jpg" alt="Advocacy" fluid className="mb-4" />
         </Col>
         <Col md={6}>
           <p>

@@ -7,7 +7,7 @@ const ExpertKnowledge = () => {
       <h2 className="mb-4">Expert Knowledge Sharing in Transport Safety Development</h2>
       <Row>
         <Col md={6}>
-          <Image src="/expert-knowledge-image.jpg" alt="Expert Knowledge" fluid className="mb-4" />
+          <Image src="/trafficLights.jpg" alt="Expert Knowledge" fluid className="mb-4" />
         </Col>
         <Col md={6}>
           <p>

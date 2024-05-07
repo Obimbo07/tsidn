@@ -7,7 +7,7 @@ const CapacityBuildingAndHumanResourceDevelopmentInTransport = () => {
       <h2 className="mb-4">Capacity Building and Human Resource Development in Transport</h2>
       <Row>
         <Col md={6}>
-          <Image src="/capacity-building-image.jpg" alt="Capacity Building" fluid className="mb-4" />
+          <Image src="/capacitybuilding.jpg" alt="Capacity Building" fluid className="mb-4" />
         </Col>
         <Col md={6}>
           <p>
