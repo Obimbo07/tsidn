@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/BlogCarousel.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPosts } from '../../redux/posts/postSlice';
 
 
 
@@ -14,7 +16,16 @@ const Events = [
 ]
 
 
-const BlogCarousel = ({ blogPosts }) => {
+
+const BlogCarousel = () => {
+  const blogPosts = useSelector((state) => state.posts.data);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPosts())
+  }, [dispatch]);
+
+
   const settings = {
     dots: true,
     infinite: true,

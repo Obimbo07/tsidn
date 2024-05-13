@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React,{ useState } from 'react';
 import BlogCarousel from './blogCarousel';
 import CardComponent from './Cards';
 import '../styles/Homepage.css';
 import Footer from '../Footer';
 import Modal from '../Modal';
-import { fetchPosts } from '../../redux/posts/postSlice';
 import { Link } from 'react-router-dom';
 import Component from './Navbar';
 
@@ -26,15 +24,9 @@ const podcasts = [
 ]
 
 const Homepage = () => {
-  const posts = useSelector((state) => state.posts.data);
-  const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(true)
+  
+  const [isLoading] = useState(true)
 
-  useEffect(() => {
-    dispatch(fetchPosts())
-    .then(() => setIsLoading(false))
-    .catch(() => setIsLoading(false));
-  }, [dispatch]);
 
   return (
     <>
@@ -48,7 +40,7 @@ const Homepage = () => {
       <div className="top-section">
         <div className="topContent">
           <div className="carousel">
-            <BlogCarousel blogPosts={posts} />
+            <BlogCarousel/>
           </div>
         </div>
       </div>
