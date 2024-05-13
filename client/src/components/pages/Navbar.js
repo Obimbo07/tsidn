@@ -21,18 +21,12 @@ const Navbar = () => {
     
     <>
     <section className="top-nav">
-      <div className="topNav-links">
-        <ul>
-          {toplinks.map((toplink) => (
-            <li className="topNav-link" key={toplink.id}>
-              <Link to={toplink.url} >{toplink.text}</Link>
-            </li>
-          ))}
-        </ul>
+      {/* <div className="topNav-links">
+        
         <span>
         <img className="ad" src="../../../ad.png" alt='add banner' />
         </span>
-      </div>
+      </div> */}
     </section>
     <div className="logo-div">
       <span className="logo-content">
@@ -43,6 +37,15 @@ const Navbar = () => {
       </span>
       <div className="Search">
         <Search />
+      </div>
+      <div class="user-links " >
+      <ul class="inline-flex gap-10">
+          {toplinks.map((toplink) => (
+            <li className="topNav-link" key={toplink.id}>
+              <Link to={toplink.url} >{toplink.text}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
     
