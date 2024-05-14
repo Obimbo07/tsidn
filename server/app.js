@@ -17,7 +17,7 @@ const corsOptionsLocal = {
     methods: ['POST', 'GET','PUT','DELETE']
 }
 
-app.use(cors(corsOptionsLocal));
+app.use(cors(corsOptions));
 
 
 

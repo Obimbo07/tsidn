@@ -51,7 +51,7 @@ const Search = () => {
           value={searchTerm}
           onChange={handleInputChange}
         />
-        <button type="submit">
+        <button class="searchbtn" type="submit">
         <FontAwesomeIcon icon={faSearchengin} />
         </button>
       </form>
