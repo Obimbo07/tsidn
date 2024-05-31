@@ -20,7 +20,7 @@ const FullPostContent = ({ blogPosts }) => {
       <div className="blog-content" >
       <h2>{currentPost.post_title}</h2>
       <img
-          src={`data:image/png;base64,${currentPost.post_image}`}
+          src={URL.createObjectURL(new Blob([new Uint8Array(currentPost.post_image.data)],{type: 'image/jpeg', }))}
           alt={currentPost.post_title}
           className="post-image"
         />

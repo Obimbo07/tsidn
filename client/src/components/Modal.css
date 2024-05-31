@@ -4,7 +4,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -35,7 +34,8 @@
   
 @media only screen and (min-width: 500px) {
  .modal-content {
-  max-width: 82% !important;
-  left: 44%;
+  max-width: max-content;
+  left: 53%;
+  background-color: rgb(6, 6, 40);
  }
 } 

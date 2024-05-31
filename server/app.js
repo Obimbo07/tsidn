@@ -10,21 +10,20 @@ const corsOptions = {
     methods: ['POST', 'GET','PUT','DELETE']
 }
 
-//local development cors
 
 const corsOptionsLocal = {
     origin: 'http://localhost:3000',
     methods: ['POST', 'GET','PUT','DELETE']
 }
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 
 app.use(express.json());
 
 const port = process.env.PORT;
-
+console.log(port);
 
 const router = require('./routes/routes')
 
