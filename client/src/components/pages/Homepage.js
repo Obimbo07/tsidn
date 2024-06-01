@@ -7,12 +7,12 @@ import Modal from '../Modal';
 import { Link } from 'react-router-dom';
 import Component from './Navbar';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMeetings } from '../../redux/posts/postSlice';
+import {  fetchPodcasts } from '../../redux/posts/postSlice';
 
 const pressReleases = [
   { id: 1, title: 'news 2', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '25th Nov 2023' },
   { id: 2, title: 'news 3', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '23rd Dec 2023' },
-  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases with released or scheduled date', Date: '23rd Dec 2023' },
+  { id: 3, title: 'news 4', content: 'Sample Dataset for the press releases with released or scheduled date.', Date: '23rd Dec 2023' },
 ];
 
 // const podcasts = [
@@ -31,7 +31,7 @@ const Homepage = () => {
   const podcasts = useSelector((state) => state.posts.podcasts)
 
   useEffect(() => {
-    dispatch(fetchMeetings())
+    dispatch(fetchPodcasts())
   }, [dispatch])
   return (
     <>
@@ -43,20 +43,16 @@ const Homepage = () => {
       <Modal />
       <Component />
       <div className="top-section">
-        <div className="topContent">
-          <div className="carousel">
-            <BlogCarousel/>
-          </div>
+        <BlogCarousel/>
         </div>
-      </div>
       <div className="bottom-section">
         <div className="bottom-content">
           <div className="press-releases">
-            <h3>PRESS RELEASES</h3>
+            <h5 className='pr-header'>PRESS RELEASES</h5>
             <div className="timeline">
               {pressReleases.map((release) => (
-                <Link to={'media/press-release'}>
-                <div className="timeline-item" key={release.id}>
+                <Link to={'media/press-release'} key={release.id}>
+                <div className="timeline-item">
                   <div className="date">{release.Date}</div>
                   <div className="press-content">                   
                     <p>{release.content}</p>
@@ -67,14 +63,14 @@ const Homepage = () => {
             </div>
           </div>
           <div className="podcasts dark-bg">
-          <h3>Podcasts</h3>
+          <h5 className='pd-header'>PODCASTS</h5>
            <div className="podcasts-section">
             {podcasts.map((podcast) => (
-              <div className="podcast-section m-2" key={podcast.id}>
-               <Link to={'m'}>
-                 <div className='p-2'>
-                  <h5 className="text-primary">{podcast.post_title}</h5>
-                  <p className="text-primary">{podcast.date}</p>
+              <div className="podcast-section" key={podcast.id}>
+               <Link to={'m'} className='podcasts-link'>
+                 <div className='text-start p-2'>
+                  <h5 className="text-black">{podcast.post_title}</h5>
+                  <p className="text-black">{podcast.date}</p>
                  </div>
                 </Link>
               </div>

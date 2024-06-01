@@ -12,14 +12,17 @@
   
   .events-section {
     overflow: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 8px 0;
   }
 
   .podcasts {
     width: 40%;
-    margin-left: 72px;
+    margin-left: 25px;
   }
 
-  .podcasts h3 {
+   .pd-header {
     text-decoration: underline;
     text-decoration-color: #0056b3;
     text-decoration-thickness: 10px;
@@ -31,11 +34,7 @@
     overflow: auto;
     height: 14em;
   }
-
-  .event-section {
-    background-color: #fff;
-  }
-  
+ 
   .events-container {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,7 @@
     width: 50%;
   }
 
-  .press-releases h3 {
+  .pr-header {
     text-decoration: underline;
     text-decoration-thickness: 10px;
     border-bottom: 2px solid;
@@ -245,10 +244,15 @@
 }
 
 .podcast-section {
- background-color:  #0000001a;
- text-align: center;
+  background-color: #0000000d;
+  text-align: center;
+  border-radius: 9px;
+  margin: 11px 0;
 }
 
+.top-section {
+  padding: 10px 0;
+}
 
 
 @media only screen and (max-width: 500px){
