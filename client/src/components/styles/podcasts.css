@@ -3,6 +3,11 @@
     padding: 15px;
 }
 
+.podcasts-streams {
+    background-color: gold;
+    padding: 10px;
+}
+
 .podcasts-container {
     display: flex;
     flex-direction: column;

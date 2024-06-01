@@ -1,6 +1,5 @@
 .layout_container {
   display: flex;
-  margin: 0 200px !important;
 }
 
 .layout__left-column {

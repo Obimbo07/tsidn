@@ -35,7 +35,7 @@ const Footer = () => {
                       <p>Mail: admin@tsidn.org</p>
                 </div>
                 <div className="contentContainer1">
-                    <h4>About Tsdn</h4>
+                    <h6>ABOUT TSDN</h6>
                     <ul className="about-links">
                         <li>
                             <Link className="text-white" to="/executive-director">Executive Director</Link>
@@ -49,18 +49,21 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="contentContainer2">
-                    <h4>Organization Links</h4>
+                    <h6>ORGANIZATION LINKS</h6>
                     <ul className="about-links">
                         <li>
-                            <Link className="text-white" to="/transport">TranSafety</Link>
+                            <Link className="text-white" to="/transport">TranSafety development</Link>
                         </li>
                         <li>
                             <Link className="text-white" to="/Capacity-building">Capacity Building</Link>
                         </li>
+                        <li>
+                            <Link className="text-white" to="/Capacity-building">Eco-transport</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="contentContainer4">
-                    <h4 className='icon-text'>Follow Us</h4>
+                    <h6 className='icon-text'>FOLLOW US</h6>
                     <div className="icons text-white">
                         <a className="text-white" href="https://twitter.com/tsdn">
                             Twitter <FontAwesomeIcon icon={faTwitter} />

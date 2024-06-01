@@ -58,7 +58,8 @@ nav {
   }
 
   .dropdown-content li a:hover {
-    color: gold !important;
+    text-decoration-line: underline;
+    text-decoration-color: gold;
   }
   
   .dropdown:hover .dropdown-content {
