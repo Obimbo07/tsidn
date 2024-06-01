@@ -9,9 +9,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 50%, #ccc 50%, #ccc 75%, transparent 75%, transparent); */
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 50%, #ccc 50%, #ccc 75%, transparent 75%, transparent);
     background-size: 4px 4px;
-    
 }
 
 
@@ -34,7 +33,10 @@ a {
 }
 
 @media (min-width: 900px) {
-  .bottom-section {
+  body {
+    margin: 0 270px !important;
+  }
+  /* .bottom-section {
     margin: 0 270px !important;
     box-shadow: 2px 63px 10px 23px rgba(0, 0, 0, 0.4) !important;
 
@@ -44,5 +46,5 @@ a {
     margin: 0 270px !important;
     box-shadow: 2px 29px 10px 23px rgba(0, 0, 0, 0.4) !important;
     
-  }
+  } */
 }
