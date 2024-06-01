@@ -1,19 +1,19 @@
 .footerSection {
     background-color: rgb(6, 6, 40);
-    padding: 3%;
-    border-radius: 10px;
+    padding: 2%;
     color: #fff;
 }
 
 .inner-sctn {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     color: #fff;
+    background-color: rgb(6, 6, 40);
+    gap: 30px
 }
 
 .inner-sctn div {
-    width: -webkit-fill-available;
+    width: 100%;
 }
 
 .icons {

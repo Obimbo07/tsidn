@@ -4,7 +4,7 @@ import axios from "axios";
 
 // const api = 'https://tsidnapi.tsidn.org/api/selectContent';
 const api = `${process.env.REACT_APP_DATABASE_API}/api/selectContent`;
-const podcastsApi = `${process.env.REACT_APP_DATABASE_API}/api/selectPodcasts`;
+const podcastsApi = `${process.env.REACT_APP_DATABASE_API}/api/selectPodCasts`;
 const meetingsEventsApi = `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`;
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
@@ -19,6 +19,7 @@ export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
 export const fetchPodcasts = createAsyncThunk("posts/fetchPodcasts", async () => {
   try {
     const response = await axios.get(podcastsApi);
+    console.log(response);
     return response.data;
   } catch(err){
     console.log(err);
@@ -63,7 +64,6 @@ const postSlice = createSlice({
     })
     .addCase(fetchPodcasts.fulfilled, (state, action) => {
       state.podcasts = action.payload.data;
-      console.log(state.podcasts)
       state.isLoading = false;
     })
     .addCase(fetchPodcasts.rejected, (state, action) => {

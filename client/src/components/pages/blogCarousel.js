@@ -60,7 +60,7 @@ const BlogCarousel = () => {
         </Slider>
     </div>
     <div className="event-section">
-    <span className="stn-header">MAJOR EVENTS</span>
+    <span className="stn-header bg-white">MAJOR EVENTS</span>
       <div className="events-section">
         <div className="events-container">
            <div className="events-section">
@@ -79,7 +79,7 @@ const BlogCarousel = () => {
               ))}
            </div>
         </div>
-     </div>
+       </div>
       </div>
     </div>
   );
