@@ -38,14 +38,12 @@ nav {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #000000c9;
+    background-color: #000000fa;
     min-width: max-content;
     list-style: none;
     box-shadow: -14px 8px 13px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding-inline-start: 0px;
-    transform: translateY(-89px);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
   
   .dropdown-content li {
@@ -65,7 +63,13 @@ nav {
   .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
-    transform: translateY(0);
+    animation: drop_down 0.6s ease-in;
+  }
+
+  @keyframes drop_down {
+    0% { transform: translateY(-42px); opacity: 1; }
+    30% { opacity: 0; }
+    100% { transform: translateY(0); opacity: 1;}
   }
   
   a {
@@ -84,7 +88,6 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 6em;
     background-color: rgb(0, 0, 255);
   }
 
@@ -151,15 +154,15 @@ nav {
     width: 40%;
 }
 .searchbtn {
-  font-size: 2em;
+  font-size: 22px;
   color: #fff;
   padding: 7px;
 }
 
 .search input {
-  border-radius: 20px;
-  width: 84%;
-  padding: 12px;
+  border-radius: 46px;
+  width: 83%;
+  padding: 5p
 }
 
 .topNav-links ul {

@@ -27,7 +27,6 @@
 
 .continue-reading-link {
   display: block;
-  font-size: 51px;
   color: #FFF;
   text-decoration: none;
   padding: 49px 67px;
@@ -38,14 +37,11 @@
 }
 
 .continue-reading-link h6 {
-  font-size: 13px;
   width: fit-content;
 }
 
 .stn-header {
   text-decoration: underline;
-  font-size: 23px;
-  font-family: monospace;
   display: block;
   justify-content: center;
   text-decoration-thickness: 6px;
@@ -68,7 +64,6 @@
   }
 
   .continue-reading-link {
-    font-size: 28px;
     padding: 20px; 
   }
 }

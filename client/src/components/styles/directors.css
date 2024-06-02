@@ -142,13 +142,11 @@
 }
 
 .directors-title {
-  font-weight: bold;
-  font-size: 18px;
+
   color: #333;
 }
 
 .directors-name {
-  font-size: 16px;
   color: #666;
 }
 
@@ -159,7 +157,6 @@
 
 .directors-social a {
   color: #ccc;
-  font-size: 18px;
   transition: all 0.2s ease-in-out;
 }
 
