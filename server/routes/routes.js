@@ -144,17 +144,14 @@ router.post('/registerUser', async(req, res) => {
 
         const userName = formBody.userName;
         const email = formBody.email;
-        const password = formBody.password;
         const users = await controller.userList();
         const userExist = users.find(user => user.user_email === email);
-        const userExists = Array(userExist).length;
 
-        if(userExists > 0) {
-            console.log('Email already Exists');
+        if(userExist > 0) {
             res.json({success: false, message: 'Email already Exists'});
         }
 
-        await controller.registerUser(userName, email, password);
+        await controller.registerUser(userName, email);
 
         res.json({success: true, message: "Successifully registered"});
     } catch (error) {
@@ -166,14 +163,13 @@ router.post('/loginUser', async(req, res) => {
     try {
         const formData = req.body;
         const email = formData.email;
-        const password = formData.password;
         const users = await controller.userList();
         const userExist = users.find(user => user.user_email === email);
         
-        if(userExist) {
-            if(password === userExist.password) {
-                res.json({success: true, message: 'Logged in Successifully'});
-            }
+        if(userExist) { 
+            req.session.users = userExist;
+            console.log(userExist);
+            res.json({ success: true, message: 'Logged in successfully '})
         } else {
             console.log('Email does not exist');
             res.json({success: false, message: 'Email does not exist'});
@@ -182,6 +178,22 @@ router.post('/loginUser', async(req, res) => {
         res.json({success: false, message: error.message});
     }
 });
+
+router.get('/logout', (req, res) => {
+    req.session.destory((err) => {
+        if(err) {
+            return res.json({ success: false, message: 'Logout failed'});
+        }
+        res.json({ success: true, message: 'logged out successfully' });
+    });
+});
+
+const requireLogin = (req, res, next) => {
+    if(!req.session.userExist) {
+        return res.json(401).json({ success: false, message: 'Unauthorized'});
+    }
+    next();
+};
 
 router.post('/payPremium', (req, res) => {
     const  formData = req.body;
