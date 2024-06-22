@@ -41,6 +41,7 @@ import AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment from './componen
 import CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes from './components/pages/themes/CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes';
 import Modal from './components/Modal';
 import Pricing from './components/pages/pricing/Pricing';
+import Login from './components/Login';
 
 function App() {
   const posts = useSelector((state) => state.posts.data);
@@ -108,6 +109,7 @@ function App() {
           <Route path="pay" element={<Pay />} />
         </Route>
         <Route path="/register" element={<Modal />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
     </>

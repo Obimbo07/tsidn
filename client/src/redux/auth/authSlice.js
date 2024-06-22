@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const registerApi = `${process.env.REACT_APP_DATABASE_API}/api/registerUser`;
 const loginApi = `${process.env.REACT_APP_DATABASE_API}/api/loginUser`;
+const logoutApi = `${process.env.REACT_APP_DATABASE_API}/api/logout`;
 
 export const registerUser = createAsyncThunk('auth/registerUser', async (userData) => {
   try {
@@ -25,12 +26,24 @@ export const loginUser = createAsyncThunk('auth/loginUser', async (loginData) =>
   }
 });
 
+
+export const logoutUser = createAsyncThunk('auth/logoutUser', async (logoutData) => {
+  try {
+    const response = await axios.post(logoutApi, logoutData);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+});
+
 const initialState = {
   user: null,
   isLoading: false,
   error: null,
   registerSuccess: false,
   loginSuccess: false,
+  logoutSuccess: false,
 };
 
 const authSlice = createSlice({
@@ -67,6 +80,22 @@ const authSlice = createSlice({
         }
       })
       .addCase(loginUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase(logoutUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(logoutUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        if (action.payload.success) {
+          state.user = action.payload.user;
+          state.logoutSuccess = true;
+        } else {
+          state.error = action.payload.message;
+        }
+      })
+      .addCase(logoutUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });
