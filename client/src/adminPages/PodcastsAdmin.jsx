@@ -131,14 +131,13 @@ const PodcastsAdmin = () => {
     // }
 
       const tags = [
-        'Transport',
-        'Road Safety',
-        'Knowledge Sharing',
-        'Capacity building',
+        'Transport safety and development',
+        'Expert Knowledge Sharing in transport safety development',
+        'Capacity building and human resource development in transport',
         'Eco-transport development',
-        'Human Resource Development',
-        'Agg in transport Sector',
-        'Research and Development',
+        'Catalyzing financing for road transport safety improvement programmes',
+        'Advocacy for good governance in transport safety and developement',
+        'Research and Development in transport',
       ];
 
       const handleCloseEdit =() => {

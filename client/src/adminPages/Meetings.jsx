@@ -131,14 +131,13 @@ const Meetings = () => {
     // }
 
       const tags = [
-        
-        'Transport Safety and Development',
+        'Transport safety and development',
         'Expert Knowledge Sharing in transport safety development',
-        'Capacity Building and Human Resource Development in Transport',
-        'Advocacy for good governance in Transport Safety and Development',
-        'Catalyzing financing for road transport safety improvement Programmes',
+        'Capacity building and human resource development in transport',
+        'Eco-transport development',
+        'Catalyzing financing for road transport safety improvement programmes',
+        'Advocacy for good governance in transport safety and developement',
         'Research and Development in transport',
-        'ECO-Transport Development',
       ];
 
       const handleCloseEdit =() => {

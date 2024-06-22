@@ -12,14 +12,17 @@
   
   .events-section {
     overflow: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 8px 0;
   }
 
   .podcasts {
     width: 40%;
-    margin-left: 72px;
+    margin-left: 25px;
   }
 
-  .podcasts h3 {
+   .pd-header {
     text-decoration: underline;
     text-decoration-color: #0056b3;
     text-decoration-thickness: 10px;
@@ -31,11 +34,7 @@
     overflow: auto;
     height: 14em;
   }
-
-  .event-section {
-    background-color: #fff;
-  }
-  
+ 
   .events-container {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,7 @@
     width: 50%;
   }
 
-  .press-releases h3 {
+  .pr-header {
     text-decoration: underline;
     text-decoration-thickness: 10px;
     border-bottom: 2px solid;
@@ -75,9 +74,9 @@
     left: -1px;
     background-color: #fff;
     color: #000;
-    font-family: poppins;
+    /* font-family: poppins; */
     padding: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
   
   .press-content {
@@ -91,7 +90,7 @@
   
   .press-content p {
     margin: 10px 0;
-    font-family: Poppins;
+    /* font-family: Poppins; */
   }
   
   
@@ -155,8 +154,7 @@
 
   .event-title {
     color: #0056b3;
-    font-size: 19px;
-    font-weight: 600;
+
   }
 
   .event-title:hover {
@@ -177,7 +175,6 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    font-size: 14px;
     text-decoration: none;
     color: #fff;
     background-color: #007bff; 
@@ -245,10 +242,15 @@
 }
 
 .podcast-section {
- background-color:  #0000001a;
- text-align: center;
+  background-color: #0000000d;
+  text-align: center;
+  border-radius: 9px;
+  margin: 11px 0;
 }
 
+.top-section {
+  padding: 10px 0;
+}
 
 
 @media only screen and (max-width: 500px){

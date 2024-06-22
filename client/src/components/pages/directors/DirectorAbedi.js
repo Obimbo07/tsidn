@@ -41,14 +41,14 @@ const DirectorAbedi = () => {
         
         <p>
         <h3>Profession</h3>
-         >> He is a trained trainer of trainers and a drivers' trainer on Advanced Safe Defensive Training Systems, from Smith Systems International in UK since 2013 
+         &gt;&gt; He is a trained trainer of trainers and a drivers' trainer on Advanced Safe Defensive Training Systems, from Smith Systems International in UK since 2013 
          to date where he conducts his refresher course every two years.
          <br />
-        >> He is a member of NTSA  Road Safety commitee.
+        &gt;&gt; He is a member of NTSA  Road Safety commitee.
          <br />
-        >> Mr Abedi helps in the Curriculum development team in NITA and also members of KEBS where he helps in developing standards.
+        &gt;&gt; Mr Abedi helps in the Curriculum development team in NITA and also members of KEBS where he helps in developing standards.
          <br />
-         >> He is an authorized trainer of PIEA where he trains oil marketers with its transporters on safe products handling and transportation
+         &gt;&gt; He is an authorized trainer of PIEA where he trains oil marketers with its transporters on safe products handling and transportation
          </p>
          
           </Row>

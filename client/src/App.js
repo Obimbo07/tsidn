@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { fetchPosts } from '../src/redux/posts/postSlice';
 import './App.css';
 import DashHome from './adminPages/DashHome';
@@ -39,171 +39,77 @@ import CapacityBuildingAndHumanResourceDevelopmentInTransport from './components
 import TransportSafetyAndDevelopment from './components/pages/themes/TransportSafetyAndDevelopment';
 import AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment from './components/pages/themes/AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment';
 import CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes from './components/pages/themes/CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes';
+import Modal from './components/Modal';
 
 function App() {
   const posts = useSelector((state) => state.posts.data);
   const dispatch = useDispatch();
-  console.log(posts);
+  const location = useLocation();
 
   useEffect(() => {
-    dispatch(fetchPosts())
-  }, [dispatch]);  return (
+    dispatch(fetchPosts());
+  }, [dispatch]);
+
+  return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={<Homepage />}
-        />
-        <Route
-          path="/about/"
-          element={<Layout />}
-        >
-          <Route
-            index
-            element={<Mission />}
-          />
-          
-          <Route 
-            path="/about/executives"
-            element={<Directors />}
-          />
-          <Route 
-            path="/about/director-ian"
-            element={<DirectorIan />}
-          />
-          <Route 
-            path="/about/director-abedi"
-            element={<DirectorAbedi />}
-          />
-          <Route
-            path="/about/mission"
-            element={<Mission />}
-          />
-          <Route
-            path="/about/our-core-values"
-            element={<OurCoreValues />}
-          />
+      <Routes location={location}>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about/" element={<Layout />}>
+          <Route index element={<Mission />} />
+          <Route path="/about/executives" element={<Directors />} />
+          <Route path="/about/director-ian" element={<DirectorIan />} />
+          <Route path="/about/director-abedi" element={<DirectorAbedi />} />
+          <Route path="/about/mission" element={<Mission />} />
+          <Route path="/about/our-core-values" element={<OurCoreValues />} />
         </Route>
-        <Route
-          path="/tsdn-aims"
-          element={<Layout />}
-          >
-            <Route
-              index
-              element={<TsdnAims />}
-            />
-            <Route
-              path="/tsdn-aims/what-we-do"
-              element={<WhatWeDo />}
-            />
-          </Route>
-        <Route
-          path="/themes/"
-          element={<Layout />}
-        >
-          <Route
-            index
-            element={<TransportSafetyAndDevelopment  />}
-          />
-          <Route
-            path="/themes/transport-safety-and-development"
-            element={<TransportSafetyAndDevelopment />}
-          />
-          <Route
-            path="/themes/expert-knowledge-sharing-in-transport-safety-development"
-            element={<KnowledgeSharing/>}
-          />
-          <Route
-            path="/themes/capacity-building-and-human-resource-development-in-transport"
-            element={<CapacityBuildingAndHumanResourceDevelopmentInTransport />}
-          />
-          <Route
-            path="/themes/eco-transport-development"
-            element={<EcoTransport />}
-          />
-          <Route
-            path="/themes/research-and-development-in-transport"
-            element={<ResearchAndDevelopmentInTransport />}
-          />
-          <Route
-            path="/themes/advocacy-for-good-governance-in-transport-safety-and-development"
-            element={<AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment />}
-          />
-          <Route
-            path="/themes/catalyzing-financing-for-road-transport-safety-improvement-programmes"
-            element={<CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes />}
-          />
+        <Route path="/tsdn-aims" element={<Layout />}>
+          <Route index element={<TsdnAims />} />
+          <Route path="/tsdn-aims/what-we-do" element={<WhatWeDo />} />
         </Route>
-        <Route
-         path="/media"
-         element={<Layout />}
-         >
-          <Route 
-             index
-             element={<Media />}
-             />
-          <Route 
-            path="/media/press-release"
-            element={<PressRelease />}
-            />
-            <Route 
-            path="/media/podcasts"
-            element={<Podcasts />}
-            />
-            <Route 
-            path="/media/videos"
-            element={<Videos />}
-            />
-         </Route>
-         <Route
-           path="/meetings-and-events"
-           element={<Layout/>}
-          >
-            <Route
-              index
-              element={<Events />}
-            />
-            <Route
-              path="/meetings-and-events/meetings-and-events"
-              element={<Events />}
-            />
-            <Route
-              path="/meetings-and-events/ambush-highlights"
-              element={<Highlights />}
-            />
-          </Route>
-          <Route 
-            path="/blog/:id"
-            element={<Layout blogPosts={posts} />}
-          >
-            <Route
-              index
-              element={<FullPostContent blogPosts={posts} />}
-            />
-          </Route>
-          <Route 
-            path="/executive-director"
-            element={<ExecutiveDirector />}
-          />
-          <Route path='christine-ajulu' element={<DirectorChristine /> } />
-          <Route path='/shirley-cherotich' element={<DirectorShirley />} />
-          <Route path='/austin-obimbo' element={<DirectorAustin />} />
-          <Route path="/ian-kipchumba" element={<DirectorIan />} />
-          <Route path="/abedi-amakobe" element={<DirectorAbedi />} />
-          <Route path='/dashboard' element={<Front />} >
-            <Route path="" element={<DashHome />} />
-            <Route path="transportSafety" element={<TransportSafety />} />
-            <Route path="training" element={<Training />} />
-            <Route path="press" element={<Press />} />
-            <Route path="podcasts" element={<PodcastsAdmin />} />
-            <Route path="meetings" element={<Meetings />} />
-            <Route path="news" element={<News />} />
-            <Route path="pay" element={<Pay />} />
-          </Route>
+        <Route path="/themes/" element={<Layout />}>
+          <Route index element={<TransportSafetyAndDevelopment />} />
+          <Route path="/themes/transport-safety-and-development" element={<TransportSafetyAndDevelopment />} />
+          <Route path="/themes/expert-knowledge-sharing-in-transport-safety-development" element={<KnowledgeSharing />} />
+          <Route path="/themes/capacity-building-and-human-resource-development-in-transport" element={<CapacityBuildingAndHumanResourceDevelopmentInTransport />} />
+          <Route path="/themes/eco-transport-development" element={<EcoTransport />} />
+          <Route path="/themes/research-and-development-in-transport" element={<ResearchAndDevelopmentInTransport />} />
+          <Route path="/themes/advocacy-for-good-governance-in-transport-safety-and-development" element={<AdvocacyForGoodGovernanceInTransportSafetyAndDevelopment />} />
+          <Route path="/themes/catalyzing-financing-for-road-transport-safety-improvement-programmes" element={<CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes />} />
+        </Route>
+        <Route path="/media" element={<Layout />}>
+          <Route index element={<Media />} />
+          <Route path="/media/press-release" element={<PressRelease />} />
+          <Route path="/media/podcasts" element={<Podcasts />} />
+          <Route path="/media/videos" element={<Videos />} />
+        </Route>
+        <Route path="/meetings-and-events" element={<Layout />}>
+          <Route index element={<Events />} />
+          <Route path="/meetings-and-events/meetings-and-events" element={<Events />} />
+          <Route path="/meetings-and-events/ambush-highlights" element={<Highlights />} />
+        </Route>
+        <Route path="/blog/:id" element={<Layout blogPosts={posts} />}>
+          <Route index element={<FullPostContent blogPosts={posts} />} />
+        </Route>
+        <Route path="/executive-director" element={<ExecutiveDirector />} />
+        <Route path="/christine-ajulu" element={<DirectorChristine />} />
+        <Route path="/shirley-cherotich" element={<DirectorShirley />} />
+        <Route path="/austin-obimbo" element={<DirectorAustin />} />
+        <Route path="/ian-kipchumba" element={<DirectorIan />} />
+        <Route path="/abedi-amakobe" element={<DirectorAbedi />} />
+        <Route path="/dashboard" element={<Front />}>
+          <Route path="" element={<DashHome />} />
+          <Route path="transportSafety" element={<TransportSafety />} />
+          <Route path="training" element={<Training />} />
+          <Route path="press" element={<Press />} />
+          <Route path="podcasts" element={<PodcastsAdmin />} />
+          <Route path="meetings" element={<Meetings />} />
+          <Route path="news" element={<News />} />
+          <Route path="pay" element={<Pay />} />
+        </Route>
+        <Route path="/register" element={<Modal />} />
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 }
 
-export default App;
+export default App;

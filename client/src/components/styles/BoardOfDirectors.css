@@ -19,8 +19,8 @@
 }
 
 .intro h2 {
-  font-family: fantasy;
-  font-size: 26px;
+  /* font-family: fantasy; */
+  /* font-size: 26px; */
 }
 
 .content-section {
@@ -47,7 +47,6 @@
 .content-section em {
   display: block;
   padding: 20px;
-  font-family: monospace;
   padding: 28px;
   width: fit-content;
 }
