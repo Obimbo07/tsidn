@@ -16,12 +16,11 @@ const sessionSecret = generateSessionSecret();
 console.log(sessionSecret);
 
 
-// Configure session middleware
 app.use(session({
     secret: sessionSecret,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: true } // Set to true if using HTTPS
+    cookie: { secure: true }
 }));
 
 // Production CORS

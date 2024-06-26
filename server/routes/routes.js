@@ -137,7 +137,6 @@ router.put('/updateContent/:id',upload.single('post_image'), async(req, res) => 
     }
    
 });
-
 router.post('/registerUser', async(req, res) => {
     try {
         const formBody = req.body;
@@ -202,6 +201,7 @@ router.post('/payPremium', (req, res) => {
 
     console.log(reason, amount)
 })
+
 
 
 
