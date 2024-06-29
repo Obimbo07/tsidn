@@ -33,8 +33,8 @@ const Navbar = () => {
 
   const toplinks = [
     { id: 1, text: 'Contact us', url: '/contact' },
-    { id: 2, text: user ? 'Logout' : 'Register', url: user ? '#' : '/register' },
-    { id: 3, text: user ? 'Profile' : 'Login', url: user ? '/profile' : '/login' },
+    { id: 2, text: 'Logout' : 'Register', url:'#' : '/register' },
+    { id: 3, text:  'Profile' : 'Login', url: '/profile' : '/login' },
   ];
 
   const toggleDropdown = (index) => {
