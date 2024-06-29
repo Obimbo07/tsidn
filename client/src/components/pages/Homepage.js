@@ -68,9 +68,9 @@ const Homepage = () => {
             {podcasts.map((podcast) => (
               <div className="podcast-section" key={podcast.id}>
                <Link to={'m'} className='podcasts-link'>
-                 <div className='text-start p-2'>
+                 <div className='podcast-content text-start p-2'>
                   <h5 className="text-black">{podcast.post_title}</h5>
-                  <p className="text-black">{podcast.date}</p>
+                  <p className="text-black">Release Date: {podcast.date} </p>
                  </div>
                 </Link>
               </div>

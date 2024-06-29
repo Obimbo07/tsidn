@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             <div className="bottom-footer">
                 <span className="horizontal-line"></span>
-                <span className="copyright">© 2023 TranSafety Development Network</span>
+                <span className="copyright">© 2024 TranSafety Development Network</span>
                 <span className="horizontal-line"></span>
             </div>
         </div>

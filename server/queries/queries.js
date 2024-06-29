@@ -10,7 +10,7 @@ const queries = {
     selectNews: "SELECT * FROM content_table WHERE post_category = 'News'",
     deleteContent: "DELETE FROM content_table WHERE id = ?",
     updateContent: "UPDATE content_table SET post_category = ?, post_tag = ?, post_title =?, post_content =?, post_image =?, image_name =?, date =?, start_date =?, end_date =? WHERE id = ?",
-    registerUser: "INSERT INTO users_table (user_name, user_email, password) VALUES (?,?,?)",
+    registerUser: "INSERT INTO users_table (user_name, user_email, has_paid) VALUES (?,?,NULL)",
     loginUser: "SELECT * FROM users_table WHERE user_email = ?",
     usersList: 'SELECT * FROM users_table',
 }

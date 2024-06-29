@@ -45,8 +45,9 @@
   display: block;
   justify-content: center;
   text-decoration-thickness: 6px;
+  text-decoration-color: #0056b3;
   text-orientation: mixed;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #0056b3;
   padding: 0px 0px -1px 0px;
 }
 

@@ -223,13 +223,13 @@ const controllers = {
             console.log(error);
         }
     },
-    registerUser: async (userName, email, password) => {
+    registerUser: async (userName, email) => {
         try {
             const connection = await database.createConnection();
             const query = queries.registerUser;
 
             const register = await new Promise((resolve, reject) => {
-                connection.query(query, [userName, email, password], (err, result) => {
+                connection.query(query, [userName, email], (err, result) => {
                     if(err) {
                         reject(err);
                     }else{
