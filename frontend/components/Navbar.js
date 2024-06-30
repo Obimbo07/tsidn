@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <>
       <nav className="flex justify-between items-center p-4 bg-white shadow-md">
-        <ul className="hidden md:flex gap-4">
+        <ul className=" md:flex flex gap-4">
           {toplinks.map((link) => (
             <li key={link.id}>
               <Link href={link.url}>{link.text}</Link>
