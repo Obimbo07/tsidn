@@ -36,7 +36,25 @@ const SLIDES = [
     }
 ];
 
+const Events = [
+  {  title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  {  title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+]
 
+
+export function MajorEvents() {
+    return (
+        <div className="flex flex-col h-auto p-2">
+            {Events.map((event) => (
+                <div className="flex bg-blue-700 flex-col" key={event.index} >
+                  <p>{event.title}</p>
+                </div>
+            ))}
+        </div>        
+    );
+}
 
 export default function BlogCarossel(){
     return (
