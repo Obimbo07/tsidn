@@ -8,14 +8,14 @@ export default function Cards() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const CARDS_TO_SHOW = 2; // Number of cards to show at once
+  const CARDS_TO_SHOW = 2;
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isHovered) {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
       }
-    }, 1000); // Change slide every 3 seconds
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [isHovered]);
