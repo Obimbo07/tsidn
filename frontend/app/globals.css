@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.horizontal-line {
+  background: repeating-linear-gradient(
+    45deg,
+    black,
+    black 10px,
+    yellow 10px,
+    yellow 20px
+  );
+  height: 4px; /* Adjust thickness as needed */
+}

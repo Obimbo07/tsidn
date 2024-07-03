@@ -36,7 +36,7 @@ const Footer = () => {
                     <button type="submit" className="bg-yellow-600 rounded-full p-2 hover:bg-yellow-400">Subscribe</button>
                 </form>
             </div>
-            <div className="inner-sctn md:flex">
+            <div className="inner-sctn md:flex md:justify-around">
                 <div className="map-container text-white text-center flex justify-center flex-col">
                       <h2 className="text-white text-5xl text-center font-bold p-2">Contact us</h2>
                       <div className="flex">
@@ -79,36 +79,37 @@ const Footer = () => {
                 </div>
                 <div className="contentContainer4 text-white text-  flex flex-col">
                     <h6 className='icon-text text-white text-5xl font-bold p-8'>FOLLOW US</h6>
-                    <div className="icons text-white text-5xl flex justify-around flex-wrap">
-                        <Link className="text-white" href={socialTwitter}>
+                    <div className="icons text-white text-5xl flex justify-around flex-wrap md:gap-4 md:flex-wrap">
+                        <Link className="text-white bg-slate-900 p-4" href={socialTwitter}>
                             <FontAwesomeIcon icon={faTwitter} />
                         </Link>
-                        <Link className="text-white" href={socialFacebook}>
+                        <Link className="text-white bg-blue-700 p-4" href={socialFacebook}>
                              <FontAwesomeIcon icon={faFacebook} />
                         </Link>
-                        <Link className="text-white" href={socialInstagram}>
+                        <Link className="text-white bg-gradient-to-r from-yellow-500 via-red-500 to-purple-600 p-4" href={socialInstagram}>
                              <FontAwesomeIcon icon={faInstagram} />
                         </Link>
-                        <Link className="text-white" href={socialFlickr}>
+                        <Link className="text-white bg-gradient-to-r from-blue-600 to-red-300 p-4" href={socialFlickr}>
                              <FontAwesomeIcon icon={faFlickr} />
                         </Link>
-                        <Link className="text-white" href={socialSoundCloud}>
+                        <Link className="text-white bg-orange-600 p-4" href={socialSoundCloud}>
                              <FontAwesomeIcon icon={faSoundcloud} />
                         </Link>
-                        <Link className="text-white" href={socialYoutube}>
+                        <Link className="text-white bg-red-800 p-4" href={socialYoutube}>
                              <FontAwesomeIcon icon={faYoutube} />
                         </Link>
-                        <Link className="text-white" href={socialWhatsApp}>
+                        <Link className="text-white bg-green-500 p-4" href={socialWhatsApp}>
                              <FontAwesomeIcon icon={faWhatsapp} />
                         </Link>
                     </div>
                 </div>
             </div>
-            <div className="bottom-footer text-white w-full">
-                <span className="horizontal-line bg-blue-700 p-2 w-20"></span>
-                <span className="copyright">© 2024 TranSafety Development Network</span>
-                <span className="horizontal-line"></span>
+            <div className="bottom-footer text-white pt-6 pb-2 w-full flex items-center justify-between">
+                <span className="horizontal-line h-1 w-1/6"></span>
+                <span className="text-2xl font-bold">© 2024 TranSafety Development Network</span>
+                <span className="horizontal-line h-1 w-1/6"></span>
             </div>
+
         </div>
     );
 };
