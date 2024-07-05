@@ -37,19 +37,24 @@ const SLIDES = [
 ];
 
 const Events = [
-  {  title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
-  {  title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  {  title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  {  title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: 'LogoFinal.svg', title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  {  img: 'LogoFinal.svg', title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: 'LogoFinal.svg', title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: 'LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
 
 
 export function MajorEvents() {
     return (
-        <div className="flex flex-col h-auto p-2">
+        <div className="flex flex-col h-auto mx-4 shadow-full my-2">
+         <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">MAJOR EVENTS</h2>
             {Events.map((event) => (
-                <div className="flex bg-blue-700 flex-col" key={event.index} >
-                  <p>{event.title}</p>
+                <div className="flex text-neutral-900 my-4 flex-row" key={event.index} >
+                  <span className="text-2xl">
+                    <p className="text-blue-600">{event.title}</p>
+                    <p>{event.date}</p>
+                  </span>
+                  <img className="h-auto w-52" src={event.img} alt="tsdn logo svg" />
                 </div>
             ))}
         </div>        
