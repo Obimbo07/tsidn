@@ -17,7 +17,7 @@ export default function Home() {
             <div className="video-container">
 
               <iframe
-                width="460"
+                
                 height="315"
                 src="https://www.youtube.com/embed/T--aotYDL0g?si=GPC24-McY4EBB1uJ"
                 title="YouTube Video 2"

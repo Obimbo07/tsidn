@@ -37,7 +37,7 @@ const Footer = () => {
                 </form>
             </div>
             <div className="inner-sctn md:flex md:justify-around">
-                <div className="map-container text-white text-center flex justify-center flex-col">
+                <div className="map-container text-white text-center flex justify-center flex-row md:flex-col">
                       <h2 className="text-white text-5xl text-center font-bold p-2">Contact us</h2>
                       <div className="flex">
                         <img src="worldmap.png" alt="Map-image-section" />
