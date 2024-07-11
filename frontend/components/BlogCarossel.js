@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import EmblaCarousel from './EmblaCarousel';
 import '../component_css/base.css'
 import '../component_css/embla.css'
@@ -12,7 +11,6 @@ import '../component_css/sandbox.css'
 // const meetingsEventsApi = `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`;
 
 const OPTIONS = { axis: 'x', align: 'start', dragFree: true, Autoplay: true }
-const SLIDE_COUNT = 5
 const SLIDES = [
     {
         title: 'Post 1',
