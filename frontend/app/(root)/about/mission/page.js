@@ -4,27 +4,27 @@ import Link from "next/link";
 export default function Mission(){
     return( 
         <>
-            <h2 className="font-bold text-2xl text-center">Our Mission</h2>
+            <h2 className="font-bold text-2xl text-center md:text-start">Our Mission</h2>
               <div className="font-sans p-2">
                 <p className="p-4 text-start text-lg">
                     At TranSafety Development Network, our mission is to empower road transport safety and development in Kenya. 
                     We are dedicated to fostering collaboration among key stakeholders at national, regional, and international levels to enhance the safety and development of the transport sector. Our primary goal is to ensure the well-being of communities, facilitate the efficient movement of goods and services, and contribute to the overall growth of Kenya’s economy.
                 </p>
-                <p className="text-start font-bold">
+                <p className="text-start text-3xl font-bold md:text-start">
                     TSDN achieves its mission through:
                 </p>
-                <ul className="list-disc list-image">
-                  <li>
-                    <Link href={'/'}>
+                <ul className="list-image md:flex justify-center">
+                  <li className="outline p-2 m-2">
+                    <Link href={'/'} >
                       Expert knowledge sharing sessions
                     </Link>
                   </li>
-                  <li>
+                  <li className="outline p-2 m-2">
                     <Link href={'/'}> 
                       Training programs
                     </Link>
                   </li>
-                  <li>
+                  <li className="outline p-2 m-2">
                     <Link href={'/'}>
                       Hosting national and regional road transport and safety technical seminars and confrences
                     </Link>
