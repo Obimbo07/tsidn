@@ -23,7 +23,8 @@ function Navbar() {
       text: "TSDN Aims",
       url: "/tsdn-aims",
       dropdown: [
-        { id: 1, text: "What We Do", url: "/what-we-do" }
+        { id: 1, text: "TSDN Aims", url: "/tsdn-aims" },
+        { id: 2, text: "What We Do", url: "/what-we-do" }
       ]
     },
     {
