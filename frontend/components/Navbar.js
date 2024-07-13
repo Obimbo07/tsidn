@@ -104,7 +104,7 @@ function Navbar() {
                 </Link>
                 <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center group-hover:hidden">+</span>
               </div>
-              <div className="w-max hidden md:absolute group-hover:block bg-white shadow-lg rounded">
+              <div className="w-max hidden md:absolute z-50 group-hover:block bg-white shadow-lg rounded">
                 <ul>
                   {link.dropdown.map((item) => (
                     <li key={item.id} className="px-4 py-2 hover:bg-gray-200">
