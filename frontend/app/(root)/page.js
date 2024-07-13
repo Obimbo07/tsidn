@@ -1,10 +1,12 @@
 import BlogCarossel, { MajorEvents } from "@/components/BlogCarossel";
 import Cards from "@/components/Cards";
+import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
 export default function Home() {
   return (
     <main>
+      <Modal />
       <BlogCarossel />
       <MajorEvents />
       <Cards />
