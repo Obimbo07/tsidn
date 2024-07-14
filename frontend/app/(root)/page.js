@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <main>
       <Modal />
-      <BlogCarossel />
-      <MajorEvents />
+      <div className="md:flex md:flex-col">
+          <BlogCarossel />
+          <MajorEvents />
+      </div>
       <Cards />
       <div className="w-full md:flex md:justify-center">
         <PressRelease/>

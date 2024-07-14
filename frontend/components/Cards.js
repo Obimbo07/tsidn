@@ -25,7 +25,7 @@ export default function Cards() {
   const goToSlide = (index) => setCurrentIndex(index);
 
   return (
-    <div className="relative w-full overflow-hidden" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="block w-full overflow-hidden" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${(currentIndex * 100) / CARDS_TO_SHOW}%)` }}>
         {cardsData.map((card) => (
           <div className="w-full flex-shrink-0" key={card.id} style={{ width: `${100 / CARDS_TO_SHOW}%` }}>
