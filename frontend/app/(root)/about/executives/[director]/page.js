@@ -1,16 +1,19 @@
+"use client"
+
 import { useParams } from 'next/navigation';
 import { directors } from '@/components/Data';
 import Image from 'next/image';
 
+
 const DirectorPage = () => {
   const params = useParams();
-  const { director } = router.query
-  console.log(params);
+  const id = params.director;
+ 
 
-  // Find the director data based on the URL
-  const directorData = directors.find(d => d.url === `/about/executives${director}`);
+  const directorData = directors.find(d => d.id == id);
 
-  // If no director found, you can show a 404 or some fallback UI
+
+  // // If no director found, you can show a 404 or some fallback UI
   if (!directorData) {
     return <p>Director not found</p>;
   }

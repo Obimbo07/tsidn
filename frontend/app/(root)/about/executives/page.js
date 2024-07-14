@@ -1,17 +1,21 @@
+"use client"
+
 import { directors } from "@/components/Data";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image';
+import { usePathname } from "next/navigation";
 
 export default function Executives() {
+  const pathname = usePathname();
   return (
     <>
       <h2 className="text-2xl font-bold text-center my-4">Executives</h2>
       <div className="flex flex-wrap justify-center gap-4 px-4">
         {directors.map((director) => (
           <div key={director.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 bg-white shadow-md rounded-lg overflow-hidden">
-            <Link href={`${director.name}`} passHref className="block">
+            <Link href={{pathname: `${pathname}/${director.id}`}} passHref className="block">
               <div className="block">
                 <Image src={director.imgPath} alt={director.name} width={500} height={200} className="w-full h-48 object-contain rounded-t-lg" />
                 <div className="p-4">
