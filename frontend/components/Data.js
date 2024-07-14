@@ -136,6 +136,7 @@ export const directors = [
     url: '/austin-obimbo',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
+    twitter: 'https://twitter.com/',
     email: 'mailto:samuel@example.com'
   },
   {

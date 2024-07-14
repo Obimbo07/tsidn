@@ -23,7 +23,8 @@ function Navbar() {
       text: "TSDN Aims",
       url: "/tsdn-aims",
       dropdown: [
-        { id: 1, text: "What We Do", url: "/what-we-do" }
+        { id: 1, text: "TSDN Aims", url: "/tsdn-aims" },
+        { id: 2, text: "What We Do", url: "/what-we-do" }
       ]
     },
     {
@@ -70,6 +71,9 @@ function Navbar() {
   return (
     <>
       <nav className="flex justify-between items-center p-4 bg-white shadow-md">
+        <Link href={"/"}>
+          <Image src="/LogoFinal.svg" alt="Logo" width={150} height={10} priority />
+        </Link>
         <ul className="md:flex flex gap-4">
           {toplinks.map((link) => (
             <li key={link.id}>
@@ -78,19 +82,29 @@ function Navbar() {
           ))}
         </ul>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          ☰
+          {isOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          )}
         </button>
       </nav>
 
       <nav className={`md:flex ${isOpen ? "block" : "hidden"} justify-around bg-gray-100 p-4`}>
-        <Image src="/LogoFinal.svg" alt="Logo" width={180} height={37} priority />
         <ul className="flex flex-col md:flex-row md:gap-4">
           {links.map((link) => (
             <li key={link.id} className="relative group">
-              <Link href={link.url} className="block px-4 py-2">
-                {link.text}
-              </Link>
-              <div className="absolute w-max hidden right-8 group-hover:block bg-white shadow-lg mt-2 rounded">
+              <div className="flex items-center">
+                <Link href={link.url} className="block font-bold px-4 py-2">
+                  {link.text}
+                </Link>
+                <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center group-hover:hidden">+</span>
+              </div>
+              <div className="w-max hidden md:absolute group-hover:block bg-white shadow-lg rounded">
                 <ul>
                   {link.dropdown.map((item) => (
                     <li key={item.id} className="px-4 py-2 hover:bg-gray-200">

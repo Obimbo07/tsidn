@@ -106,7 +106,7 @@ const Footer = () => {
             </div>
             <div className="bottom-footer text-white pt-6 pb-2 w-full flex items-center justify-between">
                 <span className="horizontal-line h-1 w-1/6"></span>
-                <span className="text-2xl font-bold">© 2024 TranSafety Development Network</span>
+                <span className="text-2xl font-bold">© 2024 TranSafety Development Network <Link className="underline" href={'/terms-and-conditions'}>Terms and Conditions</Link></span>
                 <span className="horizontal-line h-1 w-1/6"></span>
             </div>
 
