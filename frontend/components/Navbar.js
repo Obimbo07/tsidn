@@ -53,7 +53,7 @@ function Navbar() {
     {
       id: 5,
       text: "Events",
-      url: "/meetings-and-events",
+      url: "/events",
       dropdown: [
         { id: 1, text: "Meetings And Events", url: "/meetings-and-events" },
         { id: 2, text: "Ambush Highlights", url: "/ambush-highlights" }

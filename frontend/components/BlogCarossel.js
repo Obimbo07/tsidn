@@ -51,19 +51,7 @@ const SLIDES = [
 //   {  img: 'LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 // ]
 
-async function getMeetings() {
-    'use server'
-    const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`);
-
-  
-    if (!res.ok) {
-      throw new Error('Failed to fetch Meetings');
-    }
-  
-    const result = await res.json();
-    console.log(result.data)
-    return result.data;
-}
+import { getMeetings } from '@/app/(root)/events/meetings-and-events/page';
 
 // async function getNews() {
 //     'use server'

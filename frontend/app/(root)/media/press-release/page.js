@@ -19,13 +19,12 @@ export default async function PressRelease(){
                <div className="p-2">
                {pressRelease.length > 0 ? (
                   pressRelease.map((press) => (
-            <div className="flex" key={press.id}>
-              <h2>{press.post_title}</h2>
-            </div>
-          ))
-        ) : (
-          <p className="font-bold text-4xl text-center text-red-700">No press releases available.</p>
-        )}
+                    <div className="flex" key={press.id}>
+                      <h2>{press.post_title}</h2>
+                  </div>
+                ))) : (
+                   <p className="font-bold text-4xl text-center text-red-700">No press releases available.</p>
+                )}
         </div>
         </div>
         </>
