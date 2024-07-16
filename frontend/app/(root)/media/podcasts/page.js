@@ -10,7 +10,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 
-async function getPodcasts() {
+export async function getPodcasts() {
   'use server'
   const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectPodCasts`);
 
@@ -22,7 +22,7 @@ async function getPodcasts() {
   return result.data;
 }
 
-async function Page() {
+async function PodcastComponent() {
   const podcasts = await getPodcasts();
   console.log(podcasts);
 
@@ -61,7 +61,7 @@ async function Page() {
           </a>
         </ul>
       </div>
-      <div className="p-6">
+      <div className="p-6 overflow-scroll">
         {podcasts.map((podcast) => (
           <div className="bg-white shadow-lg rounded-lg p-4 mb-6" key={podcast.id}>
             <h2 className="text-xl font-bold mb-2">{podcast.post_title}</h2>
@@ -87,4 +87,4 @@ async function Page() {
   );
 }
 
-export default Page;
+export default PodcastComponent;

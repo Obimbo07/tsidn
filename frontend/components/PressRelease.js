@@ -5,7 +5,7 @@ import { pressReleases } from "./Data";
 const PressRelease = () => {
   return (
     <>
-    <h2 className="font-mono underline underline-offset-8 decoration-sky-500 text-3xl mr-8 text-extrabold">Press release</h2>
+    <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">PRESS RELEASES</h2>
     <div className="m-4 divide-y-2 shadow-2xl shadow-inner ">
       
       {pressReleases.map((release) => (
