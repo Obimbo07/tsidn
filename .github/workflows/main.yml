@@ -16,9 +16,9 @@ jobs:
       with:
         node-version: 20
 
-    - name: Install dependencies for client
+    - name: Install dependencies for frontend
       run: |
-        cd client
+        cd frontend
         npm install
        
     - name: Install dependencies for server
@@ -33,11 +33,11 @@ jobs:
         
     - name: Build React app
       run: |
-        cd client
+        cd frontend
         npm run build
 
     - name: List contents of build directory
-      run: ls -R client/build/
+      run: ls -R frontend/.next/
    
 
     - name: 📂 Deploy to cPanel frontend
@@ -46,7 +46,7 @@ jobs:
         server:  ftp.tsidn.org
         username: ${{ secrets.FTP_USERNAME_FRONTEND }}
         password: ${{ secrets.FTP_PASSWORD_FRONTEND }}
-        local-dir: client/build/
+        local-dir: frontend/.next/
         target: /home/tsidnorg/public_html/
 
     - name: List contents of server directory

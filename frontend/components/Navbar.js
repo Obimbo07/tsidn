@@ -23,8 +23,7 @@ function Navbar() {
       text: "TSDN Aims",
       url: "/tsdn-aims",
       dropdown: [
-        { id: 1, text: "TSDN Aims", url: "/tsdn-aims" },
-        { id: 2, text: "What We Do", url: "/what-we-do" }
+        { id: 1, text: "What We Do", url: "/what-we-do" }
       ]
     },
     {
@@ -54,7 +53,7 @@ function Navbar() {
     {
       id: 5,
       text: "Events",
-      url: "/meetings-and-events",
+      url: "/events",
       dropdown: [
         { id: 1, text: "Meetings And Events", url: "/meetings-and-events" },
         { id: 2, text: "Ambush Highlights", url: "/ambush-highlights" }
@@ -104,7 +103,7 @@ function Navbar() {
                 </Link>
                 <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center group-hover:hidden">+</span>
               </div>
-              <div className="w-max hidden md:absolute group-hover:block bg-white shadow-lg rounded">
+              <div className="w-max hidden md:absolute z-50 group-hover:block bg-white shadow-lg rounded">
                 <ul>
                   {link.dropdown.map((item) => (
                     <li key={item.id} className="px-4 py-2 hover:bg-gray-200">

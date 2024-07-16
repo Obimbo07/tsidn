@@ -36,18 +36,17 @@ const Footer = () => {
                     <button type="submit" className="bg-yellow-600 rounded-full p-2 hover:bg-yellow-400">Subscribe</button>
                 </form>
             </div>
-            <div className="inner-sctn md:flex md:justify-around">
-                <div className="map-container text-white text-center flex justify-center flex-row md:flex-col">
+            <div className=" md:flex md:justify-around">
+                <div className="map-container text-white text-center flex justify-center flex-col md:flex-col">
                       <h2 className="text-white text-5xl text-center font-bold p-2">Contact us</h2>
-                      <div className="flex">
-                        <img src="worldmap.png" alt="Map-image-section" />
+                      <div className="flex flex-col">
                         <span>
                             <p>P.O BOX 557, 323</p>
                             <p>Nairobi, Kenya</p>
                             <p>Mail: admin@tsidn.org</p>
                         </span>
+                        <img src="worldmap.png" alt="Map-image-section" />
                       </div>
-                      
                 </div>
                 <div className="contentContainer1  text-white text-center flex justify-center flex-col">
                     <h6 className="text-white text-5xl font-bold p-8">ABOUT TSDN</h6>
@@ -78,7 +77,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="contentContainer4 text-white text-  flex flex-col">
-                    <h6 className='icon-text text-white text-5xl font-bold p-8'>FOLLOW US</h6>
+                    <h6 className='icon-text text-center text-white text-5xl font-bold p-8'>FOLLOW US</h6>
                     <div className="icons text-white text-5xl flex justify-around flex-wrap md:gap-4 md:flex-wrap">
                         <Link className="text-white bg-slate-900 p-4" href={socialTwitter}>
                             <FontAwesomeIcon icon={faTwitter} />
@@ -106,7 +105,7 @@ const Footer = () => {
             </div>
             <div className="bottom-footer text-white pt-6 pb-2 w-full flex items-center justify-between">
                 <span className="horizontal-line h-1 w-1/6"></span>
-                <span className="text-2xl font-bold">© 2024 TranSafety Development Network <Link className="underline" href={'/terms-and-conditions'}>Terms and Conditions</Link></span>
+                <span className="text-2xl font-bold">© 2024 TranSafety Development Network •|• <Link className="underline" href={'/terms-and-conditions'}>Terms and Conditions</Link></span>
                 <span className="horizontal-line h-1 w-1/6"></span>
             </div>
 

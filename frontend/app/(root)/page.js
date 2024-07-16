@@ -1,12 +1,16 @@
 import BlogCarossel, { MajorEvents } from "@/components/BlogCarossel";
 import Cards from "@/components/Cards";
+import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
 export default function Home() {
   return (
     <main>
-      <BlogCarossel />
-      <MajorEvents />
+      <Modal />
+      <div className="md:flex md:flex-row md:justify-around  md:mx-56 shadow-lg">
+          <BlogCarossel className="md:w-2/3"/>
+          <MajorEvents className="md:w-1/3" />
+      </div>
       <Cards />
       <div className="w-full md:flex md:justify-center">
         <PressRelease/>
@@ -28,7 +32,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </div>
       
     </main>
