@@ -82,7 +82,7 @@ export async function MajorEvents() {
     const Events = await getMeetings();
     console.log(Events)
     return (
-        <div className="m-4 flex flex-col h-auto mx-4  shadow-full my-2">
+        <div className="flex flex-col h-auto shadow-lg ">
          <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">MAJOR EVENTS</h2>
            <div className='divide-y divide-slate-400'>
             {Events.map((event) => (
@@ -103,7 +103,7 @@ export async function MajorEvents() {
 export default  function BlogCarossel(){
     return (
         <>
-            <div id="hero" >
+            <div id="hero w-2/3" >
               <EmblaCarousel slides={SLIDES} options={OPTIONS} />
             </div>
         </>

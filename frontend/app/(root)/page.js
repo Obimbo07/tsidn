@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Modal />
-      <div className="md:flex md:flex-col">
+      <div className="md:flex md:flex-row  md:mx-32 shadow-lg">
           <BlogCarossel />
           <MajorEvents />
       </div>
@@ -32,7 +32,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </div>
       
     </main>
