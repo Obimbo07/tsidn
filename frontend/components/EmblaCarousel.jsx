@@ -44,11 +44,13 @@ const EmblaCarousel = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
-            <div className="embla__slide" key={slide.index}>
-              <p className='absolute text-white text-3xl bg-blue-700 w-full'>{slide.title}</p>
-              <img src={slide.img} />
-            </div>
-          ))}
+              <div className="embla__slide bg-blue-900 text-white " key={slide.index}>
+                  <img src={slide.img} alt={slide.title} />
+                  <p className='p-4'>{slide.title}</p>
+                  <p className='p-4'>{slide.description}</p>
+                 
+              </div>
+            ))}
         </div>
       </div>
 

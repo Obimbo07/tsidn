@@ -11,23 +11,33 @@ import '../component_css/sandbox.css'
 const OPTIONS = { axis: 'x', align: 'start', dragFree: true, Autoplay: true }
 const SLIDES = [
     {
+        index: 1,
         title: 'Post 1',
+        description: 'Sample test data description 1',
         img: '/shirley.jpg'
     },
     {
+        index: 2,
         title: 'Post 2',
+        description: 'Sample test data description 2',
         img: '/shirley.jpg'
     },
     {
+        index: 3,
         title: 'Post 3',
+        description: 'Sample test data description 3',
         img: '/shirley.jpg'
     },
     {
+        index: 4,
         title: 'Post 4',
+        description: 'Sample test data description 4',
         img: '/shirley.jpg'
     },
     {
+        index: 5,
         title: 'Post 5',
+        description: 'Sample test data description 5',
         img: '/shirley.jpg'
     }
 ];
