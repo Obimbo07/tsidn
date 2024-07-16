@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <main>
       <Modal />
-      <div className="md:flex md:flex-row  md:mx-32 shadow-lg">
-          <BlogCarossel />
-          <MajorEvents />
+      <div className="md:flex md:flex-row md:justify-around  md:mx-56 shadow-lg">
+          <BlogCarossel className="md:w-2/3"/>
+          <MajorEvents className="md:w-1/3" />
       </div>
       <Cards />
       <div className="w-full md:flex md:justify-center">

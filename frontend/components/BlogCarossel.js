@@ -70,9 +70,9 @@ export async function MajorEvents() {
     const Events = await getMeetings();
     console.log(Events)
     return (
-        <div className="flex flex-col h-auto shadow-lg ">
+        <div className="flex flex-col h-auto md:w-fit">
          <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">MAJOR EVENTS</h2>
-           <div className='divide-y divide-slate-400'>
+           <div className='divide-y shadow-lg divide-slate-400'>
             {Events.map((event) => (
                     <div className="m-2 flex text-neutral-900 my-4 flex-row" key={event.index} >
                     <span className="text-2xl">
