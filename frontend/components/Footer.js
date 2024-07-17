@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-    faTwitter, 
+    faXTwitter, 
     faFacebook, 
     faInstagram, 
     faFlickr, 
@@ -11,6 +11,7 @@ import {
     faYoutube, 
     faWhatsapp, 
 } from '@fortawesome/free-brands-svg-icons';
+import Image from "next/image";
 
 const socialTwitter ="https://twitter.com/tsdn";
 const socialFacebook ="https://web.facebook.com/profile.php?id=61558983545764";
@@ -45,7 +46,7 @@ const Footer = () => {
                             <p>Nairobi, Kenya</p>
                             <p>Mail: admin@tsidn.org</p>
                         </span>
-                        <img src="worldmap.png" alt="Map-image-section" />
+                        <Image src="worldmap.png" alt="Map-image-section" />
                       </div>
                 </div>
                 <div className="contentContainer1  text-white text-center flex justify-center flex-col">
@@ -80,7 +81,7 @@ const Footer = () => {
                     <h6 className='icon-text text-center text-white text-5xl font-bold p-8'>FOLLOW US</h6>
                     <div className="icons text-white text-5xl flex justify-around flex-wrap md:gap-4 md:flex-wrap">
                         <Link className="text-white bg-slate-900 p-4" href={socialTwitter}>
-                            <FontAwesomeIcon icon={faTwitter} />
+                            <FontAwesomeIcon icon={faXTwitter} />
                         </Link>
                         <Link className="text-white bg-blue-700 p-4" href={socialFacebook}>
                              <FontAwesomeIcon icon={faFacebook} />

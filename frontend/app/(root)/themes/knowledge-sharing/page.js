@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ExpertKnowledge = () => {
   return (
     <div className="expert-knowledge-container p-4 sm:p-6 lg:p-8">
@@ -6,7 +8,7 @@ const ExpertKnowledge = () => {
       </h2>
       <div className="flex flex-col md:flex-row md:space-x-6 mb-4">
         <div className="md:w-1/2 mb-4 md:mb-0">
-          <img src="/trafficLights.jpg" alt="Expert Knowledge" className="w-full h-auto rounded" />
+          <Image src="/trafficLights.jpg" alt="Expert Knowledge" className="w-full h-auto rounded" />
         </div>
         <div className="md:w-1/2 space-y-4 text-sm sm:text-base lg:text-lg">
           <p>

@@ -52,6 +52,7 @@ const SLIDES = [
 // ]
 
 import { getMeetings } from '@/app/(root)/events/meetings-and-events/page';
+import { Image } from 'react-bootstrap';
 
 // async function getNews() {
 //     'use server'
@@ -79,7 +80,7 @@ export async function MajorEvents() {
                         <p className="text-blue-600">{event.post_title}</p>
                         <span>{event.start_date} to {event.end_date} </span>
                     </span>
-                    <img className="h-auto w-52" src={'/LogoFinal.svg'} alt="tsdn logo svg" />
+                    <Image className="h-auto w-52" src={'/LogoFinal.svg'} alt="tsdn logo svg" />
                     </div>
                 ))}
            </div>

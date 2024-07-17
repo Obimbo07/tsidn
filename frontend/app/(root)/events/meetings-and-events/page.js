@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export async function getMeetings() {
     'use server'
     const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`);
@@ -25,7 +26,7 @@ export default async function MeetingsAndEvents(){
                             <p className="text-blue-600">{event.post_title}</p>
                             <span>{event.start_date} to {event.end_date} </span>
                         </span>
-                        <img className="h-auto w-52" src={'/LogoFinal.svg'} alt="tsdn logo svg" />
+                        <Image className="h-auto w-52" src={'/LogoFinal.svg'} alt="tsdn logo svg" />
                     </div>
                    ))
                 ) : (

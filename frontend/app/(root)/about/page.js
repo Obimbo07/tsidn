@@ -9,7 +9,7 @@ const About = () => {
   useEffect(() => {
     // Redirect logic when the component mounts
     router.push('/about/mission');
-  }, []); // Empty dependency array to run this effect only once on mount
+  }, [router]); // Empty dependency array to run this effect only once on mount
 
   return (
     <div>

@@ -3,7 +3,8 @@
 import { directors } from "@/components/Data";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faTwitter, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {  faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {  faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from 'next/image';
 import { usePathname } from "next/navigation";
 
@@ -31,7 +32,7 @@ export default function Executives() {
                     )}
                     {director.twitter && (
                       <Link href={director.twitter} className="text-blue-400" passHref>
-                          <FontAwesomeIcon icon={faTwitter} />
+                          <FontAwesomeIcon icon={faXTwitter} />
                       </Link>
                     )}
                     {director.email && (

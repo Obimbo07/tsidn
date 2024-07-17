@@ -100,7 +100,7 @@ export  const CardsCarossel = (props) => {
         <div className="embla__container_cards">
           {slides.map((slide) => (
               <div className="embla__slide_cards bg-gradient-to-b from-blue-400 to-blue-800 text-white" key={slide.index}>
-                  <img src={slide.iconUrl} width={80} height={30} alt={slide.title} />
+                  <Image src={slide.iconUrl} width={80} height={30} alt={slide.title} />
                   <h2 className='font-bold text-2xl'>{slide.title}</h2>
               </div>
             ))}
