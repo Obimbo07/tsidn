@@ -52,7 +52,7 @@ const SLIDES = [
 // ]
 
 import { getMeetings } from '@/app/(root)/events/meetings-and-events/page';
-import { Image } from 'react-bootstrap';
+import Image from 'next/image';
 
 // async function getNews() {
 //     'use server'
@@ -69,7 +69,6 @@ import { Image } from 'react-bootstrap';
 
 export async function MajorEvents() {
     const Events = await getMeetings();
-    console.log(Events)
     return (
         <div className="flex flex-col h-auto md:w-fit">
          <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">MAJOR EVENTS</h2>
