@@ -2,14 +2,14 @@ export const cardsData = [
     {
       id: 1,
       title: 'Transport safety and development ',
-      iconUrl: 'camera_1972954.png',
+      iconUrl: '/camera_1972954.png',
       path: 'themes/transport-safety-and-development'
        
     },
     {
       id: 2,
       title: 'Expert knowledge sharing',
-      iconUrl: 'agreement_10476721.png',
+      iconUrl: '/agreement_10476721.png',
       path: 'themes/expert-knowledge-sharing-in-transport-safety-development'
     },
     {
@@ -27,13 +27,13 @@ export const cardsData = [
     {
       id: 5,
       title: 'Research and Development',
-      iconUrl: 'conedevelopment.png',
+      iconUrl: '/conedevelopment.png',
       path: 'themes/research-and-development-in-transport'
     },
     {
       id: 6,
       title: 'Capacity Building',
-      iconUrl: 'supply-chain-management_11562996.png',
+      iconUrl: '/supply-chain-management_11562996.png',
       path: 'themes/capacity-building-and-human-resource-development-in-transport'
     },
 ];
@@ -41,19 +41,19 @@ export const cardsData = [
 
 export const pressReleases = [
     {   id: 1, 
-        title: 'news 2', 
+        post_title: 'news 2', 
         content: 'Sample Dataset for the press releases with released or scheduled date.', 
         Date: '25th Nov 2023' 
     },
 
     { id: 2, 
-      title: 'news 3', 
+      post_title: 'news 3', 
       content: 'Sample Dataset for the press releases with released or scheduled date.', 
       Date: '23rd Dec 2023' 
     },
 
     { id: 3, 
-      title: 'news 4', 
+      post_title: 'news 4', 
       content: 'Sample Dataset for the press releases with released or scheduled date.', 
       Date: '23rd Dec 2023' 
     },
@@ -61,35 +61,35 @@ export const pressReleases = [
   
 export const podcasts = [
     { id: 1, 
-      title: 'Fundamentals of road safety', 
+      post_title: 'Fundamentals of road safety', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
 
     { id: 2, 
-      title: 'Policy and regulatory framework in transport sector', 
+      post_title: 'Policy and regulatory framework in transport sector', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
 
     { id: 3, 
-      title: 'Managing road safety risks', 
+      post_title: 'Managing road safety risks', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
 
     { id: 4, 
-      title: 'Speed management', 
+      post_title: 'Speed management', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
     { id: 5, 
-      title: 'Fatigue management', 
+      post_title: 'Fatigue management', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
     { id: 6, 
-      title: 'Journey planning', 
+      post_title: 'Journey planning', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     },
     { 
       id: 7, 
-      title: 'Drunk/drug driving', 
+      post_title: 'Drunk/drug driving', 
       date: '23rd Dec 2023 - 20th Dec 2023' 
     }
 ];
@@ -162,3 +162,10 @@ export const directors = [
     email: 'mailto:samuel@example.com'
   },
 ];
+
+export const Events = [
+  {  img: '/LogoFinal.svg', title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  {  img: '/LogoFinal.svg', title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: '/LogoFinal.svg', title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: '/LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+]

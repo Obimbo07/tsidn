@@ -46,7 +46,7 @@ const Footer = () => {
                             <p>Nairobi, Kenya</p>
                             <p>Mail: admin@tsidn.org</p>
                         </span>
-                        <Image src="worldmap.png" alt="Map-image-section" />
+                        <Image src="/worldmap.png" width={150} height={150}  alt="Map-image-section" />
                       </div>
                 </div>
                 <div className="contentContainer1  text-white text-center flex justify-center flex-col">

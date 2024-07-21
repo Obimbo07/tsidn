@@ -24,16 +24,16 @@ app.use(session({
 }));
 
 // Production CORS
-// const corsOptions = {
-//     origin: 'https://tsidn.org',
-//     methods: ['POST', 'GET', 'PUT', 'DELETE']
-// };
+const corsOptions = {
+    origin: 'https://tsidn.org',
+    methods: ['POST', 'GET', 'PUT', 'DELETE']
+};
 
 // const corsOptionsLocal = {
 //     origin: 'http://localhost:3000',
 //     methods: ['POST', 'GET', 'PUT', 'DELETE']
 // };
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.json());
 

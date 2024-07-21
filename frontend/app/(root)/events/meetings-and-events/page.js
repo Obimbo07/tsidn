@@ -1,20 +1,23 @@
+'use server';
 import Image from 'next/image';
-export async function getMeetings() {
-    'use server'
-    const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`);
+import { Events } from '@/components/Data';
+// export async function getMeetings() {
+//     const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`);
+//     console.log(res);
 
   
-    if (!res.ok) {
-      throw new Error('Failed to fetch Meetings');
-    }
+//     if (!res.ok) {
+//       throw new Error('Failed to fetch Meetings');
+//     }
   
-    const result = await res.json();
-    console.log(result.data)
-    return result.data;
-}
+//     const result = await res.json();
+//     console.log(result.data)
+//     return result.data;
+// }
 
 export default async function MeetingsAndEvents(){
-    const events = await getMeetings()
+    // const events = await getMeetings()
+    const events = Events
     return (
         <>
             <div className="p-2">

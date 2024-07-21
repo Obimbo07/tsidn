@@ -1,3 +1,4 @@
+'use server';
 import {
   faTwitter,
   faFacebook,
@@ -9,23 +10,22 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import { podcasts } from '@/components/Data';
 
-export async function getPodcasts() {
-  'use server'
-  const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectPodCasts`);
+// export async function getPodcasts() {
+//   const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectPodCasts`);
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch podcasts');
-  }
+//   if (!res.ok) {
+//     throw new Error('Failed to fetch podcasts');
+//   }
 
-  const result = await res.json();
-  return result.data;
-}
+//   const result = await res.json();
+//   console.log(result);
+//   return result.data;
+// }
 
 async function PodcastComponent() {
-  const podcasts = await getPodcasts();
-  console.log(podcasts);
-
+ 
   return (
     <>
       <div className="bg-yellow-500 p-6">
@@ -65,7 +65,7 @@ async function PodcastComponent() {
         {podcasts.map((podcast) => (
           <div className="bg-white shadow-lg rounded-lg p-4 mb-6" key={podcast.id}>
             <h2 className="text-xl font-bold mb-2">{podcast.post_title}</h2>
-            <div className="flex">
+            {/* <div className="flex">
               <div className="w-1/3">
                 <Image
                   src={podcasts.post_image}
@@ -79,7 +79,7 @@ async function PodcastComponent() {
                 <p className="text-gray-700">{podcast.post_tag}</p>
                 <p className="text-gray-500">{podcast.date}</p>
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

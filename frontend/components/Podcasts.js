@@ -1,12 +1,13 @@
 // import { podcasts } from "./Data";
 // import { podcasts } from "@/app/(root)/media/podcasts/page";
-import { getPodcasts } from "@/app/(root)/media/podcasts/page";
+// import { getPodcasts } from "@/app/(root)/media/podcasts/page";
 import Link from "next/link";
 import Image from "next/image";
 import { split } from "postcss/lib/list";
+import { podcasts } from "./Data";
 
 async function Podcasts(){
-  const podcasts = await getPodcasts();
+  // const podcasts = await getPodcasts();
   // const podcatsTag = podcastspost.split()
   return (
     <div className="h-2/5 overflow-scroll h-svh p-4">

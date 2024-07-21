@@ -1,17 +1,18 @@
-export async function getPressReleases() {
-    'use server'
-    const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectPressRelease`);
+// export async function getPressReleases() {
+//     'use server'
+//     const res = await fetch( `${process.env.REACT_APP_DATABASE_API}/api/selectPressRelease`);
   
-    if (!res.ok) {
-      throw new Error('Failed to fetch podcasts');
-    }
+//     if (!res.ok) {
+//       throw new Error('Failed to fetch podcasts');
+//     }
   
-    const result = await res.json();
-    return result.data;
-}
+//     const result = await res.json();
+//     return result.data;
+// }
+import { pressReleases } from "@/components/Data";
 
 export default async function PressRelease(){
-    const pressRelease = await getPressReleases();
+    const pressRelease = pressReleases
     console.log(pressRelease);
     return (
         <>

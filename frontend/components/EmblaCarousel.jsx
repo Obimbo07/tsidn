@@ -45,7 +45,9 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((slide) => (
               <div className="embla__slide bg-gradient-to-b from-blue-400 to-blue-800 text-white " key={slide.index}>
-                  <Image src={slide.img} alt={slide.title} />
+                  <div className='w-full h-auto'>
+                   <Image src={slide.img} width={1000} height={700}  alt={slide.title} /> 
+                  </div>
                   <p className='p-4'>{slide.title}</p>
                   <p className='p-4'>{slide.description}</p>
                  
