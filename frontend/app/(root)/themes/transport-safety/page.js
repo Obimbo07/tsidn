@@ -22,7 +22,7 @@ const Transport = () => {
           </p>
         </div>
         <div className="md:w-1/2 hidden md:block">
-          <img src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
+          <Image src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
         </div>
       </div>
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 mb-4">

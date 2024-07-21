@@ -1,5 +1,7 @@
-export default function AbmushHightlights(){
-    return {
-        
-    }
+export default function AmbushHightlights(){
+    return (
+        <>
+           <h2>Ambush Highlight</h2>
+        </>
+    )
 }
