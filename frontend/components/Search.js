@@ -21,21 +21,21 @@ export default function Search(){
         setSearchResults(matches || []);
     };
 
-    const renderSearchResults = () => {
-        // if (!searchResults.length) {
-        //   return <p className="error-text">No results found.</p>;
-        // }
+    // const renderSearchResults = () => {
+    //     // if (!searchResults.length) {
+    //     //   return <p className="error-text">No results found.</p>;
+    //     // }
     
-        return searchResults.map((result) => (
-          <p key={result}>
-            {result}
-          </p>
-        ));
-    };
+    //     return searchResults.map((result) => (
+    //       <p key={result}>
+    //         {result}
+    //       </p>
+    //     ));
+    // };
 
     return (
         <>
-            <form className="p-2 border-solid bg-yellow-300 rounded-lg" onSubmit={handleSearchSubmit}>
+            <form className="p-2 h-fit border-solid bg-blue-800 rounded-lg w-fit" onSubmit={handleSearchSubmit}>
                 <input
                   id="search-input"
                   placeholder="Search here.."
@@ -47,8 +47,8 @@ export default function Search(){
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </form>
-            {searchResults.length > 0 && <h3>Results</h3>}
-            {renderSearchResults()}
+            {/* {searchResults.length > 0 && <h3>Results</h3>}
+            {renderSearchResults()} */}
         </>
     )
 }

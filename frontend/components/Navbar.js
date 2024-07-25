@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Search from "./Search";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,18 +70,24 @@ function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-center p-4 bg-white shadow-md">
-        <Link href={"/"}>
-          <Image src="/LogoFinal.svg" alt="Logo" width={150} height={10} priority />
-        </Link>
-        <ul className="md:flex flex gap-4">
-          {toplinks.map((link) => (
-            <li key={link.id}>
-              <Link href={link.url}>{link.text}</Link>
-            </li>
-          ))}
-        </ul>
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <div className='w-full flex'>
+          <ul className="md:flex flex w-full justify-center flex-center center gap-4">
+              {toplinks.map((link) => (
+                <li key={link.id}>
+                  <Link className="hover:text-yellow-500 p-2" href={link.url}>{link.text}</Link>
+                </li>
+              ))}
+            </ul>
+      </div>
+      <nav className="flex-col  items-center p-4 bg-white shadow-md">
+        <div className='flex items-center justify-between'>
+            <Link className='' href={"/"}>
+              <Image src="/LogoFinal.svg" alt="Logo" width={150} height={10} priority />
+            </Link>
+           <Search />
+        </div>
+
+        <button className="hidden flex-end" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -91,7 +98,14 @@ function Navbar() {
             </svg>
           )}
         </button>
+
+        <div className="w-full">
+            
+        </div>
+
       </nav>
+       
+      
 
       <nav className={`md:flex ${isOpen ? "block" : "hidden"} justify-around bg-gray-100 p-4`}>
         <ul className="flex flex-col md:flex-row md:gap-4">
@@ -101,7 +115,7 @@ function Navbar() {
                 <Link href={link.url} className="block font-bold px-4 py-2">
                   {link.text}
                 </Link>
-                <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center group-hover:hidden">+</span>
+                <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center ">+</span>
               </div>
               <div className="w-max hidden md:absolute z-50 group-hover:block bg-white shadow-lg rounded">
                 <ul>
