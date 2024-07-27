@@ -5,7 +5,8 @@ import Image from "next/image";
 import TopBadge from "./TopBadge";
 import SheetSide from "./SearchSheet";
 import MobileNav from "./MobileNav";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXTwitter, faFacebook, faWhatsapp, f } from "@fortawesome/free-brands-svg-icons";
 function Navbar() {
 
   const links = [
@@ -75,6 +76,7 @@ function Navbar() {
               {toplinks.map((link) => (
                 <li key={link.id}>
                   <Link className="text-white hover:text-gold-700 p-2" href={link.url}>{link.text}</Link>
+                  
                 </li>
               ))}
             </ul>
@@ -101,8 +103,31 @@ function Navbar() {
         </div>
 
       </nav>
-       
-      
+      <nav className={`md:flex hidden sm:block justify-around bg-gray-100 p-4`}>
+        <ul className="flex flex-col md:flex-row md:gap-4">
+          {links.map((link) => (
+            <li key={link.id} className="relative group">
+              <div className="flex items-center">
+                <Link href={link.url} className="block font-bold px-4 py-2">
+                  {link.text}
+                </Link>
+                <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center ">+</span>
+              </div>
+              <div className="w-max hidden md:absolute z-50 group-hover:block bg-white shadow-lg rounded">
+                <ul>
+                  {link.dropdown.map((item) => (
+                    <li key={item.id} className="px-4 py-2 hover:bg-gray-200">
+                      <Link href={`${link.url}${item.url}`}>
+                        {item.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       
     </>
