@@ -28,7 +28,7 @@ export default function EventsCarousel() {
       }}
       className="w-full"
     >
-      <CarouselContent className="h-[200px]">
+      <CarouselContent className="h-[fit]">
         {Events.map((event, id) => (
           <CarouselItem key={id} className="h-[fit] basis-1/2 md:basis-1/3 lg:basis-1/3">
             <div className="p-1">

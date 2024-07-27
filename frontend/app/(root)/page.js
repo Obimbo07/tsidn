@@ -4,6 +4,7 @@ import EventsCarousel from "@/components/EventsCarousel";
 import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
+
 export default function Home() {
   return (
     <main>
@@ -18,6 +19,7 @@ export default function Home() {
       <Cards />
       <div className="w-full md:flex md:justify-center">
         <PressRelease/>
+          <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">PODCASTS</h2>
         <Podcasts />
         <div className="lower-section">
           <div className="featured-videos">
