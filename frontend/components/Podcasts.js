@@ -11,6 +11,7 @@ async function Podcasts(){
   // const podcatsTag = podcastspost.split()
   return (
     <div className="h-2/5 overflow-scroll h-svh p-4">
+    
       {podcasts.map((podcast) => (
             <div className="bg-white shadow-lg rounded-lg p-4 mb-6" key={podcast.id}>
               <h2 className="text-3xl font-bold mb-2">{podcast.post_title}</h2>

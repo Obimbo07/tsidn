@@ -71,14 +71,14 @@ export async function MajorEvents() {
          <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">MAJOR EVENTS</h2>
            <div className='divide-y shadow-lg divide-slate-400'>
             {Events.map((event) => (
-                    <div className="m-2 flex text-neutral-900 my-4 flex-row" key={event.index} >
-                    <span className="text-2xl">
-                        <p className="text-blue-600">{event.post_title}</p>
-                        <span>{event.start_date} to {event.end_date} </span>
-                    </span>
-                    <Image className="h-auto w-52" src={'/LogoFinal.svg'} width={100} height={100} alt="tsdn logo svg" />
-                    </div>
-                ))}
+                <div className="m-2 flex text-neutral-900 my-4 flex-row hover:underline" key={event.index} >
+                <span className="text-2xl text-center">
+                    <p className="text-blue-600">{event.post_title}</p>
+                    <span>{event.start_date} to {event.end_date} </span>
+                </span>
+                <Image className="h-auto w-52" src={'/LogoFinal.svg'} width={100} height={100} alt="tsdn logo svg" />
+                </div>
+            ))}
            </div>
             
         </div>        
