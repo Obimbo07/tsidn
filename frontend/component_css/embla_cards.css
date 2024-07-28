@@ -1,9 +1,9 @@
 .embla_cards {
     max-width: 48rem;
-    margin: auto;
     --slide-height: 19rem;
     --slide-spacing: 1rem;
     --slide-size: 40%;
+    margin-top: 30px;
   }
   .embla__viewport_cards {
     overflow: hidden;

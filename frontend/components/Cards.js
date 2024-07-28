@@ -97,9 +97,9 @@ export  const CardsCarossel = (props) => {
   return (
     <section className="embla_cards">
       <div className="embla__viewport_cards" ref={emblaRef}>
-        <div className="embla__container_cards">
+        <div className="embla__container_cards flex gap-4">
           {slides.map((slide) => (
-              <div className="embla__slide_cards bg-gradient-to-b from-blue-400 to-blue-800 text-white" key={slide.index}>
+              <div className="embla__slide_cards bg-gradient-to-b flex-col gap-8 from-blue-400 to-blue-800 text-white" key={slide.index}>
                   <Image src={slide.iconUrl} width={80} height={30} alt={slide.title} />
                   <h2 className='font-bold text-2xl'>{slide.title}</h2>
               </div>

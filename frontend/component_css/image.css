@@ -1,0 +1,8 @@
+.press-release-img {
+    background-image: url('/ad.png');
+}
+
+.press-release-img:hover {
+    opacity: 10;
+}
+

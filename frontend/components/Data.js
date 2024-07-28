@@ -41,24 +41,61 @@ export const cardsData = [
 
 export const pressReleases = [
     {   id: 1, 
-        post_title: 'news 2', 
+        post_title: 'Press release title ', 
         content: 'Sample Dataset for the press releases with released or scheduled date.', 
         Date: '25th Nov 2023' 
     },
 
     { id: 2, 
-      post_title: 'news 3', 
+      post_title: 'Press release title ', 
       content: 'Sample Dataset for the press releases with released or scheduled date.', 
       Date: '23rd Dec 2023' 
     },
 
     { id: 3, 
-      post_title: 'news 4', 
+      post_title: 'Press release title ', 
       content: 'Sample Dataset for the press releases with released or scheduled date.', 
       Date: '23rd Dec 2023' 
     },
 ];
-  
+
+export const meetings = [
+  {
+    index: 1,
+    title: 'Post 1',
+    description: 'Sample test data description 1',
+    tags: 'Transport Safety and development',
+    img: '/samuel_musumba_talk_during_training.jpeg'
+},
+{
+    index: 2,
+    title: 'Post 2',
+    description: 'Sample test data description 2',
+    tags: 'Capacity Building and human resource development',
+    img: '/ed_training.jpg'
+},
+{
+    index: 3,
+    title: 'Post 3',
+    description: 'Sample test data description 3',
+    tags: 'Research and development',
+    img: '/safetytransport.jpg'
+},
+{
+    index: 4,
+    title: 'Post 4',
+    description: 'Sample test data description 4',
+    tags: 'transport-safety, Eco transport development',
+    img: '/transportsafety.jpg'
+},
+{
+    index: 5,
+    title: 'Post 5',
+    description: 'Sample test data description 5',
+    tags: 'Eco transport development',
+    img: '/director_training-shot.jpg'
+}
+]
 export const podcasts = [
     { id: 1, 
       post_title: 'Fundamentals of road safety', 
@@ -164,8 +201,8 @@ export const directors = [
 ];
 
 export const Events = [
-  {  img: '/LogoFinal.svg', title: '2 DAY EVENT AT CITAM', date: '14th - 20th January, Nairobi', content: 'Company writeup that is displayed on each card and listed from the api data.'},
-  {  img: '/LogoFinal.svg', title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th January 2023, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  {  img: '/LogoFinal.svg', title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 20th January', content: 'Company writeup that is displayed on each card and listed from the api data.' },
-  {  img: '/LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 20th February', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: '/LogoFinal.svg', title: '2 DAY EVENT AT CITAM', date: '14th - 20th July 2020', content: 'Company writeup that is displayed on each card and listed from the api data.'},
+  {  img: '/LogoFinal.svg', title: 'ROAD SAFETY TRAINING TO SCHOOL DRIVERS', date: '20th - 22th June 2024, ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: '/LogoFinal.svg', title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 27th June 2024', content: 'Company writeup that is displayed on each card and listed from the api data.' },
+  {  img: '/LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 27th 2024 ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
