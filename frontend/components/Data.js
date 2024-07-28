@@ -58,7 +58,44 @@ export const pressReleases = [
       Date: '23rd Dec 2023' 
     },
 ];
-  
+
+export const meetings = [
+  {
+    index: 1,
+    title: 'Post 1',
+    description: 'Sample test data description 1',
+    tags: 'Transport Safety and development',
+    img: '/samuel_musumba_talk_during_training.jpeg'
+},
+{
+    index: 2,
+    title: 'Post 2',
+    description: 'Sample test data description 2',
+    tags: 'Capacity Building and human resource development',
+    img: '/ed_training.jpg'
+},
+{
+    index: 3,
+    title: 'Post 3',
+    description: 'Sample test data description 3',
+    tags: 'Research and development',
+    img: '/safetytransport.jpg'
+},
+{
+    index: 4,
+    title: 'Post 4',
+    description: 'Sample test data description 4',
+    tags: 'transport-safety, Eco transport development',
+    img: '/transportsafety.jpg'
+},
+{
+    index: 5,
+    title: 'Post 5',
+    description: 'Sample test data description 5',
+    tags: 'Eco transport development',
+    img: '/director_training-shot.jpg'
+}
+]
 export const podcasts = [
     { id: 1, 
       post_title: 'Fundamentals of road safety', 
