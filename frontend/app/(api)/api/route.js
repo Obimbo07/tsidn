@@ -4,7 +4,7 @@ import db from '../../../lib/db';
 export async function GET(req) {
   try {
     const results = await new Promise((resolve, reject) => {
-      db.query('SELECT * FROM content_table', (err, results) => {
+      db.query('SELECT * FROM subscribers', (err, results) => {
         if (err) {
           return reject(err);
         }

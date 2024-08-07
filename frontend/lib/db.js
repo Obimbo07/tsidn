@@ -1,4 +1,3 @@
-// lib/db.js
 import mysql from 'mysql2';
 import { config } from 'dotenv';
 
