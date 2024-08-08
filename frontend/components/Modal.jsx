@@ -4,8 +4,10 @@ import { useRouter } from 'next/navigation';
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
-  const [userName, setUserName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
   const [registerSuccess, setRegisterSuccess] = useState(false);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -39,15 +41,37 @@ const Modal = () => {
     router.push('/');
   };
 
-  const handleNewsletter = (e) => {
+  const handleNewsletter = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Mock registration process
-    setTimeout(() => {
-      // Simulate success response
+
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          email,
+          phone_number: phoneNumber,
+          password,
+          subscription: 'free-tier',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
       setRegisterSuccess(true);
+    } catch (error) {
+      setError(error.message);
+    } finally {
       setIsLoading(false);
-    }, 2000);
+    }
   };
 
   return (
@@ -63,8 +87,8 @@ const Modal = () => {
           <form onSubmit={handleNewsletter}>
             <input
               type="text"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter your Username"
               className="w-full p-2 mb-2 border rounded"
               required
@@ -77,8 +101,24 @@ const Modal = () => {
               className="w-full p-2 mb-4 border rounded"
               required
             />
+            <input
+              type="text"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              placeholder="Enter your Phone Number"
+              className="w-full p-2 mb-2 border rounded"
+              required
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your Password"
+              className="w-full p-2 mb-4 border rounded"
+              required
+            />
             <button type="submit" disabled={isLoading} className="w-full p-2 bg-blue-500 text-white rounded disabled:bg-gray-400">
-              Subscribe
+              {isLoading ? 'Subscribing...' : 'Subscribe'}
             </button>
           </form>
         </div>
