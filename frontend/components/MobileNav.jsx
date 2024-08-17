@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-const MobileNav = ({ links }) => {
+const MobileNav = ({ links, slides }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -31,13 +31,13 @@ const MobileNav = ({ links }) => {
                     </button>
                 </SheetTrigger>
 
-                <SheetContent>
-                    <nav className={`bg-gray-100 p-4`}>
-                        <ul className="flex flex-col md:flex-row md:gap-4">
+                <SheetContent className="opacity-70">
+                    <nav className="bg-gray-100 p-4 text-dark-600">
+                        <ul className="flex flex-col md:flex-row gap-6">
                             {links.map((link) => (
                                 <li key={link.id} className="relative group">
                                     <div className="flex items-center">
-                                        <Link href={link.url} className="block font-bold px-4 py-2">
+                                        <Link href={link.url} className="block font-bold px-4 py-2 text-4xl">
                                             {link.text}
                                         </Link>
                                         <span className="ml-2 font-bold md:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center">
@@ -47,7 +47,7 @@ const MobileNav = ({ links }) => {
                                     <div className="w-max hidden md:absolute z-50 group-hover:block bg-white shadow-lg rounded">
                                         <ul>
                                             {link.dropdown.map((item) => (
-                                                <li key={item.id} className="px-4 py-2 hover:bg-gray-200">
+                                                <li key={item.id} className="px-4 py-2 hover:bg-gray-200 text-3xl">
                                                     <Link href={`${link.url}${item.url}`}>
                                                         {item.text}
                                                     </Link>
@@ -59,6 +59,16 @@ const MobileNav = ({ links }) => {
                             ))}
                         </ul>
                     </nav>
+
+
+                    <div>
+                        SLIDES
+                    </div>
+
+
+
+
+
                 </SheetContent>
             </Sheet>
         </>

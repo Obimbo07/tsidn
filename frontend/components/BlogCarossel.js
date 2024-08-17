@@ -9,7 +9,7 @@ import '../component_css/sandbox.css'
 // const meetingsEventsApi = `${process.env.REACT_APP_DATABASE_API}/api/selectMeeting`;
 
 const OPTIONS = { axis: 'x', align: 'start', dragFree: true, Autoplay: true }
-const SLIDES = [
+export const SLIDES = [
     {
         index: 1,
         title: 'Post 1',
@@ -76,7 +76,7 @@ export async function MajorEvents() {
                     <p className="text-blue-600">{event.post_title}</p>
                     <span>{event.start_date} to {event.end_date} </span>
                 </span>
-                <Image className="h-auto w-52" src={'/LogoFinal.svg'} width={100} height={100} alt="tsdn logo svg" />
+                <Image className="h-auto w-52" src={'/LogoFinal.svg'} width={50} height={50} alt="tsdn logo svg" />
                 </div>
             ))}
            </div>

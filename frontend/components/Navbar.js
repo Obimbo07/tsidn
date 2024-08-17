@@ -7,6 +7,9 @@ import SheetSide from "./SearchSheet";
 import MobileNav from "./MobileNav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faFacebook, faWhatsapp, f } from "@fortawesome/free-brands-svg-icons";
+import { SLIDES } from "./BlogCarossel";
+
+
 function Navbar() {
 
   const links = [
@@ -93,7 +96,7 @@ function Navbar() {
 
 
             
-            <MobileNav  links={links}/>
+            <MobileNav  links={links} slides={SLIDES} />
         </div>
 
         

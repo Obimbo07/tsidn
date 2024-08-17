@@ -28,17 +28,19 @@ export default function EventsCarousel() {
       }}
       className="w-full"
     >
-      <CarouselContent className="h-[fit]">
+      <CarouselContent className="h-[max] p-2">
         {Events.map((event, id) => (
           <CarouselItem key={id} className="h-[fit] basis-1/2 md:basis-1/3 lg:basis-1/3">
             <div className="p-1">
-              <Card>
-                <CardContent className="flex flex-col aspect-square items-center justify-center">
-                  <div className="flex items-top">
-                      <Image src={event.img} className="h-auto w-52" width={100} height={100} alt="Company Logo" />
+              <Card className="h-fit">
+                <CardContent className="flex flex-row  items-center justify-center">
+                  <div className="flex items-top content-start">
+                      <Image src={event.img} className="h-auto w-52" width={10} height={10} alt="Company Logo" />
                   </div>
-                  <h5 className="font-semibold">{event.title}</h5>
-                  <span className="font-neutral-100">{event.date}</span>
+                  <div className="flex-col">
+                    <h5 className="font-semibold text-xl">{event.title}</h5>
+                    <span className="font-neutral-100 text-xl">{event.date}</span>
+                  </div>
                 </CardContent>
               </Card>
             </div>
