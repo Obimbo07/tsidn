@@ -66,7 +66,7 @@ function Navbar() {
   const toplinks = [
     { id: 1, text: "Contact us", url: "/contact" },
     { id: 2, text: "Register", url: "/register" },
-    { id: 3, text: "Login", url: "/login" },
+    { id: 3, text: "Login", url: "/signin" },
   ];
 
   return (
