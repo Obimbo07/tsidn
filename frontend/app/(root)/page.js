@@ -5,20 +5,22 @@ import HeroBlog from "@/components/HeroBlog";
 import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
+import Themes from "@/components/Themes";
 
 export default function Home() {
   return (
     <main>
       <Modal />
-      <div className="md:flex md:flex-row md:justify-around rounded-3xl  mx-10 my-10 shadow-lg">
+      <div className="md:flex gap-4 md:flex-row md:justify-around rounded-3xl w-fit  mx-10 my-10 shadow-lg">
           <HeroBlog className="rounded-3xl" />
+          <Themes />
       </div>
         <div className="w-full flec-col ">
           <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 text-center text-4xl underline-offset-4">MAJOR EVENTS</h2>
           <EventsCarousel />
        </div>
       <Cards />
-       <div className="lower-section">
+       {/* <div className="lower-section">
           <div className="featured-videos">
             <h3>FEATURED VIDEOS</h3>
             <div className="video-container">
@@ -34,13 +36,13 @@ export default function Home() {
               ></iframe>
             </div>
           </div>
-        </div> 
-      <div className="w-full md:flex md:justify-center">
+        </div>  */}
+      {/* <div className="w-full md:flex md:justify-center">
         <PressRelease/>
           <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 underline-offset-4">PODCASTS</h2>
         <Podcasts />
         
-      </div>
+      </div> */}
       
     </main>
   );
