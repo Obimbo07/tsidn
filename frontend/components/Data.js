@@ -206,3 +206,50 @@ export const Events = [
   {  img: '/LogoFinal.svg', title: 'APPLICATION OF DRIVERS LISENCE AND RENEWALS', date: '25th - 27th June 2024', content: 'Company writeup that is displayed on each card and listed from the api data.' },
   {  img: '/LogoFinal.svg', title: 'MOMBASA ECO-TRANSPORT LAUNCH', date: '14th - 27th 2024 ', content: 'Company writeup that is displayed on each card and listed from the api data.' },
 ]
+
+
+export const pricingdata = [
+  {
+    id: 1,
+    tier: 'Free',
+    price: 'Free',
+    timeline: 'lifetime',
+    Features: [
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts'
+
+    ],
+    discount: '0'
+  },
+  {
+    id: 2,
+    tier: 'Monthly',
+    price: '10',
+    timeline: '30 days',
+    Features: [
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts'
+    ],
+    discount: '0'
+  },
+  {
+    id: 3,
+    tier: 'Yearly',
+    price: '10',
+    timeline: '12 months',
+    Features: [
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts',
+      'Lifetime posts'
+    ],
+    discount: '0'
+  }
+]
