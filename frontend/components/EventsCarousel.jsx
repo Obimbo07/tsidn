@@ -26,11 +26,11 @@ export default function EventsCarousel() {
         align: "center",
         loop: true,
       }}
-      className="w-full"
+      className="w-full "
     >
       <CarouselContent className="h-[fit]">
         {Events.map((event, id) => (
-          <CarouselItem key={id} className="h-[fit] basis-1/2 md:basis-1/3 lg:basis-1/3">
+          <CarouselItem key={id} className="h-[fit] basis-1/2 md:basis-1/3 lg:basis-1/5">
             <div className="p-1">
               <Card>
                 <CardContent className="flex flex-col aspect-square items-center justify-center">

@@ -32,7 +32,7 @@ export default function HeroBlog() {
       }}
       className="w-full"
     >
-      <CarouselContent className="h-[600px] ">
+      <CarouselContent className="h-[600px] w-[40rem] ">
         {meetings.map((meeting, index) => (
           <CarouselItem
             key={index}
