@@ -2,18 +2,18 @@ import BlogCarossel, { MajorEvents } from "@/components/BlogCarossel";
 import Cards from "@/components/Cards";
 import EventsCarousel from "@/components/EventsCarousel";
 import HeroBlog from "@/components/HeroBlog";
+import HotNews from "@/components/HotNews";
 import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
-import Themes from "@/components/Themes";
 
 export default function Home() {
   return (
     <main>
       <Modal />
       <div className="md:flex gap-4 md:flex-row md:justify-around rounded-3xl w-fit  mx-10 my-10 shadow-lg">
+         <HotNews />
           <HeroBlog className="rounded-3xl" />
-          <Themes />
       </div>
         <div className="w-full flec-col ">
           <h2 className="underline decoration-blue-700 decoration-width-full decoration-2 text-center text-4xl underline-offset-4">MAJOR EVENTS</h2>

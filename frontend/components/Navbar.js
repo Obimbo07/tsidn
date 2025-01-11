@@ -7,8 +7,10 @@ import SheetSide from "./SearchSheet";
 import MobileNav from "./MobileNav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faFacebook, faWhatsapp, f } from "@fortawesome/free-brands-svg-icons";
-function Navbar() {
+import { useSession } from "next-auth/react";
 
+function Navbar() {
+  const { data: session, status } = useSession();
   const links = [
     {
       id: 1,
@@ -67,41 +69,32 @@ function Navbar() {
     { id: 1, text: "Contact us", url: "/contact" },
     { id: 2, text: "Register", url: "/register" },
     { id: 3, text: "Login", url: "/signin" },
+    { id: 4, text: "Account", url: "/dashboard" },
   ];
 
   return (
     <>
       <div className='w-full flex-col'>
-          <ul className="md:flex flex w-full justify-center  bg-blue-500 flex-center center gap-4">
+          <ul className="md:flex flex w-full justify-center bg-blue-500 flex-center center gap-4">
               {toplinks.map((link) => (
                 <li key={link.id}>
                   <Link className="text-white hover:text-gold-700 p-2" href={link.url}>{link.text}</Link>
-                  
                 </li>
               ))}
-            </ul>
+              </ul>
             <TopBadge />
       </div>
-      <nav className="flex-col  items-center p-4 bg-white shadow-md">
+      <nav className="flex-col items-center p-4 bg-white shadow-md">
         <div className='flex items-center justify-between'>
             <Link className='' href={"/"}>
               <Image src="/LogoFinal.svg" alt="Logo" width={150} height={10} priority />
             </Link>
 
-
-            <SheetSide />
-
-
-            
+            <SheetSide />    
             <MobileNav  links={links}/>
         </div>
-
-        
-
-        <div className="w-full">
-            
+        <div className="w-full">  
         </div>
-
       </nav>
       <nav className={`md:flex hidden sm:block justify-around bg-gray-100 p-4`}>
         <ul className="flex flex-col md:flex-row md:gap-4">
