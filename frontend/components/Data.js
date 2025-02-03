@@ -1,3 +1,56 @@
+
+export const HeroData = [
+  {
+    className: "slide-1",
+    heading: "Transport and Safety",
+    texts: [
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+    ],
+  },
+  {
+    className: "slide-1 ",
+    heading: "Transport and Safety",
+    texts: [
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+    ],
+  },
+  {
+    className: "slide-2 ",
+    heading: "Transport and Safety",
+    texts: [
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+    ],
+  },
+  {
+    className: "slide-2 ",
+    heading: "Transport and Safety",
+    texts: [
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety ",
+      "Transport and Safety",
+    ],
+  },
+  {
+    className: "slide-2 ",
+    heading: " Transport and Safety",
+    texts: [
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+      "Transport and Safety",
+    ],
+  },
+];
+
 export const cardsData = [
     {
       id: 1,
