@@ -1,3 +1,4 @@
+import Banner from "@/components/Banners/Banner";
 import BlogCarossel, { MajorEvents } from "@/components/BlogCarossel";
 import Cards from "@/components/Cards";
 import EventsCarousel from "@/components/EventsCarousel";
@@ -9,8 +10,16 @@ import PressRelease from "@/components/PressRelease";
 
 export default function Home() {
   return (
-    <main>
-      <Modal />
+    <>
+     <div id="fill" className="w-full">
+      <Banner />
+     </div>
+    </>
+  );
+}
+
+
+      {/* <Modal />
       <div className="md:flex gap-4 md:flex-row md:justify-around rounded-3xl w-fit  mx-10 my-10 shadow-lg">
          <HotNews />
           <HeroBlog className="rounded-3xl" />
@@ -43,7 +52,3 @@ export default function Home() {
         <Podcasts />
         
       </div> */}
-      
-    </main>
-  );
-}
