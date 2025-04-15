@@ -7,12 +7,14 @@ import HotNews from "@/components/HotNews";
 import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
+import IntroText from "@/components/IntroText/IntroText";
 
 export default function Home() {
   return (
     <>
      <div id="fill" className="w-full">
       <Banner />
+      <IntroText />
      </div>
     </>
   );
