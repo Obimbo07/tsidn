@@ -8,6 +8,7 @@ import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
 import IntroText from "@/components/IntroText/IntroText";
+import TextSlider from "@/components/TextSlider/TextSlider";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
      <div id="fill" className="w-full">
       <Banner />
       <IntroText />
+      <div className="">
+        <TextSlider />
+      </div>
      </div>
     </>
   );
