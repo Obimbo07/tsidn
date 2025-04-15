@@ -12,7 +12,7 @@ import { SessionProvider } from "next-auth/react";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white overflow-hidden">
+      <body className="bg-white  overflow-">
         <SessionProvider>
          <Navbar />
           {children}

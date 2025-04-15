@@ -9,15 +9,21 @@ import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
 import IntroText from "@/components/IntroText/IntroText";
 import TextSlider from "@/components/TextSlider/TextSlider";
+import MissionCard from "@/components/MissionCard/MissionCard";
+import VisionCard from "@/components/VisionCard/VisionCard";
 
 export default function Home() {
   return (
     <>
-     <div id="fill" className="w-full">
+     <div>
       <Banner />
       <IntroText />
       <div className="">
         <TextSlider />
+      </div>
+      <div className="md:flex gap-4 md:flex-row md:justify-around  p-2 w-fit mx-10 my-10 shadow-lg">
+        <MissionCard />
+        <VisionCard />
       </div>
      </div>
     </>
