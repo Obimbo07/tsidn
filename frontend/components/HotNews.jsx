@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { Events } from "./Data"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -14,8 +13,9 @@ import Autoplay from "embla-carousel-autoplay"
 
 import Image from "next/image"
 
-export default function HotNews() {
+export default function HotNews({ Events }) {
   return (
+    <div className="w-full ">
     <Carousel
        plugins={[
         Autoplay({
@@ -26,15 +26,15 @@ export default function HotNews() {
         align: "center",
         loop: true,
       }}
-      className="w-full h-[70px] "
+      className="w-full h-[fit]"
     >
       <CarouselContent className="h-[fit]">
         {Events.map((event, id) => (
           <CarouselItem key={id} className="h-[fit] basis-1/2 md:basis-1/3 lg:basis-1/5">
             <div className="">
               <Card>
-                <CardContent className="flex flex-row aspect-square items-center justify-center">
-                  
+                <CardContent className="flex flex-col aspect-square items-center text-center justify-center">
+                  <Image src={event.iconUrl} alt={event.title} width={100} height={100} className="" />
                   <h5 className="font-semibold">{event.title}</h5>
                   <span className="font-neutral-100">{event.date}</span>
                 </CardContent>
@@ -46,5 +46,6 @@ export default function HotNews() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+    </div>
   )
 }

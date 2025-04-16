@@ -14,7 +14,6 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
     const result = await signIn("credentials", {
       email,
       password,

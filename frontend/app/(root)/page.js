@@ -9,8 +9,9 @@ import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
 import IntroText from "@/components/IntroText/IntroText";
 import TextSlider from "@/components/TextSlider/TextSlider";
-import MissionCard from "@/components/MissionCard/MissionCard";
-import VisionCard from "@/components/VisionCard/VisionCard";
+import MissionVisionCards from "@/components/VisionCard/VisionCard";
+import { Events } from "@/components/Data";
+import { cardsData } from "@/components/Data";
 
 export default function Home() {
   return (
@@ -21,10 +22,14 @@ export default function Home() {
       <div className="">
         <TextSlider />
       </div>
-      <div className="md:flex gap-4 md:flex-row md:justify-around  p-2 w-fit mx-10 my-10 shadow-lg">
-        <MissionCard />
-        <VisionCard />
+      <div className="md:flex gap-4 md:flex-row md:justify-around  p-2 w-fit mx-10 my-10">
+        <MissionVisionCards />
       </div>
+      <div className="w-full">
+        <h2 className="text-3xl font-bold text-center">Pillars of TSDNs</h2>
+        <HotNews Events={cardsData}/>
+      </div>
+
      </div>
     </>
   );
