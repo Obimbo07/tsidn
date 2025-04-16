@@ -12,6 +12,7 @@ import TextSlider from "@/components/TextSlider/TextSlider";
 import MissionVisionCards from "@/components/VisionCard/VisionCard";
 import { Events } from "@/components/Data";
 import { cardsData } from "@/components/Data";
+import Impact from "@/components/Impact/Impact";
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
       <div className="w-full">
         <h2 className="text-3xl font-bold text-center">Pillars of TSDNs</h2>
         <HotNews Events={cardsData}/>
+      </div>
+      <div>
+        <Impact />        
       </div>
 
      </div>
