@@ -7,12 +7,45 @@ import HotNews from "@/components/HotNews";
 import Modal from "@/components/Modal";
 import Podcasts from "@/components/Podcasts";
 import PressRelease from "@/components/PressRelease";
+import IntroText from "@/components/IntroText/IntroText";
+import TextSlider from "@/components/TextSlider/TextSlider";
+import MissionVisionCards from "@/components/VisionCard/VisionCard";
+import { Events } from "@/components/Data";
+import { cardsData } from "@/components/Data";
+import Impact from "@/components/Impact/Impact";
+import ProgramsActivities from "@/components/programs/programsActivities";
+import IntoVideo from "@/components/Banners/IntoVideo";
+import Partners from "@/components/Partners/Partners";
 
 export default function Home() {
   return (
     <>
-     <div id="fill" className="w-full">
-      <Banner />
+     <div>
+      <div className="">
+        <IntoVideo />
+        {/* <Banner /> */}
+      </div>
+      <IntroText />
+      <div className="">
+        <TextSlider />
+      </div>
+      <div className="md:flex gap-4 md:flex-row md:justify-around  p-2 w-fit mx-10 my-10">
+        <MissionVisionCards />
+      </div>
+      <div className="w-full">
+        <h2 className="text-3xl font-bold text-center">Pillars of TSDNs</h2>
+        <HotNews Events={cardsData}/>
+      </div>
+      <div>
+        <Impact />        
+      </div>
+      <div class="">
+        <ProgramsActivities />
+      </div>
+      <div>
+        <Partners />
+      </div>
+
      </div>
     </>
   );

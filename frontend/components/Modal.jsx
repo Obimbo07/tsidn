@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import {useSession} from 'next-auth/react';
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -9,17 +10,19 @@ const Modal = () => {
   const [registerSuccess, setRegisterSuccess] = useState(false);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShowModal(true);
-    }, 1000);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    if (session) {
+      const timeoutId = setTimeout(() => {
+        setShowModal(true);
+      }, 1000);
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+    
   }, []);
 
   useEffect(() => {

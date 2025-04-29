@@ -54,38 +54,50 @@ export const HeroData = [
 export const cardsData = [
     {
       id: 1,
-      title: 'Transport safety and development ',
+      title: 'Transport Safety and Development ',
       iconUrl: '/camera_1972954.png',
       path: 'themes/transport-safety-and-development'
        
     },
     {
       id: 2,
-      title: 'Expert knowledge sharing',
+      title: 'Expert Knowledge Sharing In Transport Safety Development',
       iconUrl: '/agreement_10476721.png',
       path: 'themes/expert-knowledge-sharing-in-transport-safety-development'
     },
     {
       id: 3,
-      title: 'Trainings',
+      title: 'Advocacy for Good Governance in Transport Safety and Development',
       iconUrl: '/traffic-cone.png',
       path: 'themes/knowlegde-sharing'
     },
     {
       id: 4,
-      title: 'Eco-Transport',
+      title: 'Eco-Transport Development',
       iconUrl: '/transportation_4515717.png',
       path: 'themes/eco-transport-development'
     },
     {
       id: 5,
-      title: 'Research and Development',
+      title: 'Catalysing Financing for Road Transport Safety Improvement Programs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ',
       iconUrl: '/conedevelopment.png',
       path: 'themes/research-and-development-in-transport'
     },
     {
       id: 6,
-      title: 'Capacity Building',
+      title: 'Capacity Building and Human Resource training in Transport Development',
+      iconUrl: '/supply-chain-management_11562996.png',
+      path: 'themes/capacity-building-and-human-resource-development-in-transport'
+    },
+    {
+      id: 7,
+      title: 'Promoting Data Solutions in Transport',
+      iconUrl: '/supply-chain-management_11562996.png',
+      path: 'themes/capacity-building-and-human-resource-development-in-transport'
+    },
+    {
+      id: 8,
+      title: 'Stakeholder Collaboration and Partnerships enhancement',
       iconUrl: '/supply-chain-management_11562996.png',
       path: 'themes/capacity-building-and-human-resource-development-in-transport'
     },
