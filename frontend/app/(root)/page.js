@@ -13,12 +13,18 @@ import MissionVisionCards from "@/components/VisionCard/VisionCard";
 import { Events } from "@/components/Data";
 import { cardsData } from "@/components/Data";
 import Impact from "@/components/Impact/Impact";
+import ProgramsActivities from "@/components/programs/programsActivities";
+import IntoVideo from "@/components/Banners/IntoVideo";
+import Partners from "@/components/Partners/Partners";
 
 export default function Home() {
   return (
     <>
      <div>
-      <Banner />
+      <div className="">
+        <IntoVideo />
+        {/* <Banner /> */}
+      </div>
       <IntroText />
       <div className="">
         <TextSlider />
@@ -32,6 +38,12 @@ export default function Home() {
       </div>
       <div>
         <Impact />        
+      </div>
+      <div class="">
+        <ProgramsActivities />
+      </div>
+      <div>
+        <Partners />
       </div>
 
      </div>

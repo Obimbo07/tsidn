@@ -19,19 +19,19 @@ const Banner = () => {
         Autoplay({ delay: 2000, stopOnInteraction: true })
       )
       return (
-        <div className=" bg-gray-500">
+        <div className="h-screen bg-gray-500">
         <Carousel
           plugins={[plugin.current]}
           opts={{ align: "center", loop: true, }}
-          className="w-full p-10  bg-gray-900 "
+          className="w-full p-10 bg-gray-900 h-screen "
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="w-full">
+          <CarouselContent className="w-full h-screen">
             {HeroData.map((data, index) => (
-              <CarouselItem key={index} className="" >
-                <div className="">
-                  <Card className={`h-[40rem] md:h-[30rem] ${data.className}`}>
+              <CarouselItem key={index} className="h-screen" >
+                <div className="h-screen">
+                  <Card className={`h-screen md:h-[30rem] ${data.className}`}>
                     <CardContent className="flex flex-col pt-8 items-center justify-center">
                     <h2 className="text-5xl md:text-5xl font-bold mb-4 text-white">
                       {data.heading}
