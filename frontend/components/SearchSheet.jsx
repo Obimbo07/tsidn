@@ -23,10 +23,8 @@ export default function SheetSide() {
     <div className="grid grid-cols-2 gap-2">
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
-          <SheetTrigger asChild>
-            <Button variant="outline" className="w-36 h-auto">
-               <MagnifyingGlassIcon  className="w-10 h-auto"/>
-            </Button>
+          <SheetTrigger asChild>            
+            <MagnifyingGlassIcon  className="hover:font-yellow-300 hover:cursor-pointer w-10 h-auto"/>
           </SheetTrigger>
           <SheetContent className="flex justify-center" side={side}>
               <SheetHeader>

@@ -16,7 +16,7 @@ const Banner = () => {
   const plugin = React.useRef(Autoplay({ delay: 1000, stopOnInteraction: true }));
 
   return (
-    <div className="relative w-full h-screen md:h-screen">
+    <div className=" w-full h-screen md:h-screen">
       <Carousel
         plugins={[plugin.current]}
         opts={{ align: 'center', loop: true }}
@@ -29,7 +29,6 @@ const Banner = () => {
             <CarouselItem key={index} className="h-full">
               <Card
                 className={`h-full bg-cover bg-center ${data.className}`}
-               
               >
                 <div className="h-full bg-black bg-opacity-50 flex items-center justify-center">
                   <CardContent className="flex flex-col items-center justify-center text-center p-6 md:p-10">
