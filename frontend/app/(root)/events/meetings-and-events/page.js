@@ -29,7 +29,7 @@ export default async function MeetingsAndEvents(){
                             <p className="text-blue-600">{event.post_title}</p>
                             <span>{event.start_date} to {event.end_date} </span>
                         </span>
-                        <Image className="h-auto w-52" src={'/LogoFinal.svg'} alt="tsdn logo svg" />
+                        <Image width={50} height={50} className="h-auto w-auto" src='/LogoFinal.svg' alt="tsdn logo svg" />
                     </div>
                    ))
                 ) : (

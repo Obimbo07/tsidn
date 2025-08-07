@@ -8,7 +8,7 @@ const CatalyzingFinancingForRoadTransportSafetyImprovementProgrammes = () => {
       </h2>
       <div className="flex flex-col md:flex-row md:space-x-6">
         <div className="md:w-1/2 mb-4 md:mb-0">
-          <Image src="/financing-image.jpg" alt="Financing" className="w-full h-auto rounded" />
+          <Image width={500} height={500} src="/financing-image.jpg" alt="Financing" className="w-full h-auto rounded" />
         </div>
         <div className="md:w-1/2 space-y-4 text-sm sm:text-base lg:text-lg">
           <p>

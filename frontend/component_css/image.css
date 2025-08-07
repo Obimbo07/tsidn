@@ -13,6 +13,12 @@
   }
   
 .slide-2 {
-  background-image: url('/IMG_3892.jpg');
+  background-image: url('/safety.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-3 {
+  background-image: url('/transportsafety.jpg');
   background-size: cover;
 }

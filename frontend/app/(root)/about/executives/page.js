@@ -7,7 +7,7 @@ import {  faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {  faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from 'next/image';
 import { usePathname } from "next/navigation";
-
+//  href={{pathname: `${pathname}/${director.id}`}}
 export default function Executives() {
   const pathname = usePathname();
   return (
@@ -16,7 +16,7 @@ export default function Executives() {
       <div className="flex flex-wrap justify-center gap-4 px-4">
         {directors.map((director) => (
           <div key={director.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 shadow-md rounded-b-lg  overflow-hidden">
-            <Link href={{pathname: `${pathname}/${director.id}`}} className="">
+            <Link href="#" >
               <div className="">
                 <div>
                   <Image src={director.imgPath} alt={director.name} width={500} height={100} className="object-contain" />

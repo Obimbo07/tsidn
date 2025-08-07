@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-white  overflow-">
         <SessionProvider>
-         <Navbar />
+        <div className="z-20 sticky top-0 w-full bg-white">
+          <Navbar />
+        </div>
           {children}
          <Footer />
         </SessionProvider>

@@ -6,9 +6,9 @@ const EcoTransport = () => {
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
         ECO-Transport Development
       </h2>
-      <div className="flex flex-col md:flex-row md:space-x-6">
+      <div className="flex flex-col md:flex-row md:space-x-2">
         <div className="md:w-1/2 mb-4 md:mb-0">
-          <Image src="/eco-transport-image.jpg" alt="Eco-Transport" className="w-full h-auto rounded" />
+          <Image width={500} height={500} src="/eco.jpg" alt="Eco-Transport" />
         </div>
         <div className="md:w-1/2 space-y-4 text-sm sm:text-base lg:text-lg">
           <p>

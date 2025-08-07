@@ -11,8 +11,8 @@ const Transport = () => {
           <p>
             Transport Safety and Development is at the core of our mission at TSDN. We strive to promote safe and sustainable road transport in Kenya by collaborating with key stakeholders and implementing initiatives that enhance safety and foster development in the transport sector.
           </p>
-          <div className="md:hidden mb-4">
-            <Image src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
+          <div className="w-fit md:hidden mb-4">
+            <Image width={100} height={100} src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
           </div>
           <p>
             Through partnerships with government agencies, NGOs, and international organizations, we work to improve road infrastructure, implement safety regulations, and promote responsible practices among drivers and transport operators.
@@ -22,7 +22,7 @@ const Transport = () => {
           </p>
         </div>
         <div className="md:w-1/2 hidden md:block">
-          <Image src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
+          <Image width={100} height={100} src="/safety.jpeg" alt="Transport" className="w-full h-auto rounded" />
         </div>
       </div>
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 mb-4">
@@ -41,7 +41,7 @@ const Transport = () => {
           </p>
         </div>
         <div className="md:w-1/2">
-          <Image src="/transportsafety.jpg" alt="Making a Difference on the Roads" className="w-full h-auto rounded mb-4 md:mb-0" />
+          <Image width={100} height={100} src="/transportsafety.jpg" alt="Making a Difference on the Roads" className="w-full h-auto rounded mb-4 md:mb-0" />
         </div>
       </div>
     </div>

@@ -22,8 +22,7 @@ const TopBadge = () => {
     // Display the date, day, and year
     console.log(`Today is `);
   return (
-    <Badge className='w-full m-2 text-xl p-2 text-center flex justify-between'>
-        <h5 className="">This content consist of company adverts and promotions</h5>
+    <Badge className='w-fit m-2 text-xl p-2 text-center flex justify-center'>
         <h5>{dayName}, {dayOfMonth}, {year}</h5>
     </Badge>
   )

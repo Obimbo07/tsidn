@@ -1,53 +1,80 @@
 
+// export const HeroData = [
+//   {
+//     className: "slide-1",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-1 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety ",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: " Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+// ];
+
 export const HeroData = [
   {
     className: "slide-1",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    heading: "Advancing Road Safety",
+    text: "Promoting safer roads through innovative solutions and awareness campaigns.",
+    ctaText: "Learn More",
+    ctaLink: "/safety",
+    backgroundImage: "/images/road-safety.jpg", // Add actual image paths
   },
   {
-    className: "slide-1 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    className: "slide-2",
+    heading: "Sustainable Transport Solutions",
+    text: "Building eco-friendly and efficient transportation systems for the future.",
+    ctaText: "Explore Solutions",
+    ctaLink: "/transport",
+    backgroundImage: "/images/sustainable-transport.jpg",
   },
   {
-    className: "slide-2 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
-  },
-  {
-    className: "slide-2 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety ",
-      "Transport and Safety",
-    ],
-  },
-  {
-    className: "slide-2 ",
-    heading: " Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    className: "slide-3",
+    heading: "Community-Driven Initiatives",
+    text: "Empowering communities to prioritize safety and accessibility in transport.",
+    ctaText: "Join Us",
+    ctaLink: "/community",
+    backgroundImage: "/images/community-transport.jpg",
   },
 ];
 
@@ -206,7 +233,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 2,
@@ -217,18 +244,18 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 3,
-    title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
-    name: 'Christine Ajulu',
-    imgPath: '/christine.jpg',
-    url: '/christine-ajulu',
+    title: 'Expert, Capacity Building & Research',
+    name: 'Mr barasa musoba',
+    imgPath: '/barasa-musoba.jpeg',
+    url: '/barasa-musoba',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 4,
@@ -239,7 +266,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 5,
@@ -250,7 +277,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
 
   { 
@@ -261,7 +288,7 @@ export const directors = [
     url: '/abedi-amakobe',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
 ];
 
