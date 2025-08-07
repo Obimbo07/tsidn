@@ -233,7 +233,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 2,
@@ -244,18 +244,18 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 3,
-    title: 'Senior Director Occupational Health, Environment, Policy, and Social Initiatives',
-    name: 'Christine Ajulu',
-    imgPath: '/christine.jpg',
-    url: '/christine-ajulu',
+    title: 'Expert, Capacity Building & Research',
+    name: 'Mr barasa musoba',
+    imgPath: '/barasa-musoba.jpeg',
+    url: '/barasa-musoba',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 4,
@@ -266,7 +266,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
   {
     id: 5,
@@ -277,7 +277,7 @@ export const directors = [
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
     twitter: 'https://twitter.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
 
   { 
@@ -288,7 +288,7 @@ export const directors = [
     url: '/abedi-amakobe',
     intro: 'This should be intro content',
     linkedin: 'https://www.linkedin.com/',
-    email: 'mailto:samuel@example.com'
+    email: ''
   },
 ];
 

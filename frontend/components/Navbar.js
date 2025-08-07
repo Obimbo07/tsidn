@@ -54,9 +54,9 @@ function Navbar() {
       </div>
 
       {/* Second Layer: Main Navigation */}
-      <nav className="bg-gradient-to-b from-gray-50 to-white p-4 shadow-md">
-        <div className="w-full flex items-center justify-center  mx-auto">
-          <ul className="flex gap-6">
+      <nav className="bg-gradient-to-b flex items-center justify-center from-gray-50 to-white p-4 shadow-md">
+        <div className="w-full  mx-auto">
+          <ul className="flex gap-6 flex-row items-center justify-center">
             {links.map((link) => (
               <li key={link.id} className="relative hidden md:block group">
                 <Link href={link.url} className="font-bold text-gray-800 hover:text-blue-700 transition-colors">
@@ -67,7 +67,7 @@ function Navbar() {
                     <ul className="py-2">
                       {link.dropdown.map((item) => (
                         <li key={item.id} className="px-4 py-2 hover:bg-gray-100">
-                          <Link href={`${link.url}${item.url}`} className="text-gray-600 underline hover:text-">
+                          <Link href={`${link.url}${item.url}`} className="text-gray-600  hover:text-">
                             {item.text} {'>'}
                           </Link>
                         </li>
