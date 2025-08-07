@@ -20,8 +20,8 @@ function Navbar() {
       { id: 6, text: 'Advocacy for governance', url: '/advocacy' },
       { id: 7, text: 'Research and Development', url: '/research-development' }
     ] },
-    { id: 4, text: 'Media', url: '/media', dropdown: [{ id: 1, text: 'Press Release', url: '/press-release' }, { id: 2, text: 'Podcasts', url: '/podcasts' }, { id: 3, text: 'Videos', url: '/videos' }] },
-    { id: 5, text: 'Events', url: '/events', dropdown: [{ id: 1, text: 'Meetings And Events', url: '/meetings-and-events' }, { id: 2, text: 'Ambush Highlights', url: '/ambush-highlights' }] },
+    // { id: 4, text: 'Media', url: '/media', dropdown: [{ id: 1, text: 'Press Release', url: '/press-release' }, { id: 2, text: 'Podcasts', url: '/podcasts' }, { id: 3, text: 'Videos', url: '/videos' }] },
+    // { id: 5, text: 'Events', url: '/events', dropdown: [{ id: 1, text: 'Meetings And Events', url: '/meetings-and-events' }, { id: 2, text: 'Ambush Highlights', url: '/ambush-highlights' }] },
   ];
 
   const toplinks = [
@@ -58,7 +58,7 @@ function Navbar() {
         <div className="w-full flex items-center justify-center  mx-auto">
           <ul className="flex gap-6">
             {links.map((link) => (
-              <li key={link.id} className="relative group">
+              <li key={link.id} className="relative hidden md:block group">
                 <Link href={link.url} className="font-bold text-gray-800 hover:text-blue-700 transition-colors">
                   {link.text}
                 </Link>
@@ -67,8 +67,8 @@ function Navbar() {
                     <ul className="py-2">
                       {link.dropdown.map((item) => (
                         <li key={item.id} className="px-4 py-2 hover:bg-gray-100">
-                          <Link href={`${link.url}${item.url}`} className="text-gray-600 hover:text-blue-700">
-                            {item.text}
+                          <Link href={`${link.url}${item.url}`} className="text-gray-600 underline hover:text-">
+                            {item.text} {'>'}
                           </Link>
                         </li>
                       ))}
@@ -78,8 +78,7 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="flex justify-between items-center gap-4">
-            
+          <div className="flex justify-end  w-full">
             <MobileNav links={links} />
           </div>
         </div>

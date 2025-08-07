@@ -34,7 +34,13 @@ const MobileNav = ({ links }) => {
             {links.map((link) => (
               <div key={link.id} className="w-full">
                 <div className="flex items-center justify-between" onClick={() => toggleDropdown(link.id)}>
-                  <Link href={link.url} className="text-xl font-bold text-blue-700 hover:text-blue-900">
+                  <Link
+                    href={link.url}
+                    className="text-xl font-bold text-blue-700 hover:text-blue-900"
+                    onClick={(e) => {
+                      toggleMenu();
+                    }}
+                  >
                     {link.text}
                   </Link>
                   {link.dropdown.length > 0 && (
@@ -45,7 +51,13 @@ const MobileNav = ({ links }) => {
                   <ul className="ml-4 mt-2 space-y-2 transition-all duration-300 ease-in-out">
                     {link.dropdown.map((item) => (
                       <li key={item.id}>
-                        <Link href={`${link.url}${item.url}`} className="text-gray-600 hover:text-blue-700">
+                        <Link
+                          href={`${link.url}${item.url}`}
+                          className="text-gray-600 hover:text-blue-700"
+                          onClick={(e) => {
+                            toggleMenu();
+                          }}
+                        >
                           {item.text}
                         </Link>
                       </li>
