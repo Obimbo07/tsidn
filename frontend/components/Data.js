@@ -1,53 +1,80 @@
 
+// export const HeroData = [
+//   {
+//     className: "slide-1",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-1 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: "Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety ",
+//       "Transport and Safety",
+//     ],
+//   },
+//   {
+//     className: "slide-2 ",
+//     heading: " Transport and Safety",
+//     texts: [
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//       "Transport and Safety",
+//     ],
+//   },
+// ];
+
 export const HeroData = [
   {
     className: "slide-1",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    heading: "Advancing Road Safety",
+    text: "Promoting safer roads through innovative solutions and awareness campaigns.",
+    ctaText: "Learn More",
+    ctaLink: "/safety",
+    backgroundImage: "/images/road-safety.jpg", // Add actual image paths
   },
   {
-    className: "slide-1 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    className: "slide-2",
+    heading: "Sustainable Transport Solutions",
+    text: "Building eco-friendly and efficient transportation systems for the future.",
+    ctaText: "Explore Solutions",
+    ctaLink: "/transport",
+    backgroundImage: "/images/sustainable-transport.jpg",
   },
   {
-    className: "slide-2 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
-  },
-  {
-    className: "slide-2 ",
-    heading: "Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety ",
-      "Transport and Safety",
-    ],
-  },
-  {
-    className: "slide-2 ",
-    heading: " Transport and Safety",
-    texts: [
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-      "Transport and Safety",
-    ],
+    className: "slide-3",
+    heading: "Community-Driven Initiatives",
+    text: "Empowering communities to prioritize safety and accessibility in transport.",
+    ctaText: "Join Us",
+    ctaLink: "/community",
+    backgroundImage: "/images/community-transport.jpg",
   },
 ];
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import IntoVideo from '../Banners/IntoVideo';
 
 const subjects = [
   "Safety for all road users",
@@ -35,6 +36,7 @@ const TextSlider = () => {
           ))}
         </div>
       </div>
+      <IntoVideo />
     </div>
   );
 };

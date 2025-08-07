@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-white  overflow-">
         <SessionProvider>
-         <Navbar />
+          <Navbar />
           {children}
          <Footer />
         </SessionProvider>

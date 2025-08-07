@@ -21,9 +21,8 @@ export default function Home() {
   return (
     <>
      <div>
-      <div className="">
-        <IntoVideo />
-        {/* <Banner /> */}
+      <div className="h-screen">
+        <Banner />
       </div>
       <IntroText />
       <div className="">
@@ -36,16 +35,11 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center">Pillars of TSDNs</h2>
         <HotNews Events={cardsData}/>
       </div>
-      <div>
+      <div className="">
         <Impact />        
-      </div>
-      <div class="">
         <ProgramsActivities />
-      </div>
-      <div>
         <Partners />
       </div>
-
      </div>
     </>
   );
