@@ -8,7 +8,7 @@ const ResearchAndDevelopment = () => {
       </h2>
       <div className="flex flex-col md:flex-row md:space-x-6 mb-4">
         <div className="md:w-1/2 mb-4 md:mb-0">
-          <Image src="/research-image.jpg" alt="Research" className="w-full h-auto rounded" />
+          <Image width={900} height={900} src="/research-s.webp" alt="Research" className="w-full h-auto rounded" />
         </div>
         <div className="md:w-1/2 space-y-4 text-sm sm:text-base lg:text-lg">
           <p>
